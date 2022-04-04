@@ -29,20 +29,13 @@ REP_bib_lib <- 'bibliografia_libros.bib'
 REP_bib_art <- 'bibliografia_articulos.bib'
 REP_bib_ley <- 'bibliografia_leyes.bib'
 
-REP_tit <- 'Valuación Actuarial del Seguro de 
-            Riesgos del Trabajo del Seguro General Obligatorio'
+REP_tit <- 'Estudio Actuarial del impacto de la aplicación de la Sentencia del Caso No. 1024-19-JP/21 y 66-20-JP, de la Corte Constitucional, al Fondo del Seguro General de Riesgos del Trabajo'
 REP_nom_seg <- 'Seguro de Riesgos del Trabajo'
-REP_seg <- switch( parametros$seguro,
-                  'IVM' = 'Seguro IVM',
-                  'CES' = 'Seguro de Cesantía',
-                  'DES' = 'Seguro de Desempleo',
-                  'RTR' = 'Seguro General de Riesgos del Trabajo',
-                  'SAL' = 'Seguro de Salud',
-                  'SSC' = 'SSC') 
-  
+REP_seg <- c('RTR' = 'Seguro General de Riesgos del Trabajo')
+
 paste( 'Seguro', parametros$seguro )
 REP_fec_fin <- format( parametros$fec_fin, '%Y-%m-%d' )
-REP_fec_val <- format( ymd( '2022-03-04' ), '%Y-%m-%d' )
+REP_fec_val <- format( ymd( '2022-04-04' ), '%Y-%m-%d' )
 REP_watermark <- paste0( 'Borrador ', parametros$fec_eje, ' ', format( Sys.time(), '%H:%M:%S' ) )
 REP_version <- digest( paste0( 'IESSDAIE', format( Sys.time(), '%Y%m%d%H' ) ), algo = 'sha256', file = FALSE )
 
