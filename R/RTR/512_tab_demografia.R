@@ -8,7 +8,7 @@ source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 
 #lectura tabla de edad------------------------------------------------------------------------------
 message( '\tTabla edades por sexo' )
-aux <- as.data.table(edad_sexo_total)
+aux <- as.data.table(edad_sexo_total)  #elaborado por Darlyn
 aux <- clean_names(aux)
 aux_xtab <- xtable( aux, digits = c(0,0,0,0,0))
 print( aux_xtab,

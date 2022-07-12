@@ -10,7 +10,7 @@ anio_fin<-2020
 
 #1.Tabla por rangos de edad----------------------------------------------------- 
 
-cortes_edad<-c(15,seq(20,70,10),81)
+cortes_edad<-c(15,seq(20,70,10),81)  #elaborado por Darlyn 
 etiquetas_edad<-c( paste0("(",formatC( c(15,seq(20,70,10)), 
                                           digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
                           "-",formatC( c(seq(20,70,10),81), 

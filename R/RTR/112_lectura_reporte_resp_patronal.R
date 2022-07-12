@@ -31,8 +31,9 @@ file <- paste0( parametros$Data, 'CES/IESS_registro_civil.RData' )
 load(file)
 rc <- rc %>% select(cedula,sexo,fecha_nacimiento)
 reporte_resp_patronal <-  left_join(reporte_resp_patronal,rc,by="cedula") %>%
-                          filter(cod_estado_acuerdo!="ANU") %>% 
-                          mutate(edad=as.integer(round(((fecha_siniestro-fecha_nacimiento)/365),0)))
+                          filter(cod_estado_acuerdo!="ANU") %>%  # se quita los de codigo anulado
+                          mutate(edad=as.integer(round(((fecha_siniestro-fecha_nacimiento)/365),0))) # se calcula la edad a la
+                                                                                                     #fecha de siniestro
 
        
  save( reporte_resp_patronal,
