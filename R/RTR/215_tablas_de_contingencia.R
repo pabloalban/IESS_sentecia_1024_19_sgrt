@@ -152,6 +152,9 @@ aux_total_monto1 <- aux_total %>% add_row(rango_monto="Total",hombres_priv=sum(a
 monto_rangos_sexo_empresa <- aux_total_monto1
 
 save( reporte_resp_patronal,
+      edad_sexo_total,
+      monto_rangos_sexo,
+      monto_rangos_sexo_empresa,
       file = paste0( parametros$RData_seg, 'IESS_RTR_tablas_rp.RData' ) )
 # #-----------------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )

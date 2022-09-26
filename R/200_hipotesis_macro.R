@@ -75,7 +75,7 @@ train <- na.omit(data)
 #Ho: No hay raíz unitaria presente
 adfTest(train$diff_pib)
 adfTest(train$diff_tasa_pasiva)
-adfTest(train$diff_tasa_pasiva)
+adfTest(train$diff_tasa_activa)
 adfTest(train$diff_sal_prom)
 adfTest(train$diff_sbu)
 adfTest(train$diff_inflacion)
@@ -85,7 +85,7 @@ adfTest(train$diff_inflacion)
 m1<-VAR(train, include.mean = F, p=1)
 m2=refVAR(m1,  thres = 1.96)
 m2 = m2
-m2$coef
+#m2$coef
 variables <- data.frame(var=c('PIB',
                               'Tasa pasiva',
                               'Tasa activa',
@@ -96,6 +96,42 @@ coeficientes <- cbind(variables,
                       t(as.data.frame(m2$coef)) )
 
 #Prueba de indepencia de residuos-------------------------------------------------------------------
+
+#función mq aumentada-------------------------------------------------------------------------------
+mq_aumentada <- function (x, lag = 24, adj = 0) 
+{
+  if (!is.matrix(x)) 
+    x = as.matrix(x)
+  nr = nrow(x)
+  nc = ncol(x)
+  g0 = var(x)
+  ginv = solve(g0)
+  qm = 0
+  QM = NULL
+  df = 0
+  for (i in 1:lag) {
+    x1 = x[(i + 1):nr, ]
+    x2 = x[1:(nr - i), ]
+    g = cov(x1, x2)
+    g = g * (nr - i - 1)/(nr - 1)
+    h = t(g) %*% ginv %*% g %*% ginv
+    qm = qm + nr * nr * sum(diag(h))/(nr - i)
+    df = df + nc * nc
+    dff = df - adj
+    mindeg = nc^2 - 1
+    pv = 1
+    if (dff > mindeg) 
+      pv = 1 - pchisq(qm, dff)
+    QM = rbind(QM, c(i, qm, dff, pv))
+  }
+  pvs = QM[, 4]
+  dimnames(QM) = list(names(pvs), c("  m  ", "    Q(m) ", 
+                                    "   df  ", " p-value"))
+  cat("Ljung-Box Statistics: ", "\n")
+  printCoefmat(QM, digits = 3)
+  return(QM)
+}
+
 residuos = m2$residuals
 residuos <- as.data.frame(residuos)
 colnames(residuos) <- c("diff_pib",
@@ -108,9 +144,11 @@ colnames(residuos) <- c("diff_pib",
 
 #H0: Independencia de los residuos
 #p>0.05 no se rechaza la H0
-png(file = paste0( parametros$resultado_graficos, 'iess_test_modelo', parametros$graf_ext ) )
-mq(residuos, lag = 12) 
-dev.off()
+
+#png(file = paste0( parametros$resultado_graficos, 'iess_test_modelo', parametros$graf_ext ) )
+box_ljung <- mq_aumentada(residuos, lag = 12)
+#dev.off()
+
 #No se rechaza la HO para todo retardo menor a 10
 #No se rechaza la HO para todo retardo al nivel de significacia del 2%
 
@@ -134,6 +172,12 @@ shapiro.test(residuos$diff_inflacion)
 #H0: Las desviaciones no tienen heterocedasticidad condicional
 #p>0.05 no se rechaza la H0
 MarchTest(residuos)
+
+
+#Prueba de multicolinealidad------------------------------------------------------------------------
+library(ppcor)
+pcor(na.omit(data)[1:14,], method = "pearson")
+
 
 #Predicciones del modelo----------------------------------------------------------------------------
 #Predicción hasta 12/2026 por datos perdidos
@@ -282,6 +326,7 @@ save( tasas_macro_pred,
       tasas_macro_crec,
       hip_macro_resumen,
       coeficientes,
+      box_ljung,
       file = paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
 
 #Exportar a excel-----------------------------------------------------------------------------------
