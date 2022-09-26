@@ -297,57 +297,56 @@ ggsave( plot = iess_subsidios_edad_sexo,
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 # Indemnizaciones------------------------------------------------------------------------------------
-message( '\tGraficando población beneficiaria a indemnizaciones de RT' )
-unidad<-1e6
-aux <- indemnizaciones_rtr %>%
-  mutate( anio = ano ) %>%
-  filter(anio<='2020',
-         tipo_prestacion=='ID') %>%
-  group_by(anio) %>%
-  mutate(monto=sum(valor_de_la_prestacion,na.rm = TRUE)) %>%
-  ungroup() %>%
-  distinct(cedula,anio,.keep_all = TRUE) %>%
-  group_by(anio) %>%
-  mutate(numero=n()) %>%
-  ungroup() %>%
-  distinct(anio,.keep_all = TRUE) %>%
-  select(anio,numero,monto) 
-
-aux[nrow(aux), 2:3 ] <- 3 * aux[nrow(aux), 2:3 ]
-
-aux <- aux %>%
-  arrange(anio) %>%
-  mutate(creci_num=100*(numero-lag(numero))/lag(numero)) %>%
-  mutate(creci_monto=100*(monto-lag(monto))/lag(monto)) %>%
-  #mutate(anio=as.character(anio)) %>%
-  select(anio,numero,creci_num,monto,creci_monto) 
-
-x_lim <- c( 2011, 2020 )
-x_brk <- 2011:2020
-x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
-
-y_lim <- c( 0, 1250)
-y_brk <- seq( y_lim[1], y_lim[2], 300 )
-y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
-
-iess_indemnizaciones <- ggplot( data = aux ) + 
-  geom_line( aes( x = anio, 
-                  y = numero, 
-                  color = parametros$iess_blue ), 
-             size = graf_line_size,
-             lineend = "round" ) + 
-  labs( x = 'Año', y = 'Beneficiarios' ) +
-  scale_color_manual( values =  c( parametros$iess_green, parametros$iess_blue ), 
-                      labels = c( '', '' ) ) +
-  scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
-  scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
-  theme_bw() +
-  plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
-
-ggsave( plot = iess_indemnizaciones , 
-        filename = paste0( parametros$resultado_graficos, 'iess_indemnizaciones_rtr', parametros$graf_ext ),
-        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+# message( '\tGraficando población beneficiaria a indemnizaciones de RT' )
+# unidad<-1e6
+# aux <- indemnizaciones_rtr %>%
+#   mutate( anio = ano ) %>%
+#   filter(anio <='2020', tipo_prestacion =='ID') %>%
+#   group_by(anio) %>%
+#   mutate(monto=sum(valor_de_la_prestacion,na.rm = TRUE)) %>%
+#   ungroup() %>%
+#   distinct(cedula,anio,.keep_all = TRUE) %>%
+#   group_by(anio) %>%
+#   mutate(numero=n()) %>%
+#   ungroup() %>%
+#   distinct(anio,.keep_all = TRUE) %>%
+#   select(anio,numero,monto) 
+# 
+# aux[nrow(aux), 2:3 ] <- 3 * aux[nrow(aux), 2:3 ]
+# 
+# aux <- aux %>%
+#   arrange(anio) %>%
+#   mutate(creci_num=100*(numero-lag(numero))/lag(numero)) %>%
+#   mutate(creci_monto=100*(monto-lag(monto))/lag(monto)) %>%
+#   #mutate(anio=as.character(anio)) %>%
+#   select(anio,numero,creci_num,monto,creci_monto) 
+# 
+# x_lim <- c( 2011, 2020 )
+# x_brk <- 2011:2020
+# x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
+# 
+# y_lim <- c( 0, 1250)
+# y_brk <- seq( y_lim[1], y_lim[2], 300 )
+# y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
+# 
+# iess_indemnizaciones <- ggplot( data = aux ) + 
+#   geom_line( aes( x = anio, 
+#                   y = numero, 
+#                   color = parametros$iess_blue ), 
+#              size = graf_line_size,
+#              lineend = "round" ) + 
+#   labs( x = 'Año', y = 'Beneficiarios' ) +
+#   scale_color_manual( values =  c( parametros$iess_green, parametros$iess_blue ), 
+#                       labels = c( '', '' ) ) +
+#   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
+#   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
+#   theme_bw() +
+#   plt_theme +
+#   theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
+# 
+# ggsave( plot = iess_indemnizaciones , 
+#         filename = paste0( parametros$resultado_graficos, 'iess_indemnizaciones_rtr', parametros$graf_ext ),
+#         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 # Indemnizaciones por edad y sexo--------------------------------------------------------------------
 message( '\tGraficando población beneficiaria a indemnizaciones por edad y sexo de RT' )
@@ -434,52 +433,52 @@ ggsave( plot = iess_pensiones_provisionales_inc_tem ,
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 # Incapacidad permanente parcial---------------------------------------------------------------------
-message( '\tGraficando pensionistas por incapacidad permanente parcial del fondo de RT' )
-unidad<-1e6
-aux<- base %>%
-  filter(tipo_prestacion=='PP') %>%
-  group_by(anio) %>%
-  mutate(monto=sum(tot_ingr,na.rm = TRUE)) %>%
-  #filter(mes=='12') %>%
-  distinct(cedula,.keep_all = TRUE) %>%
-  mutate(numero=n()) %>%
-  distinct(anio,.keep_all = TRUE) %>%
-  ungroup() %>%
-  select(anio,numero,monto) %>%
-  mutate(creci_num=100*(numero-lag(numero))/lag(numero)) %>%
-  mutate(creci_monto=100*(monto-lag(monto))/lag(monto)) %>%
-  mutate(anio=as.numeric(anio)) %>%
-  select(anio,numero,creci_num,monto,creci_monto)
-
-
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
-x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
-
-y_lim <- c( 4700, 5200)
-y_brk <- seq( y_lim[1], y_lim[2], 100 )
-y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
-
-iess_incapacidad_parcial <- ggplot( data = aux ) + 
-  geom_line( aes( x = anio, 
-                  y = numero, 
-                  color = parametros$iess_blue ), 
-             size = graf_line_size,
-             lineend = "round" ) + 
-  labs( x = 'Año', y = 'Beneficiarios' ) +
-  scale_color_manual( values =  c( parametros$iess_green, 
-                                   parametros$iess_blue ), 
-                      labels = c( '', '' ) ) +
-  scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
-  scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
-  theme_bw() +
-  plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
-
-ggsave( plot = iess_incapacidad_parcial , 
-        filename = paste0( parametros$resultado_graficos, 'iess_incapacidad_parcial_rtr',
-                           parametros$graf_ext ),
-        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+# message( '\tGraficando pensionistas por incapacidad permanente parcial del fondo de RT' )
+# unidad<-1e6
+# aux<- base %>%
+#   filter(tipo_prestacion == 'PP') %>%
+#   group_by(anio) %>%
+#   mutate(monto=sum(tot_ingr,na.rm = TRUE)) %>%
+#   #filter(mes=='12') %>%
+#   distinct(cedula,.keep_all = TRUE) %>%
+#   mutate(numero=n()) %>%
+#   distinct(anio,.keep_all = TRUE) %>%
+#   ungroup() %>%
+#   select(anio,numero,monto) %>%
+#   mutate(creci_num=100*(numero-lag(numero))/lag(numero)) %>%
+#   mutate(creci_monto=100*(monto-lag(monto))/lag(monto)) %>%
+#   mutate(anio=as.numeric(anio)) %>%
+#   select(anio,numero,creci_num,monto,creci_monto)
+# 
+# 
+# x_lim <- c( 2012, 2020 )
+# x_brk <- 2012:2020
+# x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
+# 
+# y_lim <- c( 4700, 5200)
+# y_brk <- seq( y_lim[1], y_lim[2], 100 )
+# y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
+# 
+# iess_incapacidad_parcial <- ggplot( data = aux ) + 
+#   geom_line( aes( x = anio, 
+#                   y = numero, 
+#                   color = parametros$iess_blue ), 
+#              size = graf_line_size,
+#              lineend = "round" ) + 
+#   labs( x = 'Año', y = 'Beneficiarios' ) +
+#   scale_color_manual( values =  c( parametros$iess_green, 
+#                                    parametros$iess_blue ), 
+#                       labels = c( '', '' ) ) +
+#   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
+#   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
+#   theme_bw() +
+#   plt_theme +
+#   theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
+# 
+# ggsave( plot = iess_incapacidad_parcial , 
+#         filename = paste0( parametros$resultado_graficos, 'iess_incapacidad_parcial_rtr',
+#                            parametros$graf_ext ),
+#         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 # Incapacidad Permanente Parcial por edad y sexo-----------------------------------------------------
 message( '\tGraficando pensionistas por incapacidad permanente parcial por edad y sexo de RT' )
