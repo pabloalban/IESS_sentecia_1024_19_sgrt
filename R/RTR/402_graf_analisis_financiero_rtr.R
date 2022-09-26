@@ -744,6 +744,26 @@ ggsave( plot = iess_relacion_patrimonio_beneficio,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
+
+############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Casos de lesiones profesionales no fatales en america latina---------------------------------------
 aux <- copy( lesiones_profesionales )
 aux[, pais:=as.character(pais)]
