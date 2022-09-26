@@ -9,17 +9,17 @@
 
 Una de las hipótesis importantes a considerar en los modelos matemáticos – actuariales es la inflación, que mide el aumento generalizado y sostenido de los precios de bienes y servicios en un país, cuya medición consiste en el cálculo de los incrementos que presenta el Índice de Precios al Consumidor (IPC). Es por ello que se pone especial atención en dicho fenómeno económico en razón de que este afecta tanto las tasas de interés como al incremento salarial, que es la base del crecimiento de las reservas y del crecimiento salarial en el tiempo, referente tanto de aportes como de beneficios.
 
-A continuación, se muestra la evolución histórica del índice de precios en la tabla \ref{tab:iess_IPC_ivm} y la figura \ref{fig:iess_ipc_hist}.
+A continuación, se muestra la evolución histórica del índice de precios en la tabla \ref{tab:iess_IPC_ivm} y la figura % \ref{fig:iess_ipc_hist}.
 
 
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica del índice de precios (IPC)}
-\label{fig:iess_ipc_hist}
-\includegraphics[scale=1]{graficos/iess_ipc_hist.png}
-\caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos. \\
-            {\bf Elaborado:} DAIE.}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \caption{Evolución histórica del índice de precios (IPC)}
+% \label{fig:iess_ipc_hist}
+% \includegraphics[scale=1]{graficos/iess_ipc_hist.png}
+% \caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos. \\
+%             {\bf Elaborado:} DAIE.}
+% \end{figure}
 
 \begin{table}[H]
 \begin{center}
@@ -51,16 +51,16 @@ En la tabla \ref{tab:iess_IPC_ivm} se observa que la inflación se redujo desde 
 
 Otra de las hipótesis a considerarse en los modelos matemáticos – actuariales es el comportamiento del salario básico unificado (SBU) y su crecimiento en el futuro. El SBU está directamente influenciado por el comportamiento de la inflación.
 
-A continuación, se muestra la evolución del salario básico unificado en la tabla \ref{tab:iess_sbu_hist} y la figura \ref{fig:iess_sbu}.
+A continuación, se muestra la evolución del salario básico unificado en la tabla \ref{tab:iess_sbu_hist} y la figura % \ref{fig:iess_sbu}.
 
-\begin{figure}[H]
-\centering
-\caption{Serie histórica del Salario Básico Unificado}
-\label{fig:iess_sbu}
-\includegraphics[scale=1.0]{graficos/iess_sbu.png}
-\caption*{\scriptsize {\bf Fuente:} Ministerio de Trabajo. \\
-  {\bf Elaborado:} DAIE.}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \caption{Serie histórica del Salario Básico Unificado}
+% \label{fig:iess_sbu}
+% \includegraphics[scale=1.0]{graficos/iess_sbu.png}
+% \caption*{\scriptsize {\bf Fuente:} Ministerio de Trabajo. \\
+%   {\bf Elaborado:} DAIE.}
+% \end{figure}
 
 \begin{table}[H]
 \begin{center}
@@ -90,16 +90,16 @@ Se destaca una desaceleración paulatina de las tasas de crecimiento del SBU en 
 
 Los ingresos mensuales por aportes que recibe el Fondo del Seguro IVM es un porcentaje fijo de la materia gravada. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de aportes.
 
-A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_spd_hist} y la figura \ref{fig:iess_spd_hist}.
+A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_spd_hist} y la figura %\ref{fig:iess_spd_hist}.
 
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica del salario nominal promedio aportado}
-\label{fig:iess_spd_hist}
-\includegraphics[scale=1.0]{graficos/iess_spd_hist.png}
-\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del fondo administrado del Seguro IVM \\
-  {\bf Elaborado:} DAIE.}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \caption{Evolución histórica del salario nominal promedio aportado}
+% \label{fig:iess_spd_hist}
+% \includegraphics[scale=1.0]{graficos/iess_spd_hist.png}
+% \caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del fondo administrado del Seguro IVM \\
+%   {\bf Elaborado:} DAIE.}
+% \end{figure}
 
 
 El salario declarado promedio de los afiliados activos del SGO se incrementó un 42\% entre 2010 y 2020, pasando de USD 520,56 a USD 737,23 con un crecimiento promedio anual de 3,58\%. En el año 2011 se registró el crecimiento nominal anual más alto del salario con un 9,06\%, es decir un crecimiento de USD 47,18 respecto al año anterior; sin embargo en el 2020 se registró un decrecimiento del -0,63\% (USD 4,67 menos que el 2019).
@@ -126,7 +126,7 @@ El salario declarado promedio de los afiliados activos del SGO se incrementó un
 % % % % --------------------------------------------------------------------------------
 \subsection{Evolución histórica de la tasa de crecimiento real del PIB del Ecuador}
 
-A continuación, se muestra la evolución histórica de la tasa de crecimiento real del PIB, misma que fue obtenida de la página del Banco Mundial \footnote{\url{https://datos.bancomundial.org/pais/ecuador}} (ver tabla \ref{tab:iess_pib_hist} y figura \ref{fig:iess_pib_hist}).
+A continuación, se muestra la evolución histórica de la tasa de crecimiento real del PIB, misma que fue obtenida de la página del Banco Mundial \footnote{\url{https://datos.bancomundial.org/pais/ecuador}} (ver tabla \ref{tab:iess_pib_hist} y figura %\ref{fig:iess_pib_hist}).
 
 % \begin{figure}[H]
 % \centering
@@ -236,14 +236,14 @@ En la tabla \ref{tab:iess_pen_min_max_ivm}, se presenta su evolución histórica
 En la Figura \ref {tab:iess_hist_pib_ipc}, se presenta la evolución y comportamiento de las variables económicas denominadas “PIB” e “Inflación”, correspondiente al período 2000 al 2020.
 
 
-\begin{figure}[H]
-\centering
-\caption{Evolución y comportamiento del PIB y la Inflación}
-\label{fig:iess_pib_hist}
-\includegraphics[scale=1.0]{graficos/iess_ipcpib_hist.png}
-\caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos/Banco Mundial. \\
-  {\bf Elaborado:} DAIE.}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \caption{Evolución y comportamiento del PIB y la Inflación}
+% \label{fig:iess_pib_hist}
+% \includegraphics[scale=1.0]{graficos/iess_ipcpib_hist.png}
+% \caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos/Banco Mundial. \\
+%   {\bf Elaborado:} DAIE.}
+% \end{figure}
 
 \begin{table}[H]
 \begin{center}
@@ -330,8 +330,10 @@ El proceso vectorial ($Y_t$) de dimensión $n$, $Y_t \in  \mathbb{R}^n$, se lo d
 El Test de Shapiro–Wilk se usa para contrastar la normalidad de un conjunto de datos. Se considera uno de los test más potentes para el contraste de normalidad. La prueba de normalidad de Shapiro-Wilk es aplicable cuando se analizan muestras compuestas por menos de 50 elementos (muestras pequeñas).
 
 Las hipótesis estadísticas son las siguientes:
-\textit{H_0}: La variable presenta una distribución normal.
-\textit{H_1}: La variable presenta una distribución no normal.
+
+\textit{H\_0}: La variable presenta una distribución normal.
+
+\textit{H\_1}: La variable presenta una distribución no normal.
 
 Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\%. Por lo tanto, no se rechaza la hipótesis nula.
 
@@ -352,8 +354,10 @@ Inflación        & 0,92074                                      & 0,2254       
 
 La prueba de Box - Ljung (a veces llamada Box-Pierce modificada, o simplemente prueba de caja) es una forma de probar la ausencia de autocorrelación serial, hasta un retraso $k$ especificado. La prueba determina si los errores son o no independientes idénticamente distribuidos (es decir, ruido blanco) o si hay algo más detrás de ellos; si las autocorrelaciones para los errores o residuos son distintas de cero o no. 
 Esencialmente, es una prueba de falta de ajuste: si las autocorrelaciones de los residuos son muy pequeñas, decimos que el modelo no muestra una "falta de ajuste significativa". Las hipótesis estadísticas son las siguientes:
-\textit{H_0}: Los residuos del modelo se distribuyen de forma independiente (es decir, las correlaciones en la población de la que se toma la muestra son 0, por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).
-\textit{H_1}: Los datos no se distribuyen de forma independiente; exhiben correlación serial.
+
+\textit{H\_0}: Los residuos del modelo se distribuyen de forma independiente (es decir, las correlaciones en la población de la que se toma la muestra son 0, por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).
+\textit{H\_1}: Los datos no se distribuyen de forma independiente; exhiben correlación serial.
+
 Un valor p significativo en esta prueba rechaza la hipótesis nula de que la serie temporal no está autocorrelacionada.
 
 
@@ -376,14 +380,14 @@ Un valor p significativo en esta prueba rechaza la hipótesis nula de que la ser
 \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-\begin{center}
-\caption{Gráfica de los p - valores para las estadísticas $Q_k(m)$ para las 6 dimensiones del modelo, la línea discontinua indica un error de tipo I del 5\%.}
-\label{fig:iess_test_modelo}
-\includegraphics[scale=1]{graficos/iess_test_modelo.png}
-\caption*{\scriptsize \centering {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Gráfica de los p - valores para las estadísticas $Q_k(m)$ para las 6 dimensiones del modelo, la línea discontinua indica un error de tipo I del 5\%.}
+% \label{fig:iess_test_modelo}
+% \includegraphics[scale=1]{graficos/iess_test_modelo.png}
+% \caption*{\scriptsize \centering {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
 
 Al utilizar el comando mq del paquete MTS del software estadístico R, se estiman los p – valores de los estadísticos para las 6 dimensiones del modelo propuesto, y no se rechaza la hipótesis nula, los residuos del modelo son independientes, al nivel de significancia igual a 5\%. 
 
@@ -435,63 +439,63 @@ Inflación promedio\\
 
 
 
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones del PIB nominal (en millones de dólares)}
-\label{fig:iess_pib_pred}
-\includegraphics[scale=1]{graficos/iess_pib_pred.png}
-\caption*{\scriptsize \centering {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
-
-
-
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones del salario promedio anual (en dólares)}
-\label{fig:iess_sal_pred}
-\includegraphics[scale=1]{graficos/iess_sal_pred.png}
-\caption*{\scriptsize {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
-
-
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones del SBU (en dólares)}
-\label{fig:iess_sbu_pred}
-\includegraphics[scale=1]{graficos/iess_sbu_pred.png}
-  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
-
-
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones de la tasa activa referencial}
-\label{fig:iess_ta_pred}
-\includegraphics[scale=1]{graficos/iess_ta_pred.png}
-  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
-
-
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones de la tasa pasiva referencial}
-\label{fig:iess_tp_pred}
-\includegraphics[scale=1]{graficos/iess_tp_pred.png}
-  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
-
-
-\begin{figure}[H]
-\begin{center}
-\caption{Predicciones de la inflación promedio}
-\label{fig:iess_inf_pred}
-\includegraphics[scale=1]{graficos/iess_inf_pred.png}
-\caption*{\scriptsize {\bf Elaborado:} DAIE.}
-\end{center}
-\end{figure}
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones del PIB nominal (en millones de dólares)}
+% \label{fig:iess_pib_pred}
+% \includegraphics[scale=1]{graficos/iess_pib_pred.png}
+% \caption*{\scriptsize \centering {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
+% 
+% 
+% 
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones del salario promedio anual (en dólares)}
+% \label{fig:iess_sal_pred}
+% \includegraphics[scale=1]{graficos/iess_sal_pred.png}
+% \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
+% 
+% 
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones del SBU (en dólares)}
+% \label{fig:iess_sbu_pred}
+% \includegraphics[scale=1]{graficos/iess_sbu_pred.png}
+%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
+% 
+% 
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones de la tasa activa referencial}
+% \label{fig:iess_ta_pred}
+% \includegraphics[scale=1]{graficos/iess_ta_pred.png}
+%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
+% 
+% 
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones de la tasa pasiva referencial}
+% \label{fig:iess_tp_pred}
+% \includegraphics[scale=1]{graficos/iess_tp_pred.png}
+%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
+% 
+% 
+% \begin{figure}[H]
+% \begin{center}
+% \caption{Predicciones de la inflación promedio}
+% \label{fig:iess_inf_pred}
+% \includegraphics[scale=1]{graficos/iess_inf_pred.png}
+% \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+% \end{center}
+% \end{figure}
 

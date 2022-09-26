@@ -90,34 +90,34 @@ una pensión de incapacidad laboral;
 \label{chp_res_ejec:hipotesis}
 A manera de resumen, se describen las principales hipótesis de este estudio: 
 
-\begin{center}
-{\fontsize{11}{12}\selectfont
-%\begin{longtable}[H]{r*{5}{R{2.5cm}}}
-\begin{longtable}[H]{lc}
-\caption{Tasas utilizadas en el estudio (período 2019-2058)}
-\label{tab:iess_hip_macro_re} \\
-\toprule
-Ítem: & \multicolumn{1}{c}{Tasa}\\
-\midrule
-\endfirsthead
-
-\toprule
-Ítem: & \multicolumn{1}{c}{Tasa}\\
-\midrule
-\endhead
-
-\bottomrule
-\multicolumn{2}{r}{continúa...} \\
-\endfoot
-
-\bottomrule
-\endlastfoot
-
-\input{tablas/iess_hipotesis_macro.tex}
-
-\end{longtable}
-}
-\end{center}
+% \begin{center}
+% {\fontsize{11}{12}\selectfont
+% %\begin{longtable}[H]{r*{5}{R{2.5cm}}}
+% \begin{longtable}[H]{lc}
+% \caption{Tasas utilizadas en el estudio (período 2019-2058)}
+% \label{tab:iess_hip_macro_re} \\
+% \toprule
+% Ítem: & \multicolumn{1}{c}{Tasa}\\
+% \midrule
+% \endfirsthead
+% 
+% \toprule
+% Ítem: & \multicolumn{1}{c}{Tasa}\\
+% \midrule
+% \endhead
+% 
+% \bottomrule
+% \multicolumn{2}{r}{continúa...} \\
+% \endfoot
+% 
+% \bottomrule
+% \endlastfoot
+% 
+% \input{tablas/iess_hipotesis_macro.tex}
+% 
+% \end{longtable}
+% }
+% \end{center}
 
 %---------------------------------------------------------------------------------------------------
 \section{Escenarios del estudio}
@@ -152,20 +152,20 @@ para cubrir los gastos de enfermedades profesiones y atenciones por accidentes e
 \section{Principales resultados de las proyecciones actuariales}
 \label{chp_res_ejec:resultados}
 Del estudio actuarial se concluyen los siguientes resultados:
-\begin{table}[H]
-\centering
-\caption{Resultado de los escenarios de la valuación actuarial (2019 a 2058)}
-\label{tab:iess_resultados_resumen_ejec}
-{\fontsize{9}{11}\selectfont
-\begin{tabular}{lrrrr}
-\toprule
-\multirow{1}{*}{Parámetro o componente:} &  \multicolumn{1}{c}{\textbf{Escenario 1}} &  \multicolumn{1}{c}{\textbf{Escenario 2}}  &  \multicolumn{1}{c}{\textbf{Escenario 3}} &  \multicolumn{1}{c}{\textbf{Escenario 4}} \\
-\midrule
-\input{tablas/iess_resultados.tex}
-\bottomrule
-\end{tabular}
-}
-\end{table}
+% \begin{table}[H]
+% \centering
+% \caption{Resultado de los escenarios de la valuación actuarial (2019 a 2058)}
+% \label{tab:iess_resultados_resumen_ejec}
+% {\fontsize{9}{11}\selectfont
+% \begin{tabular}{lrrrr}
+% \toprule
+% \multirow{1}{*}{Parámetro o componente:} &  \multicolumn{1}{c}{\textbf{Escenario 1}} &  \multicolumn{1}{c}{\textbf{Escenario 2}}  &  \multicolumn{1}{c}{\textbf{Escenario 3}} &  \multicolumn{1}{c}{\textbf{Escenario 4}} \\
+% \midrule
+% \input{tablas/iess_resultados.tex}
+% \bottomrule
+% \end{tabular}
+% }
+% \end{table}
 % --------------------------------------------------------------------------------------------------
 \section{Principales conclusiones y recomendaciones.}
 \label{chp_res_ejec:conclusiones}

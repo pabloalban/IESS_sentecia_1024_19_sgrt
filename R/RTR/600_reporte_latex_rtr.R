@@ -22,5 +22,5 @@ source( 'R/rtr/504_tab_inversiones_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( parametros$reporte_script, encoding = 'UTF-8', echo = FALSE )
 
 # Reportes excel -----------------------------------------------------------------------------------
-source( 'R/600_reporte_poblacion.R', encoding = 'UTF-8', echo = FALSE )
+# source( 'R/600_reporte_poblacion.R', encoding = 'UTF-8', echo = FALSE )
 # source( 'R/ivm/601_reporte_balance_ivm.R', encoding = 'UTF-8', echo = FALSE )
