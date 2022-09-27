@@ -9,24 +9,25 @@
 
 Una de las hipótesis importantes a considerar en los modelos matemáticos – actuariales es la inflación, que mide el aumento generalizado y sostenido de los precios de bienes y servicios en un país, cuya medición consiste en el cálculo de los incrementos que presenta el Índice de Precios al Consumidor (IPC). Es por ello que se pone especial atención en dicho fenómeno económico en razón de que este afecta tanto las tasas de interés como al incremento salarial, que es la base del crecimiento de las reservas y del crecimiento salarial en el tiempo, referente tanto de aportes como de beneficios.
 
-A continuación, se muestra la evolución histórica del índice de precios en la tabla \ref{tab:iess_IPC_ivm} y la figura % \ref{fig:iess_ipc_hist}.
+A continuación, se muestra la evolución histórica del índice de precios en la tabla \ref{tab:iess_IPC_ivm} y la figura \ref{fig:iess_ipc_hist}.
 
 
-% \begin{figure}[H]
-% \centering
-% \caption{Evolución histórica del índice de precios (IPC)}
-% \label{fig:iess_ipc_hist}
-% \includegraphics[scale=1]{graficos/iess_ipc_hist.png}
-% \caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos. \\
-%             {\bf Elaborado:} DAIE.}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica del índice de precios (IPC)}
+\label{fig:iess_ipc_hist}
+\includegraphics[scale=1]{graficos/iess_ipc_hist.png}
+\caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos. \\
+            {\bf Elaborado:} DAIE.}
+\end{figure}
+
 
 \begin{table}[H]
 \begin{center}
 \caption{IPC (período 2000-2020)}
 \label{tab:iess_IPC_ivm}
 {\fontsize{10}{12}\selectfont
-\begin{tabular}{ccc}
+\begin{tabular}{lrr}
 \toprule
      Año & IPC              & Inflación acumulada\\
          & (a diciembre)    & anual (\%) \\
@@ -51,23 +52,23 @@ En la tabla \ref{tab:iess_IPC_ivm} se observa que la inflación se redujo desde 
 
 Otra de las hipótesis a considerarse en los modelos matemáticos – actuariales es el comportamiento del salario básico unificado (SBU) y su crecimiento en el futuro. El SBU está directamente influenciado por el comportamiento de la inflación.
 
-A continuación, se muestra la evolución del salario básico unificado en la tabla \ref{tab:iess_sbu_hist} y la figura % \ref{fig:iess_sbu}.
+A continuación, se muestra la evolución del salario básico unificado en la tabla \ref{tab:iess_sbu_hist} y la figura \ref{fig:iess_sbu}.
 
-% \begin{figure}[H]
-% \centering
-% \caption{Serie histórica del Salario Básico Unificado}
-% \label{fig:iess_sbu}
-% \includegraphics[scale=1.0]{graficos/iess_sbu.png}
-% \caption*{\scriptsize {\bf Fuente:} Ministerio de Trabajo. \\
-%   {\bf Elaborado:} DAIE.}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\caption{Serie histórica del Salario Básico Unificado}
+\label{fig:iess_sbu}
+\includegraphics[scale=1]{graficos/iess_sbu.png}
+\caption*{\scriptsize {\bf Fuente:} Ministerio de Trabajo. \\
+  {\bf Elaborado:} DAIE.}
+\end{figure}
 
 \begin{table}[H]
 \begin{center}
 \caption{Salario Básico Unificado (período 2002-2021)}
 \label{tab:iess_sbu_hist}
 {\fontsize{10}{12}\selectfont
-\begin{tabular}{ccc}
+\begin{tabular}{lrr}
 \toprule
       Año & SBU   & Tasa de         \\
           & (USD) & crecimiento (\%) \\
@@ -83,23 +84,23 @@ A continuación, se muestra la evolución del salario básico unificado en la ta
 
 En la tabla \ref{tab:iess_sbu_hist} , se presenta la evolución histórica del SBU en dólares desde el año 2002 hasta el 2021. Como se observa, el SBU hasta diciembre de 2021 fue de USD. 400; es decir con respecto al 2020 no tuvo incremento (mantuvo constante) significando una tasa de variación del 0,00\% (la más baja del período).
 
-Se destaca una desaceleración paulatina de las tasas de crecimiento del SBU en los últimos años. En el año 2008 se registró el mayor incremento en el SBU con una tasa de variación del 17,65\%; sin embargo los dos últimos años registraron el menor incremento del 1,52\% y 0,00\% respectivamente. Por último, el SBU creció 7,40\% en promedio durante el período analizado; para los próximos años se prevé una tasa de crecimiento constante o con crecimiento desacelerado del SBU debido a los siguientes hechos: no se espera nuevamente altos precios del crudo, existe gran incertidumbre económica en el país, el dólar se cotiza muy fuerte en comparación a otras monedas de la región y la existencia de una fuerte crisis sanitaria.
+Se destaca una desaceleración paulatina de las tasas de crecimiento del SBU en los últimos años. En el año 2008 se registró el mayor incremento en el SBU con una tasa de variación del 17,65\%; sin embargo los dos últimos años registraron el menor incremento del 1,52\% y 0,00\% respectivamente. Por último, el SBU creció 7,40\% en promedio durante el período analizado; para los próximos años se prevé una tasa de crecimiento constante o con crecimiento desacelerado del SBU debido a los siguientes hechos: no se espera nuevamente altos precios del crudo, existe gran incertidumbre económica en el país, el dólar se cotiza muy fuerte en comparación a otras monedas de la región y la existencia de una fuerte crisis sanitaria, social y económica.
 
 % % ---------------------------------------------------------------------------------
 \subsection{Evolución histórica de los salarios}
 
 Los ingresos mensuales por aportes que recibe el Fondo del Seguro IVM es un porcentaje fijo de la materia gravada. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de aportes.
 
-A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_spd_hist} y la figura %\ref{fig:iess_spd_hist}.
+A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_spd_hist} y la figura \ref{fig:iess_spd_hist}.
 
-% \begin{figure}[H]
-% \centering
-% \caption{Evolución histórica del salario nominal promedio aportado}
-% \label{fig:iess_spd_hist}
-% \includegraphics[scale=1.0]{graficos/iess_spd_hist.png}
-% \caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del fondo administrado del Seguro IVM \\
-%   {\bf Elaborado:} DAIE.}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica del salario nominal promedio aportado}
+\label{fig:iess_spd_hist}
+\includegraphics[scale=1.0]{graficos/iess_spd_hist.png}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del fondo administrado del Seguro IVM \\
+  {\bf Elaborado:} DAIE.}
+\end{figure}
 
 
 El salario declarado promedio de los afiliados activos del SGO se incrementó un 42\% entre 2010 y 2020, pasando de USD 520,56 a USD 737,23 con un crecimiento promedio anual de 3,58\%. En el año 2011 se registró el crecimiento nominal anual más alto del salario con un 9,06\%, es decir un crecimiento de USD 47,18 respecto al año anterior; sin embargo en el 2020 se registró un decrecimiento del -0,63\% (USD 4,67 menos que el 2019).
@@ -109,7 +110,7 @@ El salario declarado promedio de los afiliados activos del SGO se incrementó un
 \caption{Evolución de salarios promedio anual declarados}
 \label{tab:iess_spd_hist}
 {\fontsize{10}{12}\selectfont
-\begin{tabular}{*{4}{c}}
+\begin{tabular}{*{4}{r}}
 \toprule
        Año & Salario declarado      & Incremento     & Tasa de \\
            & promedio (USD)         & anual (USD)    & crecimiento (\%) \\
@@ -126,16 +127,16 @@ El salario declarado promedio de los afiliados activos del SGO se incrementó un
 % % % % --------------------------------------------------------------------------------
 \subsection{Evolución histórica de la tasa de crecimiento real del PIB del Ecuador}
 
-A continuación, se muestra la evolución histórica de la tasa de crecimiento real del PIB, misma que fue obtenida de la página del Banco Mundial \footnote{\url{https://datos.bancomundial.org/pais/ecuador}} (ver tabla \ref{tab:iess_pib_hist} y figura %\ref{fig:iess_pib_hist}).
+A continuación, se muestra la evolución histórica de la tasa de crecimiento real del PIB, misma que fue obtenida de la página del Banco Mundial \footnote{\url{https://datos.bancomundial.org/pais/ecuador}} (ver tabla \ref{tab:iess_pib_hist} y figura \ref{fig:iess_pib_hist}).
 
-% \begin{figure}[H]
-% \centering
-% \caption{Evolución histórica del crecimiento real del PIB del Ecuador}
-% \label{fig:iess_pib_hist}
-% \includegraphics[scale=1.0]{graficos/iess_pib_hist.png}
-% \caption*{\scriptsize Fuente: Banco Mundial. \\
-%   Elaborado: DAIE.}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica del crecimiento real del PIB del Ecuador}
+\label{fig:iess_pib_hist}
+\includegraphics[scale=0.9]{graficos/iess_pib_hist.png}
+\caption*{\scriptsize Fuente: Banco Mundial. \\
+  Elaborado: DAIE.}
+\end{figure}
 
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{crcr}
@@ -233,24 +234,24 @@ En la tabla \ref{tab:iess_pen_min_max_ivm}, se presenta su evolución histórica
 % % %---------------------------------------------------------------------------------------------------
 \subsection{Comparativo de las variables económicas más representativas de una economía }
 
-En la Figura \ref {tab:iess_hist_pib_ipc}, se presenta la evolución y comportamiento de las variables económicas denominadas “PIB” e “Inflación”, correspondiente al período 2000 al 2020.
+En la Figura \ref {fig:iess_ipcpib_hist}, se presenta la evolución y comportamiento de las variables económicas denominadas “PIB” e “Inflación”, correspondiente al período 2000 al 2020.
 
 
-% \begin{figure}[H]
-% \centering
-% \caption{Evolución y comportamiento del PIB y la Inflación}
-% \label{fig:iess_pib_hist}
-% \includegraphics[scale=1.0]{graficos/iess_ipcpib_hist.png}
-% \caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos/Banco Mundial. \\
-%   {\bf Elaborado:} DAIE.}
-% \end{figure}
+\begin{figure}[H]
+\centering
+\caption{Evolución y comportamiento del PIB y la Inflación}
+\label{fig:iess_pib_hist}
+\includegraphics[scale=1.0]{graficos/iess_ipcpib_hist.png}
+\caption*{\scriptsize {\bf Fuente:} Instituto Nacional de Estadísticas y Censos/Banco Mundial. \\
+  {\bf Elaborado:} DAIE.}
+\end{figure}
 
 \begin{table}[H]
 \begin{center}
 \caption{Comportamiento del PIB y la Inflación desde 2000 al 2020}
 \label{tab:iess_hist_pib_ipc}
 {\fontsize{10}{12}\selectfont
-\begin{tabular}{*{3}{c}}
+\begin{tabular}{*{3}{r}}
 \toprule
        Año & Crecimiento real   & Inflación acumulada     \\
            & del PIB (\%)       & anual (\%)               \\
@@ -325,46 +326,113 @@ El proceso vectorial ($Y_t$) de dimensión $n$, $Y_t \in  \mathbb{R}^n$, se lo d
 
 \subsection{Pruebas estadísticas de validación de supuestos del modelo macroeconómico}
 
+\subsubsection{Prueba de multicolinealidad}
+
+La multicolinealidad (también colinealidad) es un fenómeno en el que una variable predictora en un modelo de regresión múltiple puede predecirse linealmente a partir de las demás con un grado sustancial de precisión. En esta situación, las estimaciones de los coeficientes de la regresión múltiple pueden cambiar erráticamente en respuesta a pequeños cambios en el modelo o los datos. La multicolinealidad no reduce el poder predictivo o la confiabilidad del modelo como un todo, al menos dentro del conjunto de datos de muestra; solo afecta los cálculos relacionados con los predictores individuales. Es decir, un modelo de regresión multivariable con predictores colineales puede indicar qué tan bien predice el paquete completo de predictores la variable de resultado, pero es posible que no proporcione resultados válidos sobre ningún predictor individual o sobre qué predictores son redundantes con respecto a otros.
+
+
+Utilizando la función pcor del paquete PPCOR del software estadístico R, se comprueba la existencia de una fuerte correlación entre variables explicativas (todas las variables una vez diferenciadas con registros hasta el año 2020) del modelo utilizando la matriz de covarianzas de Pearson y los p valores para contrarrestar la existencia de una baja correlación, como hipótesis nula. 
+
+\begin{table}[H]
+\centering
+{\fontsize{9}{10}\selectfont
+\caption{Matriz de covarianzas}
+\label{tab:iess_mcov}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Variables:}       & \textbf{$\Delta$ PIB} & \textbf{$\Delta$ Tasa activa} & \textbf{$\Delta$ Tasa pasiva} & \textbf{$\Delta$ Salario} & \textbf{$\Delta$ SBU} & \textbf{$\Delta$ Inflación} \\ 
+\midrule
+$\Delta$ PIB              & 1,000000              & 0,208762                      & -0,298030                     & 0,320848                           & 0,370003              & 0,209247                    \\
+$\Delta$ Tasa activa      & 0,208762              & 1,000000                      & 0,792421                      & -0,177114                          & -0,114795             & -0,280754                   \\
+$\Delta$ Tasa pasiva      & -0,298030             & 0,792421                      & 1,000000                      & 0,207031                           & -0,035595             & 0,462595                    \\
+$\Delta$ Salario & 0,320848              & -0,177114                     & 0,207031                      & 1,000000                           & 0,553770              & -0,065116                   \\
+$\Delta$ SBU              & 0,370003              & -0,114795                     & -0,035595                     & 0,553771                           & 1,000000              & 0,177256                    \\
+$\Delta$ Inflación        & 0,209247              & -0,280754                     & 0,462595                      & -0,065116                          & 0,177256              & 1,000000                    \\ 
+\bottomrule
+\end{tabular}}
+\caption*{\scriptsize Elaborado: DAIE.}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+{\fontsize{9}{10}\selectfont
+\caption{P valores de la prueba de multicolinealidad}
+\label{tab:iess_mcov_p_valores}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Variables:} & \textbf{$\Delta$ PIB} & \textbf{$\Delta$ Tasa activa} & \textbf{$\Delta$ Tasa pasiva} & \textbf{$\Delta$ Salario} & \textbf{$\Delta$ SBU} & \textbf{$\Delta$ Inflación} \\
+\midrule
+$\Delta$ PIB & 0,00000000 & 0,56272121 & 0,40294477 & 0,36604282 & 0,29261915 & 0,56179180 \\
+$\Delta$ Tasa activa & 0,56272120 & 0,00000000 & 0,00626931  & 0,62449026 & 0,75216891 & 0,43201390\\
+$\Delta$ Tasa pasiva & 0,40294480 & 0,00626931 & 0,00000000  & 0,56603701  & 0,92223439 & ,17823260\\
+$\Delta$ Salario & 0,36604280            & 0,62449026                    & 0,56603701                    & 0,00000000                         & 0,09674793            & 0,85816100                  \\
+$\Delta$ SBU              & 0,29261920            & 0,75216891                    & 0,92223439                    & 0,09674793                         & 0,00000000            & 0,62420790                  \\
+$\Delta$ Inflación        & 0,56179180            & 0,43201389                    & 0,17823256                    & 0,85816097                         & 0,62420792            & 0,00000000                  \\ 
+\bottomrule
+\end{tabular}}
+\caption*{\scriptsize Elaborado: DAIE.}
+\end{table}
+
+De los resultados obtenidos se obtuvieron correlaciones entre 0,56 y -0,30, con p valores mayores a 0,096. Por lo tanto, no existe evidencias de multicolinealidad entre las variables del modelo propuesto.
+
+
+
 \subsubsection{Pruebas de Normalidad de los errores}
 
 El Test de Shapiro–Wilk se usa para contrastar la normalidad de un conjunto de datos. Se considera uno de los test más potentes para el contraste de normalidad. La prueba de normalidad de Shapiro-Wilk es aplicable cuando se analizan muestras compuestas por menos de 50 elementos (muestras pequeñas).
 
 Las hipótesis estadísticas son las siguientes:
 
-\textit{H\_0}: La variable presenta una distribución normal.
+$H_0$ : $\mbox{La variable presenta una distribución normal.}$\\
+$H_1$ : $\mbox{La variable presenta una distribución nonormal.}$
 
-\textit{H\_1}: La variable presenta una distribución no normal.
 
-Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\%. Por lo tanto, no se rechaza la hipótesis nula.
+Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\% como se muestra en la tabla \ref{tab:iess_Shapiro–Wilk}. Por lo tanto, no se rechaza la hipótesis nula.
 
-\begin{table}[]
-\begin{tabular}{lll}
-\hline
-\textbf{Modelo:} & \multicolumn{1}{c}{\textbf{Estadístico - W}} & \multicolumn{1}{c}{\textbf{p - valor}} \\ \hline
-PIB              & 0,95131                                      & 0,5813                                 \\
-Tasa activa      & 0,96988                                      & 0,8751                                 \\
-Tasa pasiva      & 0,89918                                      & 0,1098                                 \\
-Salario Promedio & 0,9539                                       & 0,6228                                 \\
-SBU              & 0,95757                                      & 0,683                                  \\
-Inflación        & 0,92074                                      & 0,2254                                 \\ \hline
-\end{tabular}
+\begin{table}[H]
+\centering
+{\fontsize{10}{12}\selectfont
+\caption{ Prueba de normalidad de Shapiro-Wilk}
+\label{tab:iess_Shapiro–Wilk}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Modelo:} & \textbf{Estadístico - W}} & \textbf{p - valor} \\
+\midrule
+PIB              & 0,95131    & 0,5813\\
+Tasa activa      & 0,96988    & 0,8751\\
+Tasa pasiva      & 0,89918    & 0,1098\\
+Salario Promedio & 0,9539     & 0,6228\\
+SBU              & 0,95757    & 0,683 \\
+Inflación        & 0,92074    & 0,2254\\ 
+\bottomrule
+\end{tabular}}
+\caption*{\scriptsize Elaborado: DAIE.}
 \end{table}
+
 
 \subsubsection{Pruebas de independecia de errores}
 
 La prueba de Box - Ljung (a veces llamada Box-Pierce modificada, o simplemente prueba de caja) es una forma de probar la ausencia de autocorrelación serial, hasta un retraso $k$ especificado. La prueba determina si los errores son o no independientes idénticamente distribuidos (es decir, ruido blanco) o si hay algo más detrás de ellos; si las autocorrelaciones para los errores o residuos son distintas de cero o no. 
-Esencialmente, es una prueba de falta de ajuste: si las autocorrelaciones de los residuos son muy pequeñas, decimos que el modelo no muestra una "falta de ajuste significativa". Las hipótesis estadísticas son las siguientes:
+Esencialmente, es una prueba de falta de ajuste: si las autocorrelaciones de los residuos son muy pequeñas, decimos que el modelo no muestra una "falta de ajuste significativa". 
 
-\textit{H\_0}: Los residuos del modelo se distribuyen de forma independiente (es decir, las correlaciones en la población de la que se toma la muestra son 0, por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).
-\textit{H\_1}: Los datos no se distribuyen de forma independiente; exhiben correlación serial.
+Las hipótesis estadísticas son las siguientes:
+
+$H_0$: Los residuos del modelo se distribuyen de forma independiente (es decir, las correlaciones en la población de la que se toma la muestra son 0, por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).\\
+$H_1$: Los datos no se distribuyen de forma independiente; exhiben correlación serial.
 
 Un valor p significativo en esta prueba rechaza la hipótesis nula de que la serie temporal no está autocorrelacionada.
 
 
-\begin{table}[]
-\begin{tabular}{llll}
-\hline
-\textbf{m} & \textbf{Q(m)} & \textbf{Grados de libertad} & \textbf{p-valor} \\ \hline
+{\fontsize{11}{11}\selectfont
+\begin{table}[H]
+\centering
+\caption{Prueba de Box - Ljung}
+\label{tab:iess_box_ljung}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{m} & \textbf{Q(m)} & \textbf{Grados de libertad} & \textbf{p-valor} \\
+\midrule
 1          & 33,90         & 36,00                       & 0,57             \\
 2          & 70,10         & 72,00                       & 0,54             \\
 3          & 102,20        & 108,00                      & 0,64             \\
@@ -376,10 +444,12 @@ Un valor p significativo en esta prueba rechaza la hipótesis nula de que la ser
 9          & 330,30        & 324,00                      & 0,39             \\
 10         & 379,30        & 360,00                      & 0,23             \\
 11         & 441,00        & 396,00                      & 0,06             \\
-12         & 483,00        & 432,00                      & 0,05             \\ \hline
+12         & 483,00        & 432,00                      & 0,05             \\
+\bottomrule
 \end{tabular}
+\caption*{\scriptsize Elaborado: DAIE.}
 \end{table}
-
+}
 % \begin{figure}[H]
 % \begin{center}
 % \caption{Gráfica de los p - valores para las estadísticas $Q_k(m)$ para las 6 dimensiones del modelo, la línea discontinua indica un error de tipo I del 5\%.}
@@ -397,16 +467,24 @@ Una de las principales suposiciones del modelo de series de tiempo VARMA es la h
 
 Se utilizan varias pruebas. Primero, la serie vectorial $z_t$ se transforma en $r_t = t(z_t)$ y se realiza la prueba. La segunda prueba se basa en los rangos de la serie $r_t$ transformada. La tercera prueba es la estadística multivariante Ljung-Box para la serie de vectores al cuadrado $z_t^2$. La cuarta prueba es el estadístico Ljung-Box multivariante aplicado a la serie recortada al 5\% de la serie transformada $r_t$. La hipótesis nula es idéntica para todas estas pruebas, la varianza de los residuos del modelo es constante.
 
-\begin{table}[]
-\begin{tabular}{lll}
-\hline
-\textbf{Prueba:}                 & \textbf{Estadístico} & \textbf{p-valor} \\ \hline
+{\fontsize{11}{11}\selectfont
+\begin{table}[H]
+\centering
+\caption{Pruebas de homocedasticidad}
+\label{tab:iess_de homocedasticidad}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Prueba:}                 & \textbf{Estadístico} & \textbf{p-valor} \\ 
+\midrule
 LM Test                          & 9,14662              & 0,5182478        \\
 Test basado en rango             & 5,93386              & 0,8207892        \\
 $Q_k(m)$ de la serie al cuadrado & 345,38300            & 0,7010288        \\
-Test robustez (5\%)              & 339,71440            & 0,7720816        \\ \hline
+Test robustez (5\%)              & 339,71440            & 0,7720816        \\ 
+\bottomrule
 \end{tabular}
+\caption*{\scriptsize Elaborado: DAIE.}
 \end{table}
+}
 
 Realizadas las cuatro pruebas de homocedasticidad, se tienen p valores mayores al nivel de significancia igual a 5\%. Por lo tanto, no se rechaza la hipótesis nula.
 
@@ -416,19 +494,20 @@ La tabla \ref{tab:pob_proy_tot} presenta los resultados del modelo multivariante
 
 
 \begin{table}[H]
+\captionsetup{justification=centering}
 \begin{center}
 \caption{Proyección las variables macroeconómicas}
 \label{tab:pob_proy_tot}
 {\fontsize{10}{12}\selectfont
-\begin{tabular}{*{7}{c}}
+\begin{tabular}{*{7}{r}}
 \toprule
 Año &
-PIB Nominal &
-Tasa activa &
-Tasa pasiva &
-Salario anual &
-SBU &
-Inflación promedio\\
+  \begin{tabular}[r]{@{}r@{}}PIB Nominal \\ (millones)\end{tabular} &
+  \begin{tabular}[r]{@{}r@{}}Tasa \\ activa\end{tabular} &
+  \begin{tabular}[r]{@{}r@{}}Tasa \\ pasiva\end{tabular} &
+  \begin{tabular}[r]{@{}r@{}}Salario anual \\ nominal\end{tabular} &
+  SBU &
+  \begin{tabular}[r]{@{}r@{}}Inflación promedio \\ anual\end{tabular}\\
 \midrule
 \input{tablas/iess_tasas_macro_prediccion.tex}
 \end{tabular}
@@ -438,64 +517,71 @@ Inflación promedio\\
 \end{table}
 
 
+Las siguientes figuras describen las proyecciones realizadas utilizando el modelo antes mencionado:
 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones del PIB nominal (en millones de dólares)}
-% \label{fig:iess_pib_pred}
-% \includegraphics[scale=1]{graficos/iess_pib_pred.png}
-% \caption*{\scriptsize \centering {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
-% 
-% 
-% 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones del salario promedio anual (en dólares)}
-% \label{fig:iess_sal_pred}
-% \includegraphics[scale=1]{graficos/iess_sal_pred.png}
-% \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
-% 
-% 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones del SBU (en dólares)}
-% \label{fig:iess_sbu_pred}
-% \includegraphics[scale=1]{graficos/iess_sbu_pred.png}
-%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
-% 
-% 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones de la tasa activa referencial}
-% \label{fig:iess_ta_pred}
-% \includegraphics[scale=1]{graficos/iess_ta_pred.png}
-%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
-% 
-% 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones de la tasa pasiva referencial}
-% \label{fig:iess_tp_pred}
-% \includegraphics[scale=1]{graficos/iess_tp_pred.png}
-%   \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
-% 
-% 
-% \begin{figure}[H]
-% \begin{center}
-% \caption{Predicciones de la inflación promedio}
-% \label{fig:iess_inf_pred}
-% \includegraphics[scale=1]{graficos/iess_inf_pred.png}
-% \caption*{\scriptsize {\bf Elaborado:} DAIE.}
-% \end{center}
-% \end{figure}
 
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones del PIB nominal (en millones de dólares)}
+\label{fig:iess_pib_pred}
+\includegraphics[scale=1]{graficos/iess_pib_pred.png}
+\caption*{\scriptsize  {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones del salario promedio anual (en dólares)}
+\label{fig:iess_sal_pred}
+\includegraphics[scale=1]{graficos/iess_sal_pred.png}
+\caption*{\scriptsize {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones del SBU (en dólares)}
+\label{fig:iess_sbu_pred}
+\includegraphics[scale=1]{graficos/iess_sbu_pred.png}
+  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones de la tasa activa referencial}
+\label{fig:iess_ta_pred}
+\includegraphics[scale=1]{graficos/iess_ta_pred.png}
+  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones de la tasa pasiva referencial}
+\label{fig:iess_tp_pred}
+\includegraphics[scale=1]{graficos/iess_tp_pred.png}
+  \caption*{\scriptsize {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Predicciones de la inflación promedio anual}
+\label{fig:iess_inf_pred}
+\includegraphics[scale=1]{graficos/iess_inf_pred.png}
+\caption*{\scriptsize {\bf Elaborado:} DAIE.}
+\end{center}
+\end{figure}

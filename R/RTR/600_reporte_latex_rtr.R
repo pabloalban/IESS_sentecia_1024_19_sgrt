@@ -2,7 +2,7 @@
 source( 'R/400_preparar_reporte.R', encoding = 'UTF-8', echo = FALSE )
 
 # # Gráficos genéricos
-# source( 'R/402_graf_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/402_graf_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )
 # source( 'R/410_graf_poblacion_piramide.R', encoding = 'UTF-8', echo = FALSE )
 
 # Gráficos específicas de RTR ----------------------------------------------------------------------
