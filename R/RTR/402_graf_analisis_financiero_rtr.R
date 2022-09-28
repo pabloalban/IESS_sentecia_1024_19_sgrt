@@ -32,7 +32,7 @@ iess_activo_fondo <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_activo_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_activo_fondo_rtr',
@@ -66,7 +66,7 @@ iess_cuentas_cobrar_fondo <-  ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_cuentas_cobrar_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_cuentas_cobrar_fondo_rtr', 
@@ -100,7 +100,7 @@ iess_pasivo_fondo <-ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5  ) )
 
 ggsave( plot = iess_pasivo_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_pasivo_fondo_rtr', 
@@ -134,7 +134,7 @@ iess_cuentas_pagar_fondo <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5  ) )
 
 ggsave( plot = iess_cuentas_pagar_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_cuentas_pagar_fondo_rtr', 
@@ -168,7 +168,7 @@ iess_patrimonio_fondo <-  ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5  ) )
 
 ggsave( plot = iess_patrimonio_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_patrimonio_fondo_rtr',
@@ -202,7 +202,7 @@ iess_ingresos_fondo <-  ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_ingresos_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_ingresos_fondo_rtr', 
@@ -236,7 +236,7 @@ iess_ingresos_aportes_fondo <-  ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_ingresos_aportes_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_ingresos_aportes_fondo_rtr', 
@@ -271,7 +271,7 @@ iess_cont_estado_fondo <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_cont_estado_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_cont_estado_fondo_rtr', 
@@ -306,7 +306,7 @@ iess_gastos_fondo <-  ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5) )
 
 ggsave( plot = iess_gastos_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_gastos_fondo_rtr',
@@ -342,7 +342,7 @@ iess_gastos_prestacionales_fondo <- ggplot( data = aux ) +
                       limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_gastos_prestacionales_fondo,
         filename = paste0( parametros$resultado_graficos, 'iess_gastos_prestacionales_fondo_rtr',
@@ -375,7 +375,7 @@ iess_otros_gatos_fondo <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, vjust = 0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
 
 ggsave( plot = iess_otros_gatos_fondo, 
         filename = paste0( parametros$resultado_graficos, 'iess_otros_gatos_fondo_rtr', 

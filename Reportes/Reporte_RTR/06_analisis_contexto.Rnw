@@ -234,7 +234,7 @@ En la tabla \ref{tab:iess_pen_min_max_ivm}, se presenta su evolución histórica
 % % %---------------------------------------------------------------------------------------------------
 \subsection{Comparativo de las variables económicas más representativas de una economía }
 
-En la Figura \ref {fig:iess_ipcpib_hist}, se presenta la evolución y comportamiento de las variables económicas denominadas “PIB” e “Inflación”, correspondiente al período 2000 al 2020.
+En la Figura \ref{fig:iess_pib_hist}, se presenta la evolución y comportamiento de las variables económicas denominadas “PIB” e “Inflación”, correspondiente al período 2000 al 2020.
 
 
 \begin{figure}[H]

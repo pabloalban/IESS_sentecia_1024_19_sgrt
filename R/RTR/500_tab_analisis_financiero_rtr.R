@@ -34,10 +34,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 
 # Análisis Horizontal Activo------------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal Activo' )
@@ -51,10 +49,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 # Análisis vertical del activo----------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Activo' )
 aux <- as.data.table(analisis_vertical_activo[ , -c(2,3) ])
@@ -67,10 +63,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 
 # Cuentas por Cobrar Fondo RT-----------------------------------------------------------------------
 message( '\tTabla Análisis Cuentas por Cobrar' )
@@ -101,7 +95,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 # Componentes del Pasivo del Fondo------------------------------------------------------------------
@@ -115,10 +109,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 
 # Análisis Horizontal del Pasivo--------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Pasivo' )
@@ -132,10 +124,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 
 # Análisis Vertical del Pasivo----------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Pasivo' )
@@ -149,10 +139,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 7,
+       sanitize.text.function = identity)
 
 # Cuentas por Pagar del Fondo-----------------------------------------------------------------------
 message( '\tTabla Cuentas por Pagar del Fondo' )
@@ -183,7 +171,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 # Componentes del Patrimonio del Fondo--------------------------------------------------------------
@@ -198,10 +186,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 4,
+       sanitize.text.function = identity)
 
 # Análisis Horizontal del Patrimonio----------------------------------------------------------------
 message( '\tTabla  Análisis Horizontal del Patrimonio' )
@@ -215,10 +201,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 4,
+       sanitize.text.function = identity)
 
 # Análisis Vertical del Patrimonio------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Patrimonio' )
@@ -232,10 +216,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 4,
+       sanitize.text.function = identity)
 
 # Ingresos del Fondo--------------------------------------------------------------------------------
 message( '\tTabla Ingresos del Fondo' )

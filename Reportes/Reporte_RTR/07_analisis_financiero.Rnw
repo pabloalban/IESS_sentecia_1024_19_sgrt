@@ -11,22 +11,13 @@ Para realizar el presente análisis financiero, se consideran los Estados Financ
 \section{Total de activos contables}
 \label{chp_infofinan:activos}
 
-La tabla siguiente presenta la evolución del activo del Fondo del \Sexpr{REP_seg}: 
-
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Activo del Fondo del \Sexpr{REP_seg}}
-\label{fig:iess_activo_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_activo_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos
-Especializados - DNGF.  \\Elaborado: DAIE}
-\end{figure}
+A continuación, en la tabla \ref{tab:iess_activo_del_fondo_rtr} y figura \ref{fig:iess_activo_fondo_rtr}, se presenta la evolución del activo del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020: 
 
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrrr}
 \captionsetup{justification=centering}
-\caption{Activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año.}
+\caption{Activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+millones de dólares).}
 \label{tab:iess_activo_del_fondo_rtr} \\
 \toprule
 \multirow{2}[0]{*}{Año}& Activo & Incremento  & Incremento\\
@@ -42,17 +33,29 @@ Especializados - DNGF.  \\Elaborado: DAIE}
 \multicolumn{4}{r}{continúa...} \\
 \endfoot
 %\bottomrule
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
+  {\bf Elaborado:} DAIE.}
 \endlastfoot
 \input{tablas/iess_activo_del_fondo_rtr.tex}
 \end{longtable}
 }
 
-De la  tabla \ref{tab:iess_activo_del_fondo_rtr} y la figura \ref{fig:iess_activo_fondo_rtr}, se observa que los activos en el período 2010 al 2020, se incrementaron en 349,69\%, esto quiere decir que en promedio su activo creció en USD. 95,62 millones; es decir, en promedio representó un 16,22\% de crecimiento anual durante el período 2011 a 2020. La mayor tasa de crecimiento se evidencia en el año 2012 con el 30,38\%, con un incremento respecto al 2011 de USD. 105,93 millones; manteniendo una tendencia al alza hasta el 2014. 
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Activo del Fondo del \Sexpr{REP_seg}.}
+\label{fig:iess_activo_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_activo_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.  \\
+{\bf Elaborado:} DAIE}
+\end{figure}
+
+
+Se observa que los activos en el período 2010 al 2020, se incrementaron en 349,69\%, esto quiere decir que en promedio su activo creció en USD. 95,62 millones; es decir, en promedio representó un 16,22\% de crecimiento anual durante el período 2011 a 2020. La mayor tasa de crecimiento se evidencia en el año 2012 con el 30,38\%, con un incremento respecto al 2011 de USD. 105,93 millones; manteniendo una tendencia al alza hasta el 2014. 
 
 A partir del año 2015 se observa un crecimiento desacelerado del activo, esto se debe que a partir del mes de abril del año 2015, se elimina la contribución del Estado para el financiamiento de las pensiones por el 40\% como contribución para el pago de las pensiones y a la aplicación de la Resolución No. C.D. 501 que disminuye los porcentajes de aportación para este Seguro (a partir de noviembre de 2015), obligando a acudir a realizar desinversiones para cubrir las necesidades de pago de rentas, comportamiento que se evidencia hasta el 2018. Entre el 2019 y 2020 el activo comienza a incrementar con una tasa de crecimiento igual a 12,82\%; es decir, un incremento anual de USD. 139.778.264,80.
 
+\begin{landscape}
 
 \subsection{Componentes del activo}
 
@@ -64,60 +67,56 @@ La cuenta con mayor representatividad en el período analizado es inversiones de
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis de los componentes del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año.}%título tabla
+\begin{center}
+\caption{Análisis de los componentes del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
 \label{tab:iess_analisis_componentes_activo_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020} \\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
 \midrule
 \input{tablas/iess_analisis_componentes_activo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos
-Especializados - DNGF. \\ Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:}Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
 
+{\footnotesize {\bf Nota Metodológica:}  
+
 Los balances del IESS en el período comprendido 2010 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes: 
+
 \begin{itemize}[itemsep=0mm, topsep=0pt]
 \item	En la cuenta “Inversiones” a partir del 2010 al 2012 en los balances se las denomina como: “Inversiones deuda renta fija sector privado” (7110) e “Inversiones deuda renta fija Sector Público” (7120); a partir del 2013 al 2014 es optimizada en una sola cuenta registrada en el plan de cuentas como “Inversiones” (12). Finalmente a partir del 2015 al 2020 cambia su denominación a “Recursos/Administra por El BIESS” (714). 
 \item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla \ref{tab:iess_analisis_componentes_activo_rtr} no registra valores desde el 2013.
-\end{itemize}
+\end{itemize}}
 
 \subsection{Análisis horizontal y vertical del activo}
-En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y
-\ref{tab:iess_analisis_vertical_activo_rtr}, se presentan los análisis horizontal y vertical de los
-componentes del activo del Fondo del \Sexpr{REP_seg} por el período 2010 - 2020:
 
-{\fontsize{8.5}{10}\selectfont
-\begin{longtable}[H]{lrrrrrrrr}
+En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_analisis_vertical_activo_rtr}, se presentan los análisis horizontal y vertical de los componentes del activo del Fondo del \Sexpr{REP_seg} por el período 2010 - 2020:
+
+\begin{table}[H]
 \captionsetup{justification=centering}
-\caption{Análisis horizontal del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (tasa de crecimiento (\%))}
-\label{tab:iess_analisis_horizontal_activo_rtr}\\
+\begin{center}
+\caption{Análisis horizontal del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
+\label{tab:iess_analisis_horizontal_activo_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de las cuentas: & 2013/2012 & 2014/2013 & 2015/2014 & 2016/2015 &
-2017/2016 & 2018/2017 & 2019/2018 & 2020/2019 \\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
 \midrule
-\endfirsthead
-\toprule
-Descripción de las cuentas: & 2013/2012 & 2014/2013 & 2015/2014 & 2016/2015 &
-2017/2016 & 2018/2017 & 2019/2018 & 2020/2019 \\
-\midrule
-\endhead
-%\bottomrule
-\multicolumn{9}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos
-Especializados - DNGF. \\ Elaborado: DAIE.}
-\endlastfoot
 \input{tablas/iess_analisis_horizontal_activo_rtr.tex}
-\end{longtable}
+\bottomrule
+\end{tabular}
 }
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
 
 En el año 2012 se evidencia el mayor incremento del Activo con una tasa de 30,38\%, debido al aumento de las subcuentas “Propiedades y Equipos Especializados” (127,05\%) y “Cuentas por Cobrar” (124,24\%). Cabe mencionar que en el período analizado no se registran variaciones negativas; sin embargo el año 2016 se evidencia una disminución del activo en 6,17\% siendo la más significativa, debido a las subcuentas “Recursos/Administrado por el BIESS” (6,03\%) y “Cuentas por Cobrar” (6,26\%).
 
@@ -125,103 +124,102 @@ El crecimiento del Activo es variable en el periodo. Respecto al activo en el a�
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis vertical del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (Valores en \%)}
+\begin{center}
+\caption{Análisis vertical del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
 \label{tab:iess_analisis_vertical_activo_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de las cuentas & 2012 (\%) & 2013 (\%) & 2014 (\%) & 2015 (\%) & 2016 (\%) & 2017 (\%) & 2018 (\%) & 2019  (\%) & 2020 (\%)\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015  & \multirow{ 2}{*}{2016 } & \multirow{ 2}{*}{2017 } & \multirow{ 2}{*}{2018 } & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
 \midrule
 \input{tablas/iess_analisis_vertical_activo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:}Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-
+\end{landscape}
 
 %---------------------------------------------------------------------------------------------------
 \section{Total de pasivos contables}
-A continuación, se presenta la evolución del pasivo del Fondo del \Sexpr{REP_seg} por el período 2010 - 2020:
+
+A continuación en la tabla \ref{tab:iess_pasivos_fondo_rtr} y figura \ref{fig:iess_pasivo_fondo_rtr}, se presenta la evolución del pasivo del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020:
+
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año.}
+\begin{center}
+\caption{Pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+millones de dólares).}
 \label{tab:iess_pasivos_fondo_rtr}
-%\scalebox{0.7}{
 {\fontsize{10}{12}\selectfont
-%\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
 \toprule
 \multirow{2}[0]{*}{Año}  & Pasivo & Incremento & Incremento \\
 & (USD) & anual (USD) & anual (\%)\\
 \midrule
 \input{tablas/iess_pasivos_fondo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-
-Se observa que los pasivos correspondientes al 2020 con respecto al 2011 tienen intervalos con mucha
-variación de año a año en este periodo, crecieron en un 15,92\% como promedio anual; además, el
-decrecimiento en el año 2015 es el punto más bajo y que a partir del 2016 hasta el año 2018 se
-aprecia un crecimiento del pasivo; pues el año 2016 aceleró su crecimiento en 2 veces con respecto
-al año 2015, en el año 2018 sufre una disminución con respecto al año 2017.
-
-El incremento porcentual que los pasivos registraron en el periodo 2020 a 2010; la mayoría de los
-porcentajes decrecieron, excepto el año 2016 debido a que se inserta la cuenta “depósitos no
-identificados” y la cuenta “diferencia por neteos”; siendo este, el más alto del periodo con un
-crecimiento del 208,08\% con respecto al año 2015.
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Pasivo del Fondo del \Sexpr{REP_seg}}
+\caption{Pasivo del Fondo del \Sexpr{REP_seg}.}
 \label{fig:iess_pasivo_fondo_rtr}
 \includegraphics[scale=1]{graficos/iess_pasivo_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
-\\Elaborado: DAIE}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
+\\ {\bf Elaborado:} DAIE}
 \end{figure}
 
 
+Se observa que los pasivos correspondientes al 2020 con respecto al 2011 tienen intervalos con mucha variación de año a año en este periodo, crecieron en un 15,92\% como promedio anual; además, el decrecimiento en el año 2015 es el punto más bajo y que a partir del 2016 hasta el año 2018 se aprecia un crecimiento del pasivo; pues el año 2016 aceleró su crecimiento en 2 veces con respecto al año 2015, en el año 2018 sufre una disminución con respecto al año 2017.
+
+El incremento porcentual que los pasivos registraron en el periodo 2020 a 2010; la mayoría de los porcentajes decrecieron, excepto el año 2016 debido a que se inserta la cuenta “depósitos no identificados” y la cuenta “diferencia por neteos”; siendo este, el más alto del periodo con un crecimiento del 208,08\% con respecto al año 2015.
+
+
+\begin{landscape}
+
 \subsection{Componentes del pasivo}
-En la siguiente tabla, se presenta los componentes del pasivo del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
+
+A continucación, el la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr}, se presenta los componentes del pasivo del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis de los componentes del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año.}%título tabla
+\begin{center}
+\caption{Análisis de los componentes del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
 \label{tab:iess_componentes_pasivos_fondo_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas &  2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
 \midrule
 \input{tablas/iess_componentes_pasivos_fondo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
 
+{\footnotesize {\bf Nota Metodológica:}  
 
 Los balances del IESS en el período comprendido 2012 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes:
-\begin{itemize}
+
+\begin{itemize}[itemsep=0mm, topsep=0pt]
 \item	En la cuenta “Inversiones” a partir del 2010 al 2012 en los balances se las denomina como: “Inversiones deuda renta fija sector privado” (7110) e “Inversiones deuda renta fija Sector Público” (7120); a partir del 2013 al 2014 es optimizada en una sola cuenta registrada en el plan de cuentas como “Inversiones” (12). Finalmente, a partir del 2015 al 2020 cambia su denominación a “Recursos/Administra por El BIESS” (714). 
-
-\item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo, a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla 5.2 no registra valores desde el 2013.
-\end{itemize}
-
+\item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo, a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr} no registra valores desde el 2013.
+\end{itemize}}
 
 \subsection{Análisis horizontal y vertical del pasivo}
 
@@ -229,25 +227,28 @@ A continuación, se desarrolla el análisis vertical de los componentes del Acti
 
 La cuenta con mayor representatividad en el período analizado es inversiones denominada en los últimos años como “Recursos/Administrados por el BIESS”, la cual representa en promedio el 96,93\% corresponde a pasivos no corrientes. En las tabla \ref{tab:iess_analisis_horizontal_pasivos_rtr}, se presenta el análisis horizontal de los componentes del Activo del Fondo del Seguro de Riesgos del Trabajo correspondiente al período 2012-2020.
 
+
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis horizontal del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
+\begin{center}
+\caption{Análisis horizontal del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
 \label{tab:iess_analisis_horizontal_pasivos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2013/2012 (\%) & 2014/2013 (\%) & 2015/2014 (\%) & 2016/2015 (\%) & 2017/2016 (\%) & 2018/2017 (\%) & 2019/2018 & 2020/2019\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
 \midrule
 \input{tablas/iess_analisis_horizontal_pasivos_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
+
+
 El crecimiento del Pasivo es variable en el periodo. Respecto al pasivo en el año 2010 el
 crecimiento anual en el 2011 fue de 29,11\%; para el 2012 el decrecimiento es de  -0,12\% respecto
 al 2011; el decrecimiento en el 2013 fue de -10,83\%, en tanto que para el 2014sufre un crecimiento
@@ -257,28 +258,29 @@ el resultado para el año 2018 sufre un decrecimiento con un -27,59\% con respec
 crecimiento más alto del periodo del 2015 a 2016 por incremento acelerado de la cuenta “Diferencia
 por Neteos Acreedor” dentro de los pasivos no corrientes.
 
+
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis vertical del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año
-(En millones de dólares)}
+\begin{center}
+\caption{Análisis vertical del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
 \label{tab:iess_analisis_vertical_pasivos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 (\%) & 2013 (\%) & 2014 (\%) & 2015 (\%) & 2016 (\%) & 2017 (\%) & 2018 (\%) & 2019 (\%) & 2020 (\%) \\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
 \midrule
-\input{tablas/iess_analisis_vertical_pasivos_rtr.tex}
-%\bottomrule
+\input{tablas/iess_analisis_vertical_pasivos_rtr}
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
 
-En el año 2012, la cuenta ``Prestaciones y Beneficios'' en el año 2010 representan el mayor valor del pasivo para
+
+En el año 2012, la cuenta "Prestaciones y Beneficios'' en el año 2010 representan el mayor valor del pasivo para
 ese año con un 99,44\% del mismo. Para el periodo 2011 al 2014 la cuenta de “Cuentas por Pagar” representa el valor más alto en
 referencia al pasivo, siendo este un 87,78\% para el 2011, en el 2012 alcanza el 99,44\%, en el 2013
 alcanza el 99,37\%, en el 2014 alcanza el 99,19\%.
@@ -286,31 +288,34 @@ alcanza el 99,37\%, en el 2014 alcanza el 99,19\%.
 La cuenta de Pasivos no Corrientes representa el mayor valor para el periodo 2015 al 2020, alcanzado
 en el año 2015 el 95,69\%; el 2016 alcanza el 98,02\%, en el 2017 alcanza el 97,72\%, y para el año
 2018 alcanza el 95,60\%, sigue aumentando en 2019 (97,25\%); y 97,27\% en 2020.
+\end{landscape}
+
 
 %---------------------------------------------------------------------------------------------------
 \section{Patrimonio}
-Se presenta en la siguiente tabla la evolución del patrimonio de este fondo a diciembre de cada año:
+A continuación, en la tabla \ref{tab:iess_patrimonio_fondo_rtr} y figura \ref{fig:iess_patrimonio_fondo_rtr}, se presenta la evolución del patrimonio del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020: 
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año.}
+\begin{center}
+\caption{Patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+millones de dólares).}
 \label{tab:iess_patrimonio_fondo_rtr}
-%\scalebox{0.7}{
 {\fontsize{10}{12}\selectfont
-%\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
 \toprule
 \multirow{2}[0]{*}{Año}  & Patrimonio & Incremento & Incremento \\
 &(USD)& anual (USD) & anual (\%)\\
 \midrule
 \input{tablas/iess_patrimonio_fondo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
+
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -318,113 +323,103 @@ Se presenta en la siguiente tabla la evolución del patrimonio de este fondo a d
 \caption{Patrimonio del Fondo del \Sexpr{REP_seg} (En millones de dólares).}
 \label{fig:iess_patrimonio_fondo_rtr}
 \includegraphics[scale=1]{graficos/iess_patrimonio_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
-\\Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
 \end{figure}
 
-Se observa que el patrimonio de este fondo aumentó en 4,14 veces (812,14 millones de dólares) en el
-periodo 2010 al 2020; sin embargo, en el año 2015 con respecto al 2016 disminuyó 14,14\% por el
-impacto de la eliminación del 40\% de la contribución del Estado para el pago de las pensiones y la
-aplicación de la Resolución No. C.D. 501.
+Se observa que el patrimonio de este fondo aumentó en 4,14 veces (812,14 millones de dólares) en el periodo 2010 al 2020; sin embargo, en el año 2015 con respecto al 2016 disminuyó 14,14\% por el
+impacto de la eliminación del 40\% de la contribución del Estado para el pago de las pensiones y la aplicación de la Resolución No. C.D. 501.
 
-Se observa una desaceleración del patrimonio del \Sexpr{REP_seg} durante todo el período 2010 a
-2018. Esta desaceleración se acentúa a partir del año 2014, decreciendo precipitadamente a partir
-del año 2015 con la aplicación de la Resolución No. C.D. 501 y la eliminación de la contribución del
-40\% del Estado, siendo el punto más bajo el año 2016.
+Además, existe una desaceleración del patrimonio del \Sexpr{REP_seg} durante todo el período 2010 a 2018. Esta desaceleración se acentúa a partir del año 2014, decreciendo precipitadamente a partir del año 2015 con la aplicación de la Resolución No. C.D. 501 y la eliminación de la contribución del 40\% del Estado, siendo el punto más bajo el año 2016.
 
+\begin{landscape}
 \subsection{Componentes del patrimonio}
-En la siguiente tabla, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg} por
-el periodo 2012 - 2020.
+
+A continucación, el la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
+
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis de los componentes del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
+\begin{center}
+\caption{Análisis de los componentes del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
 \label{tab:iess_componentes_patrimonio_fondo_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
 \midrule
 \input{tablas/iess_componentes_patrimonio_fondo_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: : Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-\textbf{NOTA:} Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios
-en los códigos de cuentas, creación de cuentas, signo negativo en la representación del pasivo,
-patrimonio e ingresos por las resoluciones emitidas por la Superintendencia de Bancos, en el año
-2012 con la Resolución No. 0859 y en el año 2014 con la Resolución No. 0823, siendo este caso los
-años 2014, 2015, 2017, 2018, 2019 y 2020 que presentan números negativos en el patrimonio; sin embargo, por
-razones técnicas se estandarizó la presentación en tablas y gráficas con números positivos.
+
+{\footnotesize {\bf Nota}
+
+Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios en los códigos de cuentas, creación de cuentas, signo negativo en la representación del pasivo, patrimonio e ingresos por las resoluciones emitidas por la Superintendencia de Bancos, en el año 2012 con la Resolución No. 0859 y en el año 2014 con la Resolución No. 0823, siendo este caso los años 2014, 2015, 2017, 2018, 2019 y 2020 que presentan números negativos en el patrimonio; sin embargo, por razones técnicas se estandarizó la presentación en tablas y gráficas con números positivos.}
+
+
 
 \subsection{Análisis horizontal y vertical del patrimonio}
 
-En las siguientes tablas, se presentan los análisis horizontal y vertical del patrimonio del Fondo
-del \Sexpr{REP_seg}
+En las tablas \ref{tab:iess_analisis_horizontal_patrimonio_rtr} y \ref{tab:iess_analisis_vertical_patrimonio_rtr}, se presentan los análisis horizontal y vertical del patrimonio del Fondo del \Sexpr{REP_seg}
+
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis horizontal del patrimonio del Fondo del Seguro de \Sexpr{REP_seg} Al 31 de
-diciembre de cada año (Valores en \%)}
+\begin{center}
+\caption{Análisis horizontal del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
 \label{tab:iess_analisis_horizontal_patrimonio_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
-\toprule
-Descripción de cuentas & 2013/2012 & 2014/2013 & 2015/2014 & 2016/2015 & 2017/2016 & 2018/2017 & 2019/2018 & 2020/2019 \\
-\midrule
-\input{tablas/iess_analisis_horizontal_patrimonio_rtr.tex}
-%\bottomrule
-\end{tabular}
-}
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
-\end{table}
-
-El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en el año 2010 el
-crecimiento anual en el 2011 fue de 27,42\%; para el 2012 el crecimiento es de  32,17\% respecto al
-2011; el crecimiento en el 2013 fue de  24,50\%, en tanto que para el 2014, el crecimiento anual
-alcanzó el 23,61\%; para el 2015 fue de 17,70\%; para el 2016 presenta un leve crecimiento con
-respecto al 2015 de 3,56\%, lo mismo ocurre para el año 2017 con un 7,39\%; el resultado para el año
-2018 es casi similar al 2017 con un crecimiento de 7,77\%, el punto más alto que presenta en el
-periodo 2010-2020 es en el año 2012 con un porcentaje del 32,17\%.
-
-\begin{table}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Análisis vertical del patrimonio del Fondo del \Sexpr{REP_seg} Al 31 de diciembre de cada
-año (Valores en \%)}%título tabla
-\label{tab:iess_analisis_vertical_patrimonio_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020   \\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
 \midrule
-\input{tablas/iess_analisis_vertical_patrimonio_rtr.tex}
-%\bottomrule
+\input{tablas/iess_analisis_horizontal_patrimonio_rtr.tex}
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
 
-La cuenta Fondos Capitalizados representan el mayor valor con un 89,30\% como promedio en referencia
-a la representación de la cuenta con el Patrimonio para el periodo 2012-2020; siendo este para el
-año 2010 un porcentaje del 69,89\%, en el 2011 alcanza el 76,02\%, en el 2012 alcanza el 74,85\%, en
-el 2013 alcanza el 77,86\%, en el 2014 alcanza el 84,54\%, en el año 2015 alcanza el 86,59\%; el
-2016 alcanza el 97,17\%, en el 2017 alcanza el 93,41\%, en el año 2018 alcanza el 93,29\% y para los años 2019 y 2020, representa el 100\%.
+El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en el año 2010 el crecimiento anual en el 2011 fue de 27,42\%; para el 2012 el crecimiento es de  32,17\% respecto al 2011; el crecimiento en el 2013 fue de  24,50\%, en tanto que para el 2014, el crecimiento anual alcanzó el 23,61\%; para el 2015 fue de 17,70\%; para el 2016 presenta un leve crecimiento con respecto al 2015 de 3,56\%, lo mismo ocurre para el año 2017 con un 7,39\%; el resultado para el año 2018 es casi similar al 2017 con un crecimiento de 7,77\%, el punto más alto que presenta en el periodo 2010-2020 es en el año 2012 con un porcentaje del 32,17\%.
 
-A continuación, se procede al análisis de ingresos y egresos, que se encuentran en los Estados de
-Pérdidas y Ganancias al 31 de diciembre de cada año, por el período 2010 al 2020
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Análisis vertical del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
+\label{tab:iess_analisis_vertical_patrimonio_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
+\midrule
+\input{tablas/iess_analisis_vertical_patrimonio_rtr}
+\bottomrule
+\end{tabular}
+}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+
+
+La cuenta Fondos Capitalizados representan el mayor valor con un 89,30\% como promedio en referencia a la representación de la cuenta con el Patrimonio para el periodo 2012-2020; siendo este para el año 2010 un porcentaje del 69,89\%, en el 2011 alcanza el 76,02\%, en el 2012 alcanza el 74,85\%, en el 2013 alcanza el 77,86\%, en el 2014 alcanza el 84,54\%, en el año 2015 alcanza el 86,59\%; el 2016 alcanza el 97,17\%, en el 2017 alcanza el 93,41\%, en el año 2018 alcanza el 93,29\% y para los años 2019 y 2020, representa el 100\%.
+
+A continuación, se procede al análisis de ingresos y egresos, que se encuentran en los Estados de Pérdidas y Ganancias al 31 de diciembre de cada año, por el período 2010 al 2020
+
+\end{landscape}
+
+
 
 %---------------------------------------------------------------------------------------------------
 \section{Ingresos}
