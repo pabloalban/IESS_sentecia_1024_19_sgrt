@@ -248,10 +248,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 8,
+       sanitize.text.function = identity)
 
 # Análisis Horizontal del Ingreso-------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Ingreso' )
@@ -266,10 +264,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 8,
+       sanitize.text.function = identity)
 
 # Análisis Vertical del Ingreso---------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Ingreso' )
@@ -284,10 +280,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = 8,
+       sanitize.text.function = identity)
 
 # Ingresos por Aportes------------------------------------------------------------------------------
 message( '\tTabla Ingresos por Aportes' )
@@ -302,7 +296,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 #TABLA 20 Otros Ingresos--------------------------------------------------
@@ -334,7 +328,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 #tabla ingresos vs egresos--------------------------------------------------------------------------
@@ -350,7 +344,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 
@@ -383,10 +377,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = nrow(aux)-1,
+       sanitize.text.function = identity)
 
 #TABLA 23 Análisis Horizontal del Gasto--------------------------------------------------
 message( '\tTabla Análisis Horizontal del Gasto' )
@@ -401,10 +393,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = nrow(aux)-1,
+       sanitize.text.function = identity)
 
 #TABLA 24 Análisis Vertical del Gasto--------------------------------------------------
 message( '\tTabla Análisis Vertical del Gasto' )
@@ -419,10 +409,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity,
-       add.to.row = list(pos = list(nrow(aux_xtab)-1),
-                         command = c(paste("\\hline \n"))))
+       hline.after = nrow(aux)-1,
+       sanitize.text.function = identity)
 
 #TABLA 25 Gastos Prestacionales--------------------------------------------------
 message( '\tTabla Gastos Prestacionales' )
@@ -437,7 +425,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 #TABLA 26 Otros Gastos Prestacionales--------------------------------------------------
@@ -453,7 +441,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 #TABLA 27 Otros Gastos Prestacionales--------------------------------------------------
@@ -469,7 +457,7 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = NULL,
        sanitize.text.function = identity )
 
 #Relación patrimonio gasto y beneficio de pensiones
