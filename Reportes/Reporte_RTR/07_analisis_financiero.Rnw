@@ -335,7 +335,7 @@ Además, existe una desaceleración del patrimonio del \Sexpr{REP_seg} durante t
 \begin{landscape}
 \subsection{Componentes del patrimonio}
 
-A continucación, el la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
+A continuación, el la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
 
 
 \begin{table}[H]
