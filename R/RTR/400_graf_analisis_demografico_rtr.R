@@ -24,9 +24,8 @@ unidad<-1e6
 aux<-copy( pob_afi_ini[, .(anio, Afiliados)] )
 
 x_lim <- c( 2005, 2020 )
-x_brk <- 2005:2020
+x_brk <- seq( x_lim[1], x_lim[2], 2 )
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
-#x_lbl[x_lbl=="2020"] <-"2020-04"
 
 y_lim <- c( 500000, 3500000)
 y_brk <- seq( y_lim[1], y_lim[2], 500000 )
@@ -45,7 +44,7 @@ iess_pob_afi_ini <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5 ) )
 
 # iess_afi_ini
 ggsave( plot = iess_pob_afi_ini, 
@@ -63,7 +62,7 @@ aux<-copy( masa_salarial_ini[ anio<=2020, .(anio, Masa_Anual)] )
 #aux[, activos := activos / unidad ]
 
 x_lim <- c( 2005, 2020 )
-x_brk <- 2005:2020
+x_brk <- seq( x_lim[1], x_lim[2], 2)
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 4000000000, 28000000000)
@@ -83,7 +82,7 @@ iess_masa_salarial_ini <- ggplot( data = aux ) +
   scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
   theme_bw() +
   plt_theme +
-  theme( axis.text.x = element_text(angle = 90, hjust = 1 ) )
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5 ) )
 
 # iess_masa_salarial
 ggsave( plot = iess_masa_salarial_ini, 

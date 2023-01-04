@@ -17,7 +17,7 @@ source( 'R/501_tab_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )
 
 # Tablas específicas de RTR ------------------------------------------------------------------------
 source( 'R/rtr/500_tab_analisis_financiero_rtr.R', encoding = 'UTF-8', echo = FALSE )
-# source( 'R/rtr/501_tab_analisis_demografico_rtr.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/rtr/501_tab_analisis_demografico_rtr.R', encoding = 'UTF-8', echo = FALSE )
 # source( 'R/rtr/504_tab_inversiones_rtr.R', encoding = 'UTF-8', echo = FALSE )
 
 # Reporte LaTeX ------------------------------------------------------------------------------------

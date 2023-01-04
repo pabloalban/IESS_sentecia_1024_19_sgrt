@@ -349,10 +349,49 @@ ggsave( plot = iess_gastos_prestacionales_fondo,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
+# Otros gastos del Fondo de RT.----------------------------------------------------------------------
+message( '\tGraficando otros gastos del Fondo de RT.' )
+unidad <-1e6
+aux <- as.data.table( otros_gastos_prestacionales )
+aux <- aux[AÑO > 2011]
+aux <- aux[, TOTAL := TOTAL/unidad]
+
+x_lim <- c( 2012, 2020 )
+x_brk <- 2012:2020
+x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
+
+y_lim <- c( 0, 8)
+y_brk <- seq( y_lim[1], y_lim[2], length.out = 6 )
+y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
+
+iess_otros_gastos_fondo <- ggplot( data = aux ) + 
+  geom_line( aes( x = AÑO, 
+                  y = TOTAL, 
+                  color = parametros$iess_blue ), 
+             size = graf_line_size,
+             lineend = "round" ) + 
+  labs( x = 'Año', y = 'Millones (USD)') +
+  scale_color_manual( values =  c( parametros$iess_green, 
+                                   parametros$iess_blue ), 
+                      labels = c( '', '' ) ) +
+  scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
+  scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +
+  theme_bw() +
+  plt_theme +
+  theme( axis.text.x = element_text(angle = 0, hjust = 0.5 ) )
+
+ggsave( plot = iess_otros_gastos_fondo, 
+        filename = paste0( parametros$resultado_graficos, 'iess_otros_gastos_fondo_rtr', 
+                           parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+
+
 #Otros gastos del Fondo de RT.----------------------------------------------------------------------
 message( '\tGraficando otros gastos del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( gast_adm )
+aux <- aux[ , gast_adm := `Gastos Administrativos`/unidad]
 x_lim <- c( 2013, 2020 )
 x_brk <- 2013:2020
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )

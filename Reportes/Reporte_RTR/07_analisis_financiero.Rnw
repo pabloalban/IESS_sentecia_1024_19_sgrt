@@ -11,12 +11,23 @@ Para realizar el presente análisis financiero, se consideran los Estados Financ
 \section{Total de activos contables}
 \label{chp_infofinan:activos}
 
-A continuación, en la tabla \ref{tab:iess_activo_del_fondo_rtr} y figura \ref{fig:iess_activo_fondo_rtr}, se presenta la evolución del activo del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020: 
+A continuación, en la figura \ref{fig:iess_activo_fondo_rtr} y tabla \ref{tab:iess_activo_del_fondo_rtr}, se presenta la evolución del activo del Fondo del \Sexpr{REP_seg} para el período comprendido entre el 2012 y 2020.
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución del activo del Fondo del \Sexpr{REP_seg}.}
+\label{fig:iess_activo_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_activo_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.  \\
+{\bf Elaborado:} DAIE}
+\end{figure}
 
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrrr}
 \captionsetup{justification=centering}
-\caption{Activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+\caption{Evolución del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
 millones de dólares).}
 \label{tab:iess_activo_del_fondo_rtr} \\
 \toprule
@@ -40,30 +51,21 @@ millones de dólares).}
 \end{longtable}
 }
 
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Activo del Fondo del \Sexpr{REP_seg}.}
-\label{fig:iess_activo_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_activo_fondo_rtr.png}
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.  \\
-{\bf Elaborado:} DAIE}
-\end{figure}
-
-
 Se observa que los activos en el período 2010 al 2020, se incrementaron en 349,69\%, esto quiere decir que en promedio su activo creció en USD. 95,62 millones; es decir, en promedio representó un 16,22\% de crecimiento anual durante el período 2011 a 2020. La mayor tasa de crecimiento se evidencia en el año 2012 con el 30,38\%, con un incremento respecto al 2011 de USD. 105,93 millones; manteniendo una tendencia al alza hasta el 2014. 
 
 A partir del año 2015 se observa un crecimiento desacelerado del activo, esto se debe que a partir del mes de abril del año 2015, se elimina la contribución del Estado para el financiamiento de las pensiones por el 40\% como contribución para el pago de las pensiones y a la aplicación de la Resolución No. C.D. 501 que disminuye los porcentajes de aportación para este Seguro (a partir de noviembre de 2015), obligando a acudir a realizar desinversiones para cubrir las necesidades de pago de rentas, comportamiento que se evidencia hasta el 2018. Entre el 2019 y 2020 el activo comienza a incrementar con una tasa de crecimiento igual a 12,82\%; es decir, un incremento anual de USD. 139.778.264,80.
 
-\begin{landscape}
-
 \subsection{Componentes del activo}
 
-A continuación, se desarrolla el análisis vertical de los componentes del Activo, dentro de los cuales se encuentran las siguientes subcuentas “Fondos Disponibles”, “Inversiones”, “Cuentas por Cobrar”, “Propiedad Planta y Equipo”, “Deuda de Gobierno”, “Intereses por Cobrar” y “Otros Activos” (ver tabla \ref{tab:iess_analisis_componentes_activo_rtr}).
+A continuación, se desarrolla el análisis horizontal y vertical de los componentes del Activo, dentro de los cuales se encuentran las siguientes subcuentas “Fondos Disponibles”, “Inversiones”, “Cuentas por Cobrar”, “Propiedad Planta y Equipo”, “Deuda de Gobierno”, “Intereses por Cobrar” y “Otros Activos” (ver tabla \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_analisis_vertical_activo_rtr}).
 
 La cuenta con mayor representatividad en el período analizado es inversiones denominada en los últimos años como “Recursos/Administrados por el BIESS”, la cual representa en promedio el 93,16\% del total de los activos en el período 2012 a 2020. En segundo lugar, se encuentra “Deuda de Gobierno” con el 3,99\% en promedio entre el año 2012 a 2020; sin embargo, a partir del 2013 hasta el 2020 la “Cuentas por Cobrar” se encuentra como subcuenta "Deuda de Gobierno".
 
 % En las tabla \ref{tab:iess_analisis_componentes_activo_rtr}, se presenta el análisis horizontal de los componentes del Activo del Fondo del Seguro de Riesgos del Trabajo correspondiente al período 2010-2020.
+
+\begin{landscape}
+
+Además, en la tabla \ref{tab:iess_analisis_componentes_activo_rtr}, se presenta los componentes del pasivo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -80,23 +82,22 @@ La cuenta con mayor representatividad en el período analizado es inversiones de
 \bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize {\bf Fuente:}Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
 {\bf Elaborado:} DAIE.}
 \end{center}
 \end{table}
 
-{\footnotesize {\bf Nota Metodológica:}  
-
-Los balances del IESS en el período comprendido 2010 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes: 
+{\bf Nota:}  Los balances del IESS en el período comprendido 2010 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes: 
 
 \begin{itemize}[itemsep=0mm, topsep=0pt]
 \item	En la cuenta “Inversiones” a partir del 2010 al 2012 en los balances se las denomina como: “Inversiones deuda renta fija sector privado” (7110) e “Inversiones deuda renta fija Sector Público” (7120); a partir del 2013 al 2014 es optimizada en una sola cuenta registrada en el plan de cuentas como “Inversiones” (12). Finalmente a partir del 2015 al 2020 cambia su denominación a “Recursos/Administra por El BIESS” (714). 
 \item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla \ref{tab:iess_analisis_componentes_activo_rtr} no registra valores desde el 2013.
-\end{itemize}}
+\end{itemize}
 
 \subsection{Análisis horizontal y vertical del activo}
 
-En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_analisis_vertical_activo_rtr}, se presentan los análisis horizontal y vertical de los componentes del activo del Fondo del \Sexpr{REP_seg} por el período 2010 - 2020:
+En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_analisis_vertical_activo_rtr}, se presentan los análisis horizontal y vertical de los componentes del activo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -121,6 +122,8 @@ En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_anal
 En el año 2012 se evidencia el mayor incremento del Activo con una tasa de 30,38\%, debido al aumento de las subcuentas “Propiedades y Equipos Especializados” (127,05\%) y “Cuentas por Cobrar” (124,24\%). Cabe mencionar que en el período analizado no se registran variaciones negativas; sin embargo el año 2016 se evidencia una disminución del activo en 6,17\% siendo la más significativa, debido a las subcuentas “Recursos/Administrado por el BIESS” (6,03\%) y “Cuentas por Cobrar” (6,26\%).
 
 El crecimiento del Activo es variable en el periodo. Respecto al activo en el año 2010 el crecimiento anual en el 2011 fue de 27,51\%; para el 2012 el crecimiento es de  30,38\% respecto al 2011; el crecimiento en el 2013 fue de  22,98\%, en tanto que para el 2014, el crecimiento anual alcanzó el 22,98\%; para el 2015 fue de 16,10\%; para el 2016 el crecimiento con respecto al 2015 es del 6,17\%, lo mismo ocurre para el año 2017 con un 7,96\%; el resultado para el año 2018  el crecimiento fue un 6,28\% con respecto al 2017; mientras que el crecimiento entre 2020 y 2019 fue 12,82\%.
+\end{landscape}
+
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -130,29 +133,39 @@ El crecimiento del Activo es variable en el periodo. Respecto al activo en el a�
 {\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015  & \multirow{ 2}{*}{2016 } & \multirow{ 2}{*}{2017 } & \multirow{ 2}{*}{2018 } & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015}  & \multirow{ 2}{*}{2016 } & \multirow{ 2}{*}{2017 } & \multirow{ 2}{*}{2018 } & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
       \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
 \midrule
 \input{tablas/iess_analisis_vertical_activo_rtr.tex}
 \bottomrule
 \end{tabular}
-}
-\caption*{\scriptsize {\bf Fuente:}Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
 {\bf Elaborado:} DAIE.}
 \end{center}
 \end{table}
-\end{landscape}
+
 
 %---------------------------------------------------------------------------------------------------
 \section{Total de pasivos contables}
 
-A continuación en la tabla \ref{tab:iess_pasivos_fondo_rtr} y figura \ref{fig:iess_pasivo_fondo_rtr}, se presenta la evolución del pasivo del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020:
+A continuación en la figura \ref{fig:iess_pasivo_fondo_rtr} y tabla \ref{tab:iess_pasivos_fondo_rtr}, se presenta la evolución del pasivo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución del pasivo del Fondo del \Sexpr{REP_seg}.}
+\label{fig:iess_pasivo_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_pasivo_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
+\\ {\bf Elaborado:} DAIE}
+\end{figure}
 
 
 \begin{table}[H]
 \captionsetup{justification=centering}
 \begin{center}
-\caption{Pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+\caption{Evolución del pasivo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
 millones de dólares).}
 \label{tab:iess_pasivos_fondo_rtr}
 {\fontsize{10}{12}\selectfont
@@ -170,27 +183,20 @@ millones de dólares).}
 \end{center}
 \end{table}
 
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Pasivo del Fondo del \Sexpr{REP_seg}.}
-\label{fig:iess_pasivo_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_pasivo_fondo_rtr.png}
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
-\\ {\bf Elaborado:} DAIE}
-\end{figure}
-
-
 Se observa que los pasivos correspondientes al 2020 con respecto al 2011 tienen intervalos con mucha variación de año a año en este periodo, crecieron en un 15,92\% como promedio anual; además, el decrecimiento en el año 2015 es el punto más bajo y que a partir del 2016 hasta el año 2018 se aprecia un crecimiento del pasivo; pues el año 2016 aceleró su crecimiento en 2 veces con respecto al año 2015, en el año 2018 sufre una disminución con respecto al año 2017.
 
 El incremento porcentual que los pasivos registraron en el periodo 2020 a 2010; la mayoría de los porcentajes decrecieron, excepto el año 2016 debido a que se inserta la cuenta “depósitos no identificados” y la cuenta “diferencia por neteos”; siendo este, el más alto del periodo con un crecimiento del 208,08\% con respecto al año 2015.
 
 
-\begin{landscape}
-
 \subsection{Componentes del pasivo}
 
-A continucación, el la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr}, se presenta los componentes del pasivo del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
+A continuación, se desarrolla el análisis horizontal vertical de los componentes del pasivo, dentro de los cuales se encuentran las siguientes subcuentas “Prestaciones y beneficios”, “Cuentas por pagras”, “Pasivo diferido”, “Deuda de Gobierno contra”, “Provisiones”, “Pasivos corrientes” y “Pasivos no corrientes” (ver tabla \ref{tab:iess_analisis_horizontal_pasivos_rtr} y \ref{tab:iess_analisis_vertical_pasivos_rtr}).
+
+La cuenta con mayor representatividad en el período analizado es cuentas por pagar, la cual representa en promedio el 99,33\% de los pasivos en el período 2012 a 2020. En segundo lugar, se encuentra “Pasivos no corriente” con el 96,93 \% en promedio entre el año 2012 a 2020.
+
+Además, en la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr}, se presenta los componentes del pasivo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+\begin{landscape}
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -212,21 +218,16 @@ A continucación, el la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr}, se p
 \end{center}
 \end{table}
 
-{\footnotesize {\bf Nota Metodológica:}  
-
-Los balances del IESS en el período comprendido 2012 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes:
+{\bf Nota:} Los balances del IESS en el período comprendido 2012 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes:
 
 \begin{itemize}[itemsep=0mm, topsep=0pt]
 \item	En la cuenta “Inversiones” a partir del 2010 al 2012 en los balances se las denomina como: “Inversiones deuda renta fija sector privado” (7110) e “Inversiones deuda renta fija Sector Público” (7120); a partir del 2013 al 2014 es optimizada en una sola cuenta registrada en el plan de cuentas como “Inversiones” (12). Finalmente, a partir del 2015 al 2020 cambia su denominación a “Recursos/Administra por El BIESS” (714). 
 \item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo, a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla \ref{tab:iess_componentes_pasivos_fondo_rtr} no registra valores desde el 2013.
-\end{itemize}}
+\end{itemize}
 
 \subsection{Análisis horizontal y vertical del pasivo}
 
-A continuación, se desarrolla el análisis vertical de los componentes del Activo, dentro de los cuales se encuentran las siguientes subcuentas “Fondos Disponibles”, “Inversiones”, “Cuentas por Cobrar”, “Propiedad Planta y Equipo”, “Deuda de Gobierno”, “Intereses por Cobrar” y “Otros Activos”.
-
-La cuenta con mayor representatividad en el período analizado es inversiones denominada en los últimos años como “Recursos/Administrados por el BIESS”, la cual representa en promedio el 96,93\% corresponde a pasivos no corrientes. En las tabla \ref{tab:iess_analisis_horizontal_pasivos_rtr}, se presenta el análisis horizontal de los componentes del Activo del Fondo del Seguro de Riesgos del Trabajo correspondiente al período 2012-2020.
-
+En las tablas \ref{tab:iess_analisis_horizontal_pasivos_rtr} y \ref{tab:iess_analisis_vertical_pasivos_rtr}, se presentan los análisis horizontal y vertical de los componentes del pasivo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -248,7 +249,6 @@ La cuenta con mayor representatividad en el período analizado es inversiones de
 \end{center}
 \end{table}
 
-
 El crecimiento del Pasivo es variable en el periodo. Respecto al pasivo en el año 2010 el
 crecimiento anual en el 2011 fue de 29,11\%; para el 2012 el decrecimiento es de  -0,12\% respecto
 al 2011; el decrecimiento en el 2013 fue de -10,83\%, en tanto que para el 2014sufre un crecimiento
@@ -258,6 +258,7 @@ el resultado para el año 2018 sufre un decrecimiento con un -27,59\% con respec
 crecimiento más alto del periodo del 2015 a 2016 por incremento acelerado de la cuenta “Diferencia
 por Neteos Acreedor” dentro de los pasivos no corrientes.
 
+\end{landscape}
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -270,7 +271,7 @@ por Neteos Acreedor” dentro de los pasivos no corrientes.
       \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
       \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
 \midrule
-\input{tablas/iess_analisis_vertical_pasivos_rtr}
+\input{tablas/iess_analisis_vertical_pasivos_rtr.tex}
 \bottomrule
 \end{tabular}
 }
@@ -280,25 +281,25 @@ por Neteos Acreedor” dentro de los pasivos no corrientes.
 \end{table}
 
 
-En el año 2012, la cuenta "Prestaciones y Beneficios'' en el año 2010 representan el mayor valor del pasivo para
-ese año con un 99,44\% del mismo. Para el periodo 2011 al 2014 la cuenta de “Cuentas por Pagar” representa el valor más alto en
-referencia al pasivo, siendo este un 87,78\% para el 2011, en el 2012 alcanza el 99,44\%, en el 2013
+En el año 2012, la cuenta "Prestaciones y Beneficios'' en el año 2010 representan el mayor valor del pasivo para ese año con un 99,44\% del mismo. Para el periodo 2011 al 2014 la cuenta de “Cuentas por Pagar” representa el valor más alto en referencia al pasivo, siendo este un 87,78\% para el 2011, en el 2012 alcanza el 99,44\%, en el 2013
 alcanza el 99,37\%, en el 2014 alcanza el 99,19\%.
 
 La cuenta de Pasivos no Corrientes representa el mayor valor para el periodo 2015 al 2020, alcanzado
 en el año 2015 el 95,69\%; el 2016 alcanza el 98,02\%, en el 2017 alcanza el 97,72\%, y para el año
 2018 alcanza el 95,60\%, sigue aumentando en 2019 (97,25\%); y 97,27\% en 2020.
-\end{landscape}
+
 
 
 %---------------------------------------------------------------------------------------------------
 \section{Patrimonio}
-A continuación, en la tabla \ref{tab:iess_patrimonio_fondo_rtr} y figura \ref{fig:iess_patrimonio_fondo_rtr}, se presenta la evolución del patrimonio del Fondo del \Sexpr{REP_seg} para el período 2010 - 2020: 
+
+A continuación, en la tabla \ref{tab:iess_patrimonio_fondo_rtr} y figura \ref{fig:iess_patrimonio_fondo_rtr}, se presenta la evolución del patrimonio del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+ 
 
 \begin{table}[H]
 \captionsetup{justification=centering}
 \begin{center}
-\caption{Patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+\caption{Evolución del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
 millones de dólares).}
 \label{tab:iess_patrimonio_fondo_rtr}
 {\fontsize{10}{12}\selectfont
@@ -320,7 +321,7 @@ millones de dólares).}
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Patrimonio del Fondo del \Sexpr{REP_seg} (En millones de dólares).}
+\caption{Evolución del patrimonio del Fondo del \Sexpr{REP_seg}.}
 \label{fig:iess_patrimonio_fondo_rtr}
 \includegraphics[scale=1]{graficos/iess_patrimonio_fondo_rtr.png}
 \caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
@@ -332,11 +333,19 @@ impacto de la eliminación del 40\% de la contribución del Estado para el pago 
 
 Además, existe una desaceleración del patrimonio del \Sexpr{REP_seg} durante todo el período 2010 a 2018. Esta desaceleración se acentúa a partir del año 2014, decreciendo precipitadamente a partir del año 2015 con la aplicación de la Resolución No. C.D. 501 y la eliminación de la contribución del 40\% del Estado, siendo el punto más bajo el año 2016.
 
-\begin{landscape}
 \subsection{Componentes del patrimonio}
 
+<<<<<<< HEAD
 A continuación, el la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}, por el periodo comprendido entre el 2010 y 2018.
+=======
+A continuación, se desarrolla el análisis horizontal vertical de los componentes del patrimonio, dentro de los cuales se encuentran las siguientes subcuentas “Fondos capitalizados”, “Superávit Revaluación”, “Resultados” y “Reservas” (ver tabla \ref{tab:iess_analisis_horizontal_patrimonio_rtr} y \ref{tab:iess_analisis_vertical_patrimonio_rtr}).
+>>>>>>> 4d01a39f6dfb19208c3dde09c5a0a36d0f5156d6
 
+La cuenta con mayor representatividad en el período analizado es "Fondos capitalizados", la cual representa en promedio el 89.30 \% de los patrimonios en el período 2012 a 2020. Además, en la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+\begin{landscape}
+
+\vspace{1pt}
 
 \begin{table}[H]
 \captionsetup{justification=centering}
@@ -358,15 +367,15 @@ A continuación, el la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se
 \end{center}
 \end{table}
 
-{\footnotesize {\bf Nota}
+{\bf Nota:}
 
-Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios en los códigos de cuentas, creación de cuentas, signo negativo en la representación del pasivo, patrimonio e ingresos por las resoluciones emitidas por la Superintendencia de Bancos, en el año 2012 con la Resolución No. 0859 y en el año 2014 con la Resolución No. 0823, siendo este caso los años 2014, 2015, 2017, 2018, 2019 y 2020 que presentan números negativos en el patrimonio; sin embargo, por razones técnicas se estandarizó la presentación en tablas y gráficas con números positivos.}
+Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios en los códigos de cuentas, creación de cuentas, signo negativo en la representación del pasivo, patrimonio e ingresos por las resoluciones emitidas por la Superintendencia de Bancos, en el año 2012 con la Resolución No. 0859 y en el año 2014 con la Resolución No. 0823, siendo este caso los años 2014, 2015, 2017, 2018, 2019 y 2020 que presentan números negativos en el patrimonio; sin embargo, por razones técnicas se estandarizó la presentación en tablas y gráficas con números positivos.
 
-
+\newpage
 
 \subsection{Análisis horizontal y vertical del patrimonio}
 
-En las tablas \ref{tab:iess_analisis_horizontal_patrimonio_rtr} y \ref{tab:iess_analisis_vertical_patrimonio_rtr}, se presentan los análisis horizontal y vertical del patrimonio del Fondo del \Sexpr{REP_seg}
+En las tablas \ref{tab:iess_analisis_horizontal_patrimonio_rtr} y \ref{tab:iess_analisis_vertical_patrimonio_rtr}, se presentan los análisis horizontal y vertical del patrimonio del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 
 \begin{table}[H]
@@ -389,9 +398,6 @@ En las tablas \ref{tab:iess_analisis_horizontal_patrimonio_rtr} y \ref{tab:iess_
 \end{center}
 \end{table}
 
-El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en el año 2010 el crecimiento anual en el 2011 fue de 27,42\%; para el 2012 el crecimiento es de  32,17\% respecto al 2011; el crecimiento en el 2013 fue de  24,50\%, en tanto que para el 2014, el crecimiento anual alcanzó el 23,61\%; para el 2015 fue de 17,70\%; para el 2016 presenta un leve crecimiento con respecto al 2015 de 3,56\%, lo mismo ocurre para el año 2017 con un 7,39\%; el resultado para el año 2018 es casi similar al 2017 con un crecimiento de 7,77\%, el punto más alto que presenta en el periodo 2010-2020 es en el año 2012 con un porcentaje del 32,17\%.
-
-
 \begin{table}[H]
 \captionsetup{justification=centering}
 \begin{center}
@@ -403,7 +409,7 @@ El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en e
       \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
       \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
 \midrule
-\input{tablas/iess_analisis_vertical_patrimonio_rtr}
+\input{tablas/iess_analisis_vertical_patrimonio_rtr.tex}
 \bottomrule
 \end{tabular}
 }
@@ -411,23 +417,37 @@ El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en e
 {\bf Elaborado:} DAIE.}
 \end{center}
 \end{table}
+\end{landscape}
 
+El crecimiento del Patrimonio es variable en el periodo. Respecto al activo en el año 2010 el crecimiento anual en el 2011 fue de 27,42\%; para el 2012 el crecimiento es de  32,17\% respecto al 2011; el crecimiento en el 2013 fue de  24,50\%, en tanto que para el 2014, el crecimiento anual alcanzó el 23,61\%; para el 2015 fue de 17,70\%; para el 2016 presenta un leve crecimiento con respecto al 2015 de 3,56\%, lo mismo ocurre para el año 2017 con un 7,39\%; el resultado para el año 2018 es casi similar al 2017 con un crecimiento de 7,77\%, el punto más alto que presenta en el periodo 2010-2020 es en el año 2012 con un porcentaje del 32,17\%.
 
 La cuenta Fondos Capitalizados representan el mayor valor con un 89,30\% como promedio en referencia a la representación de la cuenta con el Patrimonio para el periodo 2012-2020; siendo este para el año 2010 un porcentaje del 69,89\%, en el 2011 alcanza el 76,02\%, en el 2012 alcanza el 74,85\%, en el 2013 alcanza el 77,86\%, en el 2014 alcanza el 84,54\%, en el año 2015 alcanza el 86,59\%; el 2016 alcanza el 97,17\%, en el 2017 alcanza el 93,41\%, en el año 2018 alcanza el 93,29\% y para los años 2019 y 2020, representa el 100\%.
 
 A continuación, se procede al análisis de ingresos y egresos, que se encuentran en los Estados de Pérdidas y Ganancias al 31 de diciembre de cada año, por el período 2010 al 2020
 
-\end{landscape}
-
-
 
 %---------------------------------------------------------------------------------------------------
+% Ingresos
+
 \section{Ingresos}
-A continuación, se presenta la evolución de los ingresos a este fondo:
+
+A continuación, en la figura \ref{fig:iess_ingresos_fondo_rtr} y tabla \ref{tab:iess_ingresos_fondo_rtr}, se presenta la evolución de los ingresos del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución de los ingresos del Fondo del \Sexpr{REP_seg}.}
+\label{fig:iess_ingresos_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_ingresos_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
+\\{\bf Elaborado:} DAIE.}
+\end{figure}
+
+
 \begin{table}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Análisis de los Ingresos del Fondo del Seguro de \Sexpr{REP_seg} al 31 de diciembre de cada año}
+\caption{Evolución de los Ingresos del Fondo del Seguro de \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
 \label{tab:iess_ingresos_fondo_rtr}
 %\scalebox{0.7}{
 {\fontsize{10}{12}\selectfont
@@ -447,19 +467,10 @@ A continuación, se presenta la evolución de los ingresos a este fondo:
 %\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
+\\{\bf Elaborado:} DAIE.}
 \end{table}
 
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Evolución de los ingresos del Fondo del \Sexpr{REP_seg}}
-\label{fig:iess_ingresos_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_ingresos_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF.
-\\Elaborado: DAIE.}
-\end{figure}
 
 Los ingresos para el periodo del 2010-2020 tienen un crecimiento de promedio anual del 5,54\%
 siguiendo una tendencia variable en este periodo. Se observa que los ingresos de este fondo
@@ -470,136 +481,116 @@ con un ingreso total de USD 200.040.197,20.
 
 \subsection{Componentes de los ingresos}
 
-Se presenta en la siguiente tabla, la evolución de los componentes de los ingresos del Fondo del
-\Sexpr{REP_seg}:
+A continuación, se desarrolla el análisis horizontal vertical de los componentes del ingreso, dentro de los cuales se encuentran las siguientes subcuentas “Aportes de afiliados y patronales”, “Contribuciones del Estado”, “Ing. complementarios oper.”, “Ingresos financieros”, “Ingresos por arriendo y realiz.”, “Ingresos extraordinarios (RP)”, “Intereses, tasas y contribución” y “Otros resultados integrales”  (ver tabla \ref{tab:iess_analisis_horizontal_ingresos_rtr} y 
+\ref{tab:iess_analisis_vertical_ingresos_rtr}).
+
+La cuenta con mayor representatividad en el período analizado es “Aportes de afiliados y patronales”, la cual representa en promedio el 50.50 \% de los de los ingresos en el período 2012 a 2020. Además, en la tabla \ref{tab:iess_componentes_ingresos_rtr}, se presenta los componentes del ingreso del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+
+\begin{landscape}
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Evolución de los componentes de los ingresos del Fondo del \Sexpr{REP_seg}}%título tabla
+\begin{center}
+\caption{Análisis de los componentes de los ingresos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
 \label{tab:iess_componentes_ingresos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{p{6cm}rrrrrrrrr}
+{\fontsize{9}{11}\selectfont
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
 \midrule
 \input{tablas/iess_componentes_ingresos_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-\textbf{NOTA:} Cabe mencionar que los balances del IESS en el periodo 2010-2020 ha sufrido cambios
-en los códigos de cuentas, creación de cuentas, por lo que presenta su variación y optimización.
+
+{\bf Nota:}
+
+Cabe mencionar que los balances del IESS en el periodo 2010-2020 ha sufrido cambios en los códigos de cuentas, creación de cuentas, por lo que presenta su variación y optimización.
 
 \subsection{Análisis horizontal y vertical de los ingresos}
 
-En las siguientes tablas, se presentan los análisis horizontal y vertical de los ingresos del Fondo
-del \Sexpr{REP_seg}:
-\begin{table}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Análisis horizontal de los ingresos del Fondo del \Sexpr{REP_seg} (Valores en \%)}%título tabla
-\label{tab:iess_analisis_horizontal_ingresos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
-\toprule
-Descripción de cuentas & 2013/2012 & 2014/2013 & 2015/2014 & 2016/2015 &
-2017/2016 & 2018/2017 & 2019/2018 & 2020/2019\\
-\midrule
-\input{tablas/iess_analisis_horizontal_ingresos_rtr.tex}
-%\bottomrule
-\end{tabular}
-}
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\end{table}
-El crecimiento de los Ingresos del Fondo del \Sexpr{REP_seg} es variable en el periodo 2010 – 2020
-Respecto a los ingresos en el año 2010 el crecimiento anual en el 2011 fue de 7,20\%; para el 2012
-el crecimiento es de  35,79\% respecto al 2011; el crecimiento en el 2013 fue de  12,85\%, en tanto
-que para el 2014, el crecimiento anual alcanzó el 13,90\%; para el 2015 sufre un decrecimiento con
-respecto al 2014 en un -3,26\%; para el 2016 sufre un decrecimiento con respecto al 2015 del
--44,57\%, para el año 2017 crece de manera aislada con un 20,24\%; el resultado para el año 2018
-presenta un leve un crecimiento de 2,15\% con respecto al 2017; y siendo el año más alto del periodo
-en sus ingresos se lo puede observar el año 2019 (38,21\%).
+En las tablas \ref{tab:iess_analisis_horizontal_ingresos_rtr} y \ref{tab:iess_analisis_vertical_ingresos_rtr}, se presentan los análisis horizontal y vertical de los ingresos del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis vertical de los ingresos del Fondo del \Sexpr{REP_seg} (Valores en \%)}
-\label{tab:iess_analisis_vertical_ingresos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
+\begin{center}
+\caption{Análisis horizontal de los ingresos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
+\label{tab:iess_analisis_horizontal_ingresos_rtr}
+{\fontsize{10}{12}\selectfont
 \begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
 \midrule
-\input{tablas/iess_analisis_vertical_ingresos_rtr.tex}
-%\bottomrule
+\input{tablas/iess_analisis_horizontal_ingresos_rtr.tex}
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-% El rubro Aportes IESS/Ingresos a la Seguridad Social/Ingresos de la operación representa un
-% 68,40\% como promedio anula en referencia a la representación de la cuenta de los Ingresos para el
-% período 2010 - 2018. El año que mayor crecimiento presento es el 2011 con el 90,14\%
-%
-% El rubro Ingresos Financieros/Inversiones para el período 2010 - 2018 es la segunda representación
-% con respecto a los Ingresos; siendo el año 2018 el porcentaje más alto de este período.
+
+
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Análisis vertical de los ingresos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
+\label{tab:iess_analisis_vertical_ingresos_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
+\midrule
+\input{tablas/iess_analisis_vertical_ingresos_rtr.tex}
+\bottomrule
+\end{tabular}
+}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+
+El crecimiento de los Ingresos del Fondo del \Sexpr{REP_seg} es variable en el periodo 2010 – 2020 Respecto a los ingresos en el año 2010 el crecimiento anual en el 2011 fue de 7,20\%; para el 2012 el crecimiento es de  35,79\% respecto al 2011; el crecimiento en el 2013 fue de  12,85\%, en tanto que para el 2014, el crecimiento anual alcanzó el 13,90\%; para el 2015 sufre un decrecimiento con respecto al 2014 en un -3,26\%; para el 2016 sufre un decrecimiento con respecto al 2015 del -44,57\%, para el año 2017 crece de manera aislada con un 20,24\%; el resultado para el año 2018 presenta un leve un crecimiento de 2,15\% con respecto al 2017; y siendo el año más alto del periodo en sus ingresos se lo puede observar el año 2019 (38,21\%).
 
 \subsection{Ingresos por aportes de afiliados, patronales y pensionistas}
 
-A continuación, se presenta la evolución de los ingresos a este fondo por concepto de aportes personales, patronales y pensionistas.
+A continuación, en la tabla \ref{tab:iess_ingresos_aportes_rtr} y figura \ref{fig:iess_ingresos_aportes_fondo_rtr}, se presenta la evolución de los ingresos a este fondo por concepto de aportes personales, patronales y pensionistas del fonfo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
-{\fontsize{9}{11}\selectfont
-\begin{longtable}[H]{lrrrrrr}
+\begin{table}[H]
 \captionsetup{justification=centering}
-\caption{Evolución de ingresos por aportes del \Sexpr{REP_seg}} \\
-\label{tab:iess_ingresos_aportes_rtr} \\
+\begin{center}
+\caption{Evolución de ingresos por aportes del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+millones de dólares).}
+\label{tab:iess_ingresos_aportes_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrr}
 \toprule
-\multirow{2}[0]{*}{Año} & 
-\multicolumn{1}{c}{Aportes} &
-\multicolumn{1}{c}{Aportes} &
-\multicolumn{1}{c}{Aportes}  & 
-\multicolumn{1}{c}{Total de aportes de}  &
-\multicolumn{1}{c}{Incremento}&
-\multicolumn{1}{c}{Incremento} \\
-  & 
- \multicolumn{1}{c}{personales (USD)} &
-  \multicolumn{1}{c}{patronales (USD)} &
-  \multicolumn{1}{c}{pensionistas (USD)} &
-  \multicolumn{1}{c}{afiliados y pensionistas (USD)} &
-  \multicolumn{1}{c}{Anual (USD)} &
-  \multicolumn{1}{c}{Anual (\%)} \\
+\multirow{2}[0]{*}{Año}  & Aportes & Aportes & Aportes  &Total de aportes de & Incremento & Incremento \\
+&personales (USD)& patronales (USD) & pensionistas (USD) & afiliados y pensionistas (USD) & Anual (USD) & Anual (\%) \\
 \midrule
-\endfirsthead
-
-\toprule
-\multirow{2}[0]{*}{Año} & \multicolumn{1}{c}{Aportes} & \multicolumn{1}{c}{Aportes} & \multicolumn{1}{c}{Aportes Pensionistas}  & \multicolumn{1}{c}{Aportes}  & \multicolumn{1}{c}{Incremento}  & \multicolumn{1}{c}{Incremento} \\
-& personales (USD) & patronales (USD) & y Pensionistas (USD) & Afiliados (USD) & Anual (USD) & Anual (\%) \\
-\midrule
-\endhead
-
-%\bottomrule
-\multicolumn{7}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\Elaborado: DAIE.}
-\endlastfoot
 \input{tablas/iess_ingresos_aportes_rtr.tex}
-\end{longtable}
+\bottomrule
+\end{tabular}
 }
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+\end{landscape}
 
-\textbf{NOTA:} Cabe mencionar que los balances del IESS en el periodo 2010-2020 ha sufrido cambios
+\textbf{NOTA:} 
+
+Cabe mencionar que los balances del IESS en el periodo 2010-2020 ha sufrido cambios
 en los códigos de cuentas, creación de cuentas, por lo que presenta su variación y optimización.
-
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -611,56 +602,40 @@ en los códigos de cuentas, creación de cuentas, por lo que presenta su variaci
 \\Elaborado: DAIE.}
 \end{figure}
 
+Es necesario aclarar que a partir del año 2010 a 2012, no se registran valores en aportes Personales, Patronales, Jubilados y Pensionistas, lo cual se registraron directamente en la cuenta Aportes Afiliados, y, a partir del año 2013 al 2020 se registra los valores por cada aporte.
 
-Es necesario aclarar que a partir del año 2010 a 2012, no se registran valores en aportes
-Personales, Patronales, Jubilados y Pensionistas, lo cual se registraron directamente en la cuenta
-Aportes Afiliados, y, a partir del año 2013 al 2020 se registra los valores por cada aporte.
+En los años 2010, 2011 y 2012 se incluía en el rubro APORTES IESS los valores correspondientes a: Contribución del Estado, Recargos y Multas y Otros Ingresos; desde el año 2013 se cambia el plan de cuentas institucional y se dividen los valores correspondientes a aportes.
 
-En los años 2010, 2011 y 2012 se incluía en el rubro APORTES IESS los valores correspondientes a:
-Contribución del Estado, Recargos y Multas y Otros Ingresos; desde el año 2013 se cambia el plan de
-cuentas institucional y se dividen los valores correspondientes a aportes.
+Los ingresos por aportes aumentaron entre los años 2010 hasta el 2015 con un porcentaje de 93,76\%; sin embargo, a partir del año 2015, se observa una tendencia a la baja, disminuyendo en 61,72\% (USD 79.055.118,84) del 2015 al 2016 conforme la siguiente gráfica, siendo este problema la disminución de porcentaje de distribución perteneciente a Riesgos del Trabajo del 0,50\% al 0,20\% y el no pago del 40\% del aporte del Estado. El año 2014 presenta el punto más alto con un ingreso de USD 128.629.350,58. Entre 2019 y 2020, se redujeron los ingresos en 21,42\% (USD 13.421.698,06)
 
-Los ingresos por aportes aumentaron entre los años 2010 hasta el 2015 con un porcentaje de 93,76\%;
-sin embargo, a partir del año 2015, se observa una tendencia a la baja, disminuyendo en 61,72\%
-(USD 79.055.118,84) del 2015 al 2016 conforme la siguiente gráfica, siendo este problema la
-disminución de porcentaje de distribución perteneciente a Riesgos del Trabajo del 0,50\% al 0,20\% y
-el no pago del 40\% del aporte del Estado. El año 2014 presenta el punto más alto con un ingreso de
-USD 128.629.350,58. Entre 2019 y 2020, se redujeron los ingresos en 21,42\% (USD 13.421.698,06)
+% Por la Resolución C.D. 501, los estados financieros no separan adecuadamente los aportes de jubilados y de la LOD para todos los años. Sin embargo, se puede concluir que el aporte de los afiliados representa al menos el 95\% del total de aportes.
+% El rubro Aportes IESS/Ingresos a la Seguridad Social/Ingresos de la operación representa un
+% 68,40\% como promedio anula en referencia a la representación de la cuenta de los Ingresos para el
+% período 2010 - 2018. El año que mayor crecimiento presento es el 2011 con el 90,14\%
+%
+% El rubro Ingresos Financieros/Inversiones para el período 2010 - 2018 es la segunda representación
+% con respecto a los Ingresos; siendo el año 2018 el porcentaje más alto de este período.
 
-% Por la Resolución C.D. 501, los estados financieros no separan adecuadamente los aportes de
-% jubilados y de la LOD para todos los años. Sin embargo, se puede concluir que el aporte de los
-% afiliados representa al menos el 95\% del total de aportes.
 
 \subsection{Otros ingresos}
 
 Para este análisis, se considera el ingreso más importante que es la contribución del Estado, cuya
-evolución histórica se presenta a continuación:
-
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Evolución histórica de la contribución del Estado}
-\label{fig:iess_cont_estado_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_cont_estado_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
-\\Elaborado: DAIE.}
-\end{figure}
-
+evolución histórica se presenta en la tabla \ref{tab:iess_otros_ingresos_rtr}  y figura \ref{fig:iess_cont_estado_fondo_rtr}.
 
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrrr}
 \captionsetup{justification=centering}
-\caption{Evolución histórica de la contribución del Estado en el pago de pensiones de \Sexpr{REP_seg}} \\
+\caption{Evolución histórica de la contribución del Estado en el pago de pensiones de \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).} \\
 \label{tab:iess_otros_ingresos_rtr} \\
 \toprule
-\multirow{2}[0]{*}{Año}  & 
-\multicolumn{1}{c}{Contribución} &
-\multicolumn{1}{c}{Pensiones} &
-\multicolumn{1}{c}{Participación} \\
-& 
-\multicolumn{1}{c}{del Estado (USD)} &
-\multicolumn{1}{c}{pagadas (USD)} &
-\multicolumn{1}{c}{del Estado (\%)}\\
+\multirow{2}[0]{*}{Año}  &
+\multicolumn{1}{l}{Contribución} &
+\multicolumn{1}{l}{Pensiones} &
+\multicolumn{1}{l}{Participación} \\
+&
+\multicolumn{1}{l}{del Estado (USD)} &
+\multicolumn{1}{l}{pagadas (USD)} &
+\multicolumn{1}{l}{del Estado (\%)}\\
 \midrule
 \endfirsthead
 
@@ -673,188 +648,166 @@ evolución histórica se presenta a continuación:
 \hline
 \multicolumn{4}{r}{continúa...} \\
 \endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+  {\bf Elaborado}: DAIE.}
 \endlastfoot
 \input{tablas/iess_otros_ingresos_rtr.tex}
 \end{longtable}
-}
-\textbf{NOTA:} En el año 2015, la contribución del Estado del 40\% para el pago de las pensiones fue
-hasta el mes de marzo
-
-
-Mediante la expedición de la Ley Orgánica para la Justicia Laboral y Reconocimiento del Trabajo en
-el Hogar, publicado en el Tercer Suplemento del Registro Oficial Nro. 483 de 20 de abril de 2015, el
-Estado deja de contribuir con el 40\% del valor de las pensiones, es por ello que los valores en el
-año 2015 y los años 2016, 2017, 2018, 2019 y 2020 la contribución del estado sufre una disminución drástica como
-se observa en la siguiente gráfica y un ingreso cero por parte del Estado para financiar las
-pensiones.
-
-%---------------------------------------------------------------------------------------------------
-\section{Gastos}
-En la tabla \ref{tab:iess_gastos_rtr} se presenta la evolución histórica de los gastos del Fondo del
-\Sexpr{REP_seg}.
-
-{\fontsize{10}{12}\selectfont
-\begin{longtable}[H]{lcrr}
-\caption{Evolución histórica de los gastos del Fondo del \Sexpr{REP_seg}}
-\label{tab:iess_gastos_rtr} \\
-\toprule
- \multirow{2}[0]{*}{Año}  & Gastos  & Incremento & Incremento\\
- & (USD) &Anual (USD)  &  Anual (\%)\\
-\midrule
-\endfirsthead
-
-\toprule
-\centering \multirow{2}[0]{*}{Año}  & Gastos  & Incremento & Incremento\\
- & (USD) &Anual (USD)  &  Anual (\%)\\
-\midrule
-\endhead
-
-%\bottomrule
-\multicolumn{4}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\endlastfoot
-\input{tablas/iess_gastos_rtr.tex}
-\end{longtable}
-}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Evolución del Gasto del Fondo del \Sexpr{REP_seg}}
-\label{fig:iess_gastos_fondo_rtr}
-\includegraphics[scale=1]{graficos/iess_gastos_fondo_rtr.png}
+\caption{Evolución histórica de la contribución del Estado del Fondo del \Sexpr{REP_seg}.}
+\label{fig:iess_cont_estado_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_cont_estado_fondo_rtr.png}
 \caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
 \\Elaborado: DAIE.}
 \end{figure}
+}
 
-Los gastos para el periodo del 2011 a 2020 tienen un crecimiento de promedio anual del 5,12\%;
-siguiendo una tendencia de crecimiento estable hasta el año 2015. Se observa que los gastos de este
-fondo disminuyeron a partir del 2016; siendo el año 2017 el punto con el decrecimiento más destacado
-con un -6,79\% con respecto al año 2016. Para el año 2020, se registró una reducción igual 5,88\%, respecto al 2019.
+\textbf{NOTA:} En el año 2015, la contribución del Estado del 40\% para el pago de las pensiones fue
+hasta el mes de marzo
 
-\subsection{Componentes del gasto}
-En la siguiente tabla, se presenta los componentes del gasto del Fondo del \Sexpr{REP_seg}:
+
+Mediante la expedición de la Ley Orgánica para la Justicia Laboral y Reconocimiento del Trabajo en el Hogar, publicado en el Tercer Suplemento del Registro Oficial Nro. 483 de 20 de abril de 2015, el Estado deja de contribuir con el 40\% del valor de las pensiones, es por ello que los valores en el año 2015 y los años 2016, 2017, 2018, 2019 y 2020 la contribución del estado sufre una disminución drástica como se observa en la siguiente gráfica y un ingreso cero por parte del Estado para financiar las pensiones.
+
+%---------------------------------------------------------------------------------------------------
+\section{Gastos}
+A continuación, en la tabla \ref{tab:iess_gastos_rtr} y figura \ref{fig:iess_gastos_fondo_rtr},  se presenta la evolución histórica de los gastos del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis del componente de la evolución de los gastos del Fondo del \Sexpr{REP_seg}}
-\label{tab:iess_componentes_gastos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{7}{10}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{p{7cm}rrrrrrrrr}
+\begin{center}
+\caption{Evolución de ingresos por aportes del \Sexpr{REP_seg} al 31 de diciembre de cada año (En
+millones de dólares).}
+\label{tab:iess_gastos_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrr}
 \toprule
-Descripción de cuentas & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+\multirow{2}[0]{*}{Año}  & Gastos & Incremento & Incremento \\
+& (USD) & Anual (USD) & Anual (USD)\\
 \midrule
-\input{tablas/iess_componentes_gastos_rtr.tex}
-%\bottomrule
+\input{tablas/iess_gastos_rtr.tex}
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
-\textbf{Nota:} Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios
-en los códigos de cuentas, creación de cuentas, por lo que presenta su variación y optimización.
+
+Los gastos para el periodo del 2011 a 2020 tienen un crecimiento de promedio anual del 5,12\%; siguiendo una tendencia de crecimiento estable hasta el año 2015. Se observa que los gastos de este fondo disminuyeron a partir del 2016; siendo el año 2017 el punto con el decrecimiento más destacado con un -6,79\% con respecto al año 2016. Para el año 2020, se registró una reducción igual 5,88\%, respecto al 2019.
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución del Gasto del Fondo del \Sexpr{REP_seg} }
+\label{fig:iess_gastos_fondo_rtr}
+\includegraphics[scale=1]{graficos/iess_gastos_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
+\\ {\bf Elaborado:} DAIE.}
+\end{figure}
+
+\subsection{Componentes del gasto}
+
+A continuación, se desarrolla el análisis horizontal vertical de los componentes del gasto, dentro de los cuales se encuentran las siguientes subcuentas “Pensiones por Riesgos del Trabajo”, “Gastos prestacionales por Subsidios”, “Pensiones de Montepío”, “Gastos prestacionales por Subsidios”, “Componente Proc. Unificación.”, “Incremento Ley”, “Costo de Vida entregado x Estado”, “Costo de Vida entregado x Estado”, “Costo de Vida entregado x Estado”, “Programas de Prevención”, “Subsidio por Aportes RT”, “Medicinas-Material Curación”, “Gastos Prestacionales por Atenc.”, “Gastos Direc. Person. (Serv. Prest)”, “Otros Gastos Directos”, “Gastos de Administración”, “Gastos Financieros”, “Gastos de ejercicios anteriores”, “Deprec. propiedades y eq. especial”, “Pérdida venta activos” y “Deprec. propiedades y eq. especial” (ver tabla \ref{tab:iess_analisis_horizontal_ingresos_rtr} y  \ref{tab:iess_analisis_vertical_ingresos_rtr}).
+
+
+
+La cuenta con mayor representatividad en el período analizado es “Pensiones por Riesgos del Trabajo”, la cual representa en promedio el 51.85 \%  de los gastos en el período 2012 a 2020. Además, en la tabla \ref{tab:iess_componentes_gastos_rtr}, se presenta los componentes del ingreso del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+\begin{landscape}
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Análisis de los componentes de los gastos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
+\label{tab:iess_componentes_gastos_rtr}
+{\fontsize{9}{11}\selectfont
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
+\midrule
+\input{tablas/iess_componentes_gastos_rtr.tex}
+\bottomrule
+\end{tabular}
+}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+
+{\bf Nota:}
+
+Cabe mencionar que los balances del IESS en el periodo 2010-2018 ha sufrido cambios en los códigos de cuentas, creación de cuentas, por lo que presenta su variación y optimización.
 
 \subsection{Análisis horizontal y vertical de los componentes del gasto}
 
-En las siguientes tablas, se presentan los análisis horizontal y vertical de los gastos del Fondo
-del \Sexpr{REP_seg}, por el período 2012 - 2020.
+En las tablas \ref{tab:iess_analisis_horizontal_gastos_rtr} y \ref{tab:iess_analisis_vertical_gastos_rtr}, se presentan los análisis horizontal y vertical del gasto del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 \begin{table}[H]
 \captionsetup{justification=centering}
-\centering
-\caption{Análisis horizontal de la evolución de los gastos del Fondo del \Sexpr{REP_seg}}%título tabla
+\begin{center}
+\caption{Análisis horizontal de los gastos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
 \label{tab:iess_analisis_horizontal_gastos_rtr}
-%\scalebox{0.7}{
-%{\fontsize{10}{12}\selectfont
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrrrrrrr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas (\%) & 2013/2012 & 2014/2013 & 2015/2014 & 2016/2015 & 2017/2016 & 2018/2017 & 2019/2018 & 2020/2019\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
 \midrule
 \input{tablas/iess_analisis_horizontal_gastos_rtr.tex}
-%\bottomrule
+\bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
 \end{table}
 
-El crecimiento de los Gastos del Fondo del \Sexpr{REP_seg} es variable en el periodo 2010 – 2020.
-Respecto a los Gastos en el año 2010 el crecimiento anual en el 2011 fue de 16,42\%; para el 2012 el
-crecimiento es de 22,73\% respecto al 2011; el crecimiento en el 2013 fue de 7,51\%, en tanto que
-para el 2014, el crecimiento anual alcanzó el 13,20\%; para el 2015 con respecto al 2014 alcanzó un
-14,36\%; para el 2016 presenta un decrecimiento de -3,45\%, para el año 2017  un -6,79\%; para el
-año 2018 con un decrecimiento de -3,99\% con respecto al 2017, -1,99\% en el 2019 y -5,89\% en 2020; siendo el año 2012 que presenta el
-crecimiento más alto, y en el año 2017 punto más bajo en el periodo.
-
-% \begin{table}[H]
-% \captionsetup{justification=centering}
-% \centering
-% \caption{Análisis vertical de la evolución de los gastos del Fondo del \Sexpr{REP_seg}}%título tabla
-% \label{tab:iess_analisis_vertical_gastos_rtr}
-% %\scalebox{0.7}{
-% %{\fontsize{10}{12}\selectfont
-% \resizebox{\columnwidth}{!}{%
-% \begin{tabular}{lrrrrrrrrr}
-% \toprule
-% Descripción de cuentas(\%) & 2010 & 2011 & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018\\
-% \midrule
-% \input{tablas/iess_analisis_vertical_gastos_rtr.tex}
-% \bottomrule
-% \end{tabular}
-% }
-% \caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-%   Elaborado: DAIE.}
-% \end{table}
-
-
-{\fontsize{9}{10}\selectfont
-\begin{longtable}[H]{lrrrrrrrrr}
-\caption{Análisis vertical de la evolución de los gastos del Fondo del \Sexpr{REP_seg}}\\%título tabla
-\label{tab:iess_analisis_vertical_gastos_rtr}\\
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Análisis vertical de los gastos del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
+\label{tab:iess_analisis_vertical_gastos_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Descripción de cuentas(\%) & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
+      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019}& \multirow{ 2}{*}{2020}\\
+      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
 \midrule
-\endfirsthead
-\toprule
-Descripción de cuentas(\%) & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020\\
-\midrule
-\endhead
-\hline
-\multicolumn{8}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\endlastfoot
 \input{tablas/iess_analisis_vertical_gastos_rtr.tex}
-\end{longtable}
+\bottomrule
+\end{tabular}
 }
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+
+El crecimiento de los Gastos del Fondo del \Sexpr{REP_seg} es variable en el periodo 2010 – 2020. Respecto a los Gastos en el año 2010 el crecimiento anual en el 2011 fue de 16,42\%; para el 2012 el crecimiento es de 22,73\% respecto al 2011; el crecimiento en el 2013 fue de 7,51\%, en tanto que para el 2014, el crecimiento anual alcanzó el 13,20\%; para el 2015 con respecto al 2014 alcanzó un 14,36\%; para el 2016 presenta un decrecimiento de -3,45\%, para el año 2017  un -6,79\%; para el año 2018 con un decrecimiento de -3,99\% con respecto al 2017, -1,99\% en el 2019 y -5,89\% en 2020; siendo el año 2012 que presenta el crecimiento más alto, y en el año 2017 punto más bajo en el periodo.
+
+
+\end{landscape}
 
 La cuenta Pensiones por Riesgo de Trabajo representan el mayor valor con un 50,79\% como promedio anual en referencia a la representación de los gastos totales del Fondo para el periodo 2012-2020; siendo este para el año 2012 alcanza el 44,84\%, en el 2013 alcanza el 52,07\%, en el 2014 alcanza el 53,33\%, en el año 2015 alcanza el 54,88\%; el 2016 alcanza el 53,04\%, en el 2017 alcanza el 52,44\%, en el año 2018 alcanza el 52,73\%, en el año 2019 50,80\% y 52,58\% en el año 2020, siendo la cuenta que ocupa la mayor parte de los gastos totales del Fondo del \Sexpr{REP_seg}.
 
+
 \subsection{Gastos prestacionales por pensiones y subsidios}
 
-Los egresos por pago de pensiones y subsidios de \Sexpr{REP_seg} para el período 2010 a 2018 se
-muestran a continuación:
+A continuación, en la tabla \ref{tab:iess_gastos_prestacionales_rtr} y figura \ref{fig:iess_gastos_prestacionales_fondo_rtr}, se presenta la evolución de los egresos por pago de pensiones y subsidios del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
 
-{\fontsize{9}{10}\selectfont
-\begin{longtable}[H]{lrrrrrr}
+\begin{table}[H]
 \captionsetup{justification=centering}
-\caption{Evolución del pago de pensiones y subsidios del \Sexpr{REP_seg}}
-\label{tab:iess_gastos_prestacionales_rtr} \\
+\begin{center}
+\caption{Evolución del pago de pensiones y subsidios del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
+\label{tab:iess_gastos_prestacionales_rtr}
+{\fontsize{9}{12}\selectfont
+\begin{tabular}{lrrrrrr}
 \toprule
-\multirow{2}[0]{*}{Año} & 
+\multirow{2}[0]{*}{Año} &
 \multicolumn{1}{c}{Pensiones de}&
 \multicolumn{1}{c}{Pensiones de}&
 \multicolumn{1}{c}{Subsidios} &
@@ -863,42 +816,29 @@ muestran a continuación:
 \multicolumn{1}{c}{Tasa de} \\
     &
 \multicolumn{1}{c}{incapacidad (USD)} &
-\multicolumn{1}{c}{Montepío (USD)} & 
+\multicolumn{1}{c}{Montepío (USD)} &
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{y subsidios (USD)} &
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{Crecimiento (\%)}\\
 \midrule
-\endfirsthead
-
-\toprule
-\multirow{2}[0]{*}{Año} & Pensiones de      & Pensiones de   & Subsidios &  Total de pensiones & Incremento & Tasa de \\
-                        & incapacidad (USD) & Montepío (USD) & (USD)          &  y subsidios (USD)& (USD) & Crecimiento (\%)\\
-\midrule
-\endhead
-
-%\bottomrule
-\multicolumn{6}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\endlastfoot
 \input{tablas/iess_gastos_prestacionales_rtr.tex}
-\end{longtable}
+\bottomrule
+\end{tabular}
 }
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
+
 
 
 \textbf{Nota:} Para el periodo 2013 - 2020, el concepto de incremento ley 2004-39 y servicios
 prestacionales u provinciales aparecen sumado al rubro de pensiones.
 
-El crecimiento de los egresos sigue una tendencia positiva desde el 2010 hasta el 2015 con un
-promedio anual del 6,36\%, entre 2011 y 2020. El aumento sostenido de estos rubros obedece a su incremento anual atado
-a la inflación, a la incorporación de nuevos pensionistas y a la variación del alza de sueldos que
-es la base de cálculo para las nuevas pensiones.
+El crecimiento de los egresos sigue una tendencia positiva desde el 2010 hasta el 2015 con un promedio anual del 6,36\%, entre 2011 y 2020. El aumento sostenido de estos rubros obedece a su incremento anual atado a la inflación, a la incorporación de nuevos pensionistas y a la variación del alza de sueldos que es la base de cálculo para las nuevas pensiones.
 
-Las pensiones de riesgos del trabajo representan aproximadamente el 61,32\% del total
-de egresos por pago de prestaciones.  Entre el 2010 – 2020 el egreso por pago de prestaciones se incrementó en 58,86\%, con un crecimiento promedio anual de 7,36\%.
+Las pensiones de riesgos del trabajo representan aproximadamente el 61,32\% del total de egresos por pago de prestaciones.  Entre el 2010 – 2020 el egreso por pago de prestaciones se incrementó en 58,86\%, con un crecimiento promedio anual de 7,36\%.
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -906,23 +846,26 @@ de egresos por pago de prestaciones.  Entre el 2010 – 2020 el egreso por pago 
 \caption{Evolución de los egresos pagados por las prestaciones del Fondo del \Sexpr{REP_seg}}
 \label{fig:iess_gastos_prestacionales_fondo_rtr}
 \includegraphics[scale=1]{graficos/iess_gastos_prestacionales_fondo_rtr.png}
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
-\\Elaborado: DAIE.}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
+\\{\bf Elaborado:} DAIE.}
 \end{figure}
 
 
 \subsection{Gastos prestacionales por decimatercera y decimacuarta pensión}
 
- El comportamiento de otros gastos prestacionales que entrega este fondo se presenta en la siguiente
- tabla y gráfica:
+ A continuación, en la tabla \ref{tab:iess_otros_gastos_prestacionales_rtr} y figura \ref{fig:iess_otros_gastos_fondo_rtr}, se presenta la evolución de otros gastos prestacionales que entrega el Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+ 
 
-{\fontsize{10}{12}\selectfont
-\begin{longtable}[H]{lrrr}
+
+\begin{table}[H]
 \captionsetup{justification=centering}
-\caption{Evolución de otros beneficios de  \Sexpr{REP_seg}}
-\label{tab:iess_otros_gastos_prestacionales_rtr} \\
+\begin{center}
+\caption{Evolución de otros beneficios del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
+\label{tab:iess_otros_gastos_prestacionales_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrr}
 \toprule
-\multirow{2}[0]{*}{Año}  & 
+\multirow{2}[0]{*}{Año}  &
 \multicolumn{1}{c}{13ra Pensión} &
 \multicolumn{1}{c}{14ta Pensión}  &
 \multicolumn{1}{c}{Total} \\
@@ -931,38 +874,60 @@ de egresos por pago de prestaciones.  Entre el 2010 – 2020 el egreso por pago 
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{(USD)} \\
 \midrule
-\endfirsthead
-
-\toprule
-\multirow{2}[0]{*}{Año}  & 
-\multicolumn{1}{c}{13ra Pensión} &
-\multicolumn{1}{c}{14ta Pensión}  &
-\multicolumn{1}{c}{Total} \\
-&
-\multicolumn{1}{c}{(USD)} &
-\multicolumn{1}{c}{(USD)} &
-\multicolumn{1}{c}{(USD)} \\
-\midrule
-\endhead
-
-%\bottomrule
-\multicolumn{4}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\endlastfoot
 \input{tablas/iess_otros_gastos_prestacionales_rtr.tex}
-\end{longtable}
+\bottomrule
+\end{tabular}
 }
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
 
 \textbf{Nota:} Las cuentas  Décima Tercera Pensión y Décima Cuarta Pensión del Balance contable del Fondo son independientes de las otras cuentas de prestaciones.
 
 Las décimas tercera y cuarta pensiones crecieron en 1,59 veces entre el 2010 y el 2020. Además, el pago de decimas muestra un clara tendencia a crecer con el tiempo hasta el 2019 y, para el año 2020, se registra una reducción igual a 1,95\%, respecto a 2019.
 
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución de otros beneficios del Fondo del \Sexpr{REP_seg}}
+\label{fig:iess_otros_gastos_fondo_rtr}
+\includegraphics[scale=0.9]{graficos/iess_otros_gastos_fondo_rtr.png}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
+\\{\bf Elaborado:} DAIE.}
+\end{figure}
+
+
+
 \subsection{Gastos administrativos}
 
-Los gastos administrativos se presentan a continuación:
+En la tabla \ref{tab:iess_otros_gastos_rtr} y figura \ref{fig:iess_otros_gatos_fondo_rtr}, se presenta la evolución de los gastos administrativos del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Evolución de los gastos de administración del \Sexpr{REP_seg} (En millones de dólares).}
+\label{tab:iess_otros_gastos_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrr}
+\toprule
+\multirow{2}[0]{*}{Año}  &
+\multicolumn{1}{c}{Gastos}  &
+\multicolumn{1}{c}{Incremento}  &
+\multicolumn{1}{c}{Incremento} \\
+  &
+\multicolumn{1}{c}{Administrativos (USD)} &
+\multicolumn{1}{c}{Anual (USD)} &
+\multicolumn{1}{c}{Anual (\%)}\\
+\midrule
+\input{tablas/iess_otros_gastos_rtr.tex}
+\bottomrule
+\end{tabular}
+}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -974,46 +939,6 @@ Los gastos administrativos se presentan a continuación:
 \\Elaborado: DAIE.}
 \end{figure}
 
-
-{\fontsize{10}{12}\selectfont
-\begin{longtable}[H]{lcrr}
-\captionsetup{justification=centering}
-\caption{Evolución de los gastos de administración del \Sexpr{REP_seg}}
-\label{tab:iess_otros_gastos_rtr} \\
-\toprule
-\multirow{2}[0]{*}{Año}  & 
-\multicolumn{1}{c}{Gastos}  &
-\multicolumn{1}{c}{Incremento}  & 
-\multicolumn{1}{c}{Incremento} \\
-  & 
-\multicolumn{1}{c}{Administrativos (USD)} &
-\multicolumn{1}{c}{Anual (USD)} &
-\multicolumn{1}{c}{Anual (\%)}\\
-\midrule
-\endfirsthead
-\toprule
-\multirow{2}[0]{*}{Año}  & 
-\multicolumn{1}{c}{Gastos}  &
-\multicolumn{1}{c}{Incremento}  & 
-\multicolumn{1}{c}{Incremento} \\
-  & 
-\multicolumn{1}{c}{Administrativos (USD)} &
-\multicolumn{1}{c}{Anual (USD)} &
-\multicolumn{1}{c}{Anual (\%)}\\
-\midrule
-\endhead
-\hline
-\multicolumn{4}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  Elaborado: DAIE.}
-\endlastfoot
-\input{tablas/iess_otros_gastos_rtr.tex}
-\end{longtable}
-}
-
-
 Se observa que desde el año 2013 tenemos la cuenta de Gastos Administrativos compuesto por la
 Contribución a la Administradora y Gasto por Depreciaciones como otros egresos del Fondo del
 \Sexpr{REP_seg}. Se aprecia que en el año 2013 al 2015 existe una disminución en un promedio del
@@ -1021,38 +946,32 @@ Contribución a la Administradora y Gasto por Depreciaciones como otros egresos 
 más alto en el periodo por la inclusión de la Contribución a la Administradora, al 2018 existe una
 caída precipitada en la Contribución a la Administradora en un -47,89\%. Después, crecieron a 338,24\% en el año 2019 y se redujeron a USD 327.168,43 en 2020, lo que representa un redución igual a 73,75\%, con respecto al año 2019.
 
+
 \section{Comparación entre ingresos versus gastos}
 
 La utilización de valores del \Sexpr{REP_seg} en sus diferentes conceptos frente a los ingresos recibidos en este seguro para solventar las obligaciones se presenta en la tabla \ref{tab:iess_gastos_vs_ingresos_rtr}. El resultado del ejercicio se obtiene entre la diferencia de los ingresos totales (ver tabla \ref{tab:iess_componentes_ingresos_rtr}) y los gastos totales (ver tabla \ref{tab:iess_componentes_gastos_rtr}) , lo que corresponde a la utilización de los ingresos que se utilizó en los gastos del Fondo.
 
-{\fontsize{10}{12}\selectfont
-\begin{longtable}[H]{ccccc}
-\captionsetup{justification=centering}
-\caption{Comparación entre los ingresos versus gastos totales del \Sexpr{REP_seg}} \\
-\label{tab:iess_gastos_vs_ingresos_rtr} \\
-\toprule
-Año  & Ingresos & Gastos & Resultado del    & Utilización \\
-     & (USD)    & (USD)  & ejercicio (USD)  &  Anual (\%)\\
-\midrule
-\endfirsthead
-
-\toprule
-Año  & Ingresos & Gastos & Resultado del    & Utilización \\
-     & (USD)    & (USD)  & ejercicio (USD)  &  Anual (\%)\\
-\midrule
-\endhead
-
-\hline
-\multicolumn{5}{r}{continúa...} \\
-\endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
-  Elaborado: DAIE.}
-\endlastfoot
-  \input{tablas/iess_gastos_vs_ingresos_rtr.tex}
-\end{longtable}
-}
 Comparando entre los ingresos y los gastos totales, se observa que desde el año 2016 al 2018 la utilización anual creció de 40,92\% a 71,26\% entre 2015 y 2016, por la ausencia de la contribución del 40\% del Estado. El año 2014 registró el mayor resultado del ejercicio (USD 130.799.418,96) en el período 2010 – 2020 y; en cambio, el año 2016 registró el menor resultado con USD 30.831.608,72.
+
+\begin{table}[H]
+\captionsetup{justification=centering}
+\begin{center}
+\caption{Comparación entre los ingresos versus gastos totales del \Sexpr{REP_seg}.}
+\label{tab:iess_gastos_vs_ingresos_rtr}
+{\fontsize{10}{12}\selectfont
+\begin{tabular}{lrrrr}
+\toprule
+Año  & Ingresos & Gastos & Resultado del    & Utilización \\
+     & (USD)    & (USD)  & ejercicio (USD)  &  Anual (\%)\\
+\midrule
+\input{tablas/iess_gastos_vs_ingresos_rtr.tex}
+\bottomrule
+\end{tabular}
+}
+\caption*{\scriptsize {\bf Fuente:} Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo. \\
+{\bf Elaborado:} DAIE.}
+\end{center}
+\end{table}
 
 \section{Comparación de ingresos por aportes y gastos de administración}
 La tabla \ref{tab:iess_gastos_admi_vs_ingresos_afi_rtr} presenta el porcentaje de utilización de los aportes personales y patronales (sin contar con el aporte del 2,76\% de los pensionistas) para cubrir gastos de administración a diciembre de cada año.
