@@ -47,7 +47,7 @@ aux <- aux[ ,list(print_names,
                   rendimiento_promedio,
                   rendimiento_promedio_real,
                   plazo_promedio_dias
-                  )]
+)]
 aux_xtab <- xtable( aux, digits = c(0,2,2,2,2,2))
 
 print( aux_xtab, 
@@ -125,12 +125,12 @@ print( aux_xtab,
 
 # Tabla evolución Inversiones en Créditos --------------------------------------
 aux <- inv_instrumento %>%
-       filter(instrumento=='Créditos Quirografarios') %>%
-       na.omit() %>%
-       mutate(rdto_prom_pond=rdto_prom_pond*100,
-              rend_promedio_real=rend_promedio_real*100,
-              ano=as.character(ano)) %>%
-       select(-inflacion,-instrumento) %>%
+  filter(instrumento=='Créditos Quirografarios') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
   arrange(ano)
 
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,0 ))
@@ -147,12 +147,12 @@ print( aux_xtab,
 
 # Tabla evolución Inversiones en Bonos del Estado Ecuatoriano --------------------------------------
 aux <- inv_instrumento %>%
-        filter(instrumento=='Bonos del Estado') %>%
-        na.omit() %>%
-        mutate(rdto_prom_pond=rdto_prom_pond*100,
-               rend_promedio_real=rend_promedio_real*100,
-               ano=as.character(ano)) %>%
-        select(-inflacion,-instrumento) %>%
+  filter(instrumento=='Bonos del Estado') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
   arrange(ano)
 
 
@@ -186,10 +186,10 @@ print( aux_xtab,
 
 #Tabla Recepción de Bonos del Estado por el 40% del pago de las pensiones---------------------------
 aux <- detalle_bonos_40 %>%
-       mutate(tasa=tasa*100,
-              fecha_colocacion=as.character(fecha_colocacion),
-              vencimiento=as.character(vencimiento),
-              pago_del_periodo=as.character(format(detalle_bonos_40$pago_del_periodo,"%Y-%B")))
+  mutate(tasa=tasa*100,
+         fecha_colocacion=as.character(fecha_colocacion),
+         vencimiento=as.character(vencimiento),
+         pago_del_periodo=as.character(format(detalle_bonos_40$pago_del_periodo,"%Y-%B")))
 aux_xtab <- xtable( aux, digits = c(0,0,0,0,2,2,0 ))
 
 print( aux_xtab, 
@@ -203,12 +203,12 @@ print( aux_xtab,
 
 #Tabla Evolución Inversiones en Obligaciones--------------------------------------------------------
 aux <- inv_instrumento %>%
-      filter(instrumento=='Obligaciones') %>%
-      na.omit() %>%
-      mutate(rdto_prom_pond=rdto_prom_pond*100,
-             rend_promedio_real=rend_promedio_real*100,
-             ano=as.character(ano)) %>%
-      select(-inflacion,-instrumento) %>%
+  filter(instrumento=='Obligaciones') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
   arrange(ano)
 
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,0 ))
@@ -239,12 +239,12 @@ print( aux_xtab,
 
 #Tabla Evolución Inversiones en Titularizaciones----------------------------------------------------
 aux <- inv_instrumento %>%
-        filter(instrumento=='Titularizaciones') %>%
-        na.omit() %>%
-        mutate(rdto_prom_pond=rdto_prom_pond*100,
-               rend_promedio_real=rend_promedio_real*100,
-               ano=as.character(ano)) %>%
-        select(-inflacion,-instrumento) %>%
+  filter(instrumento=='Titularizaciones') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
   arrange(ano)
 
 
