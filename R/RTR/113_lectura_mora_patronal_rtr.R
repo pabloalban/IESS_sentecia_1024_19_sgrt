@@ -28,7 +28,9 @@ rp_sgrt <- read_excel(file,
                  ) %>%
   mutate( fecha_siniestro = as.Date( fecha_siniestro, "%Y-%m-%d"),
           fecha_cancelacion = as.Date( fecha_cancelacion, "%Y-%m-%d") ) %>%
-  filter( !(estado_acuerdo %in% c('ANULADO', 'APROBADO') ) )
+  filter( !(estado_acuerdo %in% c('ANULADO', 
+                                  'APROBADO',
+                                  'EMITIDO' ) ) )
 
 #Guardando en un Rdata------------------------------------------------------------------------------
 message( '\tGuardando responsabilidad patronal' )
