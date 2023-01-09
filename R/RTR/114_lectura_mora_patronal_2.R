@@ -10,27 +10,145 @@ col_nom <- c( 'fecha_carga', 'cod_provincia', 'provincia', 'cod_canton','canton'
               'nomrepleg', 'afiliados_fecha',' tipo_empresa','numero_glosa', 'cedula_nombre_abogado','numgui', 'conceptos',
               'dias_mora', 'rango_dias_mora', 'fecpagpla',' x_dias_mora_ant')
 
-col_tip <- c( 'character', 'numeric', 'character', 'numeric', 'character', 'numeric','character', 'numeric', 'numeric','character', 
-              'numeric','numeric','character','character','numeric','numeric ','numeric', 'character','numeric', 'numeric','character','character', 
-              'character','character','character','character','character','character','character','character' , 'character', 'character',        
-              'numeric', 'character', 'character','character','character','character','character','character','numeric','numeric','numeric', 
-              'numeric','numeric','numeric','numeric','numeric', 'numeric','character','character','character','character','numeric', 
-              'character','character','character','character','character','character','character','character',
-              'numeric','character','numeric','character','character','numeric')
+col_tip <- c( 'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'numeric',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'numeric',
+              'numeric',
+              'numeric',
+              'numeric',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character',
+              'character')
 
 
 
 message( '\tLectura de mora patronal' )
-#parametros$Dat <- "D:\\Pasantes\\Darlyn\\IESS_sentecia_1024_19_sgrt\\Data\\SENTENCIA CORTE CONST 1024\\IESS-DSGRT-2022-0409-M\\"
-
+#Ubicación------------------------------------------------------------------------------------------
 file1 <- paste0( parametros$Data, 'RTR/SENTENCIA CORTE CONST 1024/IESS-DNRGC-2022-0585-M/2_4.txt')
 file2 <- paste0( parametros$Data, 'RTR/SENTENCIA CORTE CONST 1024/IESS-DNRGC-2022-0585-M/2_5.txt')
 file3 <- paste0( parametros$Data, 'RTR/SENTENCIA CORTE CONST 1024/IESS-DNRGC-2022-0585-M/2_6.txt')
-mora_patronal_2_4 <- read.table(file1, header = F,sep=";",fill=TRUE,col.names =col_nom,skip=1) %>% clean_names()   #primera hoja
-mora_patronal_2_5 <- read.table(file2, header = F,sep=";",fill=TRUE,col.names =col_nom,skip=1) %>% clean_names()   #segunda hoja
-mora_patronal_2_6 <- read.table(file3, header = F,sep=";",fill=TRUE,col.names =col_nom,skip=1) %>% clean_names()   #tercera hoja
-mora_patronal_2 <- rbind(mora_patronal_2_4,mora_patronal_2_5,mora_patronal_2_6)  #unimos las 3 hojas de excel
-mora_patronal_2 <- mora_patronal_2 %>% distinct()
+
+#Carga----------------------------------------------------------------------------------------------
+colTypes <- as.data.frame(sapply(mora_patronal_2, class))
+
+
+mora_patronal_2_4 <- read.table(file1,
+                                header = F,
+                                sep=";",
+                                dec = ",",
+                                fill=TRUE,
+                                col.names = col_nom,
+                                colClasses =col_tip,
+                                skip=1) %>% clean_names()   #primera hoja
+
+mora_patronal_2_5 <- read.table(file2,
+                                header = F,
+                                sep=";",
+                                dec = ",",
+                                fill=TRUE,
+                                col.names = col_nom,
+                                skip=1) %>% clean_names()   #segunda hoja
+mora_patronal_2_6 <- read.table(file3, 
+                                header = F,
+                                sep=";",
+                                dec = ",",
+                                fill=TRUE,
+                                col.names = col_nom,
+                                skip=1) %>% clean_names()   #tercera hoja
+
+mora_patronal_2 <- rbind(mora_patronal_2_4,
+                         mora_patronal_2_5,
+                         mora_patronal_2_6)  #unimos las 3 hojas de excel
+
+aux <- mora_patronal_2 %>%
+  mutate(aniper = as.integer( gsub(",00", "", aniper) ),
+         mesper = as.integer( gsub(",00", "", mesper ) ),
+         valor = as.numeric( gsub(",", ".", valor ) ),
+         interes = as.numeric( interes ),
+         honorarios = as.numeric( honorarios ),
+         gastos_administrativos = as.numeric( gsub(",", ".", gastos_administrativos ) ),
+         total = as.numeric( gsub(",", ".", total ) ),
+         valnorpla  = as.numeric( gsub(",", ".", valnorpla  ) ),
+         valadipla  = as.numeric( gsub(",", ".", valadipla  ) ),
+         numero_obligaciones   = as.numeric( gsub(",", ".", numero_obligaciones  ) ),
+         dias_mora  = as.numeric( gsub(",", ".", dias_mora  ) ),
+         x_x_dias_mora_ant = as.numeric( gsub(",", ".", x_x_dias_mora_ant  ) ),
+         fecha_carga = as.Date(  gsub(" 0:00:00", "", fecha_carga ), "%d/%m/%Y" ) ) %>%
+  dplyr::select( fecha_carga,
+                 aniper,
+                 mesper,
+                 tipo,
+                 valor,
+                 interes,
+                 honorarios,
+                 gastos_administrativos,
+                 total,
+                 tipo_obligacion,
+                 destipo_obligacion,
+                 valnorpla,
+                 periodo_desde,
+                 periodo_hasta,
+                 dias_mora,
+                 x_x_dias_mora_ant)
 
 
 from <- c('Ã“','Ã‰','Ã', 'Ãš','Ã‘','Í\u0081','Í‘','\u008d')
