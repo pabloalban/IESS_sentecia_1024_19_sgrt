@@ -44,8 +44,8 @@ millones de dólares).}
 \multicolumn{4}{r}{continúa...} \\
 \endfoot
 %\bottomrule
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados - DNGF. \\
-  {\bf Elaborado:} DAIE.}
+\caption*{\scriptsize Fuente: Balance Financiero del SGRT - DNGF \\
+Elaborado: DAIE}
 \endlastfoot
 \input{tablas/iess_activo_del_fondo_rtr.tex}
 \end{longtable}
@@ -70,20 +70,40 @@ Además, en la tabla \ref{tab:iess_analisis_componentes_activo_rtr}, se presenta
 \begin{table}[H]
 \captionsetup{justification=centering}
 \begin{center}
-\caption{Análisis de los componentes del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (En millones de dólares).}
+\caption{Análisis de los componentes del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
 \label{tab:iess_analisis_componentes_activo_rtr}
-{\fontsize{10}{12}\selectfont
-\begin{tabular}{lrrrrrrrrr}
+{\fontsize{8.4}{12}\selectfont
+\begin{tabular}{lrrrrrrrrrr}
 \toprule
-      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015} & \multirow{ 2}{*}{2016} & \multirow{ 2}{*}{2017} & \multirow{ 2}{*}{2018} & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020} \\
-      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  &  & \\
+\multicolumn{1}{l}{\multirow{2}[2]{*}{Cuentas: }} & 
+\multicolumn{1}{c}{2012} & 
+\multicolumn{1}{c}{2013} &
+\multicolumn{1}{c}{2014} & 
+\multicolumn{1}{c}{2015} & 
+\multicolumn{1}{c}{2016} & 
+\multicolumn{1}{c}{2017} & 
+\multicolumn{1}{c}{2018} &
+\multicolumn{1}{c}{2019} & 
+\multicolumn{1}{c}{2020} & 
+\multicolumn{1}{c}{2021} \\
+& 
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} & 
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} & 
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} &
+\multicolumn{1}{c}{(USD)} \\
 \midrule
 \input{tablas/iess_analisis_componentes_activo_rtr.tex}
 \bottomrule
 \end{tabular}
 }
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
-{\bf Elaborado:} DAIE.}
+\caption*{\scriptsize Fuente: Balance Financiero del SGRT - DNGF \\
+Elaborado: DAIE}
 \end{center}
 \end{table}
 
@@ -94,56 +114,145 @@ Además, en la tabla \ref{tab:iess_analisis_componentes_activo_rtr}, se presenta
 \item	La cuenta “Deuda del Gobierno” en el plan de cuentas del 2010 al 2012 se la reconoce como cuenta principal del activo; sin embargo a partir del 2013 al 2020 dicha cuenta pasa a ser una subcuenta de “Cuentas por Cobrar”, es por ello que en la tabla \ref{tab:iess_analisis_componentes_activo_rtr} no registra valores desde el 2013.
 \end{itemize}
 
+\end{landscape}
+
 \subsection{Análisis horizontal y vertical del activo}
 
 En las tablas \ref{tab:iess_analisis_horizontal_activo_rtr} y \ref{tab:iess_analisis_vertical_activo_rtr}, se presentan los análisis horizontal y vertical de los componentes del activo del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
 
-
-\begin{table}[H]
-\captionsetup{justification=centering}
-\begin{center}
-\caption{Análisis horizontal del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
-\label{tab:iess_analisis_horizontal_activo_rtr}
-{\fontsize{10}{12}\selectfont
-\begin{tabular}{lrrrrrrrrr}
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{9}{12}\selectfont
+\begin{longtable}[H]{lrrrrrrrrr}
+\caption{Análisis horizontal del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
+\label{tab:iess_analisis_horizontal_activo_rtr} \\
 \toprule
-      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2013/2012} & \multirow{ 2}{*}{2014/2013} & \multirow{ 2}{*}{2015/2014} & \multirow{ 2}{*}{2016/2015} & \multirow{ 2}{*}{2017/2016} & \multirow{ 2}{*}{2018/2017} & \multirow{ 2}{*}{2019/2018} & \multirow{ 2}{*}{2020/2019}\\
-      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & \\
+ \multicolumn{1}{l}{\multirow{2}[2]{*}{Cuentas: }} & 
+\multicolumn{1}{c}{2013/2012} &
+\multicolumn{1}{c}{2014/2013} & 
+\multicolumn{1}{c}{2015/2014} &
+\multicolumn{1}{c}{2016/2015} & 
+\multicolumn{1}{c}{2017/2016} &
+\multicolumn{1}{c}{2018/2017} &
+\multicolumn{1}{c}{2019/2018} &
+\multicolumn{1}{c}{2020/2019} &
+\multicolumn{1}{c}{2021/2020} \\
+& 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} \\
 \midrule
-\input{tablas/iess_analisis_horizontal_activo_rtr.tex}
-\bottomrule
-\end{tabular}
+\endfirsthead
+
+\toprule
+ \multicolumn{1}{l}{\multirow{2}[2]{*}{Cuentas: }} & 
+\multicolumn{1}{c}{2013/2012} &
+\multicolumn{1}{c}{2014/2013} & 
+\multicolumn{1}{c}{2015/2014} &
+\multicolumn{1}{c}{2016/2015} & 
+\multicolumn{1}{c}{2017/2016} &
+\multicolumn{1}{c}{2018/2017} &
+\multicolumn{1}{c}{2019/2018} &
+\multicolumn{1}{c}{2020/2019} &
+\multicolumn{1}{c}{2021/2020} \\
+& 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{10}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Balance Financiero del SGRT - DNGF \\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_analisis_horizontal_activo_rtr.tex}
+\end{longtable}
 }
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
-{\bf Elaborado:} DAIE.}
-\end{center}
-\end{table}
+}
 
 En el año 2012 se evidencia el mayor incremento del Activo con una tasa de 30,38\%, debido al aumento de las subcuentas “Propiedades y Equipos Especializados” (127,05\%) y “Cuentas por Cobrar” (124,24\%). Cabe mencionar que en el período analizado no se registran variaciones negativas; sin embargo el año 2016 se evidencia una disminución del activo en 6,17\% siendo la más significativa, debido a las subcuentas “Recursos/Administrado por el BIESS” (6,03\%) y “Cuentas por Cobrar” (6,26\%).
 
 El crecimiento del Activo es variable en el periodo. Respecto al activo en el año 2010 el crecimiento anual en el 2011 fue de 27,51\%; para el 2012 el crecimiento es de  30,38\% respecto al 2011; el crecimiento en el 2013 fue de  22,98\%, en tanto que para el 2014, el crecimiento anual alcanzó el 22,98\%; para el 2015 fue de 16,10\%; para el 2016 el crecimiento con respecto al 2015 es del 6,17\%, lo mismo ocurre para el año 2017 con un 7,96\%; el resultado para el año 2018  el crecimiento fue un 6,28\% con respecto al 2017; mientras que el crecimiento entre 2020 y 2019 fue 12,82\%.
-\end{landscape}
 
-
-\begin{table}[H]
-\captionsetup{justification=centering}
-\begin{center}
-\caption{Análisis vertical del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año (\%).}
-\label{tab:iess_analisis_vertical_activo_rtr}
-{\fontsize{10}{12}\selectfont
-\begin{tabular}{lrrrrrrrrr}
+{\fontsize{9}{12}\selectfont
+\begin{longtable}[H]{lrrrrrrrrrr}
+\caption{Análisis vertical del activo del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
+\label{tab:iess_analisis_vertical_activo_rtr} \\
 \toprule
-      \multicolumn{1}{ c }{DESCRIPCIÓN DE LAS}& \multirow{ 2}{*}{2012} & \multirow{ 2}{*}{2013} & \multirow{ 2}{*}{2014} & \multirow{ 2}{*}{2015}  & \multirow{ 2}{*}{2016 } & \multirow{ 2}{*}{2017 } & \multirow{ 2}{*}{2018 } & \multirow{ 2}{*}{2019} & \multirow{ 2}{*}{2020}\\
-      \multicolumn{1}{ c }{CUENTAS} &  &  &  & &  &  &  & & \\
+\multicolumn{1}{l}{\multirow{2}[2]{*}{Cuentas: }} & 
+\multicolumn{1}{c}{2012} & 
+\multicolumn{1}{c}{2013} &
+\multicolumn{1}{c}{2014} & 
+\multicolumn{1}{c}{2015} & 
+\multicolumn{1}{c}{2016} & 
+\multicolumn{1}{c}{2017} & 
+\multicolumn{1}{c}{2018} &
+\multicolumn{1}{c}{2019} & 
+\multicolumn{1}{c}{2020} & 
+\multicolumn{1}{c}{2021} \\
+& 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} \\
 \midrule
-\input{tablas/iess_analisis_vertical_activo_rtr.tex}
-\bottomrule
-\end{tabular}
-\caption*{\scriptsize {\bf Fuente:} Balance General Consolidado por Fondos Administrados de los Fondos Especializados-DNGF. \\
-{\bf Elaborado:} DAIE.}
-\end{center}
-\end{table}
+\endfirsthead
 
+\toprule
+\multicolumn{1}{l}{\multirow{2}[2]{*}{Cuentas: }} & 
+\multicolumn{1}{c}{2012} & 
+\multicolumn{1}{c}{2013} &
+\multicolumn{1}{c}{2014} & 
+\multicolumn{1}{c}{2015} & 
+\multicolumn{1}{c}{2016} & 
+\multicolumn{1}{c}{2017} & 
+\multicolumn{1}{c}{2018} &
+\multicolumn{1}{c}{2019} & 
+\multicolumn{1}{c}{2020} & 
+\multicolumn{1}{c}{2021} \\
+& 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} & 
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} &
+\multicolumn{1}{c}{(\%)} \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{11}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Balance Financiero del SGRT - DNGF \\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_analisis_vertical_activo_rtr.tex}
+\end{longtable}
+}
 
 %---------------------------------------------------------------------------------------------------
 \section{Total de pasivos contables}

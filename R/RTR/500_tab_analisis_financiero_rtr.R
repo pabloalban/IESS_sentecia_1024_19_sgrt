@@ -6,11 +6,13 @@ load( file = paste0( parametros$RData_seg, 'IESS_RTR_analisis_financiero.RData' 
 # Cargar función tildes a latex---------------------------------------------------------------------
 source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 
-# Activo Fondo
+# Activo Fondo--------------------------------------------------------------------------------------
 message( '\tLectura activo del fondo' )
-aux <- as.data.table(activo_del_fondo)
-aux[, Año:=as.character(Año)]
-aux <- clean_names(aux)
+aux <- activo_del_fondo %>%
+  clean_names( ) %>%
+  filter( ano >= 2012 ) %>%
+  mutate( ano = as.character( ano ) )
+
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2) )
 
 print( aux_xtab,
@@ -24,9 +26,12 @@ print( aux_xtab,
 
 # Análisis Componentes del Activo-------------------------------------------------------------------
 message( '\tTabla Análisis Componentes del Activo' )
-aux <- as.data.table( analisis_componentes_activo[ , -c(2,3) ] )
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,0,0,0,0,0,0,0) )
+aux <- analisis_componentes_activo %>% 
+  clean_names() %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+  
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_componentes_activo_rtr', '.tex' ),
@@ -34,14 +39,17 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = c(nrow(aux)-1),
        sanitize.text.function = identity)
 
 # Análisis Horizontal Activo------------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal Activo' )
-aux <- as.data.table(analisis_horizontal_activo[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2) )
+aux <- analisis_horizontal_activo %>% 
+  clean_names() %>%
+  dplyr::select( -x2011_2010,
+                 -x2012_2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 9 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_horizontal_activo_rtr', '.tex' ),
@@ -49,13 +57,18 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = c(nrow(aux)-1,
+                       nrow(aux)),
        sanitize.text.function = identity)
+
 # Análisis vertical del activo----------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Activo' )
-aux <- as.data.table(analisis_vertical_activo[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2,2))
+aux <- analisis_vertical_activo %>% 
+  clean_names() %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_vertical_activo_rtr', '.tex' ),
@@ -63,14 +76,15 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Cuentas por Cobrar Fondo RT-----------------------------------------------------------------------
 message( '\tTabla Análisis Cuentas por Cobrar' )
-aux <- as.data.table(cuentas_cobrar_fondo)
-aux[, Año:=as.character(Año)]
-aux<-clean_names(aux)
+aux <- cuentas_cobrar_fondo %>%
+  clean_names( ) %>%
+  mutate( ano = as.character(ano) )
+
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
 
 print( aux_xtab,
@@ -84,9 +98,11 @@ print( aux_xtab,
 
 # Pasivos del Fondo---------------------------------------------------------------------------------
 message( '\tTabla Pasivos del Fondo' )
-aux <- as.data.table(pasivos_fondo)
-aux[, Año:=as.character(Año)]
-aux<-clean_names(aux)
+aux <- pasivos_fondo %>%
+  clean_names( ) %>%
+  filter( ano >= 2012 ) %>%
+  mutate( ano = as.character( ano ) )
+
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
 
 print( aux_xtab,
@@ -100,23 +116,29 @@ print( aux_xtab,
 
 # Componentes del Pasivo del Fondo------------------------------------------------------------------
 message( '\tTabla Componentes del Pasivo del Fondo' )
-aux <- as.data.table(componentes_pasivos_fondo[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,0,0,0,0,0,0,0))
+aux <- componentes_pasivos_fondo %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 10 ) ))
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_componentes_pasivos_fondo_rtr', '.tex' ),
        type = 'latex',
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Análisis Horizontal del Pasivo--------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Pasivo' )
-aux <- as.data.table(analisis_horizontal_pasivos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2))
+aux <- analisis_horizontal_pasivos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2011_2010,
+                 -x2012_2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2,9) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_horizontal_pasivos_rtr', '.tex' ),
@@ -124,14 +146,18 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Análisis Vertical del Pasivo----------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Pasivo' )
-aux <- as.data.table(analisis_vertical_pasivos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2,2))
+
+aux <- analisis_vertical_pasivos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010_percent,
+                 -x2011_percent )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_vertical_pasivos_rtr', '.tex' ),
@@ -139,15 +165,16 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 7,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Cuentas por Pagar del Fondo-----------------------------------------------------------------------
 message( '\tTabla Cuentas por Pagar del Fondo' )
-aux <- as.data.table(cuentas_pagar_fondo)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
+aux <- cuentas_pagar_fondo %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep( 2, 3 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_cuentas_pagar_fondo_rtr', '.tex' ),
@@ -160,10 +187,12 @@ print( aux_xtab,
 
 # Patrimonio del Fondo------------------------------------------------------------------------------
 message( '\tTabla Patrimonio del Fondo' )
-aux <- as.data.table(patrimonio_fondo)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
+aux <- patrimonio_fondo %>%
+  clean_names( ) %>%
+  filter( ano >= 2012 ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 3) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_patrimonio_fondo_rtr', '.tex' ),
@@ -176,9 +205,12 @@ print( aux_xtab,
 
 # Componentes del Patrimonio del Fondo--------------------------------------------------------------
 message( '\tTabla Componentes del Patrimonio del Fondo' )
-aux <- as.data.table(componentes_patrimonio_fondo[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,0,0,0,0,0,0,0))
+aux <- componentes_patrimonio_fondo %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 10) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_componentes_patrimonio_fondo_rtr', '.tex' ),
@@ -186,14 +218,17 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 4,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Análisis Horizontal del Patrimonio----------------------------------------------------------------
 message( '\tTabla  Análisis Horizontal del Patrimonio' )
-aux <- as.data.table(analisis_horizontal_patrimonio[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2))
+aux <- analisis_horizontal_patrimonio %>%
+  clean_names( ) %>%
+  dplyr::select( -x2011_2010,
+                 -x2012_2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 9 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_horizontal_patrimonio_rtr', '.tex' ),
@@ -201,14 +236,17 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 4,
+       hline.after = nrow( aux )-1,
        sanitize.text.function = identity)
 
 # Análisis Vertical del Patrimonio------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Patrimonio' )
-aux <- as.data.table(analisis_vertical_patrimonio[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2,2))
+aux <- analisis_vertical_patrimonio %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 10) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_analisis_vertical_patrimonio_rtr', '.tex' ),
@@ -216,15 +254,16 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 4,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Ingresos del Fondo--------------------------------------------------------------------------------
 message( '\tTabla Ingresos del Fondo' )
-aux <- as.data.table(ingresos_fondo)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
+aux <- ingresos_fondo %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 3) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_ingresos_fondo_rtr', '.tex' ),
@@ -237,9 +276,12 @@ print( aux_xtab,
 
 # Componentes de los Ingresos-----------------------------------------------------------------------
 message( '\tTabla Componentes de los Ingresos' )
-aux <- as.data.table(componentes_ingresos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,0,0,0,0,0,0,0))
+aux <- componentes_ingresos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(2,10) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -248,14 +290,17 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 8,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Análisis Horizontal del Ingreso-------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Ingreso' )
-aux <- as.data.table( analisis_horizontal_ingresos[ , -c(2,3) ] )
-aux<-clean_names( aux )
-aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2, 2, 2, 2, 2, 2, 2 ) )
+aux <- analisis_horizontal_ingresos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2011_2010,
+                 -x2012_2011)
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 9) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -264,14 +309,18 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 8,
+       hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
 # Análisis Vertical del Ingreso---------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Ingreso' )
-aux <- as.data.table(analisis_vertical_ingresos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2, 2,2,2,2,2,2,2))
+
+aux <- analisis_vertical_ingresos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011)
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 10 ) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -285,10 +334,11 @@ print( aux_xtab,
 
 # Ingresos por Aportes------------------------------------------------------------------------------
 message( '\tTabla Ingresos por Aportes' )
-aux <- as.data.table(ingresos_aportes)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c( 0, 0, 2, 2, 2, 2, 2 ,2 ) )
+aux <- ingresos_aportes %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 6 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_ingresos_aportes_rtr', '.tex' ),
@@ -299,12 +349,13 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#TABLA 20 Otros Ingresos--------------------------------------------------
+#TABLA 20 Otros Ingresos----------------------------------------------------------------------------
 message( '\tTabla Otros Ingresos' )
-aux <- as.data.table(otros_ingresos)
-aux[,Anio:=as.character(Anio)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,2))
+aux <- otros_ingresos %>%
+  clean_names( ) %>%
+  mutate( anio = as.character( anio ) )
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2,3) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_otros_ingresos_rtr', '.tex' ),
@@ -315,12 +366,13 @@ print( aux_xtab,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
 
-#TABLA 21 Gastos--------------------------------------------------
+#TABLA 21 Gastos------------------------------------------------------------------------------------
 message( '\tTabla Gastos' )
-aux <- as.data.table(gastos)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
+aux <- gastos %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2,3) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_gastos_rtr', '.tex' ),
@@ -333,10 +385,11 @@ print( aux_xtab,
 
 #tabla ingresos vs egresos--------------------------------------------------------------------------
 message( '\tTabla ingresos vs egresos' )
-aux <- as.data.table(ingresos_vs_gastos)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2))
+aux <- ingresos_vs_gastos %>%
+  clean_names( ) %>%
+  mutate( ano = as.character(ano) )
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 4 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_gastos_vs_ingresos_rtr', '.tex' ),
@@ -350,10 +403,12 @@ print( aux_xtab,
 
 #tabla ingresos por aportes vs gastos administrativos-----------------------------------------------
 message( '\tTabla aportes vs gastos administrativos' )
-aux <- as.data.table(ingresos_vs_gtos_adm)
-aux[,Año:=as.character(Año)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2))
+
+aux <- ingresos_vs_gtos_adm %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 4)))
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_gastos_admi_vs_ingresos_afi_rtr', '.tex' ),
@@ -364,11 +419,17 @@ print( aux_xtab,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
 
-#TABLA 22 Componentes del Gasto--------------------------------------------------
+#TABLA 22 Componentes del Gasto---------------------------------------------------------------------
 message( '\tTabla Componentes del Gasto' )
-aux <- as.data.table(componentes_gastos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,0,0,0,0,0,0,0,0,0))
+
+aux <- componentes_gastos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 10 ) ) )
+
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -380,11 +441,16 @@ print( aux_xtab,
        hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
-#TABLA 23 Análisis Horizontal del Gasto--------------------------------------------------
+#TABLA 23 Análisis Horizontal del Gasto-------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Gasto' )
-aux <- as.data.table(analisis_horizontal_gastos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2))
+
+aux <- analisis_horizontal_gastos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2011_2010,
+                 -x2012_2011 )
+  
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2,9)))
+
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -396,11 +462,14 @@ print( aux_xtab,
        hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
-#TABLA 24 Análisis Vertical del Gasto--------------------------------------------------
+#TABLA 24 Análisis Vertical del Gasto---------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Gasto' )
-aux <- as.data.table(analisis_vertical_gastos[ , -c(2,3) ])
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2,2,2,2) )
+aux <- analisis_vertical_gastos %>%
+  clean_names( ) %>%
+  dplyr::select( -x2010,
+                 -x2011 )
+
+aux_xtab <- xtable( aux, digits = c(0,0,rep(2,10)) )
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab,
@@ -412,12 +481,13 @@ print( aux_xtab,
        hline.after = nrow(aux)-1,
        sanitize.text.function = identity)
 
-#TABLA 25 Gastos Prestacionales--------------------------------------------------
+#TABLA 25 Gastos Prestacionales---------------------------------------------------------------------
 message( '\tTabla Gastos Prestacionales' )
-aux <- as.data.table( gastos_prestacionales )
-aux[,AÑO:=as.character(AÑO)]
-aux<-clean_names(aux)
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,2,2,2))
+aux <- gastos_prestacionales %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
+aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 6) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'iess_gastos_prestacionales_rtr', '.tex' ),
@@ -428,11 +498,12 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#TABLA 26 Otros Gastos Prestacionales--------------------------------------------------
+#TABLA 26 Otros Gastos Prestacionales---------------------------------------------------------------
 message( '\tTabla Otros Gastos Prestacionales' )
-aux <- as.data.table(otros_gastos_prestacionales)
-aux[,AÑO:=as.character(AÑO)]
-aux<-clean_names(aux)
+aux <- otros_gastos_prestacionales %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
 
 print( aux_xtab,
@@ -444,11 +515,13 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#TABLA 27 Otros Gastos Prestacionales--------------------------------------------------
+#TABLA 27 Otros Gastos Prestacionales---------------------------------------------------------------
 message( '\tTabla Otros Gastos ' )
-aux <- as.data.table(gast_adm)
-aux[,AÑO:=as.character(AÑO)]
-aux<-clean_names(aux)
+
+aux <- otros_gastos_prestacionales %>%
+  clean_names( ) %>%
+  mutate( ano = as.character( ano ) )
+
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
 
 print( aux_xtab,
@@ -460,10 +533,12 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#Relación patrimonio gasto y beneficio de pensiones
+#Relación patrimonio gasto y beneficio de pensiones-------------------------------------------------
 message( '\tTabla relación patrimonio gasto y beneficio de pensiones' )
-aux <- as.data.table( relacion_patrimonio_beneficio )
-aux[, anio:=as.character(anio)]
+
+aux <- relacion_patrimonio_beneficio %>%
+  mutate( anio = as.character( anio ) )
+
 aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2, 2) )
 
 print( aux_xtab,
@@ -474,7 +549,7 @@ print( aux_xtab,
        only.contents = TRUE,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
-#-----------------------------------------------------------------------------------------------
+#Limpiar RAM----------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% c( 'parametros' ) ) ] )
 gc()

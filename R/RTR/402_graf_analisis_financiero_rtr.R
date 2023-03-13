@@ -11,8 +11,8 @@ message( '\tGraficando activo del fondo' )
 unidad<-1e6
 aux <- as.data.table(activo_del_fondo)
 aux[,Activo:=Activo/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 1400)
@@ -44,8 +44,8 @@ message( '\tGraficando Cuentas por cobrar del Fondo de RT ' )
 unidad<-1e6
 aux <- as.data.table( cuentas_cobrar_fondo )
 aux <- aux[,`Cuentas por Cobrar`:=`Cuentas por Cobrar`/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 90)
@@ -78,8 +78,8 @@ message( '\tGraficando Pasivo del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( pasivos_fondo )
 aux <- aux[,Pasivo:=Pasivo/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 50)
@@ -112,8 +112,8 @@ message( '\tGraficando cuentas por pagar del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( cuentas_pagar_fondo )
 aux <- aux[,`Cuentas por Pagar`:=`Cuentas por Pagar`/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 50)
@@ -146,8 +146,8 @@ message( '\tGraficando patrimonio del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( patrimonio_fondo )
 aux <- aux[,Patrimonio:=Patrimonio/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 1500)
@@ -180,8 +180,8 @@ message( '\tGraficando ingrensos del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( ingresos_fondo )
 aux <- aux[, Ingresos:=Ingresos/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 250)
@@ -214,8 +214,8 @@ message( '\tGraficando ingrensos por aporte del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( ingresos_aportes )
 aux <- aux[, `Aportes Afiliados ($)`:=`Aportes Afiliados ($)`/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 200)
@@ -249,8 +249,8 @@ unidad<-1e6
 aux <- as.data.table( otros_ingresos )
 aux <- aux[, `Contribucion del Estado`:=`Contribucion del Estado`/unidad]
 aux[ is.na(`Contribucion del Estado`),`Contribucion del Estado`:=0]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 24)
@@ -284,8 +284,8 @@ unidad<-1e6
 aux <- as.data.table( gastos )
 aux <- aux[, `Gastos`:=`Gastos`/unidad]
 
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 100)
@@ -318,8 +318,8 @@ message( '\tGraficando egresos pagados por prestaciones del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( gastos_prestacionales )
 aux <- aux[, `Prestaciones por Pensiones`:=`Prestaciones por Pensiones y subsidios`/unidad]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 80)
@@ -349,15 +349,15 @@ ggsave( plot = iess_gastos_prestacionales_fondo,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
-# Otros gastos del Fondo de RT.----------------------------------------------------------------------
+# Otros gastos del Fondo de RT----------------------------------------------------------------------
 message( '\tGraficando otros gastos del Fondo de RT.' )
 unidad <-1e6
 aux <- as.data.table( otros_gastos_prestacionales )
 aux <- aux[AÑO > 2011]
 aux <- aux[, TOTAL := TOTAL/unidad]
 
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 8)
@@ -392,8 +392,8 @@ message( '\tGraficando otros gastos del Fondo de RT.' )
 unidad<-1e6
 aux <- as.data.table( gast_adm )
 aux <- aux[ , gast_adm := `Gastos Administrativos`/unidad]
-x_lim <- c( 2013, 2020 )
-x_brk <- 2013:2020
+x_lim <- c( 2013, 2021 )
+x_brk <- 2013:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 0, 1500000)
@@ -679,6 +679,7 @@ ggsave( plot = iess_inversiones_obligaciones,
         filename = paste0( parametros$resultado_graficos, 'iess_inversiones_obligaciones_rtr', 
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
 #Evolución histórica de las inversiones en bonos del estado-----------------------------------------
 message( '\tGraficando evolución histórica de las inversiones en bonos del estado' )
 unidad <- 1e6
@@ -752,8 +753,8 @@ ggsave( plot = iess_inversiones_bonos,
 message( '\tGraficando patrimonio gasto y beneficio de pensiones' )
 aux <- as.data.table( relacion_patrimonio_beneficio )
 aux <- aux[1:9]
-x_lim <- c( 2012, 2020 )
-x_brk <- 2012:2020
+x_lim <- c( 2012, 2021 )
+x_brk <- 2012:2021
 x_lbl <- formatC( x_brk, digits = 0, format = 'f' )
 
 y_lim <- c( 4, 16)
@@ -783,64 +784,44 @@ ggsave( plot = iess_relacion_patrimonio_beneficio,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
-
-############################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Casos de lesiones profesionales no fatales en america latina---------------------------------------
-aux <- copy( lesiones_profesionales )
-aux[, pais:=as.character(pais)]
-aux <- data.frame(
-  pais = factor(c(aux$pais), levels=c(aux$pais)),
-  casos = c(aux$casos), constante=rep("pais_1", 7)
-)
-
-y_lim <- c( 0, 10000)
-y_brk <- seq( y_lim[1], y_lim[2], 1000 )
-y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
-h <- 4240.3
-
-iess_lesiones_profesionales <- ggplot(data=aux, aes(x=pais, y=casos, fill=constante)) + 
-  geom_bar(stat="identity") +  
-  geom_text(aes(label =  formatC(casos,digits = 2, format = 'f', big.mark = '.', decimal.mark = ',')
-                , y = casos), size = 3,
-            position = "identity", vjust = -1, family = "Times New Roman" )+
-  geom_hline( aes(yintercept = h,  linetype = "Valor promedio"), 
-              colour = parametros$iess_green ) +
-  geom_text(aes(0, h, label = formatC(h, digits=2, format='f', big.mark = '.', decimal.mark = ','))
-            , vjust=-0.75, hjust=-9, position = "identity", size=3
-            , family = "Times New Roman", colour=parametros$iess_green ) + 
-  scale_linetype_manual(name = NULL, values = c(2), 
-                        guide = guide_legend(override.aes = list(color = c(parametros$iess_green)))) +
-  labs( x = NULL, y = 'Casos' ) +
-  scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
-  scale_fill_manual(values = c(parametros$iess_blue, parametros$iess_green),
-                    labels = c("País", "´Promedio")) +
-  theme_bw() +
-  plt_theme_legend +
-  guides(fill = guide_legend(title = NULL, label.position = "right", label.hjust = 0))+
-  theme(legend.position="bottom") +
-  theme(legend.box.spacing=unit(0.2, "cm"))
-
-ggsave( plot = iess_lesiones_profesionales, 
-        filename = paste0( parametros$resultado_graficos, 'iess_lesiones_profesionales', parametros$graf_ext ),
-        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+# #Casos de lesiones profesionales no fatales en america latina---------------------------------------
+# aux <- copy( lesiones_profesionales )
+# aux[, pais:=as.character(pais)]
+# aux <- data.frame(
+#   pais = factor(c(aux$pais), levels=c(aux$pais)),
+#   casos = c(aux$casos), constante=rep("pais_1", 7)
+# )
+# 
+# y_lim <- c( 0, 10000)
+# y_brk <- seq( y_lim[1], y_lim[2], 1000 )
+# y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
+# h <- 4240.3
+# 
+# iess_lesiones_profesionales <- ggplot(data=aux, aes(x=pais, y=casos, fill=constante)) + 
+#   geom_bar(stat="identity") +  
+#   geom_text(aes(label =  formatC(casos,digits = 2, format = 'f', big.mark = '.', decimal.mark = ',')
+#                 , y = casos), size = 3,
+#             position = "identity", vjust = -1, family = "Times New Roman" )+
+#   geom_hline( aes(yintercept = h,  linetype = "Valor promedio"), 
+#               colour = parametros$iess_green ) +
+#   geom_text(aes(0, h, label = formatC(h, digits=2, format='f', big.mark = '.', decimal.mark = ','))
+#             , vjust=-0.75, hjust=-9, position = "identity", size=3
+#             , family = "Times New Roman", colour=parametros$iess_green ) + 
+#   scale_linetype_manual(name = NULL, values = c(2), 
+#                         guide = guide_legend(override.aes = list(color = c(parametros$iess_green)))) +
+#   labs( x = NULL, y = 'Casos' ) +
+#   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
+#   scale_fill_manual(values = c(parametros$iess_blue, parametros$iess_green),
+#                     labels = c("País", "´Promedio")) +
+#   theme_bw() +
+#   plt_theme_legend +
+#   guides(fill = guide_legend(title = NULL, label.position = "right", label.hjust = 0))+
+#   theme(legend.position="bottom") +
+#   theme(legend.box.spacing=unit(0.2, "cm"))
+# 
+# ggsave( plot = iess_lesiones_profesionales, 
+#         filename = paste0( parametros$resultado_graficos, 'iess_lesiones_profesionales', parametros$graf_ext ),
+#         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 #Limpiando Ram--------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% c( 'parametros' ) ) ] )
