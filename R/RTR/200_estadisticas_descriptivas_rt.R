@@ -7,6 +7,7 @@ load(paste0(parametros$RData_seg, "IESS_RTR_indemnizaciones.RData"))
 load(paste0(parametros$RData_seg, "IESS_RTR_subsidios.RData"))
 
 #1. Funciones---------------------------------------------------------------------------------------
+message("\tCargando funciones")
 ##1.1. Función evolución de beneficiarios-----------------------------------------------------------
 
 ben_fun <- function(.data18, .data22) {
@@ -317,7 +318,7 @@ etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1],
 
 
 #2. Tabla evolución de pensionistas-----------------------------------------------------------------
-
+message("\tTablas sobre pensiones del SGRT")
 tab_evo_ben_pp <- ben_fun(prestaciones_pp_2018, prestaciones_pp_2022 )
 tab_evo_ben_pt <- ben_fun(prestaciones_pt_2018, prestaciones_pt_2022 )
 tab_evo_ben_pa <- ben_fun(prestaciones_pa_2018, prestaciones_pa_2022 )
@@ -357,7 +358,7 @@ tab_rango_monto_vo <- rango_monto( prestaciones_viudez_2022, '2021' )
 tab_rango_monto_of <- rango_monto( prestaciones_orfandad_2022, '2021' )
 
 #7. Subsidios---------------------------------------------------------------------------------------
-
+message("\tTablas sobre subsidios del SGRT")
 ##7.1 Tabla evolución de beneficiarios en subsidios-------------------------------------------------
 
 b <- subsidios_rtr %>% 
@@ -494,7 +495,7 @@ a <- a %>%
 tab_rango_monto_subsidios <- a
 
 #8. Indemnizaciones---------------------------------------------------------------------------------
-
+message("\tTablas sobre indemnizaciones del SGRT")
 ##8.1 Tabla evolución de beneficiarios en subsidios-------------------------------------------------
 
 a <- indemnizaciones_rt_2018 %>% 
@@ -698,6 +699,7 @@ tab_rango_monto_indemnizaciones <- a
 
 
 #Guardar en Rdatas----------------------------------------------------------------------------------
+message("\tGuardando Rdatas")
 save( tab_evo_ben_pt,
       tab_evo_ben_pa,
       tab_evo_ben_vo,
