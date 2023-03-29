@@ -76,7 +76,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c(nrow(aux)-1,
+                       nrow(aux)),
        sanitize.text.function = identity)
 
 # Cuentas por Cobrar Fondo RT-----------------------------------------------------------------------
@@ -146,7 +147,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c( nrow(aux)-1,
+                        nrow( aux ) ),
        sanitize.text.function = identity)
 
 # Análisis Vertical del Pasivo----------------------------------------------------------------------
@@ -165,7 +167,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c( nrow(aux)-1,
+                        nrow(aux) ),
        sanitize.text.function = identity)
 
 # Cuentas por Pagar del Fondo-----------------------------------------------------------------------
@@ -236,7 +239,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow( aux )-1,
+       hline.after = c(nrow( aux )-1,
+                       nrow( aux ) ),
        sanitize.text.function = identity)
 
 # Análisis Vertical del Patrimonio------------------------------------------------------------------
@@ -254,7 +258,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c(nrow( aux )-1,
+                       nrow( aux ) ),
        sanitize.text.function = identity)
 
 # Ingresos del Fondo--------------------------------------------------------------------------------
@@ -290,7 +295,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c(nrow(aux)-1,
+                       nrow(aux) ),
        sanitize.text.function = identity)
 
 # Análisis Horizontal del Ingreso-------------------------------------------------------------------
@@ -309,7 +315,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c(nrow(aux)-1,
+                       nrow(aux) ),
        sanitize.text.function = identity)
 
 # Análisis Vertical del Ingreso---------------------------------------------------------------------
@@ -329,7 +336,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = 8,
+       hline.after = c(nrow(aux)-1,
+                       nrow(aux) ),
        sanitize.text.function = identity)
 
 # Ingresos por Aportes------------------------------------------------------------------------------
@@ -349,24 +357,8 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#TABLA 20 Otros Ingresos----------------------------------------------------------------------------
-message( '\tTabla Otros Ingresos' )
-aux <- otros_ingresos %>%
-  clean_names( ) %>%
-  mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0,0, rep(2,3) ) )
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_otros_ingresos_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity )
-
-#TABLA 21 Gastos------------------------------------------------------------------------------------
+#Gastos---------------------------------------------------------------------------------------------
 message( '\tTabla Gastos' )
 aux <- gastos %>%
   clean_names( ) %>%
@@ -383,43 +375,7 @@ print( aux_xtab,
        hline.after = NULL,
        sanitize.text.function = identity )
 
-#tabla ingresos vs egresos--------------------------------------------------------------------------
-message( '\tTabla ingresos vs egresos' )
-aux <- ingresos_vs_gastos %>%
-  clean_names( ) %>%
-  mutate( ano = as.character(ano) )
-
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 4 ) ) )
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_gastos_vs_ingresos_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = NULL,
-       sanitize.text.function = identity )
-
-
-#tabla ingresos por aportes vs gastos administrativos-----------------------------------------------
-message( '\tTabla aportes vs gastos administrativos' )
-
-aux <- ingresos_vs_gtos_adm %>%
-  clean_names( ) %>%
-  mutate( ano = as.character( ano ) )
-
-aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 4)))
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_gastos_admi_vs_ingresos_afi_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity )
-
-#TABLA 22 Componentes del Gasto---------------------------------------------------------------------
+#Componentes del Gasto------------------------------------------------------------------------------
 message( '\tTabla Componentes del Gasto' )
 
 aux <- componentes_gastos %>%
@@ -438,10 +394,11 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c( nrow(aux)-1,
+                        nrow( aux ) ),
        sanitize.text.function = identity)
 
-#TABLA 23 Análisis Horizontal del Gasto-------------------------------------------------------------
+#Análisis Horizontal del Gasto----------------------------------------------------------------------
 message( '\tTabla Análisis Horizontal del Gasto' )
 
 aux <- analisis_horizontal_gastos %>%
@@ -459,10 +416,11 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c(nrow(aux)-1,
+                       nrow( aux ) ),
        sanitize.text.function = identity)
 
-#TABLA 24 Análisis Vertical del Gasto---------------------------------------------------------------
+#Análisis Vertical del Gasto------------------------------------------------------------------------
 message( '\tTabla Análisis Vertical del Gasto' )
 aux <- analisis_vertical_gastos %>%
   clean_names( ) %>%
@@ -478,60 +436,9 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux)-1,
+       hline.after = c( nrow(aux)-1,
+                        nrow(aux) ),
        sanitize.text.function = identity)
-
-#TABLA 25 Gastos Prestacionales---------------------------------------------------------------------
-message( '\tTabla Gastos Prestacionales' )
-aux <- gastos_prestacionales %>%
-  clean_names( ) %>%
-  mutate( ano = as.character( ano ) )
-
-aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 6) ) )
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_gastos_prestacionales_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = NULL,
-       sanitize.text.function = identity )
-
-#TABLA 26 Otros Gastos Prestacionales---------------------------------------------------------------
-message( '\tTabla Otros Gastos Prestacionales' )
-aux <- otros_gastos_prestacionales %>%
-  clean_names( ) %>%
-  mutate( ano = as.character( ano ) )
-
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_otros_gastos_prestacionales_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = NULL,
-       sanitize.text.function = identity )
-
-#TABLA 27 Otros Gastos Prestacionales---------------------------------------------------------------
-message( '\tTabla Otros Gastos ' )
-
-aux <- otros_gastos_prestacionales %>%
-  clean_names( ) %>%
-  mutate( ano = as.character( ano ) )
-
-aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
-
-print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_otros_gastos_rtr', '.tex' ),
-       type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
-       format.args = list( decimal.mark = ',', big.mark = '.' ),
-       only.contents = TRUE,
-       hline.after = NULL,
-       sanitize.text.function = identity )
 
 #Relación patrimonio gasto y beneficio de pensiones-------------------------------------------------
 message( '\tTabla relación patrimonio gasto y beneficio de pensiones' )
