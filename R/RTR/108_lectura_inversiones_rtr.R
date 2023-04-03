@@ -6,7 +6,7 @@ message( '\tLectura de las inversiones' )
 file<-paste0(parametros$Data_seg, 'IESS_RTR_inversiones.xlsx' )
 
 
-#Caraga de recursos administrados por el BIESS------------------------------------------------------
+#Carga de recursos administrados por el BIESS-------------------------------------------------------
 recurs_adm_biess <- read_excel(file,
                                 sheet = 1,
                                 col_names = TRUE,

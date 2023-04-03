@@ -191,13 +191,14 @@ ben_pir_fun <- function(.data22, anio_valor) {
                                  units = "years",
                                  precise = FALSE ) )) %>%
     group_by( sexo, edad ) %>%
-    mutate( ben = n( ) ) %>%
+    mutate( freq = n( ) ) %>%
     ungroup( ) %>%
     distinct( sexo, edad, .keep_all = TRUE ) %>%
-    dplyr::select( anio,
-                   sexo,
+    mutate( fdp = freq / sum( freq ) ) %>% 
+    dplyr::select( sexo,
                    edad,
-                   ben ) %>%
+                   freq, 
+                   fdp ) %>%
     arrange( sexo, edad )
   return( a )
 }
@@ -550,7 +551,7 @@ b <- indemnizaciones_rt_2022 %>%
   mutate( ben =  rowSums(.[2:3]) ) %>%
   left_join(., b, by = 'anio' )
 
-tab_evo_ben_subsidios <- rbind( a, b)
+tab_evo_ben_indemnizaciones <- rbind( a, b)
 
 ##8.2 Tabla evolución de montos entregados----------------------------------------------------------
 
@@ -601,11 +602,11 @@ b <- indemnizaciones_rt_2022 %>%
   mutate( subsidios =  rowSums(.[2:3]) ) %>%
   left_join(., b, by = 'anio' )
 
-tab_evo_monto_subsidios <- rbind( a, b )
+tab_evo_monto_indemnizaciones <- rbind( a, b )
 
 ##8.3 Tabla de edades para pirámides----------------------------------------------------------------
 
-pir_ben_subsidios <- indemnizaciones_rt_2022 %>% 
+pir_ben_indemnizaciones <- indemnizaciones_rt_2022 %>% 
   filter( anio == 2021 ) %>% 
   distinct(  mes, cedula, .keep_all = TRUE ) %>%
   mutate(edad = round(age_calc(fecha_nacimiento,
@@ -613,13 +614,14 @@ pir_ben_subsidios <- indemnizaciones_rt_2022 %>%
                                units = "years",
                                precise = FALSE ) )) %>%
   group_by( sexo, edad ) %>%
-  mutate( ben = n( ) ) %>%
+  mutate( freq = n( ) ) %>%
   ungroup( ) %>%
   distinct( sexo, edad, .keep_all = TRUE ) %>%
+  mutate( dist = freq / sum( freq ) ) %>%
   dplyr::select( anio,
                  sexo,
                  edad,
-                 ben ) %>%
+                 freq ) %>%
   arrange( sexo, edad )
 
 ##8.4 Tablas de pirámides de pensiones--------------------------------------------------------------
@@ -729,9 +731,9 @@ save( tab_evo_ben_pt,
       pir_ben_subsidios,
       pir_montos_subsidios,
       tab_rango_monto_subsidios,
-      tab_evo_ben_subsidios,
-      tab_evo_monto_subsidios,
-      pir_ben_subsidios,
+      tab_evo_ben_indemnizaciones,
+      tab_evo_monto_indemnizaciones,
+      pir_ben_indemnizaciones,
       pir_montos_indemnizaciones,
       tab_rango_monto_indemnizaciones,
       file = paste0( parametros$RData_seg, 'IESS_RTR_tablas_demografia.RData' ) )

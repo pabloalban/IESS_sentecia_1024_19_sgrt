@@ -27,19 +27,44 @@ reporte_resp_patronal <- reporte_resp_patronal %>%
                           mutate(provincia=as.factor(provincia))
 
 
-file <- paste0( parametros$Data, 'CES/IESS_registro_civil.RData' )
+file <- paste0( parametros$RData, 'IESS_Reg_Civil.RData' )
 
 load(file)
 rc <- rc %>% select(cedula,sexo,fecha_nacimiento)
-reporte_resp_patronal <-  left_join(reporte_resp_patronal,rc,by="cedula") %>%
-                          filter(cod_estado_acuerdo!="ANU") %>%  # se quita los de codigo anulado
-                          mutate(edad=as.integer(round(((fecha_siniestro-fecha_nacimiento)/365),0))) # se calcula la edad a la
-                                                                                                     #fecha de siniestro
 
+reporte_resp_patronal <-  left_join(reporte_resp_patronal,rc,by="cedula") %>% #12.103
+                          #filter(cod_estado_acuerdo!="ANU") %>%  # se quita los de codigo anulado
+  mutate( fecha_nacimiento = if_else( is.na(fecha_nacimiento),
+                                      mean( fecha_nacimiento, na.rm =TRUE),
+                                      fecha_nacimiento ) ) %>%
+  mutate( fecha_siniestro = if_else( is.na(fecha_siniestro),
+                                     fecha_acuerdo,
+                                     fecha_siniestro ) ) %>%
+  group_by( concepto ) %>%
+  mutate( fecha_siniestro = if_else( is.na(fecha_siniestro),
+                                      mean( fecha_siniestro, na.rm =TRUE),
+                                     fecha_siniestro ) ) %>%
+  ungroup( ) %>%
+  mutate( fecha_siniestro = if_else( is.na(fecha_siniestro),
+                                     mean( fecha_siniestro, na.rm =TRUE),
+                                     fecha_siniestro ) ) %>%
+  mutate(edad = round(age_calc(fecha_nacimiento,
+                               enddate = fecha_siniestro,
+                               units = "years",
+                               precise = FALSE ) )) %>%
+  mutate( fecha_siniestro = if_else( cedula == '1719989012',
+                                     as.Date( "2015-05-14", "%Y-%m-%d" ),
+                                     fecha_siniestro ) ) %>%
+  filter( !is.na( ruc ) ) %>%
+  filter( year( fecha_acuerdo ) < 2022 ) %>%
+  mutate( sexo = if_else( is.na( sexo ),
+                          'M',
+                          sexo ) )
        
  save( reporte_resp_patronal,
        file = paste0( parametros$RData_seg, 'IESS_RTR_responsabilidad_patronal.RData' ) )
-# #-----------------------------------------------------------------------------------------------
+#Limpiar Ram----------------------------------------------------------------------------------------
   message( paste( rep('-', 100 ), collapse = '' ) )
   rm( list = ls()[ !( ls() %in% c( 'parametros' ) ) ] )
   gc()
+  
