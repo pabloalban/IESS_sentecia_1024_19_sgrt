@@ -5,6 +5,7 @@ source( 'R/401_graf_plantilla.R', encoding = 'UTF-8', echo = FALSE )
 
 # Carga de datos -----------------------------------------------------------------------------------
 load( file = paste0( parametros$RData, 'IESS_SGO_masa_afiliados.RData' ) )
+load( file = paste0( parametros$RData, 'IESS_pir_salarios.RData' ) )
 
 #Serie afiliados mensuales--------------------------------------------------------------------------
 message( '\tGraficando afiliados en el tiempo del SGO del IESS' )
@@ -116,6 +117,58 @@ iess_pir_afiliados<-ggplot(aux, aes(x = edad, y = n, fill=sexo)) +
 
 ggsave( plot = iess_pir_afiliados, 
         filename = paste0( parametros$resultado_graficos, 'iess_pir_afiliados', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+# Pirámide de Salarios------------------------------------------------------------------------------
+message( '\tGraficando masa salarial por monto y sexo SGO del IESS' )
+aux<-copy( masa_sal_edad_monto_ini )
+aux<-aux[cat=="afi"]  #Condición para extraer los datos
+aux[is.na(n),n:=0]     #reemplazo datos NA por cero
+
+N <- data.frame((aux[,sum(n,na.rm = TRUE),by=sexo]))  # número total por sexo
+
+aux[sexo=="H", n:=-n]
+aux[sexo=="H", n:=n/N[1,2]]
+aux[sexo=="M", n:=n/N[2,2]]
+
+M <- data.frame((aux[,max(abs(n),na.rm = TRUE),by=sexo])) # En base a este valor poner los límites del eje x
+salto_y<-200
+salto_x<-0.05
+brks_y <- seq(-0.40,0.40,salto_x)
+lbls_y <- paste0(as.character(c(seq(0.40, 0, -salto_x)*100, seq(salto_x, 0.40, salto_x)*100)), "%")
+brks_x <- seq(100,1600,salto_y)
+nb <- length(brks_x)-1   
+lbls_x <- c(paste0(formatC(c(brks_x[1:nb]),
+                           digits = 0, 
+                           format = 'f', 
+                           big.mark = '.', 
+                           decimal.mark = ',')),"mayor a 1.500")
+
+iess_pir_masa_salarial<-ggplot(aux, aes(x = monto, y = n, fill=sexo)) +
+  xlab( 'Salario (USD)' ) +
+  ylab( '' ) +
+  geom_bar( data = aux[ sexo == 'M' ],
+            stat = 'identity',
+            colour="white",  
+            size=0.1) +
+  geom_bar( data = aux[ sexo == 'H' ], 
+            stat = 'identity',
+            colour="white",  
+            size=0.1) +
+  scale_y_continuous(breaks = brks_y, labels = lbls_y) +
+  scale_x_continuous(breaks = brks_x, labels = lbls_x) +
+  coord_flip() +
+  #theme_tufte()+
+  theme_bw() +
+  plt_theme +
+  guides(fill = guide_legend(title = NULL,label.position = "right", 
+                             label.hjust = 0))+
+  theme(legend.position="bottom")+
+  scale_fill_manual(values = c(parametros$iess_blue, parametros$iess_green),
+                    labels = c("Hombres", "Mujeres"))
+
+ggsave( plot = iess_pir_masa_salarial, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_masa_salarial', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 

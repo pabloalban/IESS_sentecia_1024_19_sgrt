@@ -28,7 +28,7 @@ indemnizaciones_rtr<-indemnizaciones_rtr%>%
                            "%Y-%m-%d")) %>%
   mutate(anio=year(fecha_acu),
          mes = month( fecha_acu ) ) %>%
-  mutate( sexo = if_else(sexo == "FEMENINO", "F", "M") ) %>%
+  mutate( sexo = if_else(sexo == "FEMENINO", "M", "H") ) %>%
   mutate( fecha_nacimiento = if_else( is.na( fecha_nacimiento ),
                                       as.Date( "1976-03-05", "%Y-%m-%d"),
                                       fecha_nacimiento ) ) %>%
@@ -69,7 +69,7 @@ indemnizaciones_rt_2022 <- (read.table(file_indemnizaciones,
                  valor_pension_teorica_ajustada,
                  valor_pension_concedida,
                  liquido_a_pagar ) %>%
-  mutate( sexo = if_else(sexo == "FEMENINO", "F", "M") ) %>%
+  mutate( sexo = if_else(sexo == "FEMENINO", "M", "H") ) %>%
   mutate( cedula = as.character( cedula ) ) %>%
   mutate( cedula = ifelse( nchar( cedula )==9,
                            paste0( "0",cedula ),

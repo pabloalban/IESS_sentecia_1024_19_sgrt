@@ -301,14 +301,14 @@ etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1],
     mutate( rango_monto = as.character( rango_monto ) ) %>%
     rbind( ., c("Total", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
     mutate_at( c(2:ncol(.)), as.numeric) %>%
-    mutate( por_sexoben12F = 100 * 2 * sexoben12F / sum( total ),
-            por_sexoben12M = 100* 2 * sexoben12M / sum( total ),
+    mutate( por_sexoben12M = 100 * 2 * sexoben12M / sum( total ),
+            por_sexoben12H = 100* 2 * sexoben12H / sum( total ),
             por_total = 100 * 2 * total / sum( total ) ) %>%
     dplyr::select( rango_monto,
-                   sexoben12F,
-                   por_sexoben12F,
                    sexoben12M,
                    por_sexoben12M,
+                   sexoben12H,
+                   por_sexoben12H,
                    total,
                    por_total ) %>%
     distinct( ., rango_monto, .keep_all = TRUE )
@@ -480,14 +480,14 @@ a <- a %>%
   mutate( rango_monto = as.character( rango_monto ) ) %>%
   rbind( ., c("Total", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
   mutate_at( c(2:ncol(.)), as.numeric) %>%
-  mutate( por_sexoben12F = 100 * 2 * sexoben12F / sum( total ),
-          por_sexoben12M = 100* 2 * sexoben12M / sum( total ),
+  mutate( por_sexoben12M = 100 * 2 * sexoben12M / sum( total ),
+          por_sexoben12H = 100* 2 * sexoben12H / sum( total ),
           por_total = 100 * 2 * total / sum( total ) ) %>%
   dplyr::select( rango_monto,
-                 sexoben12F,
-                 por_sexoben12F,
                  sexoben12M,
                  por_sexoben12M,
+                 sexoben12H,
+                 por_sexoben12H,
                  total,
                  por_total ) %>%
   distinct( ., rango_monto, .keep_all = TRUE )
@@ -617,11 +617,12 @@ pir_ben_indemnizaciones <- indemnizaciones_rt_2022 %>%
   mutate( freq = n( ) ) %>%
   ungroup( ) %>%
   distinct( sexo, edad, .keep_all = TRUE ) %>%
-  mutate( dist = freq / sum( freq ) ) %>%
+  mutate( fdp = freq / sum( freq ) ) %>%
   dplyr::select( anio,
                  sexo,
                  edad,
-                 freq ) %>%
+                 freq,
+                 fdp ) %>%
   arrange( sexo, edad )
 
 ##8.4 Tablas de pirámides de pensiones--------------------------------------------------------------
@@ -684,14 +685,14 @@ a <- a %>%
   mutate( rango_monto = as.character( rango_monto ) ) %>%
   rbind( ., c("Total", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
   mutate_at( c(2:ncol(.)), as.numeric) %>%
-  mutate( por_sexobenF = 100 * 2 * sexobenF / sum( total ),
-          por_sexobenM = 100* 2 * sexobenM / sum( total ),
+  mutate( por_sexobenM = 100 * 2 * sexobenM / sum( total ),
+          por_sexobenH = 100* 2 * sexobenH / sum( total ),
           por_total = 100 * 2 * total / sum( total ) ) %>%
   dplyr::select( rango_monto,
-                 sexobenF,
-                 por_sexobenF,
                  sexobenM,
                  por_sexobenM,
+                 sexobenH,
+                 por_sexobenH,
                  total,
                  por_total ) %>%
   distinct( ., rango_monto, .keep_all = TRUE )
@@ -703,6 +704,7 @@ tab_rango_monto_indemnizaciones <- a
 #Guardar en Rdatas----------------------------------------------------------------------------------
 message("\tGuardando Rdatas")
 save( tab_evo_ben_pt,
+      tab_evo_ben_pp,
       tab_evo_ben_pa,
       tab_evo_ben_vo,
       tab_evo_ben_of,

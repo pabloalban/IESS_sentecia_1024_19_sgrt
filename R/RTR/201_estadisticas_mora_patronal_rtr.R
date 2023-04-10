@@ -271,14 +271,14 @@ a <- a %>%
   mutate( rango_monto = as.character( rango_monto ) ) %>%
   rbind( ., c("Total", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
   mutate_at( c(2:ncol(.)), as.numeric) %>%
-  mutate( por_sexoben12F = 100 * 2 * sexoben12F / sum( total ),
-          por_sexoben12M = 100* 2 * sexoben12M / sum( total ),
+  mutate( por_sexoben12M = 100 * 2 * sexoben12M / sum( total ),
+          por_sexoben12H = 100* 2 * sexoben12H / sum( total ),
           por_total = 100 * 2 * total / sum( total ) ) %>%
   dplyr::select( rango_monto,
-                 sexoben12F,
-                 por_sexoben12F,
                  sexoben12M,
                  por_sexoben12M,
+                 sexoben12H,
+                 por_sexoben12H,
                  total,
                  por_total ) %>%
   distinct( ., rango_monto, .keep_all = TRUE )

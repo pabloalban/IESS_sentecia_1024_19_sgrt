@@ -27,7 +27,7 @@ subsidios_rtr <- (read.table(file_subsidios,
           fecha_transferencia = substr(fecha_transferencia, 1, 10 ) ) %>%
   mutate( fecha_nacimiento = as.Date( fecha_nacimiento, "%Y/%m/%d" ),
           fecha_transferencia  = as.Date( fecha_transferencia, "%Y/%m/%d" ) ) %>%
-  mutate( sexo = if_else(sexo == "Femenino                        ", "F", "M") ) %>%
+  mutate( sexo = if_else(sexo == "Femenino                        ", "M", "H") ) %>%
   dplyr::select( -nombres_afi,
                  -fecnac,
                  -cedula_afi,

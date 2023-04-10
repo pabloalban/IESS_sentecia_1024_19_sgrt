@@ -254,7 +254,7 @@ base$mes <- gsub("Diciembre", "12", base$mes)
 base$mes <- as.integer(base$mes)
 
 base <- base %>%
-  mutate( sexo = if_else(sexo == "Femenino", "F", "M"),
+  mutate( sexo = if_else(sexo == "Femenino", "M", "H"),
           fecha_nacimiento = as.Date(fecha_nacimiento, "%d/%m/%Y"),
           fecha_nacimiento = if_else(is.na(fecha_nacimiento),
                                as.Date("1967/07/07", "%Y/%m/%d"),

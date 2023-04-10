@@ -2,8 +2,8 @@ message( paste( rep('-', 100 ), collapse = '' ) )
 message( '\tLectura masa salarial y afiliados' )
 
 # Carga de datos -----------------------------------------------------------------------------------
-file <- paste0( parametros$RData, 'IESS_SGO_masa_afiliados.RData' )
-load( file = file )
+load( file = paste0( parametros$RData, 'IESS_SGO_masa_afiliados.RData' ) )
+load( file = paste0( parametros$RData, 'IESS_afi_tiempo_aportacion.RData' ) )
 
 # Cargar función tildes a latex---------------------------------------------------------------------
 source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
@@ -110,6 +110,19 @@ print( aux_xtab,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
 
+#Tiempo de aportación de afiliados------------------------------------------------------------------
+message( '\tTabla de Tiempo de aportación de afiliados' )
+aux <- copy( afi_tiempo_aportacion )
+aux_xtable <- xtable( aux )
+print( aux_xtable,
+       file = paste0( parametros$resultado_tablas, 'iess_afi_tiempo_aportacion', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE,
+       include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux_xtable)-2,
+       sanitize.text.function = identity )
 
 #Tabla evolución de afiliados-----------------------------------------------------------------------
 message( '\tTabla afiliados' )

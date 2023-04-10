@@ -59,7 +59,10 @@ reporte_resp_patronal <-  left_join(reporte_resp_patronal,rc,by="cedula") %>% #1
   filter( year( fecha_acuerdo ) < 2022 ) %>%
   mutate( sexo = if_else( is.na( sexo ),
                           'M',
-                          sexo ) )
+                          sexo ) ) %>%
+  mutate( sexo = if_else( sexo == 'M',
+                          'H',
+                          'M'))
        
  save( reporte_resp_patronal,
        file = paste0( parametros$RData_seg, 'IESS_RTR_responsabilidad_patronal.RData' ) )

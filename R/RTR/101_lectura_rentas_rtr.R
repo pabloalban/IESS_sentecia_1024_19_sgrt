@@ -25,7 +25,7 @@ nomina_sgrt <- (read.table(file_nomina,skip=0,
                  descripcion,
                  valor ) %>%
   mutate( fecha_nacimiento = as.Date( fecha_nacimiento, "%Y-%m-%d" ) ) %>%
-  mutate( sexo = if_else(sexo == "Femenino", "F", "M") ) %>%
+  mutate( sexo = if_else(sexo == "Femenino", "M", "H") ) %>%
   filter( anio < 2022)
 
 # Filtrar prestación permanente parcial-------------------------------------------------------------
@@ -76,7 +76,7 @@ nomina_rt_pre_2022 <- nomina_sgrt
 # Guardando en un Rdata-----------------------------------------------------------------------------
 message("\tGuardando Rdatas")
 
-save(nomina_sgrt_pre_2022,
+save(nomina_rt_pre_2022,
      prestaciones_pp_2022,
      prestaciones_pt_2022,
      prestaciones_pa_2022,
