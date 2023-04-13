@@ -1100,7 +1100,7 @@ En la tabla \ref{tab:iess_portafolio_hist} y figura \ref{fig:iess_portaf_hist}, 
 \centering
 \caption{Evolución del rendimiento neto del portafolio global de inversiones del BIESS}
 \label{fig:iess_portaf_hist}
- \includegraphics[scale=1]{graficos/biess_rendimiento.png}
+ \includegraphics[scale=1.2]{graficos/biess_rendimiento.png}
  \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Dirección de Tesorería - BIESS \\
 Elaborado: DAIE}
 \end{figure}
@@ -1257,7 +1257,7 @@ La pirámide de la población económicamente activa se presenta en las siguient
 \caption{Pirámides poblacionales de la PEA para el año 2061}
 \label{fig:iess_pir_pea2061}
 \centering
-\includegraphics[scale=1.0]{graficos/iess_pir_pea_2060.png}
+\includegraphics[scale=1.0]{graficos/iess_pir_pea_2058.png}
   \caption*{\scriptsize Fuente: CELADE - CEPAL \\
   Elaborado: DAIE.}
 \end{figure}

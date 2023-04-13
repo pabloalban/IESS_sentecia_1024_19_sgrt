@@ -525,6 +525,11 @@ ggsave( plot = iess_inf_pred,
         filename = paste0( parametros$resultado_graficos, 'iess_inf_pred', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
+## Gráfico de la prueba de Independencia de errores de Box-Ljung------------------------------------
+
+box_ljung
+#png(file = paste0( parametros$resultado_graficos, 'iess_test_modelo', parametros$graf_ext ) )
+
 #3. Las pirámides poblacionales de la población nacional -------------------------------------------
 poblacion <- ONU_proyeccion_poblacion[ year %in% c( 2021, 2041, 2061 ), list( sex, x, year, lx ) ]
 poblacion[ , rx := lx / sum( lx ), by = list( year, sex ) ]
@@ -577,7 +582,7 @@ for( yr in years ) {
 }
 
 ##Pirámide pea -------------------------------------------------------------------------------------
-years <- c( 2021, 2041, 2060 )
+years <- c( 2021, 2041, 2058 )
 
 pob_pea <- onu_pea_tot_int[ year %in% years & sex %in% c( 'F', 'M' ), list( year, sex, x, lx = pea_int ) ]
 pob_pea[ , rx := lx / sum( lx ), by = list( year, sex ) ]
@@ -589,7 +594,7 @@ y_lbl <- paste0( formatC( 100 * abs(y_brk), digits = 0, format = 'f', big.mark =
                           decimal.mark = ',' ), "%" )
 
 x_lim <- c( 15, 100 )
-x_brk <- seq( x_lim[1], x_lim[2], 5 )
+x_brk <- seq( x_lim[1], x_lim[2], 10 )
 x_lbl <- x_brk
 
 for( yr in years ) {
@@ -608,14 +613,13 @@ for( yr in years ) {
     guides( fill = guide_legend( title = NULL,label.position = "right",
                                  label.hjust = 0, label.vjust = 0.5,reverse = TRUE ) )+
     theme( legend.position = "bottom" )+   #legend.position = c( 0.8, 0.2 )
-    scale_fill_manual( values = c( parametros$iess_green,parametros$iess_blue ),
+    scale_fill_manual( values = c( parametros$female,parametros$male ),
                        labels = c( "Mujeres","Hombres" ) )
 
   ggsave( plot = iess_pir_pea,
           filename = paste0( parametros$resultado_graficos, 'iess_pir_pea_', yr, parametros$graf_ext ),
           width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 }
-
 ##Limpiar RAM---------------------------------------------------------------------------------------
 message( paste( rep( '-', 100 ), collapse = '' ) )
 rm( list = ls( )[ !( ls( ) %in% c( 'parametros' ) ) ] )

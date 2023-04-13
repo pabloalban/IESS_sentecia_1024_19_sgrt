@@ -107,6 +107,14 @@ rendimiento_biess <- read_excel( file,
   mutate( fecha = as.Date( fecha, "%Y/%m/%d" ) )
 
 
+
+tasas_macro <- read_excel( file,
+                                 sheet = 'datos_modelo',
+                                 col_names = TRUE,
+                                 col_types = NULL,
+                                 na = "",
+                                 skip = 0 ) %>% clean_names( )
+
 #Guardando en un Rdata------------------------------------------------------------------------------
 message( '\tGuardando en un solo data.frame' )
 
@@ -122,6 +130,7 @@ save( inflacion,
       roe,
       roa,
       rendimiento_biess,
+      tasas_macro,
       file = paste0( parametros$RData, 'IESS_contexto_economico.RData' ) )
 
 #Borrando data.frames-------------------------------------------------------------------------------

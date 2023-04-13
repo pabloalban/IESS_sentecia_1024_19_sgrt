@@ -203,7 +203,8 @@ print( aux_xtab,
 
 aux <- roa %>%
   filter( anio <= '2021' ) %>%
-  mutate( anio = as.character( anio ) )
+  mutate( anio = as.character( anio ) ) %>%
+  mutate( across( where(is.numeric), ~ .x * 100 ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 5 ) ) )
 
@@ -220,7 +221,8 @@ print( aux_xtab,
 
 aux <- roe %>%
   filter( anio <= '2021' ) %>%
-  mutate( anio = as.character( anio ) )
+  mutate( anio = as.character( anio ) ) %>%
+  mutate( across( where(is.numeric), ~ .x * 100 ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 5 ) ) )
 
@@ -241,7 +243,8 @@ aux <- rendimiento_biess %>%
           mes == '12' ) %>%
   mutate( fecha = as.character( fecha ) ) %>%
   dplyr::select( -mes ) %>%
-  mutate( rendimiento = 100 * rendimiento )
+  mutate( rendimiento = 100 * rendimiento ) %>%
+  na.omit( )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 7 ) ) )
 

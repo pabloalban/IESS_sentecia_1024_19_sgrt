@@ -65,14 +65,14 @@
 %<<cap08, child='08_demografia.Rnw'>>=
 %@
 
-% <<cap09, child='09_metodologia.Rnw'>>=
-% @
-%   
+<<cap09, child='09_metodologia.Rnw'>>=
+@
+   
 <<cap10, child='10_hipotesis.Rnw'>>=
 @ 
 %   
-% <<cap11, child='11_riesgos.Rnw'>>=
-% @
+%<<cap11, child='11_riesgos.Rnw'>>=
+%@
 %  
 % <<cap12, child='12_situacion.Rnw'>>=
 % @
