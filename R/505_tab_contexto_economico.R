@@ -3,6 +3,7 @@ message( '\tLectura del contexto económico' )
 
 # Carga de datos -----------------------------------------------------------------------------------
 load( file = paste0( parametros$RData, 'IESS_contexto_economico.RData' ) )
+load( paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
 
 # Cargar función tildes a latex---------------------------------------------------------------------
 source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
@@ -14,7 +15,7 @@ message( '\tTablas del contexto económico' )
 
 aux <- inflacion %>%
   filter( mes == '12',
-          anio <= '2021') %>%
+          anio <= '2022') %>%
   dplyr::select( periodo,
                  ipc,
                  inflacion_mensual,
@@ -45,7 +46,7 @@ aux <- desempleo %>%
                  desempleo_nacional,
                  empleo_adecuado_pleno_n,
                  subempleo_nacional ) %>%
-  mutate( periodo = as.character( periodo ) )
+  mutate( periodo = as.character( format( periodo, "%b %Y" ) ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2, 2 ,2, 2 ) )
 
@@ -63,7 +64,7 @@ print( aux_xtab,
 
 aux <- pib_real %>%
   filter( anio >= '2000',
-          anio <= '2021' ) %>%
+          anio <= '2022' ) %>%
   mutate( anio = as.character( anio ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 0, 0 , 2 ) )
@@ -81,7 +82,7 @@ print( aux_xtab,
 #Tabla de SBU---------------------------------------------------------------------------------------
 
 aux <- sbu %>%
-  filter( anio <= '2021') %>%
+  filter( anio <= '2022') %>%
   mutate( anio = as.character( anio ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2 , 2 ) )
@@ -109,7 +110,7 @@ aux <- salarios %>%
                  sal_prom,
                  incremento,
                  tasa ) %>%
-  mutate( periodo = as.character( periodo ))
+  mutate( periodo = as.character( format( periodo, "%b %Y" ) ) )
   
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2 , 2 ) )
@@ -144,7 +145,7 @@ print( aux_xtab,
 #Tabla de pensiones mínimas-------------------------------------------------------------------------
 
 aux <- pension_min %>%
-  filter( anio <= '2021' ) %>%
+  filter( anio <= '2022' ) %>%
   mutate( anio = as.character( anio ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 0, rep( 2, 6 ) ) )
@@ -162,7 +163,7 @@ print( aux_xtab,
 #Tabla de pensiones máximas-------------------------------------------------------------------------
 
 aux <- pension_max %>%
-  filter( anio <= '2021' ) %>%
+  filter( anio <= '2022' ) %>%
   mutate( anio = as.character( anio ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 0, rep( 2, 7 ) ) )
@@ -180,12 +181,12 @@ print( aux_xtab,
 #Tabla de tasas de interés---------------------------------------------------------------------------
 
 aux <- tasas_interes %>%
-  filter( anio <= '2021', mes == '12' ) %>%
-  mutate( periodo = as.character( periodo ) ) %>%
+  filter( anio <= '2022', mes == '12' ) %>%
+  mutate( periodo = as.character(  format( periodo, "%b %Y") ) ) %>%
     dplyr::select( periodo,
                    tasa_activa,
                    tasa_pasiva,
-                   spread)
+                   spread )
 
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 3 ) ) )
@@ -202,7 +203,7 @@ print( aux_xtab,
 #Tabla de ROA---------------------------------------------------------------------------------------
 
 aux <- roa %>%
-  filter( anio <= '2021' ) %>%
+  filter( anio <= '2022' ) %>%
   mutate( anio = as.character( anio ) ) %>%
   mutate( across( where(is.numeric), ~ .x * 100 ) )
 
@@ -220,7 +221,7 @@ print( aux_xtab,
 #Tabla de ROE---------------------------------------------------------------------------------------
 
 aux <- roe %>%
-  filter( anio <= '2021' ) %>%
+  filter( anio <= '2022' ) %>%
   mutate( anio = as.character( anio ) ) %>%
   mutate( across( where(is.numeric), ~ .x * 100 ) )
 
@@ -239,9 +240,9 @@ print( aux_xtab,
 #Tabla rendimientos del BIESS-----------------------------------------------------------------------
 
 aux <- rendimiento_biess %>%
-  filter( fecha <= as.Date("31/12/2021", "%d/%m/%Y" ),
+  filter( fecha <= as.Date("31/12/2022", "%d/%m/%Y" ),
           mes == '12' ) %>%
-  mutate( fecha = as.character( fecha ) ) %>%
+  mutate( fecha = as.character( format( fecha, "%b %Y") ) ) %>%
   dplyr::select( -mes ) %>%
   mutate( rendimiento = 100 * rendimiento ) %>%
   na.omit( )
@@ -256,6 +257,207 @@ print( aux_xtab,
        only.contents = TRUE,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
+
+
+#Tabla de resumen de hipótesis----------------------------------------------------------------------
+
+aux <- hip_macro_resumen
+
+aux_xtab <- xtable( aux, digits = c(0, 0, 3 ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_hip_macro_resumen', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla de predicciones por año----------------------------------------------------------------------
+message( '\tTablas del modelo predictivo de las hipótesis macro-económicas' )
+aux <- tasas_macro_pred %>%
+  filter( anio >= 2023 ) %>%
+  mutate( anio = as.character( anio ) ) %>%
+  mutate( tasa_activa = 100 * tasa_activa,
+          tasa_pasiva = 100 * tasa_pasiva,
+          inflación_prom = 100 * inflación_prom)
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 6 ) ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_tasas_macro_pred', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla de coeficientes del modelo-------------------------------------------------------------------
+
+aux <- coeficientes
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 6 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_coeficientes', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla de prueba de normalidad----------------------------------------------------------------------
+
+aux <- shapiro_test
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 2 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+aux_xtab <- xtable( aux_xtab, digits = c(0, 0, 5, 5 ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_shapiro_test', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla de prueba de homocedasticidad----------------------------------------------------------------
+
+aux <- homocedasticidad
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 2 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_homocedasticidad', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+
+
+#Tabla matriz de correlaciones----------------------------------------------------------------------
+
+aux <- ma_correlaciones
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 6 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+aux_xtab <- xtable( aux_xtab, digits = c(0, 0, rep( 5, 6 ) ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_ma_correlaciones', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla matriz de p-valores de la prueba de multicolinealidad----------------------------------------
+
+aux <- ma_multi_p_valores
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 6 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+aux_xtab <- xtable( aux_xtab, digits = c(0, 0, rep( 5, 6 ) ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_ma_multi_p_valores', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+#Tabla matriz de covarianza-------------------------------------------------------------------------
+
+aux <- covarianza
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 6 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_ma_covarianza', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+
+#Tabla de la prueba de nulidad de coeficientes------------------------------------------------------
+
+aux <- test_nulidad_nulidad
+
+aux_xtab <- xtable( aux, digits = c(0, 0,2 ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_test_nulidad_nulidad', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+
+#Tabla del test de Box Ljung------------------------------------------------------------------------
+
+aux <- box_ljung 
+
+aux_xtab <- xtable( aux, digits = c(0, 0, 5, 0, 5 ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_test_box_ljung', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+
+#Tabla de prueba de normalidad----------------------------------------------------------------------
+
+aux <- shapiro_test
+
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 2 ) ) )
+
+aux_xtab <- tildes_a_latex( aux_xtab )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_shapiro_test', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
 
 #Borrando data frames-------------------------------------------------------------------------------
 message( paste( rep( '-', 100 ), collapse = '' ) )

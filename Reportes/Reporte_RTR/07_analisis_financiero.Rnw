@@ -1119,7 +1119,7 @@ La cuenta con mayor representatividad en el período analizado es “Pensiones p
 \multicolumn{1}{c}{(USD)} \\
 \midrule
 \input{tablas/iess_componentes_gastos_rtr.tex}
-\bottomrule
+%\bottomrule
 \end{tabular}
 }
 \caption*{\scriptsize Fuente: Balance Financiero del SGRT - DNGF \\

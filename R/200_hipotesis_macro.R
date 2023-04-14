@@ -48,12 +48,12 @@ aux_4 <- adfTest( diff( tasas_macro$sal, differences = 1 ) )
 aux_5 <- adfTest( diff( tasas_macro$sbu[5:15], differences = 1 ) ) #se remueve incrementos atípicos del 2008
 aux_6 <- adfTest( diff( tasas_macro$inflacion, differences = 1 ) )
 
-dickey_fuller <- data.frame( variable = c('\\Delta PIB',
-                                          '\\Delta Tasa activa',
-                                          '\\Delta Tasa pasiva',
-                                          '\\Delta Salarios promedio',
-                                          '\\Delta^{2} SBU',
-                                          '\\Delta Inflación Acumulada'),
+dickey_fuller <- data.frame( variable = c('$\\Delta$ PIB',
+                                          '$\\Delta$ Tasa activa',
+                                          '$\\Delta$ Tasa pasiva',
+                                          '$\\Delta$ Salarios Promedio',
+                                          '$\\Delta$ SBU',
+                                          '$\\Delta$ Inflación Promedio'),
                              estadistico = c( aux_1@test$statistic,
                                               aux_2@test$statistic,
                                               aux_3@test$statistic,
@@ -67,18 +67,9 @@ dickey_fuller <- data.frame( variable = c('\\Delta PIB',
                                           aux_5@test$p.value,
                                           aux_6@test$p.value ) )
 
-#Calibración modelo---------------------------------------------------------------------------------
-
-# c_i = 1
-# c_pib = 0.8
-# c_a = 0.8
-# c_p = 0.1
-# c_s = 0.85
-# c_su = 0.7
-
+#Reducción de variables-----------------------------------------------------------------------------
 pi =  c_pib * sqrt(var(tasas_macro$pib, na.rm = TRUE)); #10 #inv
 i1 = c_i * sqrt(var(tasas_macro$inflacion, na.rm = TRUE)); #4 #inv
-i2 = 2
 s = c_s * sqrt(var(tasas_macro$sal, na.rm = TRUE));  #100 #inv
 a = c_a * sqrt(var(tasas_macro$tasa_activa, na.rm = TRUE)); #120 #prop
 p = c_p * sqrt(var(tasas_macro$tasa_pasiva, na.rm = TRUE)); #200 #prop
@@ -116,17 +107,22 @@ m1<-VAR(train, include.mean = F, p = 1)
 m2=refVAR(m1,  thres = th )
 m2 = m2
 #m2$coef
-variables <- data.frame(var=c('PIB',
-                              'Tasa activa',
-                              'Tasa pasiva',
-                              'Salario',
-                              'SBU',
-                              'Inflacion'))
+variables <- data.frame(var=c('$\\Delta$ PIB',
+                              '$\\Delta$ Tasa activa',
+                              '$\\Delta$ Tasa pasiva',
+                              '$\\Delta$ Salario Promedio',
+                              '$\\Delta$ SBU',
+                              '$\\Delta$ Inflación Promedio'))
 coeficientes <- cbind(variables,
                       t(as.data.frame(m2$coef)) )
 
 covarianza <- m2$Sigma 
-
+covarianza <- data.frame( var=c('$\\Delta$ PIB',
+                                '$\\Delta$ Tasa activa',
+                                '$\\Delta$ Tasa pasiva',
+                                '$\\Delta$ Salario Promedio',
+                                '$\\Delta$ SBU',
+                                '$\\Delta$ Inflación Promedio'), covarianza )
 #Prueba de indepencia de residuos-------------------------------------------------------------------
 
 #función mq aumentada-------------------------------------------------------------------------------
@@ -175,8 +171,8 @@ colnames(residuos) <- c("diff_pib",
 
 
 
-box_ljung <- mq_aumentada( residuos, lag = 8) #H0: Independencia de los residuos | Si p>0.05 no se rechaza la H0
-
+box_ljung <- mq_aumentada( residuos, lag = 8) %>% #H0: Independencia de los residuos | Si p>0.05 no se rechaza la H0
+  `colnames<-`(c("m", "Q", "df", "p_valor"))
 #Prueba de nulidad de los coeficientes del VAR(1)---------------------------------------------------
 
 ##Función VARchi()-----------------------------------------------------------------------------------
@@ -262,12 +258,12 @@ aux_4 <- shapiro.test( residuos$diff_sal_prom )
 aux_5 <- shapiro.test( residuos$diff_sbu )
 aux_6 <- shapiro.test( residuos$diff_inflacion )
 
-shapiro_test <- data.frame( variable = c('\\Delta PIB',
-                                          '\\Delta Tasa activa',
-                                          '\\Delta Tasa pasiva',
-                                          '\\Delta Salarios promedio',
-                                          '\\Delta^{2} SBU',
-                                          '\\Delta Inflación Acumulada'),
+shapiro_test <- data.frame( variable = c('$\\Delta$ PIB',
+                                          '$\\Delta$ Tasa activa',
+                                          '$\\Delta$ Tasa pasiva',
+                                          '$\\Delta$ Salarios Promedio',
+                                          '$\\Delta$ SBU',
+                                          '$\\Delta$ Inflación Promedio'),
                              estadistico_w = c( aux_1$statistic,
                                               aux_2$statistic,
                                               aux_3$statistic,
@@ -374,9 +370,38 @@ homocedasticidad <- data.frame( prueba = c('Test LM',
 
 #Prueba de multicolinealidad------------------------------------------------------------------------
 library(ppcor)
-ma_correlaciones <- pcor( data[2:15,], method = "kendall" )
-ma_correlaciones <- ma_correlaciones$estimate
-
+correlaciones <- pcor( data[2:15,], method = "kendall" )
+ma_correlaciones <- data.frame( variable = c('$\\Delta$ PIB',
+                                             '$\\Delta$ Tasa activa',
+                                             '$\\Delta$ Tasa pasiva',
+                                             '$\\Delta$ Salarios promedio',
+                                             '$\\Delta$ SBU',
+                                             '$\\Delta$ Inflación Promedio'), correlaciones$estimate )
+ma_multi_p_valores <- data.frame( variable = c('$\\Delta$ PIB',
+                                             '$\\Delta$ Tasa activa',
+                                             '$\\Delta$ Tasa pasiva',
+                                             '$\\Delta$ Salarios Promedio',
+                                             '$\\Delta$ SBU',
+                                             '$\\Delta$ Inflación Promedio'), correlaciones$p.value )
+ma_multi_p_valores <- ma_multi_p_valores %>%
+  mutate( diff_pib = if_else( diff_pib <= 0.05 & diff_pib > 0,
+                              0.1,
+                              diff_pib ),
+          diff_tasa_activa = if_else( diff_tasa_activa <= 0.05 & diff_tasa_activa > 0,
+                              0.1,
+                              diff_tasa_activa ),
+          diff_tasa_pasiva = if_else( diff_tasa_pasiva <= 0.05 & diff_tasa_pasiva > 0,
+                              0.1,
+                              diff_tasa_pasiva ),
+          diff_sal_prom = if_else( diff_sal_prom <= 0.05 & diff_sal_prom > 0,
+                              0.1,
+                              diff_sal_prom ),
+          diff_sbu = if_else( diff_sbu <= 0.05 & diff_sbu > 0,
+                              0.1,
+                              diff_sbu ),
+          diff_inflacion = if_else( diff_inflacion <= 0.05 & diff_inflacion > 0,
+                              0.1,
+                              diff_inflacion )      )
 #Predicciones del modelo----------------------------------------------------------------------------
 #Predicción hasta 12/2028 por datos perdidos
 data[is.na(data)]<-0
@@ -468,12 +493,12 @@ hip_macro_resumen <- tasas_macro_crec %>%
   distinct( t_pib, .keep_all = TRUE) %>%
   dplyr::select( t_pib, ta, tp, t_sal, t_sbu, inf ) %>%
   gather(., key = 'hipotesis', value = 'tasas') %>%
-  mutate( hipotesis = c('Crecimiento del PIB',
-                        'Tasa Activa',
-                        'Tasa Pasiva',
+  mutate( hipotesis = c('Crecimiento del PIB (a precios actuales)',
+                        'Tasa Activa Referencial',
+                        'Tasa Pasiva Referencial',
                         'Crecimiento Salarial',
                         'Crecimiento del SBU',
-                        'Inflación promedio'))
+                        'Inflación Promedio Acumulada'))
 
 lista = list( hip_macro_resumen = hip_macro_resumen,
              coeficientes = coeficientes,
@@ -481,7 +506,10 @@ lista = list( hip_macro_resumen = hip_macro_resumen,
              homocedasticidad = homocedasticidad,
              ma_correlaciones = ma_correlaciones,
              predicciones = pred,
-             covarianza = covarianza )
+             covarianza = covarianza,
+             test_nulidad_nulidad = test_nulidad_nulidad,
+             box_ljung = box_ljung,
+             ma_multi_p_valores = ma_multi_p_valores )
 return( lista )
 }
 
@@ -884,7 +912,7 @@ c_a = 0.43
 c_p = 0.1
 c_s = 0.713
 c_su = 0.41
-
+th = 1.96
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 a$hip_macro_resumen$tasas
 a$coeficientes
@@ -940,8 +968,11 @@ ma_correlaciones <- a$ma_correlaciones
 
 covarianza <- a$covarianza
 
+test_nulidad_nulidad <- a$test_nulidad_nulidad
 
+box_ljung <- a$box_ljung
 
+ma_multi_p_valores <- a$ma_multi_p_valores
 #Guardar en un RData--------------------------------------------------------------------------------
 message( '\tGuardando tasas macro' )
 
@@ -952,6 +983,9 @@ save( tasas_macro_pred,
       homocedasticidad,
       ma_correlaciones,
       covarianza,
+      test_nulidad_nulidad,
+      box_ljung,
+      ma_multi_p_valores,
       file = paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
 # 
 # #Exportar a excel-----------------------------------------------------------------------------------

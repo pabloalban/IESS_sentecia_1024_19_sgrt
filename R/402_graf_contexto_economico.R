@@ -10,13 +10,12 @@ load( paste0( parametros$RData, 'IESS_onu_pea_ecu_int.RData' ) )
 load( paste0( parametros$RData, 'IESS_contexto_economico.RData' ) )
 load( paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
 
-
 #1. Evolución histórica-----------------------------------------------------------------------------
 ##Evolución histórica del índice de precios (IPC)----------------------------------------------------
 message( '\tGraficando análisis de contexto' )
 aux <- inflacion %>%
   filter( anio >= '2003', 
-          anio <= '2021' ) %>%
+          anio <= '2022' ) %>%
   dplyr::select( periodo,
                  ipc,
                  inflacion_mensual,
@@ -34,11 +33,11 @@ iess_inflacion  <- ggplot( data = aux, aes( x = periodo ) ) +
   geom_line( aes( y = 10 * inflacion_variacion_anual + 20 ,
                   group = 1L,
                   color="Inflación Acumulada" ),
-             size = 1 ) +
+             size = graf_line_size ) +
   geom_line( aes( y = ipc,
                   group = 1L,
                   color="aIPC" ), 
-             size = 1 ) +
+             size = graf_line_size ) +
 
   scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim,
@@ -65,7 +64,7 @@ message( '\tGraficando análisis de desempleo' )
 
 aux <- desempleo %>%
   filter( anio >= '2007', 
-          anio <= '2021' ) %>%
+          anio <= '2022' ) %>%
   dplyr::select( periodo,
                  desempleo_nacional,
                  empleo_adecuado_pleno_n ) %>%
@@ -85,11 +84,11 @@ iess_desempleo  <- ggplot( data = aux, aes( x = periodo ) ) +
   geom_line( aes( y = scl * hmts * empleo_adecuado_pleno_n + 0.9,
                   group = 1L,
                   color="empleo_adecuado_pleno_n" ),
-             size = 1 ) +
+             size = graf_line_size ) +
   geom_line( aes( y = desempleo_nacional,
                   group = 1L,
                   color="adesempleo_nacional" ), 
-             size = 1 ) +
+             size = graf_line_size ) +
   scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim,
                       sec.axis = sec_axis( ~./( scl*hmts ) - 8.181818,
@@ -112,9 +111,9 @@ ggsave( plot = iess_desempleo,
 ##Evolución del salario básico unificado (SBU)------------------------------------------------------
 
 aux <- sbu %>%
-  filter( anio <= '2021')
+  filter( anio <= '2022')
 
-x_lim <- c( 2000, 2021 )
+x_lim <- c( 2000, 2022 )
 x_brk <- seq( x_lim[1] + 1, x_lim[2], 2)
 x_lbl <- formatC( x_brk, digits = 0, format = 'f', big.mark = '', decimal.mark = ',' )
 
@@ -143,9 +142,10 @@ ggsave( plot = iess_sbu,
 ##Evolución histórica del salario promedio----------------------------------------------------------
 
 aux <- salarios %>%
-  na.omit(.)
+  na.omit(.) %>%
+  filter( periodo >= as.Date("01/12/2006","%d/%m/%Y") )
 
-x_lim <- c( 2006, 2020 )
+x_lim <- c( 2005, 2022 )
 x_brk <- seq( x_lim[1], x_lim[2], 1 )
 x_lbl <- formatC( x_brk, digits = 0, format = 'f', big.mark = '', decimal.mark = ',' )
 
@@ -159,11 +159,13 @@ iess_salarios <- ggplot( data = aux,
              color = parametros$iess_green,
              size = graf_line_size ) +
   labs( x = 'Año', y = 'Salario promedio (USD)' ) +
-  scale_x_date( date_breaks = '2 year', date_labels = '%Y') +
+  scale_x_date( breaks = seq(as.Date("2006-12-01"), as.Date("2022-12-01"), by="12 months"),
+                date_labels = '%b %Y',
+                limits = as.Date( c("2006-12-01", "2022-12-01" ), "%Y-%m-%d")  ) +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
   theme_bw( ) +
   plt_theme +
-  theme( axis.text.x = element_text( angle = 0, hjust = 0.5, vjust=0.5 ) )
+  theme( axis.text.x = element_text( angle = -90, hjust = 0.5, vjust=0.5 ) )
 
 ggsave( plot = iess_salarios,
         filename = paste0( parametros$resultado_graficos, 'iess_salarios', parametros$graf_ext ),
@@ -172,8 +174,8 @@ ggsave( plot = iess_salarios,
 ##Evolución histórica del PIB del Ecuador-----------------------------------------------------------
 
 aux <- pib_real %>%
-  filter( anio >= '1961', 
-          anio <= '2021' ) %>%
+  filter( anio >= '2000', 
+          anio <= '2022' ) %>%
   mutate( periodo = ymd( paste0(anio, '/01/01') ) ) %>%
   mutate( apib_constantes = pib_constantes  / 1000000) %>%
   mutate( var = 'PIB a precios constantes')
@@ -181,8 +183,8 @@ aux <- pib_real %>%
 scl = 1000  # escala de millones
 hmts = 3 #homotecia
   
-x_lim <- c( 1960, 2021 )
-x_brk <- seq( x_lim[1]+1, x_lim[2], 5 )
+x_lim <- c( 2000, 2022 )
+x_brk <- seq( x_lim[1], x_lim[2], by = 2 )
 x_lbl <- formatC( x_brk, digits = 0, format = 'f', big.mark = '', decimal.mark = ',' )
 
 y_lim <- c( 0, 80000 )
@@ -193,51 +195,43 @@ y_brk_dual <- seq( -9, 15, by = 3 )
 y_lbl_dual <- paste0( y_brk_dual, "%" )
 
 
-
-  
-iess_pib_real  <- ggplot( data = aux,
-                          aes(x = periodo,
-                              y = apib_constantes,
-                              group = 1L,
-                              color="pib_constantes",
-                              fill = var) ) +
-  geom_bar(stat='identity',
-           colour='black') +
-  # geom_line( aes( y = pib_constantes ,
-  #                 group = 1L,
-  #                 color="pib_constantes" ),
-  #            size = 1 ) +
+iess_pib_real <- ggplot(data = aux, 
+                        aes( x = periodo,
+                             y = apib_constantes ,
+                             fill = var) ) +
+  geom_bar( stat='identity',
+            colour='black' ) +
   geom_line(data = aux,
-            aes( x = periodo,
-                 y = crecimiento_pib*hmts*scl + 35000,                
-                 group = 1L,
-                 color="crecimiento_pib" ),
+            aes(x = periodo,
+                y = crecimiento_pib*hmts*scl + 35000,
+                group = 1,
+                linetype = 'Tasa de crecimiento PIB'),
             inherit.aes = FALSE,
-            size=1 ) +
-  scale_linetype_manual(NULL, values = 1) +
-  scale_x_date(date_breaks = '4 year', date_labels = '%Y') +
+            size = 1 ) +
+  scale_linetype_manual( NULL, values = 1 ) +
+  scale_x_date( breaks = seq( as.Date("2000-01-01"), as.Date("2022-01-01"), by = "24 months"), 
+                date_labels = '%Y',
+                limits = as.Date( c("2000-0-01", "2022-12-31" ), "%Y-%m-%d") )+
   scale_y_continuous( name = 'PIB a precios constantes (millones de USD)',
                       labels = y_lbl, breaks = y_brk, limits = y_lim,
                       sec.axis = sec_axis(~./( scl*hmts ) - 11.66667,
-                                         name = 'Crecimiento PIB real',
-                                         labels = y_lbl_dual,
-                                         breaks = y_brk_dual ) ) + 
-  scale_color_manual( values =  c( parametros$iess_blue, parametros$iess_green ), 
-                      labels = c( 'Crecimiento PIB real', 'PIB a precios constantes' ) ) + 
+                                          name = 'Tasa de crecimiento PIB real',
+                                          labels = y_lbl_dual,
+                                          breaks = y_brk_dual ) ) + 
+  scale_color_manual( values =  c(  parametros$iess_green, parametros$iess_blue ), 
+                      labels = c( 'PIB a precios constantes', 'Tasa de crecimiento PIB real' ) ) + 
   scale_fill_manual(values = c( parametros$iess_green, parametros$iess_blue ) )+
   theme_bw() +
   plt_theme+
-  guides(fill = guide_legend(title = NULL,
-                             label.position = "right", 
-                             label.hjust = 0))+
+  guides( color = guide_colorbar(order = 0),
+          fill = guide_legend( order = 1 ) ) +
   theme(legend.position='bottom') +
   labs( x = '', y = '' )+
   theme(legend.background = element_rect(fill = 'transparent'),
         legend.box.background = element_rect(fill = 'transparent', 
                                              colour = NA),
         legend.key = element_rect(fill = 'transparent'), 
-        legend.spacing = unit(-1, 'lines'),
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+        legend.spacing = unit(-1, 'lines') )
 
 
 ggsave( plot = iess_pib_real,
@@ -250,7 +244,7 @@ message( '\tGraficando tasas de interés' )
 
 aux <- tasas_interes %>%
   filter( anio >= '2003', 
-          anio <= '2021' ) %>%
+          anio <= '2022' ) %>%
   arrange( periodo )
 
 y_lim <- c( 2, 16 )
@@ -261,11 +255,11 @@ iess_tasas_interes  <- ggplot( data = aux, aes( x = periodo ) ) +
   geom_line( aes( y = tasa_activa,
                   group = 1L,
                   color="tasa_activa" ),
-             size = 1 ) +
+             size = graf_line_size) +
   geom_line( aes( y = tasa_pasiva        ,
                   group = 1L,
                   color="tasa_pasiva" ), 
-             size = 1 ) +
+             size = graf_line_size ) +
   scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
   scale_color_manual( values =  c( parametros$iess_blue, parametros$iess_green ), 
@@ -284,7 +278,7 @@ ggsave( plot = iess_tasas_interes,
 message( '\tGraficando evolución histórica de las inversiones del BIESS' )
 
 aux <- rendimiento_biess %>%
-  filter( fecha <= as.Date("01/12/2021", "%d/%m/%Y" ) ) %>%
+  filter( fecha <= as.Date("01/12/2022", "%d/%m/%Y" ) ) %>%
   mutate( rendimiento = rendimiento * 100,
           instrumento = 'Fondos administrados BIESS') %>%
   dplyr::select( fecha,
@@ -324,7 +318,7 @@ biess_rendimiento <- ggplot( data = df_bar,
                  group = 1,
                  linetype = 'Rendimiento Neto'),
             inherit.aes = FALSE,
-            size = 1 ) +
+            size = graf_line_size ) +
   scale_linetype_manual( NULL, values = 1) +
   scale_x_date( date_breaks = '1 year', date_labels = "%B-%Y" ) +
   scale_y_continuous( name = 'Fondos administrados BIESS (millones USD)',
@@ -359,8 +353,8 @@ ggsave( plot = biess_rendimiento,
 ##Predicciones Salario básico unificado-------------------------------------------------------------
 
 aux <- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 
 lim_y<- c(0,300000000)
 salto_y = 50000000
@@ -386,8 +380,8 @@ ggsave( plot = iess_pib_pred,
 ##Predicciones Salario promedio anual---------------------------------------------------------------
 
 aux <- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 
 lim_y<- c(0,25000)
 salto_y = 5000
@@ -416,8 +410,8 @@ ggsave( plot = iess_sal_pred,
 
 message( '\tGraficando salario básico unificado' )
 aux<- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 
 lim_y<- c(0,1100)
 salto_y <- 100
@@ -446,8 +440,8 @@ ggsave( plot = iess_sbu_pred,
 
 message( '\tGraficando tasa activa' )
 aux <- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 
 lim_y<- c(0.07,0.11)
 salto_y = 0.005
@@ -473,16 +467,15 @@ ggsave( plot = iess_ta_pred,
 ##Predicciones tasa pasiva--------------------------------------------------------------------------
 message( '\tGraficando tasa pasiva' )
 aux <- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 
 lim_y<- c(0.03,0.07)
 salto_y = 0.01
 brks_y <- seq(lim_y[1],lim_y[2],salto_y)
 lbls_y <- paste0(as.character(c(seq(abs(lim_y[1]), abs(lim_y[2]), salto_y)*100) ), "%" )
 
-iess_tp_pred <-
-  ggplot() +
+iess_tp_pred <- ggplot() +
   geom_line( data = aux_his, aes( x = anio, y = tasa_pasiva, group=1 ),
              colour = parametros$iess_green,size = graf_line_size ) +
   geom_line( data = aux_pred, aes( x = anio, y = tasa_pasiva, group=1 ),
@@ -501,15 +494,14 @@ ggsave( plot = iess_tp_pred,
 ##Predicciones inflación----------------------------------------------------------------------------
 message( '\tGraficando inflación' )
 aux <- tasas_macro_pred
-aux_his <- aux %>% filter( anio <= 2020 )
-aux_pred <- aux %>% filter( anio >= 2020 )
+aux_his <- aux %>% filter( anio <= 2022 )
+aux_pred <- aux %>% filter( anio >= 2022 )
 lim_y<- c(-0.01,0.09)
 salto_y = 0.01
 brks_y <- seq(lim_y[1],lim_y[2],salto_y)
 lbls_y <- paste0(as.character(seq(lim_y[1], lim_y[2], salto_y)*100), "%")
 
-iess_inf_pred <-
-  ggplot() +
+iess_inf_pred <- ggplot() +
   geom_line( data = aux_his, aes( x = anio, y = inflación_prom, group=1),colour = parametros$iess_green,
              size = graf_line_size ) +
   geom_line( data = aux_pred, aes( x = anio, y = inflación_prom, group=1 ),
@@ -525,10 +517,31 @@ ggsave( plot = iess_inf_pred,
         filename = paste0( parametros$resultado_graficos, 'iess_inf_pred', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
-## Gráfico de la prueba de Independencia de errores de Box-Ljung------------------------------------
+## Prueba de Independencia de errores de Box-Ljung--------------------------------------------------
 
-box_ljung
-#png(file = paste0( parametros$resultado_graficos, 'iess_test_modelo', parametros$graf_ext ) )
+lim_y<- c( 0, 0.9 )
+salto_y = 0.1
+brks_y <- seq(lim_y[1],lim_y[2],salto_y)
+lbls_y <- paste0(as.character(seq(lim_y[1], lim_y[2], salto_y)*100), "%")
+
+
+iess_box_ljung <- ggplot( box_ljung, aes( x = m, y = p_valor )) +
+  geom_segment( aes( x = m, xend = m,
+                     y = 0, yend = p_valor ), color = parametros$iess_blue, linetype = 6 ) +
+  geom_hline( yintercept = 0,  color = "black", size = 0.5 ) + 
+  geom_hline( yintercept = 0.05,  color = "red", size = 0.5, linetype="dashed", ) + 
+  geom_point( color = parametros$iess_green, size = 2) +
+  scale_y_continuous(breaks = brks_y, labels = brks_y, limits = lim_y) +
+  scale_x_continuous( labels = seq(1, 8, 1), breaks = seq(1, 8, 1)) +
+  theme_bw() +
+  plt_theme +
+  xlab("m") +
+  ylab("p-valor")
+
+
+ggsave( plot = iess_box_ljung,
+        filename = paste0( parametros$resultado_graficos, 'iess_box_ljung', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 #3. Las pirámides poblacionales de la población nacional -------------------------------------------
 poblacion <- ONU_proyeccion_poblacion[ year %in% c( 2021, 2041, 2061 ), list( sex, x, year, lx ) ]
