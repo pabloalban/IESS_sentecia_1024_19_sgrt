@@ -59,9 +59,12 @@
 <<cap06, child='06_analisis_contexto.Rnw'>>=
 @
  
-<<cap07, child='07_analisis_financiero.Rnw'>>=
+<<cap07, child='06_analisis_financiero.Rnw'>>=
 @
  
+<<cap07, child='07_inversiones.Rnw'>>=
+@
+
 %<<cap08, child='08_demografia.Rnw'>>=
 %@
 

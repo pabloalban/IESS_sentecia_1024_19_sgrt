@@ -91,6 +91,8 @@ tools::texi2pdf( REP_rep_latex, quiet = REP_latex_quiet, clean = REP_latex_clean
 setwd( parametros$work_dir )
 message('\tFin compilación LaTeX')
 
+unlink( paste( parametros$reporte_seguro, '06_analisis_contexto.Rnw', sep = '' ) )
+
 if( REP_latex_aux_clean ) {
   unlink( REP_file_latex_clean, recursive = TRUE )
 }
