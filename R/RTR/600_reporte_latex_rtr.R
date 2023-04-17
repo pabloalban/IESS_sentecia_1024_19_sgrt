@@ -10,6 +10,7 @@ source( 'R/403_graf_demografia_sgo.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/400_graf_analisis_demografico_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/401_graf_inversiones_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/402_graf_analisis_financiero_rtr.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/rtr/404_graf_tasas_decrementos_rtr.R', encoding = 'UTF-8', echo = FALSE )
 
 # Tablas genéricas ---------------------------------------------------------------------------------
 source( 'R/501_tab_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )

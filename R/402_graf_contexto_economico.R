@@ -356,7 +356,7 @@ aux <- tasas_macro_pred
 aux_his <- aux %>% filter( anio <= 2022 )
 aux_pred <- aux %>% filter( anio >= 2022 )
 
-lim_y<- c(0,300000000)
+lim_y<- c( 0 ,300000000 )
 salto_y = 50000000
 brks_y <- seq(lim_y[1],lim_y[2],salto_y)
 lbls_y <- formatC( brks_y, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
@@ -413,7 +413,7 @@ aux<- tasas_macro_pred
 aux_his <- aux %>% filter( anio <= 2022 )
 aux_pred <- aux %>% filter( anio >= 2022 )
 
-lim_y<- c(0,1100)
+lim_y<- c( 0, 1200 )
 salto_y <- 100
 brks_y <- seq(lim_y[1],lim_y[2],salto_y)
 lbls_y <- formatC( brks_y, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
@@ -518,6 +518,7 @@ ggsave( plot = iess_inf_pred,
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 ## Prueba de Independencia de errores de Box-Ljung--------------------------------------------------
+aux <- as_tibble( box_ljung )
 
 lim_y<- c( 0, 0.9 )
 salto_y = 0.1
@@ -525,14 +526,16 @@ brks_y <- seq(lim_y[1],lim_y[2],salto_y)
 lbls_y <- paste0(as.character(seq(lim_y[1], lim_y[2], salto_y)*100), "%")
 
 
-iess_box_ljung <- ggplot( box_ljung, aes( x = m, y = p_valor )) +
+iess_box_ljung <- ggplot( aux, aes( x = m, y = p_valor )) +
   geom_segment( aes( x = m, xend = m,
-                     y = 0, yend = p_valor ), color = parametros$iess_blue, linetype = 6 ) +
+                     y = 0, yend = p_valor ), 
+                color = parametros$iess_blue, 
+                linetype = 6 ) +
   geom_hline( yintercept = 0,  color = "black", size = 0.5 ) + 
-  geom_hline( yintercept = 0.05,  color = "red", size = 0.5, linetype="dashed", ) + 
+  geom_hline( yintercept = 0.05,  color = "red", size = 0.5, linetype="dashed" ) + 
   geom_point( color = parametros$iess_green, size = 2) +
-  scale_y_continuous(breaks = brks_y, labels = brks_y, limits = lim_y) +
-  scale_x_continuous( labels = seq(1, 8, 1), breaks = seq(1, 8, 1)) +
+  scale_y_continuous( breaks = brks_y, labels = brks_y, limits = lim_y ) +
+  scale_x_continuous( labels = seq( 1, 8, 1 ), breaks = seq( 1, 8, 1 ) ) +
   theme_bw() +
   plt_theme +
   xlab("m") +
@@ -544,20 +547,29 @@ ggsave( plot = iess_box_ljung,
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 #3. Las pirámides poblacionales de la población nacional -------------------------------------------
-poblacion <- ONU_proyeccion_poblacion[ year %in% c( 2021, 2041, 2061 ), list( sex, x, year, lx ) ]
-poblacion[ , rx := lx / sum( lx ), by = list( year, sex ) ]
-poblacion[ sex == 'M', rx := -rx ]
-poblacion[ , x := factor( x, levels = c( '0 - 4', ' 5 - 9', '10 - 14', '15 - 19', '20 - 24', 
-                                         '25 - 29', '30 - 34', '35 - 39', '40 - 44', '45 - 49', '50 - 54', 
-                                         '55 - 59', '60 - 64', '65 - 69', '70 - 74', '75 - 79', '80 - 84', 
-                                         '85 - 89', '90 - 94', '95 - 99', '100+' ), ordered = TRUE ) ]
+
+poblacion <- as_tibble( ONU_proyeccion_poblacion ) %>%
+  filter( year %in% c( 2022, 2042, 2062 ),
+          x != 'total' ) %>%
+  group_by( year ) %>%
+  mutate( rx = lx / sum( lx ) ) %>%
+  ungroup( ) %>%
+  mutate( rx = ifelse( sex == 'M',
+                        ( -1 ) * rx,
+                        rx ) ) %>%
+  mutate( x := factor( x, levels = c( ' 0 - 4', ' 5 - 9', '10 - 14', '15 - 19', '20 - 24', 
+                                      '25 - 29', '30 - 34', '35 - 39', '40 - 44', '45 - 49', '50 - 54', 
+                                      '55 - 59', '60 - 64', '65 - 69', '70 - 74', '75 - 79', '80 - 84', 
+                                      '85 - 89', '90 - 94', '95 - 99', '100+' ), ordered = TRUE ) ) %>%
+  dplyr::select( sex, x, year, lx, rx ) %>%
+  na.omit( . )
 
 ##Pirámide población -------------------------------------------------------------------------------
-years <- c( 2021, 2041, 2061 )
+years <- c( 2022, 2042, 2062 )
 
 
 for( yr in years ) {
-  if (yr == 2021) {
+  if ( yr == 2022 ) {
     y_lim <- c( -0.05, 0.05 )
     y_brk <- seq( y_lim[1], y_lim[2], 0.01 )
     y_lbl <- paste0( formatC( 100 * abs(y_brk), digits = 0, format = 'f', big.mark = '.', 
@@ -568,11 +580,11 @@ for( yr in years ) {
     y_lbl <- paste0( formatC( 100 * abs(y_brk), digits = 0, format = 'f', big.mark = '.', 
                               decimal.mark = ',' ), "%" )
   }
-  aux <- poblacion[ year == yr & x != 'total' ]
+  aux <- poblacion %>% filter( year == yr )
   
   iess_pir_poblacion <- ggplot( aux, aes( x = x, y = rx, fill = sex ) ) +
-    geom_bar( data = aux[ sex ==  'M' ], stat = 'identity', colour = "white", size = 0.1 ) +
-    geom_bar( data = aux[ sex ==  'F' ], stat = 'identity', colour = "white", size = 0.1 ) +
+    geom_bar( data = filter( aux, sex ==  'M' ), stat = 'identity', colour = "white", size = 0.1 ) +
+    geom_bar( data = filter( aux, sex ==  'F' ), stat = 'identity', colour = "white", size = 0.1 ) +
     scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
     # scale_x_continuous( breaks = brks_x, labels = lbls_x, limits = x_lim ) +
     xlab( 'Edad' ) +
@@ -595,27 +607,36 @@ for( yr in years ) {
 }
 
 ##Pirámide pea -------------------------------------------------------------------------------------
-years <- c( 2021, 2041, 2058 )
+y <- c( 2022, 2042, 2058 )
 
-pob_pea <- onu_pea_tot_int[ year %in% years & sex %in% c( 'F', 'M' ), list( year, sex, x, lx = pea_int ) ]
-pob_pea[ , rx := lx / sum( lx ), by = list( year, sex ) ]
-pob_pea[ sex == 'M', rx := -rx ]
+pob_pea <- as_tibble( onu_pea_tot_int ) %>%
+  filter( year %in% y,
+          sex %in% c( 'F', 'M' ) ) %>%
+  dplyr::select( year, sex, x, lx := pea_int ) %>%
+  group_by( year ) %>%
+  mutate( rx = lx / sum( lx ) ) %>%
+  ungroup( ) %>%
+  mutate( rx = if_else( sex == 'M',
+                        (-1) * rx,
+                        rx ) ) %>%
+  ungroup( )
 
-y_lim <- c( -0.03, 0.03 )
-y_brk <- seq( y_lim[1], y_lim[2], 0.01 )
-y_lbl <- paste0( formatC( 100 * abs(y_brk), digits = 0, format = 'f', big.mark = '.',
+
+y_lim <- c( -0.0175, 0.0175 )
+y_brk <- seq( -0.015, 0.015, 0.005 )
+y_lbl <- paste0( formatC( 100 * abs(y_brk), digits = 1, format = 'f', big.mark = '.',
                           decimal.mark = ',' ), "%" )
 
 x_lim <- c( 15, 100 )
 x_brk <- seq( x_lim[1], x_lim[2], 10 )
 x_lbl <- x_brk
 
-for( yr in years ) {
-  aux <- pob_pea[ year == yr ]
+for( yr in y ) {
+  aux <- filter( pob_pea, year == yr )
 
   iess_pir_pea <- ggplot( aux, aes( x = x, y = rx, fill = sex ) ) +
-    geom_bar( data = aux[ sex == 'M' ], stat = 'identity',colour = "white", size = 0.1 ) +
-    geom_bar( data = aux[ sex == 'F' ], stat = 'identity',colour = "white", size = 0.1 ) +
+    geom_bar( data = filter( aux, sex ==  'M' ), stat = 'identity',colour = "white", size = 0.1 ) +
+    geom_bar( data = filter( aux, sex ==  'F' ), stat = 'identity',colour = "white", size = 0.1 ) +
     xlab( 'Edad' ) +
     ylab( '' ) +
     scale_x_continuous( breaks = x_brk, labels = x_lbl, limits = x_lim ) +

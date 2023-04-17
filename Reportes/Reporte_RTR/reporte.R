@@ -48,7 +48,8 @@ REP_file_latex_org <- c( paste( parametros$work_dir, 'Reportes/bibliografia_libr
                          paste( parametros$work_dir, 'Reportes/caratula.png', sep = '' ),
                          paste( parametros$work_dir, 'Reportes/caratula_v2.png', sep = '' ),
                          paste( parametros$work_dir, 'Reportes/sumilla_actuario.png', sep = '' ),
-                         paste( parametros$work_dir, 'Reportes/firma_actuario.png', sep = '' ))
+                         paste( parametros$work_dir, 'Reportes/firma_actuario.png', sep = '' ),
+                         paste( parametros$work_dir, 'Reportes/06_analisis_contexto.Rnw', sep = '' ) )
 
 REP_file_latex_des <- c( paste( REP_rep_dir, 'bibliografia_libros.bib', sep = '' ), 
                          paste( REP_rep_dir, 'bibliografia_articulos.bib', sep = '' ),
@@ -58,7 +59,8 @@ REP_file_latex_des <- c( paste( REP_rep_dir, 'bibliografia_libros.bib', sep = ''
                          paste( REP_rep_dir, 'graficos/caratula.png', sep = '' ),
                          paste( REP_rep_dir, 'graficos/caratula_v2.png', sep = '' ),
                          paste( REP_rep_dir, 'graficos/sumilla_actuario.png', sep = '' ),
-                         paste( REP_rep_dir, 'graficos/firma_actuario.png', sep = '' ))
+                         paste( REP_rep_dir, 'graficos/firma_actuario.png', sep = '' ),
+                         paste( parametros$reporte_seguro, '06_analisis_contexto.Rnw', sep = '' ) )
 
 REP_file_latex_clean <- c( paste( REP_rep_dir, 'bibliografia_libros.bib', sep = '' ), 
                            paste( REP_rep_dir, 'bibliografia_articulos.bib', sep = '' ),
