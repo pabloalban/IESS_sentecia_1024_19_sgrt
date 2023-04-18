@@ -33,7 +33,7 @@ ben_fun <- function(.data18, .data22) {
     dplyr::select( anio, sexo, beneficiarios) %>%
     spread(  ., sexo, value = c(beneficiarios ),  sep = "ben" ) %>%
     mutate( ben =  rowSums(.[2:3]) ) %>%
-    left_join(., a, by = 'anio' )
+    left_join( a, . , by = 'anio' )
     
     b <- .data22 %>% 
       distinct( anio, mes, cedula, .keep_all = TRUE ) %>%
@@ -57,9 +57,12 @@ ben_fun <- function(.data18, .data22) {
       dplyr::select( anio, sexo, beneficiarios) %>%
       spread(  ., sexo, value = c(beneficiarios ),  sep = "ben" ) %>%
       mutate( ben =  rowSums(.[2:3]) ) %>%
-      left_join(., b, by = 'anio' )
+      left_join(b, ., by = 'anio' )
     
-    aux <- rbind( a, b)
+    aux <- rbind( a, b) %>%
+      mutate( incremento = ben - lag( ben ) ) %>%
+      mutate( tasa_crecimiento = 100 * incremento / lag( ben ) )
+    
     return( aux )
 }
 
@@ -171,7 +174,8 @@ monto_fun <- function(.data18, .data22) {
                   tot_desc,
                   liq_pagar )
   
-  aux <- rbind( a, b)
+  aux <- rbind( a, b ) 
+  
   return( aux )
 }
 
@@ -297,6 +301,7 @@ etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1],
                    ben ) %>%
     arrange( sexo, rango_monto ) %>%
     spread(  ., sexo, value = c( ben ),  sep = "ben12" )  %>%
+    mutate_if( is.numeric , replace_na, replace = 0) %>%
     mutate( total = rowSums(.[2:ncol(.)]) ) %>%
     mutate( rango_monto = as.character( rango_monto ) ) %>%
     rbind( ., c("Total", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
@@ -384,7 +389,9 @@ b <- subsidios_rtr %>%
   dplyr::select( anio, sexo, beneficiarios) %>%
   spread(  ., sexo, value = c(beneficiarios ),  sep = "ben" ) %>%
   mutate( ben =  rowSums(.[2:3]) ) %>%
-  left_join(., b, by = 'anio' )
+  mutate( incremento = ben - lag( ben ) ) %>%
+  mutate( tasa_crecimiento = 100 * incremento / lag( ben ) ) %>%
+  left_join(b, ., by = 'anio' )
 
 tab_evo_ben_subsidios <- b
 
@@ -412,9 +419,11 @@ b <- subsidios_rtr %>%
   dplyr::select( anio, sexo, subsidios) %>%
   spread(  ., sexo, value = c(subsidios ),  sep = "ben" ) %>%
   mutate( subsidios =  rowSums(.[2:3]) ) %>%
-  left_join(., b, by = 'anio' )
+  left_join( b, ., by = 'anio' )
 
-tab_evo_monto_subsidios <- b
+tab_evo_monto_subsidios <- b %>%
+  mutate( incremento = subsidios - lag( subsidios ) ) %>%
+  mutate( tasa_crecimiento = 100 * incremento / lag( subsidios ) )
 
 ##7.3 Tabla de edades para pirámides----------------------------------------------------------------
 
@@ -523,7 +532,7 @@ a <- indemnizaciones_rt_2018 %>%
   dplyr::select( anio, sexo, beneficiarios) %>%
   spread(  ., sexo, value = c(beneficiarios ),  sep = "ben" ) %>%
   mutate( ben =  rowSums(.[2:3]) ) %>%
-  left_join(., a, by = 'anio' )
+  left_join( a, ., by = 'anio' )
 
 b <- indemnizaciones_rt_2022 %>% 
   distinct( anio, mes, cedula, .keep_all = TRUE ) %>%
@@ -549,9 +558,11 @@ b <- indemnizaciones_rt_2022 %>%
   dplyr::select( anio, sexo, beneficiarios) %>%
   spread(  ., sexo, value = c(beneficiarios ),  sep = "ben" ) %>%
   mutate( ben =  rowSums(.[2:3]) ) %>%
-  left_join(., b, by = 'anio' )
+  left_join( b, ., by = 'anio' )
 
-tab_evo_ben_indemnizaciones <- rbind( a, b)
+tab_evo_ben_indemnizaciones <- rbind( a, b) %>%
+  mutate( incremento = ben - lag( ben ) ) %>%
+  mutate( tasa_crecimiento = 100 * incremento / lag( ben ) )
 
 ##8.2 Tabla evolución de montos entregados----------------------------------------------------------
 
@@ -577,7 +588,7 @@ a <- indemnizaciones_rt_2018 %>%
   spread(  ., sexo, value = c( subsidios ),  sep = "ben" ) %>%
   replace(is.na(.), 0) %>%
   mutate( subsidios =  rowSums(.[2:3]) ) %>%
-  left_join(., a, by = 'anio' )
+  left_join(a, ., by = 'anio' )
 
 
 b <- indemnizaciones_rt_2022 %>% 
@@ -600,9 +611,11 @@ b <- indemnizaciones_rt_2022 %>%
   dplyr::select( anio, sexo, subsidios) %>%
   spread(  ., sexo, value = c( subsidios ),  sep = "ben" ) %>%
   mutate( subsidios =  rowSums(.[2:3]) ) %>%
-  left_join(., b, by = 'anio' )
+  left_join( b, ., by = 'anio' )
 
-tab_evo_monto_indemnizaciones <- rbind( a, b )
+tab_evo_monto_indemnizaciones <- rbind( a, b ) %>%
+  mutate( incremento = subsidios - lag( subsidios ) ) %>%
+  mutate( tasa_crecimiento = 100 * incremento / lag( subsidios ) )
 
 ##8.3 Tabla de edades para pirámides----------------------------------------------------------------
 

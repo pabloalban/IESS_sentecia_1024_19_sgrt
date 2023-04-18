@@ -66,9 +66,12 @@ print( aux_xtab,
 message( '\tTabla masa salarial' )
 
 aux <- masa_salarial %>%
-  mutate( anio = as.character( anio ) )
+  mutate( anio = as.character( anio ) ) %>%
+  mutate( incremento = masa_salarial - lag( masa_salarial ),
+          tc = tasa_crecimiento ) %>%
+  dplyr::select( -tasa_crecimiento )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 6 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 7 ) ) )
 
 print( aux_xtab, 
        file = paste0( parametros$resultado_tablas, 'iess_masa_salarial', '.tex' ),

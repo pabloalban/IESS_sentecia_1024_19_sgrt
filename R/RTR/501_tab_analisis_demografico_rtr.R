@@ -16,7 +16,7 @@ message( '\tTablas Subsidios' )
 aux <- tab_evo_ben_subsidios %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 6 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 8 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_subsidios_rtr', '.tex' ),
@@ -32,7 +32,7 @@ print( aux_xtab,
 aux <- tab_evo_monto_subsidios %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 6 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 8 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_monto_subsidios_rtr', '.tex' ),
@@ -68,7 +68,7 @@ message("\tTablas sobre indemnizaciones del SGRT")
 aux <- tab_evo_ben_indemnizaciones %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 6 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 8 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_indemnizaciones_rtr', '.tex' ),
@@ -83,7 +83,7 @@ print( aux_xtab,
 aux <- tab_evo_monto_indemnizaciones %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 6 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 8 ) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_monto_indemnizaciones_rtr', '.tex' ),
@@ -117,7 +117,7 @@ message("\tTablas evolución de pensionistas del SGRT")
 aux <- tab_evo_ben_pp %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 6) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pp_rtr', '.tex' ),
@@ -128,11 +128,11 @@ print( aux_xtab,
        hline.after = c( nrow(aux) ),
        sanitize.text.function = identity )
 
-## 3.2 Tabla evolución de pensionistas incapacidad temporal-----------------------------------------
+## 3.2 Tabla evolución de pensionistas incapacidad permanente total---------------------------------
 aux <- tab_evo_ben_pt %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 6) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pt_rtr', '.tex' ),
@@ -148,7 +148,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_pa %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 6) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pa_rtr', '.tex' ),
@@ -163,7 +163,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_vo %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 6) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_vo_rtr', '.tex' ),
@@ -178,7 +178,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_of %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 6) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_of_rtr', '.tex' ),
@@ -208,7 +208,7 @@ print( aux_xtab,
        hline.after = c( nrow(aux) ),
        sanitize.text.function = identity )
 
-## 4.2 Tabla evolución de montos incapacidad temporal-----------------------------------------
+## 4.2 Tabla evolución de montos incapacidad permanente total---------------------------------------
 aux <- tab_evo_monto_pt %>%
   mutate( anio = as.character( anio ) )
 
@@ -289,7 +289,7 @@ print( aux_xtab,
                         nrow(aux) ),
        sanitize.text.function = identity )
 
-## 5.2 Tablas de los beneficiarios por rangos de incapacidad temporal-------------------------------
+## 5.2 Tablas de los beneficiarios por rangos de incapacidad permanente total-----------------------
 aux <- tab_rango_monto_pt
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 0, 2, 0, 2, 0, 2) )

@@ -105,7 +105,7 @@ ggsave( plot = iess_evo_ben_pp_rtr,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
-##1.4 Evolución de beneficiarios de incapacidad temporal--------------------------------------------
+##1.4 Evolución de beneficiarios de incapacidad permanente total------------------------------------
 
 aux <- tab_evo_ben_pt 
 
@@ -335,7 +335,7 @@ ggsave( plot = iess_pir_ben_pp,
         filename = paste0( parametros$resultado_graficos, 'iess_pir_ben_pp', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
-##2.4 Pirámide de beneficiarios de incapacidad temporal---------------------------------------------
+##2.4 Pirámide de beneficiarios de incapacidad permanente total-------------------------------------
 
 aux <- pir_ben_pt  %>%
   mutate( fdp = if_else( sexo == 'H',

@@ -20,7 +20,7 @@ y_lbl <- formatC( y_brk, digits = 0, format = 'f', big.mark = '.', decimal.mark 
 
 iess_afi <- ggplot( data = aux, aes( x = periodo, y = afiliados ) ) + 
   geom_line( color = parametros$iess_green, size = graf_line_size ) + 
-  labs( x = 'Año', y = 'Afiliados al SGO' ) +
+  labs( x = 'Año', y = 'Cotizantes al SGO' ) +
   scale_x_date( date_breaks = "1 year", date_labels = "%Y" ) +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
   theme_bw( ) +
