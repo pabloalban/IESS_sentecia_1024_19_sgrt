@@ -114,7 +114,7 @@ aux <- sbu %>%
   filter( anio <= '2022')
 
 x_lim <- c( 2000, 2022 )
-x_brk <- seq( x_lim[1] + 1, x_lim[2], 2)
+x_brk <- seq( x_lim[1] , x_lim[2], 2)
 x_lbl <- formatC( x_brk, digits = 0, format = 'f', big.mark = '', decimal.mark = ',' )
 
 y_lim <- c( 0, 450 )

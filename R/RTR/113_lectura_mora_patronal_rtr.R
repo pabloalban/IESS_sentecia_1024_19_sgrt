@@ -7,7 +7,7 @@ file <- paste0( parametros$Data, 'RTR/SENTENCIA CORTE CONST 1024/Memorando Nro. 
 
 
 #Cargar función tíldes a latex----------------------------------------------------------------------
-source( 'R/503_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 
 #Responsabilidad patronal al 15/10/2021-------------------------------------------------------------
 rp_sgrt <- read_excel(file,

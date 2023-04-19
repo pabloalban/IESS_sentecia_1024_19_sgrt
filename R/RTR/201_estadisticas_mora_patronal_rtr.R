@@ -128,14 +128,21 @@ aux <- reporte_resp_patronal %>%
                               'ATENCIONES MEDICAS',
                               concepto ) ) %>%
   mutate( concepto = if_else( concepto %in% c( 'RIESGOS DEL TRABAJO SANCIONES Y MULTAS',
-                                               'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR INOBSERVANCIA DE MEDIDAS DE PREVENCIÓN',
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR MULTA SIN OTRA CAUSA DE RP',
-                                               'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR NO ACATAR LOS DICTÁMENES DE CAMBIO DE PUESTO DE TRABAJO',
-                                               'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR OBSTACULIZAR LOS PROCESOS',
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR PRESTACIONES',
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR SEGUIMIENTOS' ),
-                              'NO ESPECIFICA',
+                              'OTROS',
                               concepto ) ) %>%
+  mutate( concepto = if_else( concepto %in% c( 'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR INOBSERVANCIA DE MEDIDAS DE PREVENCIÓN' ),
+                              'POR INOBSERVANCIA DE MEDIDAS DE PREVENCIÓN',
+                              concepto ) ) %>%
+  mutate( concepto = if_else( concepto %in% c( 'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR OBSTACULIZAR LOS PROCESOS' ),
+                              'POR OBSTACULIZAR LOS PROCESOS',
+                              concepto ) ) %>%
+  mutate( concepto = if_else( concepto %in% c( 'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR NO ACATAR LOS DICTÁMENES DE CAMBIO DE PUESTO DE TRABAJO' ),
+                              'POR NO ACATAR LOS DICTÁMENES DE CAMBIO DE PUESTO DE TRABAJO',
+                              concepto ) ) %>%
+  
   mutate( tipo_de_empresa = as.character( tipo_de_empresa ) ) %>%
   mutate( tipo_de_empresa = if_else( tipo_de_empresa %in% c('SEGURO SOCIAL CAMPESINO',
                                                             'VOLUNTARIO'),
@@ -183,7 +190,8 @@ tab_concepto_prom <- aux %>%
   mutate( monto_prom = monto / rp ) %>%
   dplyr::select( concepto, rp, rp_por, monto_prom, monto ) %>%
   replace( is.na(.), 0 ) %>%
-  rbind( ., c("TOTAL", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE )))) 
+  rbind( ., c("TOTAL", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
+  mutate_at( c(2:ncol(.)), as.numeric )
 
 #Pirámide por edad y sexo de los afiliados----------------------------------------------------------
 
@@ -236,7 +244,9 @@ tabla_rp_provincia <- a %>%
   replace(is.na(.), 0) %>% 
   mutate( total_monto =  rowSums(.[2:ncol(.)]) ) %>%
   left_join( tabla_rp_provincia, ., by = 'provincia' ) %>%
-  rbind( ., c("TOTAL", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE )))) 
+  rbind( ., c("TOTAL", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE )))) %>%
+  mutate_at( c(2:4), as.integer ) %>%
+  mutate_at( c(5:ncol(.)), as.numeric )
 
 #Tabla rp por montos por rango por sexo-------------------------------------------------------------
 
@@ -247,9 +257,9 @@ a <- reporte_resp_patronal %>%
 
 cortes_monto <- c( quantile(a$valor_pendiente, probs = seq( 0, 1, length.out = 11 ) ) )
 
-etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1], 
+etiquetas_monto<-c(paste0("(\\$",formatC( cortes_monto[1:length(cortes_monto)-1], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
-                          "-$",formatC( cortes_monto[2:length(cortes_monto)], 
+                          " - \\$",formatC( cortes_monto[2:length(cortes_monto)], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),"]"))
 
 a <- a %>%
