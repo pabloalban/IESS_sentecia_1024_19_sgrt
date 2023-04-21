@@ -134,7 +134,7 @@ SBU: Salario Básico Unificado a la fecha de liquidación.}\\
 $RP_{total}$: \textit{Resposabilidad Patronal Total.}\\
 $SBU$: \textit{Salario Básico Unificado a la fecha de liquidación.}\\
 $t$: \textit{Número de aportes pagados por mora.}\\
-$x_{k}$: \textit{Es el aporte "$k$` no pagado, k=\bar{1,t}.}\\
+$x_{k}$: \textit{Es el aporte $k$ no pagado, $k=\bar{1,t}$.}\\
 $FD_{k}$: \textit{Fecha límite de pago del aporte "$k$".}\\
 $FP_{k}$: \textit{Fecha de pago del aporte "$k$".}\\
 $m_{k}$: \textit{Número de meses transcurridos entre la fecha de pago $FP_{k}$ y la fecha límite de pago $FD_{k}$ del aporte "$k$", toda fracción será considerada como un mes para efectos del cálculo.}\\

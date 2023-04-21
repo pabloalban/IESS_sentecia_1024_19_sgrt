@@ -10,7 +10,7 @@ source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
 message( '\tLectura activo del fondo' )
 aux <- activo_del_fondo %>%
   clean_names( ) %>%
-  filter( ano >= 2012 ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2) )
@@ -29,7 +29,8 @@ message( '\tTabla Análisis Componentes del Activo' )
 aux <- analisis_componentes_activo %>% 
   clean_names() %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
   
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
@@ -47,7 +48,8 @@ message( '\tTabla Análisis Horizontal Activo' )
 aux <- analisis_horizontal_activo %>% 
   clean_names() %>%
   dplyr::select( -x2011_2010,
-                 -x2012_2011 )
+                 -x2012_2011,
+                 -x2013_2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 9 ) ) )
 
@@ -66,7 +68,8 @@ message( '\tTabla Análisis Vertical del Activo' )
 aux <- analisis_vertical_activo %>% 
   clean_names() %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
@@ -83,7 +86,8 @@ print( aux_xtab,
 # Cuentas por Cobrar Fondo RT-----------------------------------------------------------------------
 message( '\tTabla Análisis Cuentas por Cobrar' )
 aux <- cuentas_cobrar_fondo %>%
-  clean_names( ) %>%
+  clean_names( ) %>% 
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character(ano) )
 
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
@@ -101,7 +105,7 @@ print( aux_xtab,
 message( '\tTabla Pasivos del Fondo' )
 aux <- pasivos_fondo %>%
   clean_names( ) %>%
-  filter( ano >= 2012 ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c(0,0,2,2,2))
@@ -120,7 +124,9 @@ message( '\tTabla Componentes del Pasivo del Fondo' )
 aux <- componentes_pasivos_fondo %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 ) %>%
+  mutate_if( is.numeric, ~replace_na(., 0))
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 10 ) ))
 print( aux_xtab,
@@ -137,7 +143,8 @@ message( '\tTabla Análisis Horizontal del Pasivo' )
 aux <- analisis_horizontal_pasivos %>%
   clean_names( ) %>%
   dplyr::select( -x2011_2010,
-                 -x2012_2011 )
+                 -x2012_2011,
+                 -x2013_2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2,9) ) )
 
@@ -157,7 +164,9 @@ message( '\tTabla Análisis Vertical del Pasivo' )
 aux <- analisis_vertical_pasivos %>%
   clean_names( ) %>%
   dplyr::select( -x2010_percent,
-                 -x2011_percent )
+                 -x2011_percent,
+                 -x2012_percent ) %>%
+  mutate_if( is.numeric, ~replace_na(., 0))
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 10 ) ) )
 
@@ -175,6 +184,7 @@ print( aux_xtab,
 message( '\tTabla Cuentas por Pagar del Fondo' )
 aux <- cuentas_pagar_fondo %>%
   clean_names( ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c(0,0, rep( 2, 3 ) ) )
@@ -192,7 +202,7 @@ print( aux_xtab,
 message( '\tTabla Patrimonio del Fondo' )
 aux <- patrimonio_fondo %>%
   clean_names( ) %>%
-  filter( ano >= 2012 ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 3) ) )
@@ -211,7 +221,8 @@ message( '\tTabla Componentes del Patrimonio del Fondo' )
 aux <- componentes_patrimonio_fondo %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 10) ) )
 
@@ -229,7 +240,8 @@ message( '\tTabla  Análisis Horizontal del Patrimonio' )
 aux <- analisis_horizontal_patrimonio %>%
   clean_names( ) %>%
   dplyr::select( -x2011_2010,
-                 -x2012_2011 )
+                 -x2012_2011,
+                 -x2013_2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 9 ) ) )
 
@@ -248,7 +260,8 @@ message( '\tTabla Análisis Vertical del Patrimonio' )
 aux <- analisis_vertical_patrimonio %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 10) ) )
 
@@ -266,6 +279,7 @@ print( aux_xtab,
 message( '\tTabla Ingresos del Fondo' )
 aux <- ingresos_fondo %>%
   clean_names( ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 3) ) )
@@ -284,7 +298,8 @@ message( '\tTabla Componentes de los Ingresos' )
 aux <- componentes_ingresos %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep(2,10) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
@@ -304,7 +319,8 @@ message( '\tTabla Análisis Horizontal del Ingreso' )
 aux <- analisis_horizontal_ingresos %>%
   clean_names( ) %>%
   dplyr::select( -x2011_2010,
-                 -x2012_2011)
+                 -x2012_2011,
+                 -x2013_2012 )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep(2, 9) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
@@ -325,7 +341,8 @@ message( '\tTabla Análisis Vertical del Ingreso' )
 aux <- analisis_vertical_ingresos %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011)
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 10 ) ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
@@ -344,6 +361,7 @@ print( aux_xtab,
 message( '\tTabla Ingresos por Aportes' )
 aux <- ingresos_aportes %>%
   clean_names( ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c( 0, 0, rep( 2, 6 ) ) )
@@ -362,6 +380,7 @@ print( aux_xtab,
 message( '\tTabla Gastos' )
 aux <- gastos %>%
   clean_names( ) %>%
+  filter( ano >= 2013 ) %>%
   mutate( ano = as.character( ano ) )
 
 aux_xtab <- xtable( aux, digits = c(0,0, rep(2,3) ) )
@@ -381,7 +400,8 @@ message( '\tTabla Componentes del Gasto' )
 aux <- componentes_gastos %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 
 aux_xtab <- xtable( aux, digits = c(0,0, rep(2, 10 ) ) )
@@ -404,7 +424,8 @@ message( '\tTabla Análisis Horizontal del Gasto' )
 aux <- analisis_horizontal_gastos %>%
   clean_names( ) %>%
   dplyr::select( -x2011_2010,
-                 -x2012_2011 )
+                 -x2012_2011,
+                 -x2013_2012 )
   
 aux_xtab <- xtable( aux, digits = c(0,0, rep(2,9)))
 
@@ -425,7 +446,8 @@ message( '\tTabla Análisis Vertical del Gasto' )
 aux <- analisis_vertical_gastos %>%
   clean_names( ) %>%
   dplyr::select( -x2010,
-                 -x2011 )
+                 -x2011,
+                 -x2012 )
 
 aux_xtab <- xtable( aux, digits = c(0,0,rep(2,10)) )
 aux_xtab <- tildes_a_latex( aux_xtab )
@@ -440,22 +462,26 @@ print( aux_xtab,
                         nrow(aux) ),
        sanitize.text.function = identity)
 
-#Relación patrimonio gasto y beneficio de pensiones-------------------------------------------------
-message( '\tTabla relación patrimonio gasto y beneficio de pensiones' )
 
-aux <- relacion_patrimonio_beneficio %>%
-  mutate( anio = as.character( anio ) )
+#Análisis Resultado del ejercicio-------------------------------------------------------------------
+message( '\tTabla resultado del ejercicio' )
+aux <- ingresos_vs_gastos %>%
+  clean_names( ) %>%
+  filter( ano >= 2013) %>%
+  mutate( ano = as.character( ano ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, 2, 2, 2) )
+aux_xtab <- xtable( aux, digits = c(0,0, 2, 2, 2, 2 ) )
+
 
 print( aux_xtab,
-       file = paste0( parametros$resultado_tablas, 'iess_relacion_patrimonio_beneficio_rtr', '.tex' ),
+       file = paste0( parametros$resultado_tablas, 'iess_resultado_ejercicio_rtr', '.tex' ),
        type = 'latex',
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
-       sanitize.text.function = identity )
+       hline.after = c( nrow(aux) ),
+       sanitize.text.function = identity)
+
 #Limpiar RAM----------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% c( 'parametros' ) ) ] )
