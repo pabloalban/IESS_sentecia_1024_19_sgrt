@@ -69,11 +69,11 @@ presenta la siguiente información respecto a los fondos y reservas del \Sexpr{R
 
 A continuación, se presenta la evolución histórica del valor nominal y su respectivo rendimiento del
 portafolio de inversiones del \Sexpr{REP_seg}, durante el período 2011 a 2018 en la tabla
-\ref{tab:iess_total_inv} y la figura \ref{fig:iess_evol_hist_inver_valor_nominal_rtr}.
+\ref{tab:iess_total_inv} y la figura \ref{fig:iess_inversiones_rnd_neto}.
 
 
 {\setlength{\tabcolsep}{2pt}
-{\fontsize{9.5}{12}\selectfont
+{\fontsize{9}{12}\selectfont
 \begin{longtable}[H]{rrrrcrrc}
   \caption{Evolución de los Fondos del \Sexpr{REP_seg} administrados por el BIESS}
 \label{tab:iess_total_inv} \\
@@ -132,10 +132,10 @@ Elaborado: DAIE}
 \captionsetup{justification=centering}
 \centering
 \caption{Evolución histórica del portafolio total de inversiones del Seguro General de Riesgos del
-Trabajo con su rendimiento durante el período 2011 a 2018}
-\label{fig:iess_evol_hist_inver_valor_nominal_rtr}
-\includegraphics[scale=1]{graficos/iess_evol_hist_inver_valor_nominal_rtr.png}
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS. \\
+Trabajo con su rendimiento neto}
+\label{fig:iess_inversiones_rnd_neto}
+\includegraphics[scale=1.2]{graficos/iess_inversiones_rnd_neto.png}
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS \\
 Elaborado: DAIE}
 \end{figure}
 
@@ -151,24 +151,54 @@ rendimientos netos del portafolio de inversiones del BIESS, se debió al cumplim
 programación de desinversión del Fondo del \Sexpr{REP_seg} solicitada por el IESS, en los años 2016
 y 2017, anticipando los ingresos en esos años y reduciendo los ingresos para los años subsiguientes.
 
-\begin{table}[H]
-\captionsetup{justification=centering}
-  \caption{Portafolio de inversiones del Fondo del \Sexpr{REP_seg} administrados del BIESS a 31 de diciembre de 2021}
-  \label{tab:iess_INV_Corte}
-  \resizebox{\columnwidth}{!}{%
-  \centering
-  \begin{tabular}{lrccr}
-    \toprule
- \multicolumn{1}{c}{Instrumento:} & \multicolumn{1}{c}{Saldo Valor}   & \multicolumn{1}{c}{Rendimiento Promedio}  & \multicolumn{1}{c}{Rendimiento Promedio}  & \multicolumn{1}{c}{Plazo Promedio}  \\
-             &  \multicolumn{1}{c}{Nominal (USD)}& \multicolumn{1}{c}{Ponderado (\%)}        & \multicolumn{1}{c}{Ponderado Real (\%)}&\multicolumn{1}{c}{Remanente (días)} \\
-   \midrule
-    \input{tablas/iess_inv_corte.tex}
-    %\bottomrule
-  \end{tabular}
-    }
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Dirección de Tesorería - BIESS.\\
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{9}{12}\selectfont
+\begin{longtable}[H]{lrccrc}
+  \caption{Fondos Administrados por el BIESS del \Sexpr{REP_seg} a 31 de diciembre de 2022}
+\label{tab:iess_inv_corte} \\
+\toprule
+ \multicolumn{1}{l}{\multirow{2}{*}{Instrumento:}} &  
+ \multicolumn{1}{c}{Saldo Valor} &
+ \multicolumn{1}{c}{Rendimiento Promedio} &
+ \multicolumn{1}{c}{Rendimiento Promedio} &
+ \multicolumn{1}{c}{Plazo Promedio}  &
+ \multicolumn{1}{c}{Paticipación} \\
+ & 
+ \multicolumn{1}{c}{Nominal (USD)} &
+ \multicolumn{1}{c}{Ponderado (\%)} &
+ \multicolumn{1}{c}{Ponderado Real (\%)}&
+ \multicolumn{1}{c}{Remanente (días)} &
+  \multicolumn{1}{c}{(\%)} \\
+\midrule
+\endfirsthead
+
+\toprule
+ \multicolumn{1}{l}{\multirow{2}{*}{Instrumento:}} &  
+ \multicolumn{1}{c}{Saldo Valor} &
+ \multicolumn{1}{c}{Rendimiento Promedio} &
+ \multicolumn{1}{c}{Rendimiento Promedio} &
+ \multicolumn{1}{c}{Plazo Promedio}  &
+ \multicolumn{1}{c}{Paticipación} \\
+ & 
+ \multicolumn{1}{c}{Nominal (USD)} &
+ \multicolumn{1}{c}{Ponderado (\%)} &
+ \multicolumn{1}{c}{Ponderado Real (\%)}&
+ \multicolumn{1}{c}{Remanente (días)} &
+  \multicolumn{1}{c}{(\%)} \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{6}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Dirección de Tesorería - BIESS\\
 Elaborado: DAIE}
-\end{table}
+\endlastfoot
+  \input{tablas/iess_inv_corte.tex}
+\end{longtable}
+}
+}
 
 Se presenta un breve resumen de la situación actual de las inversiones pertenecientes al
 \Sexpr{REP_seg}, a través del BIESS, en Bonos del Estado, titularizaciones, obligaciones, préstamos,
@@ -294,13 +324,12 @@ de las inversiones del fondo en el año 2018.
 \begin{landscape}
 \vspace*{\fill}
 {\setlength{\tabcolsep}{3pt}
-{\fontsize{9}{15}\selectfont
+{\fontsize{9}{16}\selectfont
 \begin{longtable}[H]{lrrrrrrrrrr}
   \caption{Evolución de los ingresos financieros generados por las inversiones del Fondo del \Sexpr{REP_seg}}
 \label{tab:iess_ingre_inv} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Ingresos:}} & 
-\multicolumn{1}{c}{2012} &
 \multicolumn{1}{c}{2013} & 
 \multicolumn{1}{c}{2014} &
 \multicolumn{1}{c}{2015} & 
@@ -309,7 +338,8 @@ de las inversiones del fondo en el año 2018.
 \multicolumn{1}{c}{2018} & 
 \multicolumn{1}{c}{2019} & 
 \multicolumn{1}{c}{2020} & 
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} & 
+\multicolumn{1}{c}{2022} \\
 & 
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{(USD)} &
@@ -326,7 +356,6 @@ de las inversiones del fondo en el año 2018.
 
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Ingresos:}} & 
-\multicolumn{1}{c}{2012} &
 \multicolumn{1}{c}{2013} & 
 \multicolumn{1}{c}{2014} &
 \multicolumn{1}{c}{2015} & 
@@ -335,7 +364,8 @@ de las inversiones del fondo en el año 2018.
 \multicolumn{1}{c}{2018} & 
 \multicolumn{1}{c}{2019} & 
 \multicolumn{1}{c}{2020} & 
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} & 
+\multicolumn{1}{c}{2022} \\
 & 
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{(USD)} &
@@ -373,7 +403,6 @@ Elaborado: DAIE}
 \label{tab:iess_ingre_inv} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Ingresos:}} & 
-\multicolumn{1}{c}{2012} &
 \multicolumn{1}{c}{2013} & 
 \multicolumn{1}{c}{2014} &
 \multicolumn{1}{c}{2015} & 
@@ -382,7 +411,8 @@ Elaborado: DAIE}
 \multicolumn{1}{c}{2018} & 
 \multicolumn{1}{c}{2019} & 
 \multicolumn{1}{c}{2020} & 
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} & 
+\multicolumn{1}{c}{2022} \\
 & 
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{(USD)} &
@@ -399,7 +429,6 @@ Elaborado: DAIE}
 
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Gastos:}} & 
-\multicolumn{1}{c}{2012} &
 \multicolumn{1}{c}{2013} & 
 \multicolumn{1}{c}{2014} &
 \multicolumn{1}{c}{2015} & 
@@ -408,7 +437,8 @@ Elaborado: DAIE}
 \multicolumn{1}{c}{2018} & 
 \multicolumn{1}{c}{2019} & 
 \multicolumn{1}{c}{2020} & 
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} & 
+\multicolumn{1}{c}{2022} \\
 & 
 \multicolumn{1}{c}{(USD)} &
 \multicolumn{1}{c}{(USD)} &
@@ -453,33 +483,59 @@ muestra la evolución histórica de las inversiones en préstamos quirografarios
 valor nominal con su respectivo rendimiento y plazo promedio ponderado durante el período 2012 a
 2018.
 
-\begin{table}[H]
-\captionsetup{justification=centering}
-  \caption{Evolución de las inversiones del Fondo del \Sexpr{REP_seg} en préstamos}
-  \label{tab:iess_creditos_inv}
- % \resizebox{\columnwidth}{!}{%
-  \centering
-  \begin{tabular}{crrrccc}
-    \toprule
-  \multicolumn{1}{c}{Año} &   \multicolumn{1}{c}{Saldo}         &   \multicolumn{1}{c}{Rendimiento Promedio} &   \multicolumn{1}{c}{Rendimiento Promedio} &   \multicolumn{1}{c}{Plazo} \\
-     &   \multicolumn{1}{c}{Valor Nominal (USD)} &   \multicolumn{1}{c}{Ponderado (\%)}        &   \multicolumn{1}{c}{Ponderado Real (\%)} &   \multicolumn{1}{c}{(días)}   \\
-    \midrule
-    \input{tablas/iess_creditos_inv.tex}
-    %\bottomrule
-  \end{tabular}
-  %  }
-  \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Balances Financieros del BIESS. \\
-  Elaborado: DAIE}
-\end{table}
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en préstamos quirografarios}
+\label{tab:iess_creditos_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_creditos_inv.tex}
+\end{longtable}
+}
+}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
 \caption{Evolución histórica de las inversiones en préstamos quirografarios del Seguro General de
-Riesgos del Trabajo y su rendimiento durante el período 2011 al 2018}
+Riesgos del Trabajo y su rendimiento promedio ponderado}
 \label{fig:ess_prestamos_quirografarios_rtr}
 \includegraphics[scale=1]{graficos/iess_prestamos_quirografarios_rtr.png}
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS.
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
 \\Elaborado: DAIE}
 \end{figure}
 
@@ -514,32 +570,59 @@ En la tabla \ref{tab:iess_bonos_hist_inv} y figura \ref{fig:iess_inversiones_bon
 la evolución histórica de las inversiones del \Sexpr{REP_seg} en bonos del Estado, en valor nominal
 (barras) a diciembre de cada año y sus tasas de rendimiento (líneas) durante el período 2011 a 2018.
 
-\begin{table}[H]
-\centering
-\captionsetup{justification=centering}
-  \caption{Evolución de las inversiones del Fondo del \Sexpr{REP_seg} en bonos del Estado}
-      \label{tab:iess_bonos_hist_inv}
-  {\fontsize{10}{12}\selectfont
-  \begin{tabular}{crccr}
-    \toprule
-   \multicolumn{1}{c}{Año} &   \multicolumn{1}{c}{Saldo}         &   \multicolumn{1}{c}{Rendimiento Promedio} &   \multicolumn{1}{c}{Rendimiento Promedio} &   \multicolumn{1}{c}{Plazo} \\
-     &   \multicolumn{1}{c}{Valor Nominal (USD)} &   \multicolumn{1}{c}{Ponderado (\%)}        &   \multicolumn{1}{c}{Ponderado Real (\%)} &   \multicolumn{1}{c}{(días)}   \\
-    \midrule
-    \input{tablas/iess_bonos_hist_inv.tex}
-    %\bottomrule
-  \end{tabular}
-    }
-  \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Balances Financieros del BIESS. \\
-  Elaborado: DAIE}
-\end{table}
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en bonos del Estado}
+\label{tab:iess_bonos_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_bonos_hist_inv.tex}
+\end{longtable}
+}
+}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Evolución histórica de las inversiones del Seguro General de Riesgos del Trabajo en Bonos del Estado y su rendimiento durante el período 2011 a 2018.}
+\caption{Evolución histórica de las inversiones del Seguro General de Riesgos del Trabajo en Bonos del Estado y su rendimiento promedio ponderado}
 \label{fig:iess_inversiones_bonos_rtr}
 \includegraphics[scale=1]{graficos/iess_inversiones_bonos_rtr.png}
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS.
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
 \\Elaborado: DAIE}
 \end{figure}
 
@@ -563,36 +646,56 @@ rendimientos (líneas) durante el período 2011 a 2018.
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Evolución histórica de las inversiones del Seguro General de Riesgos del Trabajo en Obligaciones y su rendimiento durante el período 2011 a 2018.}
+\caption{Evolución histórica de las inversiones del Seguro General de Riesgos del Trabajo en Obligaciones y su rendimiento promedio ponderado}
 \label{fig:iess_inversiones_obligaciones_rtr}
 \includegraphics[scale=1]{graficos/iess_inversiones_obligaciones_rtr.png}
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS.
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
 \\Elaborado: DAIE}
 \end{figure}
 
+{\setlength{\tabcolsep}{4pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en Obligaciones en renta fija}
+\label{tab:iess_obligaciones_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
 
-\begin{table}[H]
-\captionsetup{justification=centering}
-\centering
-  \caption{Evolución de las inversiones del Fondo del \Sexpr{REP_seg} en Obligaciones en renta fija}
-  \label{tab:iess_obligaciones_hist_inv}
-  {\fontsize{10}{12}\selectfont
-  \centering
-  \begin{tabular}{crccr}
-    \toprule
-  \multicolumn{1}{c}{Año} &  \multicolumn{1}{c}{Saldo} &  \multicolumn{1}{c}{Rendimiento Promedio} &
-  \multicolumn{1}{c}{Rendimiento Promedio}&  \multicolumn{1}{c}{Plazo} \\
-  &  \multicolumn{1}{c}{Valor Nominal (USD)} &  \multicolumn{1}{c}{Ponderado (\%)} &
-  \multicolumn{1}{c}{Ponderado Real (\%)} &  \multicolumn{1}{c}{(días)}\\
-    \midrule
-    \input{tablas/iess_obligaciones_hist_inv.tex}
-    %\bottomrule
-  \end{tabular}
-   }
-  \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS. \\
-  Elaborado: DAIE}
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
 
-\end{table}
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_obligaciones_hist_inv.tex}
+\end{longtable}
+}
+}
 
 El saldo en valor nominal decreció de USD 13.111.109,98 a diciembre de 2013 a USD 1.107.776,50 en
 diciembre de 2018, año en el cual obtuvo su mínimo valor invertido. Por último, la tasa de
@@ -613,46 +716,58 @@ En la figura \ref{fig:iess_inversiones_titulos_financieros_rtr} y la tabla
 valor nominal, de las inversiones del Fondo del \Sexpr{REP_seg} en titularizaciones a 31 diciembre
 de cada año y su rendimiento promedio ponderado (líneas) durante el período 2011 a 2018.
 
+{\setlength{\tabcolsep}{4pt}
 {\fontsize{11}{12}\selectfont
-\begin{longtable}[H]{crccrl}
-\captionsetup{justification=centering}
-\caption{Evolución de las inversiones del Fondo del \Sexpr{REP_seg} en titularizaciones en renta fija} \\
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en titularizaciones en renta fija}
 \label{tab:iess_titularizaciones_hist_inv} \\
 \toprule
- \multicolumn{1}{c}{Año} & \multicolumn{1}{c}{Saldo} & \multicolumn{1}{c}{Rendimiento Promedio} &
- \multicolumn{1}{c}{Rendimiento  Promedio}& \multicolumn{1}{c}{Plazo} \\ & \multicolumn{1}{c}{(USD)}
- & \multicolumn{1}{c}{Ponderado (\%)} & \multicolumn{1}{c}{Ponderado Real (\%)} &
- \multicolumn{1}{c}{(días)}\\
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
 \midrule
 \endfirsthead
 
 \toprule
- \multicolumn{1}{c}{Año} & \multicolumn{1}{c}{Saldo} & \multicolumn{1}{c}{Rendimiento Promedio} &
- \multicolumn{1}{c}{Rendimiento  Promedio}& \multicolumn{1}{c}{Plazo} \\ & \multicolumn{1}{c}{(USD)}
- & \multicolumn{1}{c}{Ponderado (\%)} & \multicolumn{1}{c}{Ponderado Real (\%)} &
- \multicolumn{1}{c}{(días)}\\
-\midrule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
 \endhead
 
-\hline
-\multicolumn{6}{c}{continúa...} \\
+\bottomrule \multicolumn{5}{c}{continúa...} \\
 \endfoot
-%\bottomrule
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS. \\
-  Elaborado: DAIE}
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
 \endlastfoot
   \input{tablas/iess_titularizaciones_hist_inv.tex}
 \end{longtable}
+}
 }
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
 \caption{Evolución histórica de las inversiones del Seguro General de Riesgos del Trabajo en títulos
-financieros y su rendimiento durante el período 2011 a 2018}
+financieros y su rendimiento promedio ponderado}
 \label{fig:iess_inversiones_titulos_financieros_rtr}
 \includegraphics[scale=1]{graficos/iess_inversiones_titularizaciones_rtr.png}
-\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS.
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
 \\Elaborado: DAIE}
 \end{figure}
 
@@ -1016,7 +1131,7 @@ capital} \\
 \multicolumn{4}{c}{continúa...} \\
 \endfoot
 %\bottomrule
-\caption*{\scriptsize Fuente: Dirección de Tesorería-BIESS. \\
+\caption*{\scriptsize Fuente: Dirección de Tesorería-BIESS \\
   Elaborado: DAIE}
 \endlastfoot
  \input{tablas/iess_RTR_desinversiones.tex}
