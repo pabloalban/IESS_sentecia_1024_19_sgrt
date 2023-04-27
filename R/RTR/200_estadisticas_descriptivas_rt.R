@@ -212,7 +212,7 @@ ben_pir_fun <- function(.data22, anio_valor) {
 
 pension_pir_fun <- function(.data22, anio_valor) {
   a <- .data22 %>% 
-    filter( mes == 12, anio == {{anio_valor}} ) %>% 
+    filter( anio == {{anio_valor}} ) %>% 
     group_by( anio, mes, cedula ) %>%
     mutate( tot_ingr =  sum( ifelse( rubro %in% c(1,
                                                     2,
@@ -260,34 +260,40 @@ pension_pir_fun <- function(.data22, anio_valor) {
 rango_monto <- function(.data22, anio_valor) {
   
 a <- .data22 %>% 
-  filter( mes == 12, anio == {{anio_valor}} ) %>% 
+  filter( anio == {{anio_valor}} ) %>% 
   group_by( anio, mes, cedula ) %>%
-  mutate( pension =  sum( ifelse( rubro %in% c(1,
-                                               2,
-                                               3,
-                                               5,
-                                               22,
-                                               55,
-                                               60,
-                                               69,
-                                               89,
-                                               101,
-                                               102,
-                                               103 ),
-                                  valor,
-                                  0 ), na.rm = TRUE ) ) %>%
+  mutate( tot_ingr =  sum( ifelse( rubro %in% c(1,
+                                                2,
+                                                3,
+                                                5,
+                                                9,
+                                                10,
+                                                22,
+                                                55,
+                                                60,
+                                                69,
+                                                89,
+                                                101,
+                                                102,
+                                                103,
+                                                345,
+                                                374,
+                                                375,
+                                                376 ),
+                                   valor,
+                                   0 ), na.rm = TRUE ) ) %>%
   ungroup( ) %>%
   distinct( cedula, .keep_all = TRUE )
 
-cortes_monto <- c( quantile(a$pension, probs = seq( 0, 1, length.out = 8 ) ) )
+cortes_monto <- c( quantile(a$tot_ingr, probs = seq( 0, 1, length.out = 11 ) ) )
 
-etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1], 
+etiquetas_monto<-c(paste0("(\\$",formatC( cortes_monto[1:length(cortes_monto)-1], 
                                       digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
-                         "-$",formatC( cortes_monto[2:length(cortes_monto)], 
+                         "-\\$",formatC( cortes_monto[2:length(cortes_monto)], 
                                       digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),"]"))
 
   a <- a %>%
-    mutate(rango_monto=cut(pension, 
+    mutate( rango_monto = cut( tot_ingr, 
                           breaks = cortes_monto,
                           labels = etiquetas_monto,
                           include.lowest = TRUE,
@@ -465,9 +471,9 @@ a <- subsidios_rtr %>%
 
 cortes_monto <- c( quantile(a$valor, probs = seq( 0, 1, length.out = 11 ) ) )
 
-etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1], 
+etiquetas_monto<-c(paste0("(\\$",formatC( cortes_monto[1:length(cortes_monto)-1], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
-                          "-$",formatC( cortes_monto[2:length(cortes_monto)], 
+                          "-\\$",formatC( cortes_monto[2:length(cortes_monto)], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),"]"))
 
 a <- a %>%
@@ -674,9 +680,9 @@ a <- indemnizaciones_rt_2022 %>%
 
 cortes_monto <- c( quantile(a$valor, probs = seq( 0, 1, length.out = 11 ) ) )
 
-etiquetas_monto<-c(paste0("($",formatC( cortes_monto[1:length(cortes_monto)-1], 
+etiquetas_monto<-c(paste0("(\\$",formatC( cortes_monto[1:length(cortes_monto)-1], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
-                          "-$",formatC( cortes_monto[2:length(cortes_monto)], 
+                          "-\\$",formatC( cortes_monto[2:length(cortes_monto)], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),"]"))
 
 a <- a %>%
@@ -713,6 +719,200 @@ a <- a %>%
 
 tab_rango_monto_indemnizaciones <- a
 
+# 9. Estadísticas para redacción del capítulo-------------------------------------------------------
+## 9.1 Subsidios------------------------------------------------------------------------------------
+message("\tEstadísticas Subsidios")
+aux <- subsidios_rtr %>%
+  filter( anio == '2021' ) %>%
+  group_by( sexo ) %>%
+  mutate( prom_sub = mean( valor ) ) %>%
+  ungroup( ) %>%
+  distinct( sexo, .keep_all = TRUE ) %>%
+  dplyr::select( sexo, prom_sub)
+
+
+aux <- subsidios_rtr %>%
+  filter( anio == '2021' ) %>%
+  mutate(edad = round(age_calc(fecha_nacimiento,
+                               enddate = as.Date("30/06/2021","%d/%m/%Y"),
+                               units = "years",
+                               precise = FALSE ) )) %>%
+  group_by( sexo ) %>%
+  mutate( edad_prom = mean( edad, na.rm = TRUE ) ) %>%
+  ungroup( ) %>%
+  distinct( sexo, .keep_all = TRUE ) %>%
+  dplyr::select( sexo, edad_prom) %>%
+  left_join( ., aux, by = 'sexo' )
+
+aux <- aux %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+## 9.2 Indemnizaciones-------------------------------------------------------------------------------
+message("\tEstadísticas Indemnizaciones")
+aux <- indemnizaciones_rt_2022 %>%
+  filter( anio == '2021' ) %>%
+  group_by( sexo ) %>%
+  mutate( prom_sub = mean( liquido_a_pagar ) ) %>%
+  ungroup( ) %>%
+  distinct( sexo, .keep_all = TRUE ) %>%
+  dplyr::select( sexo, prom_sub)
+
+
+aux <- indemnizaciones_rt_2022 %>%
+  filter( anio == '2021' ) %>%
+  mutate(edad = round(age_calc(fecha_nacimiento,
+                               enddate = as.Date("30/06/2021","%d/%m/%Y"),
+                               units = "years",
+                               precise = FALSE ) )) %>%
+  group_by( sexo ) %>%
+  mutate( edad_prom = mean( edad, na.rm = TRUE ) ) %>%
+  ungroup( ) %>%
+  distinct( sexo, .keep_all = TRUE ) %>%
+  dplyr::select( sexo, edad_prom) %>%
+  left_join( ., aux, by = 'sexo' )
+
+aux <- aux %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+##Función para pensiones----------------------------------------------------------------------------
+estadisticas_fun <- function(.data22) {
+  b <- .data22 %>%
+    filter( anio == '2021' ) %>%
+    group_by( cedula, mes ) %>%
+    mutate( tot_ingr =  sum( ifelse( rubro %in% c(1,
+                                                  2,
+                                                  3,
+                                                  5,
+                                                  9,
+                                                  10,
+                                                  22,
+                                                  55,
+                                                  60,
+                                                  69,
+                                                  89,
+                                                  101,
+                                                  102,
+                                                  103,
+                                                  345,
+                                                  374,
+                                                  375,
+                                                  376 ),
+                                     valor,
+                                     0), na.rm = TRUE ),
+            decimo_tercero = sum( ifelse( rubro %in% c(345, 374, 376, 10 ),
+                                          valor,
+                                          0), na.rm = TRUE ),
+            decimo_cuarto = sum( ifelse( rubro %in% c(9, 375 ),
+                                         valor,
+                                         0), na.rm = TRUE ),
+            renta_mensual = tot_ingr - decimo_tercero - decimo_cuarto,
+            financiamiento_decimas_pensiones = sum( ifelse( rubro %in% c(16),
+                                                            valor,
+                                                            0), na.rm = TRUE ),
+            financiamiento_fondo_mortuorio = sum( ifelse( rubro %in% c(17),
+                                                          valor,
+                                                          0), na.rm = TRUE ),
+            
+            tot_desc = sum( ifelse( rubro %in% c( 11,
+                                                  12,
+                                                  13,
+                                                  14,
+                                                  15,
+                                                  16,
+                                                  17,
+                                                  111,
+                                                  211,
+                                                  212,
+                                                  213,
+                                                  214,
+                                                  216,
+                                                  217,
+                                                  218,
+                                                  220,
+                                                  221,
+                                                  228,
+                                                  235,
+                                                  328,
+                                                  329,
+                                                  360,
+                                                  361 ),
+                                    valor,
+                                    0), na.rm = TRUE ),
+            otros_descuentos = tot_desc - financiamiento_fondo_mortuorio - financiamiento_decimas_pensiones,
+            liq_pagar = tot_ingr - tot_desc ) %>%
+    ungroup( ) %>%
+    filter( !is.na(fecha_nacimiento) ) %>%
+    mutate(edad = round(age_calc(fecha_nacimiento,
+                                 enddate = as.Date("31/12/2021","%d/%m/%Y"),
+                                 units = "years",
+                                 precise = FALSE ) )) %>%
+    group_by( anio, sexo ) %>%
+    mutate( prom_pension = mean( renta_mensual, na.rm = TRUE ) ) %>%
+    mutate( prom_tot_ingr = mean( tot_ingr, na.rm = TRUE ) ) %>%
+    ungroup( ) %>%
+    filter( mes == '12' ) %>%
+    group_by( sexo ) %>%
+    mutate( prom_edad = mean( edad, na.rm = TRUE ) ) %>%
+    ungroup( ) %>%
+    distinct( ., sexo, .keep_all = TRUE ) %>%
+    dplyr::select( sexo,
+                   prom_edad,
+                   prom_pension,
+                   prom_tot_ingr )
+  
+  return( b )
+}
+
+
+## 9.2 Pensiones Incapacidad Permanente Parcial-----------------------------------------------------
+message("\tEstadísticas Incapacidad Permanente Parcial")
+
+aux <- estadisticas_fun(prestaciones_pp_2022) %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+## 9.3 Pensiones Incapacidad Permanente Total-------------------------------------------------------
+message("\tEstadísticas Incapacidad Permanente Total")
+
+aux <- estadisticas_fun(prestaciones_pt_2022) %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+## 9.4 Pensiones Incapacidad Permanente Absoluta----------------------------------------------------
+message("\tEstadísticas Incapacidad Permanente Absoluta")
+
+aux <- estadisticas_fun(prestaciones_pa_2022) %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+
+## 9.5 Pensiones viudez-----------------------------------------------------------------------------
+message("\tEstadísticas viudez")
+
+aux <- estadisticas_fun(prestaciones_viudez_2022) %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
+
+(aux)
+
+## 9.5 Pensiones orfandad---------------------------------------------------------------------------
+message("\tEstadísticas orfandad")
+
+aux <- estadisticas_fun(prestaciones_orfandad_2022) %>%
+  mutate_if(is.numeric, round, digits = 2) %>%
+  mutate_at( c(2:ncol(.)), as.character)
 
 #Guardar en Rdatas----------------------------------------------------------------------------------
 message("\tGuardando Rdatas")

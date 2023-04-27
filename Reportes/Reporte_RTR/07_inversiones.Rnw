@@ -633,6 +633,263 @@ diciembre de 2011 a USD 4.283.912.915,79  en diciembre de 2015, crecimiento del 
 2015, año en el cual obtuvo su máximo; más tarde, su valor nominal disminuyó a USD 1.776.121.661,83
 a diciembre de 2018, con un decrecimiento de 32,83\% entre 2015 y 2018.
 
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{10}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Bonos del Estado Ecuatoriano a 31 de diciembre de 2022}
+\label{tab:iess_bonos_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Referencia} & 
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+  \multicolumn{1}{c}{del Título} & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Referencia} & 
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+  \multicolumn{1}{c}{del Título} & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_bonos_detalle_inv.tex}
+\end{longtable}
+}
+}
+
+
+
+
+{\setlength{\tabcolsep}{6pt}
+{\fontsize{11}{13}\selectfont
+\begin{longtable}[H]{crrr}
+  \caption{Proyección de la recuperación de las inversiones del Fondo del \Sexpr{REP_seg} en Bonos del Estado Ecuatoriano}
+\label{tab:iess_bonos_recuperacion_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} &
+  \multicolumn{1}{c}{Capital Recuperado} &
+  \multicolumn{1}{c}{Interés} & 
+  \multicolumn{1}{c}{Total Recuperado}\\
+  & 
+  \multicolumn{1}{c}{(USD)} &
+  \multicolumn{1}{c}{(USD)} & 
+  \multicolumn{1}{c}{(USD)} \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} &
+  \multicolumn{1}{c}{Capital Recuperado} &
+  \multicolumn{1}{c}{Interés} & 
+  \multicolumn{1}{c}{Total Recuperado}\\
+  & 
+  \multicolumn{1}{c}{(USD)} &
+  \multicolumn{1}{c}{(USD)} & 
+  \multicolumn{1}{c}{(USD)} \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{4}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_bonos_recuperacion_inv.tex}
+\end{longtable}
+}
+}
+
+\subsubsection{Inversiones en Certificados de Tesorería}
+
+
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en bonos del Estado}
+\label{tab:iess_bonos_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cetes_hist_inv.tex}
+\end{longtable}
+}
+}
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución histórica de las inversiones del\Sexpr{REP_seg} en Certificados de Tesorería y su rendimiento promedio ponderado}
+\label{fig:iess_inversiones_bonos_rtr}
+\includegraphics[scale=1]{graficos/iess_inversiones_cetes_rtr.png}
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
+\\Elaborado: DAIE}
+\end{figure}
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{10}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Certificados de Tesorería a 31 de diciembre de 2022}
+\label{tab:iess_cetes_detalle_inv} \\
+\toprule
+  \multicolumn{1}{c}{Referencia} & 
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+  \multicolumn{1}{c}{del Título} & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Referencia} & 
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+  \multicolumn{1}{c}{del Título} & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cetes_detalle_inv.tex}
+\end{longtable}
+}
+}
+
+
+
+
+
+{\setlength{\tabcolsep}{6pt}
+{\fontsize{11}{13}\selectfont
+\begin{longtable}[H]{crrr}
+  \caption{Proyección de la recuperación de las inversiones del Fondo del \Sexpr{REP_seg} en Certificados de Tesorería}
+\label{tab:iess_cetes_recuperacion_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} &
+  \multicolumn{1}{c}{Capital Recuperado} &
+  \multicolumn{1}{c}{Interés} & 
+  \multicolumn{1}{c}{Total Recuperado}\\
+  & 
+  \multicolumn{1}{c}{(USD)} &
+  \multicolumn{1}{c}{(USD)} & 
+  \multicolumn{1}{c}{(USD)} \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} &
+  \multicolumn{1}{c}{Capital Recuperado} &
+  \multicolumn{1}{c}{Interés} & 
+  \multicolumn{1}{c}{Total Recuperado}\\
+  & 
+  \multicolumn{1}{c}{(USD)} &
+  \multicolumn{1}{c}{(USD)} & 
+  \multicolumn{1}{c}{(USD)} \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{4}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cetes_recuperacion_inv.tex}
+\end{longtable}
+}
+}
+
+
 % --------------------------------------------------------------------------------------------------
 \subsection{Inversiones no privativas con renta fija en el sector privado}
 
@@ -704,6 +961,63 @@ inversiones en obligaciones en renta fija al corte (diciembre de 2018) se muestr
 de compra de estos bonos corporativos, el nombre del emisor, el saldo remanente, la tasa de cupón
 anual y el plazo remanente en días en la tabla \ref{tab:iess_oblig_detalle_inv}.
 
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{8.5}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Obligaciones}
+\label{tab:iess_oblig_detalle_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_oblig_detalle_inv.tex}
+\end{longtable}
+}
+}
 % --------------------------------------------------------------------------------------------------
 \subsubsection{Inversiones en Titularizaciones}
 
@@ -782,6 +1096,339 @@ diciembre de 2018. En la tabla \ref{tab:iess_titularizaciones_hist_inv}, se pres
 valor nominal de la Titularización, saldo al corte en valor nominal, la tasa cupón trimestral y el
 plazo remanente en días.
 
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{8}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Titularizaciones}
+\label{tab:iess_titul_detalle_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_titul_detalle_inv.tex}
+\end{longtable}
+}
+}
+
+\subsubsection{Inversiones en Certificados de Depósitos}
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{8}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Certificados de Depósitos}
+\label{tab:iess_cdp_detalle_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cdp_detalle_inv.tex}
+\end{longtable}
+}
+}
+
+
+\subsubsection{Inversiones en Certificados de Inversión}
+
+
+{\setlength{\tabcolsep}{4pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en Certificados de Inversión en renta fija}
+\label{tab:iess_cid_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cid_hist_inv.tex}
+\end{longtable}
+}
+}
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{8}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Certificados de Inversión}
+\label{tab:iess_cid_detalle_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_cid_detalle_inv.tex}
+\end{longtable}
+}
+}
+
+
+\subsubsection{Inversiones en Papel Comercial}
+
+
+{\setlength{\tabcolsep}{4pt}
+{\fontsize{11}{12}\selectfont
+\begin{longtable}[H]{crrrccc}
+  \caption{Evolución histórica de las inversiones del Fondo del \Sexpr{REP_seg} en Papel Comercial}
+\label{tab:iess_pc_hist_inv} \\
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{c}{Año} & 
+  \multicolumn{1}{c}{Saldo} &
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Rendimiento Promedio} & 
+  \multicolumn{1}{c}{Plazo} \\
+  &
+  \multicolumn{1}{c}{Valor Nominal (USD)} & 
+  \multicolumn{1}{c}{Ponderado (\%)} &
+  \multicolumn{1}{c}{Ponderado Real (\%)} & 
+  \multicolumn{1}{c}{(días)}   \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{5}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_pc_hist_inv.tex}
+\end{longtable}
+}
+}
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución histórica de las inversiones del \Sexpr{REP_seg} en Papel Comercial y su rendimiento promedio ponderado}
+\label{fig:iess_inversiones_papel_comercial_rtr}
+\includegraphics[scale=1]{graficos/iess_inversiones_papel_comercial_rtr.png}
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
+\\Elaborado: DAIE}
+\end{figure}
+
+
+{\setlength{\tabcolsep}{3pt}
+{\fontsize{8}{13}\selectfont
+\begin{longtable}[H]{lcccrrrc}
+  \caption{Detalle de las inversiones del Fondo del \Sexpr{REP_seg} en Papel Comercial}
+\label{tab:iess_pc_detalle_inv} \\
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+\midrule
+\endfirsthead
+
+\toprule
+  \multicolumn{1}{l}{\multirow{2}{*}{Emisor:}} &
+  \multicolumn{1}{c}{Fecha de} &
+  \multicolumn{1}{c}{Fecha de} & 
+  \multicolumn{1}{c}{Tasa} & 
+  \multicolumn{1}{c}{Valor Nominal} &
+  \multicolumn{1}{c}{Saldo Valor} &
+  \multicolumn{1}{c}{Plazo por} &
+   \multicolumn{1}{l}{\multirow{2}{*}{Amortización}} \\
+   
+  & 
+  \multicolumn{1}{c}{Compra} &
+  \multicolumn{1}{c}{Vencimiento} & 
+  \multicolumn{1}{c}{Cupón (\%)} & 
+  \multicolumn{1}{c}{de Compra (USD)} &
+  \multicolumn{1}{c}{Nominal (USD)} &
+  \multicolumn{1}{c}{Vencer (días)} & \\
+	\midrule
+\endhead
+
+\bottomrule \multicolumn{8}{c}{continúa...} \\
+\endfoot
+%\hline
+\caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS\\
+Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_pc_detalle_inv.tex}
+\end{longtable}
+}
+}
 % --------------------------------------------------------------------------------------------------
 \subsection{Otras inversiones menores}
 El portafolio del Fondo del \Sexpr{REP_seg} también posee otras inversiones, además de las expuestas

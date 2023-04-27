@@ -164,14 +164,17 @@ aux <- detalle_bonos %>%
               NA,
               as.character( colSums( .[,5:6],  na.rm =TRUE ) ),
               '846.45' ) ) %>%
-  mutate_at( c( 4:7 ), as.numeric )
+  mutate_at( c( 4:7 ), as.numeric ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) )
   
 aux_xtab <- xtable( aux, digits = c( 0, rep(0, 3), rep(2, 4), 0 ) )
 
 print( aux_xtab, 
        file = paste0( parametros$resultado_tablas, 'iess_bonos_detalle_inv', '.tex' ),
        type = 'latex',
-       include.colnames = FALSE, include.rownames = FALSE,
+       include.colnames = FALSE, 
+       include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
        hline.after = c( nrow( aux ) - 1,
@@ -226,6 +229,29 @@ print( aux_xtab,
        only.contents = TRUE,
        hline.after = nrow(aux),
        sanitize.text.function = identity )
+
+# Tabla evolución Inversiones en CETES--------------------------------------------------------------
+aux <- inv_instrumento %>%
+  filter(instrumento=='Certificados de Tesorería - CETES') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
+  arrange(ano)
+
+
+aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,0 ))
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_cetes_hist_inv', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
 
 # Tabla detalle Inversiones en CETES al corte-------------------------------------------------------
 aux <- detalle_bonos %>%
@@ -319,7 +345,9 @@ aux <- detalle_obligaciones %>%
               as.character( colSums( .[,5:6],  na.rm =TRUE ) ),
               '1048.96',
               NA ) ) %>%
-  mutate_at( c( 4:7 ), as.numeric )
+  mutate_at( c( 4:7 ), as.numeric ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) )
 
 aux_xtab <- xtable( aux, digits = c( 0, rep( 0, 3 ), rep( 2, 4 ), 0 ) )
 aux_xtab <- tildes_a_latex( aux_xtab )
@@ -381,6 +409,29 @@ print( aux_xtab,
        sanitize.text.function = identity )
 
 
+# Tabla evolución Inversiones en Papel Comercial----------------------------------------------------
+aux <- inv_instrumento %>%
+  filter( instrumento == 'Papel Comercial') %>%
+  na.omit( ) %>%
+  mutate(rdto_prom_pond = rdto_prom_pond * 100,
+         rend_promedio_real = rend_promedio_real * 100,
+         ano = as.character( ano ) ) %>%
+  select( -inflacion, -instrumento ) %>%
+  arrange( ano )
+
+
+aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,0 ))
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_pc_hist_inv', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
+
 #Tabla detalle de las inversiones en Papel Comercial------------------------------------------------
 aux <- detalle_papel_comercial %>%
   rbind( ., c("Total",
@@ -429,6 +480,29 @@ print( aux_xtab,
        hline.after = c( nrow( aux ) - 1,
                         nrow( aux ) ),
        sanitize.text.function = identity )
+
+# Tabla evolución Inversiones en Certificados de Inversión------------------------------------------
+aux <- inv_instrumento %>%
+  filter(instrumento=='Certificados de Inversión') %>%
+  na.omit() %>%
+  mutate(rdto_prom_pond=rdto_prom_pond*100,
+         rend_promedio_real=rend_promedio_real*100,
+         ano=as.character(ano)) %>%
+  select(-inflacion,-instrumento) %>%
+  arrange(ano)
+
+
+aux_xtab <- xtable( aux, digits = c(0,0,2,2,2,0 ))
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_cid_hist_inv', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = nrow(aux),
+       sanitize.text.function = identity )
+
 
 
 #Tabla detalle de las inversiones en certificados de inversión--------------------------------------

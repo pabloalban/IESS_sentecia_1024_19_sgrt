@@ -450,15 +450,14 @@ aux <- pir_ben_of  %>%
   mutate( fdp = if_else( sexo == 'H',
                          -fdp,
                          fdp ) ) %>%
-  filter( edad >= 0,
-          edad <= 17 ) %>%
+  filter( edad >= 0 ) %>%
   arrange( sexo, edad )
 
-salto_y <- 2
+salto_y <- 9
 salto_x <- 0.01
 brks_y <- seq( -0.04, 0.04, salto_x)
 lbls_y <- paste0( as.character( c( seq (0.04, 0, -salto_x )*100, seq( salto_x, 0.04, salto_x )*100 ) ), "%" )
-brks_x <- seq( 0, 18, salto_y)
+brks_x <- seq( 0, 99, salto_y)
 lbls_x <- paste0( as.character( brks_x ) )
 
 iess_pir_ben_of <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
@@ -479,6 +478,267 @@ iess_pir_ben_of <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
 
 ggsave( plot = iess_pir_ben_of, 
         filename = paste0( parametros$resultado_graficos, 'iess_pir_ben_of', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+
+
+#3. Piramide de pensiones al 31 de diciembre de 2222------------------------------------------------
+message( '\tGraficando Pirámide de pensiones de SGRT' )
+
+##3.1 Pirámide de pensiones de subsidios------------------------------------------------------------
+
+aux <- pir_montos_subsidios %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 90 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 4), seq( 0, max(aux$fdp), length.out = 6 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+                  
+iess_pir_montos_subsidios <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_montos_subsidios, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_montos_subsidios', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+##3.2 Pirámide de pensiones de Indemnizaciones------------------------------------------------------
+
+aux <- pir_montos_indemnizaciones %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 100 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_montos_indemnizaciones <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_montos_indemnizaciones, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_montos_indemnizaciones', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+##3.3 Pirámide de pensiones de incapacidad parcial--------------------------------------------------
+
+aux <- pir_pensiones_pp %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 100 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_pensiones_pp <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_pensiones_pp, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_pp', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+##3.4 Pirámide de pensiones de incapacidad permanente total-----------------------------------------
+
+aux <- pir_pensiones_pt  %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 105 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_pensiones_pt <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_pensiones_pt, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_pt', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+##3.5 Pirámide de pensiones de incapacidad absoluta-------------------------------------------------
+
+aux <- pir_pensiones_pa  %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 105 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_pensiones_pt <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_pensiones_pt, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_pt', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+##2.6 Pirámide de pensiones de viudedad-------------------------------------------------------------
+
+aux <- pir_pensiones_vo  %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 15,
+          edad <= 105 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 5
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 15, 100, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_pensiones_vo <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_pensiones_vo, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_vo', parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
+##3.7 Pirámide de pensiones de orfandad-------------------------------------------------------------
+
+aux <- pir_pensiones_of  %>%
+  mutate( fdp = if_else( sexo == 'H',
+                         -pen_promedio,
+                         pen_promedio ) ) %>%
+  filter( edad >= 0 ) %>%
+  arrange( sexo, edad )
+
+salto_y <- 9
+brks_y <- round( c( seq( min(aux$fdp), 0, length.out = 5), seq( 0, max(aux$fdp), length.out = 5 )[-1] ) )
+lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ) )
+brks_x <- seq( 0, 99, salto_y )
+lbls_x <- paste0( as.character( brks_x ) )
+
+iess_pir_pensiones_of <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+  xlab( 'Edad' ) +
+  ylab( '' ) +
+  geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
+  geom_bar( data = aux %>% filter( sexo == 'H' ), stat = 'identity',colour="white", size=0.1) +
+  scale_y_continuous( breaks = brks_y, labels = lbls_y ) +
+  scale_x_continuous( breaks = brks_x, labels = lbls_x ) +
+  coord_flip( ) +
+  theme_bw( ) +
+  plt_theme +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) ) +
+  guides(fill = guide_legend( title = NULL,label.position = "right",
+                              label.hjust = 0, label.vjust = 0.5 ) )+
+  theme( legend.position="bottom" ) +
+  scale_fill_manual( values = c( parametros$male, parametros$female ),
+                     labels = c( "Hombres", "Mujeres") )
+
+ggsave( plot = iess_pir_pensiones_of, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_of', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
 # Limpiar Memoria RAM-------------------------------------------------------------------------------

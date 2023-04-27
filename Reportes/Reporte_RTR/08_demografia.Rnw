@@ -375,10 +375,10 @@ La distribución de los beneficiarios de subsidios en 2020, por edad y sexo, se 
 \ref{fig:iess_pir_ben_subsidios}.
 \begin{figure}[H]
 \centering
-\caption{Distribución de beneficiarios de subsidios, por edad y sexo.}
+\caption{Distribución de beneficiarios de subsidios, por edad y sexo}
 \label{fig:iess_pir_ben_subsidios}
 \includegraphics[scale=1]{graficos/iess_pir_ben_subsidios.png}
-\caption*{\scriptsize Fuente: Base de subsidios de Riesgos del Trabajo.
+\caption*{\scriptsize Fuente: DSGRT - IESS
 \\Elaborado: DAIE}
 \end{figure}
 
@@ -392,22 +392,49 @@ muestra en la tabla \ref{tab:tab_rango_monto_subsidios_rtr}.
 Para el año 2020, el beneficio mensual promedio por subsidios para las mujeres es de USD 364,30 y
 para los hombres de USD 421,45.
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de los montos promedios entregados por subsidios de incapacidad temporal, por edad y sexo}
+\label{fig:iess_pir_montos_subsidios}
+\includegraphics[scale=1]{graficos/iess_pir_montos_subsidios.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{11}\selectfont
 \begin{longtable}[H]{crrrrrr}
 \caption{Beneficiarios por rango de montos pagados en subsidios durante 2021}
 \label{tab:tab_rango_monto_subsidios_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -591,37 +618,49 @@ mujeres es de 45,5 años, mientras que la de los hombres es de 39,4 años.
 La distribución de los montos pagados por indemnizaciones para cada sexo en 2020 se presenta en la
 tabla \ref{tab:tab_rango_monto_indemnizaciones_rtr}.
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de los montos promedios entregados por indemnizaciones, por edad y sexo}
+\label{fig:iess_pir_montos_indemnizaciones}
+\includegraphics[scale=1]{graficos/iess_pir_montos_indemnizaciones.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de los montos pagados por indemnizaciones, para cada sexo, en 2020}
 \label{tab:tab_rango_monto_indemnizaciones_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:}
-& \multicolumn{2}{c}{Masculino}
-& \multicolumn{2}{c}{Femenino}
-& \multicolumn{2}{c}{Total} \\
-\cmidrule(r){2-3} \cmidrule(r){4-5} \cmidrule(r){6-7}
-& \multicolumn{1}{c}{Beneficiarios}
-& \multicolumn{1}{c}{Porcentaje (\%)}
-& \multicolumn{1}{c}{Beneficiarias}
-& \multicolumn{1}{c}{Porcentaje (\%)}
-& \multicolumn{1}{c}{Beneficiarios}
-& \multicolumn{1}{c}{Porcentaje (\%)} \\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
+\cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:}
-& \multicolumn{2}{c}{Masculino}
-& \multicolumn{2}{c}{Femenino}
-& \multicolumn{2}{c}{Total} \\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-& \multicolumn{1}{c}{Beneficiarios}
-& \multicolumn{1}{c}{Porcentaje (\%)}
-& \multicolumn{1}{c}{Beneficiarias}
-& \multicolumn{1}{c}{Porcentaje (\%)}
-& \multicolumn{1}{c}{Beneficiarios}
-& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -795,21 +834,49 @@ Elaborado: DAIE}
 \end{figure}
 
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente parcial, por edad y sexo}
+\label{fig:iess_pir_pensiones_pp}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_pp.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por incapacidad permanente parcial, para cada sexo, en 2020}
 \label{tab:tab_rango_monto_pp_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -1005,22 +1072,48 @@ La pensión mensual promedio de mujeres y hombres por incapacidad permanente tot
 USD 957,75 respectivamente. La tabla \ref{tab:iess_iess_monto_incapacidad_total_sexo_rtr} muestra la
 distribución de la pensión mensual por sexo de los pensionistas por incapacidad permanente total.
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente total, por edad y sexo}
+\label{fig:iess_pir_pensiones_pt}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_pt.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por incapacidad permanente total, para cada sexo, en 2020}
 \label{tab:iess_iess_monto_incapacidad_total_sexo_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -1199,22 +1292,48 @@ La pensión mensual promedio de mujeres y hombres por incapacidad permanente abs
 muestra la distribución de la pensión mensual por sexo de los pensionistas por incapacidad
 permanente absoluta.
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente absoluta, por edad y sexo}
+\label{fig:iess_pir_pensiones_pa}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_pa.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por incapacidad permanente absoluta, para cada sexo, en 2020}
 \label{tab:tab_rango_monto_pa_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -1389,21 +1508,48 @@ La edad media de hombres y mujeres es de 13,8 y 34,1 años, respectivamente.
 \\Elaborado: DAIE}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, de orfandad, por edad y sexo}
+\label{fig:iess_pir_pensiones_of}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_of.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por orfandad, para cada sexo, en 2020}
 \label{tab:tab_rango_monto_of_rtr}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -1581,21 +1727,49 @@ La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
 \end{figure}
 
 
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, de viudedad, por edad y sexo}
+\label{fig:iess_pir_pensiones_vo}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_vo.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por viudedad, para cada sexo, en 2020}
 \label{tab:tab_rango_monto_of}\\
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 
@@ -1903,16 +2077,34 @@ Elaborado: DAIE}
 \caption{Resposabilidad Patronal por rangos y por sexo}
 \label{tab:tabla_rangos_montos_rp}\\
 \toprule
-\multirow{2}[2]{*}{Rango de RP:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endfirsthead
 
 \toprule
-\multirow{2}[2]{*}{Rango:} & \multicolumn{2}{c}{Masculino} & \multicolumn{2}{c}{Femenino} & \multicolumn{2}{c}{Total}\\
+\multirow{2}[2]{*}{Rango:} &
+\multicolumn{2}{c}{Femenino} & 
+\multicolumn{2}{c}{Masculino} &
+\multicolumn{2}{c}{Total}\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
-   & \multicolumn{1}{c}{Beneficiarios}   & \multicolumn{1}{c}{Porcentaje (\%)}   & \multicolumn{1}{c}{Beneficiarias}   & \multicolumn{1}{c}{Porcentaje (\%)} & \multicolumn{1}{c}{Beneficiarios}& \multicolumn{1}{c}{Porcentaje (\%)} \\
+&
+\multicolumn{1}{c}{Beneficiarios}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Beneficiarias}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Beneficiarios} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
 \midrule
 \endhead
 

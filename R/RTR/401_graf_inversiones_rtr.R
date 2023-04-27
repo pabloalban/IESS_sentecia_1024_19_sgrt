@@ -421,6 +421,75 @@ ggsave( plot = iess_inversiones_papel_comercial,
                            parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 
+
+#Evolución histórica de las cetes--------------------------------------------------------------------
+message( '\tGraficando evolución histórica de los cetes' )
+
+aux <- inv_instrumento %>% 
+  filter(instrumento=='Certificados de Tesorería - CETES') %>% 
+  left_join( data.frame( ano = seq(2011, 2022, 1) ), ., by = 'ano' ) %>%
+  mutate( instrumento ='CETES' ) %>%
+  replace(is.na(.), 0) %>%
+  dplyr::select(ano,
+                instrumento,
+                valor_nominal,
+                rdto_prom_pond ) %>%
+  mutate( periodo = ymd( paste0(ano, '/01/01') ) )
+
+df_bar <- aux %>% select(-rdto_prom_pond)
+df_line = aux %>% select(periodo, rdto_prom_pond)
+
+scl = 1000000  # escala de millones
+hmts = 30 #homotecia
+
+y_lim <- c( 0, 120000000 )
+y_brk <- seq( y_lim[1], y_lim[2], length.out = 11 )
+y_lbl <- formatC( y_brk/1000000, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
+ydual_brk <- seq(0.00, 0.05,0.005 )
+ydual_lbl <- paste0(formatC( ydual_brk*100, 
+                             digits = 1, 
+                             format = 'f', 
+                             big.mark = '.', 
+                             decimal.mark = ',' ),"%")
+
+iess_inversiones_cetes <- ggplot(data = df_bar, aes(x = periodo,
+                                                              y = valor_nominal, 
+                                                              fill = instrumento)) +
+  geom_bar(stat='identity',colour='black') +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  geom_line(data = df_line,
+            aes(x = periodo,
+                y = rdto_prom_pond*hmts*scl*100, 
+                group = 1, linetype = 'Rendimiento Promedio Ponderado'),
+            inherit.aes = FALSE,
+            size=1) +
+  scale_linetype_manual(NULL, values = 1) +
+  scale_x_date(date_breaks = '1 year', date_labels = '%Y')+
+  scale_y_continuous(name = 'Saldo (millones USD)',
+                     labels = y_lbl, breaks = y_brk, limits = y_lim,
+                     sec.axis = sec_axis(~./(scl*hmts*100),
+                                         name = 'Rendimiento Promedio Ponderado',
+                                         labels = ydual_lbl,
+                                         breaks = ydual_brk)) + 
+  scale_fill_manual(values = c(parametros$iess_green, 
+                               parametros$iess_blue))+
+  theme_bw() +
+  plt_theme+
+  guides( color = guide_colorbar(order = 0),
+          fill = guide_legend(order = 1) ) + 
+  theme(legend.position='bottom') +
+  labs( x = '', y = '' )+
+  theme(legend.background = element_rect(fill = 'transparent'),
+        legend.box.background = element_rect(fill = 'transparent', 
+                                             colour = NA),
+        legend.key = element_rect(fill = 'transparent'), 
+        legend.spacing = unit(-1, 'lines') )
+
+ggsave( plot = iess_inversiones_cetes, 
+        filename = paste0( parametros$resultado_graficos, 'iess_inversiones_cetes_rtr', 
+                           parametros$graf_ext ),
+        width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
+
 #Limpiando Ram--------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% c( 'parametros' ) ) ] )
