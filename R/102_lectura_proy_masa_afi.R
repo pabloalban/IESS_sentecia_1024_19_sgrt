@@ -32,7 +32,7 @@ load( paste0( parametros$RData, 'IESS_proyeccion_poblacion.RData' ) )
 # wid : Widow(er) pensioners of sex s and age x receiving pension at time t. Obtained from previous iterations.
 # orph : Number of orphans’ pensions of sex s and age x at time t. Obtained from previous iterations.
 # dis : Disability pensioners of sex s and age x at time t, obtained from previous iterations.
-
+# csact: Number of average contributions from active members of sex s, group g and age x at time t.
 # ls_oldage : Number of individuals of sex s receiving old-age lump sum benefits at time t.
 # ls_death : Number of individuals of sex s and age x receiving death lump sum benefits at time t.
 
