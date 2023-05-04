@@ -22,7 +22,8 @@ message( '\tCalculando escenarios del balance para RTR' )
 
 # 0. 1.  Carga de hipótesis macro 
 load( paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
-rm( list = ls()[ !( ls() %in% c( 'parametros', 'Hipotesis' ) ) ] )
+load( paste0( parametros$RData_seg, 'IESS_RTR_modelo_rp.RData' ) )
+rm( list = ls()[ !( ls() %in% c( 'parametros', 'Hipotesis', 'coeficiente' ) ) ] )
 
 # 1. Escenario 1 -----------------------------------------------------------------------------------
 esc <- new.env()
@@ -31,7 +32,7 @@ esc$nombre <- 'escenario_1'
 message( '\t\t\t', esc$nombre )
 
 # 1.1. Hipótesis -----------------------------------------------------------------------------------
-esc$V0 <- 1070526553.26
+esc$V0 <- 1202240160.65
 
 esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            
@@ -47,14 +48,15 @@ esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            apo_cot = c( 0.002, rep( 0.0038 , 40 ) ),
                            apo_sal = c( rep( 0, 41 ) ),
                            apo_jub = 0,  # Aporte del 2.76% de los jubilados
+                           rp = coeficiente, # Valor de la rp generada, respecto al aporte del SGRT
                            # Factores de calibración
-                           cal_mas = 1.0,
-                           cal_pen_pa_pt = 1.30,
-                           cal_pen_pp = 1.32,
-                           cal_indm = 1,
-                           cal_subs = 1,
-                           cal_orf = 1,
-                           cal_viu = 1 )
+                           cal_mas = 1.06083,
+                           cal_pen_pa_pt = 1.886482,
+                           cal_pen_pp = 1.264204,
+                           cal_indm = 1.156043,
+                           cal_subs = 0.1493458,
+                           cal_orf = 2.409926,
+                           cal_viu = 0.9694932 )
 
 # 1.2. Factores de calculo de montepío -------------------------------------------------------------
 # No están siendo utilizadas en el cálculo del balance
@@ -65,6 +67,55 @@ esc$mont_prop_afi_orf <- 0.118449037 # Porcentaje que representan de las prestac
 esc$mont_prop_afi_viud <- 0.254047820
 
 # 1.3. Calculos necesarios para el modelo actuarial ------------------------------------------------
+parametros_lista <- c( 'parametros_lista', 'esc', 'Hipotesis' )
+source( 'R/rtr/304_calculo_balance_rtr.R', encoding = 'UTF-8', echo = FALSE )
+save( esc, file = paste0( parametros$RData_seg, 'IESS_RTR_configuracion_', esc$nombre, '.RData' ) )
+rm( esc )
+
+
+
+# 2. Escenario 2 -----------------------------------------------------------------------------------
+esc <- new.env()
+
+esc$nombre <- 'escenario_2'
+message( '\t\t\t', esc$nombre )
+
+# 2.1. Hipótesis -----------------------------------------------------------------------------------
+esc$V0 <- 1202240160.65
+
+esc$hip_esc <- data.table( t = 0:parametros$horizonte,
+                           
+                           i_a = 0.0625,
+                           i_r = Hipotesis[ 4, 2 ],
+                           i_sbu = Hipotesis[ 5, 2 ],
+                           i_f = Hipotesis[ 7, 2 ],
+                           i_p = Hipotesis[ 7, 2 ],
+                           
+                           # Tasas de aportación y gasto
+                           por_gas = 0.0003, # 0,03% de la masa salarial
+                           apo_est = c( rep( 0.28, 41 ) ),
+                           apo_cot = c( 0.002, rep( 0.0038 , 40 ) ),
+                           apo_sal = c( rep( 0, 41 ) ),
+                           apo_jub = 0,  # Aporte del 2.76% de los jubilados
+                           rp = 0, # Valor de la rp generada, respecto al aporte del SGRT
+                           # Factores de calibración
+                           cal_mas = 1.06083,
+                           cal_pen_pa_pt = 1.886482,
+                           cal_pen_pp = 1.264204,
+                           cal_indm = 1.156043,
+                           cal_subs = 0.1493458,
+                           cal_orf = 2.409926,
+                           cal_viu = 0.9694932 )
+
+# 2.2. Factores de calculo de montepío -------------------------------------------------------------
+# No están siendo utilizadas en el cálculo del balance
+esc$porc_ben_orf <- 2.67756315 # Porcentaje de benefcios de orf respecto a los pensts de PA y PT
+esc$porc_ben_viud <- 3.108469539 # Porcentaje de beneficios de viudez respecto a los pensts de PA y PT
+
+esc$mont_prop_afi_orf <- 0.118449037 # Porcentaje que representan de las prestaciones
+esc$mont_prop_afi_viud <- 0.254047820
+
+# 2.3. Calculos necesarios para el modelo actuarial ------------------------------------------------
 parametros_lista <- c( 'parametros_lista', 'esc', 'Hipotesis' )
 source( 'R/rtr/304_calculo_balance_rtr.R', encoding = 'UTF-8', echo = FALSE )
 save( esc, file = paste0( parametros$RData_seg, 'IESS_RTR_configuracion_', esc$nombre, '.RData' ) )

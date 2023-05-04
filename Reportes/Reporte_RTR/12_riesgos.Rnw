@@ -33,7 +33,7 @@ La tabla de mortalidad de afiliados por edad y sexo se presenta en la tabla
 
 {\fontsize{10}{12}\selectfont
   \begin{longtable}[H]{l*{4}{r}|l*{4}{r}}
-  \captionsetup{justification=centering}
+  %\captionsetup{justification=centering}
     \caption{Tabla de mortalidad de afiliados (2020)}
     \label{tab:iess_afi_mort_2020}\\
     \toprule
@@ -69,7 +69,7 @@ pensionistas de vejez por edad y sexo.
 
 {\fontsize{10}{12}\selectfont
   \begin{longtable}[H]{l*{4}{r}|l*{4}{r}}
-    \captionsetup{justification=centering}
+    %\captionsetup{justification=centering}
     \caption{Tabla de mortalidad de pensionistas vejez (2020)}
     \label{tab:iess_pen_vej_mort_2020}\\
     \toprule
@@ -105,7 +105,7 @@ incapacidad permanente parcial, absoluta y total por edad y sexo.
 
 {\fontsize{10}{12}\selectfont
   \begin{longtable}[H]{l*{4}{r}|l*{4}{r}}
-  \captionsetup{justification=centering}
+  %\captionsetup{justification=centering}
     \caption{Tabla de mortalidad de pensionistas de incapacidad permanente parcial, absoluta y total}
     \label{tab:iess_pen_incap_mort_rtr}\\
     \toprule
@@ -141,7 +141,7 @@ por edad y sexo.
 
 {\fontsize{10}{12}\selectfont
   \begin{longtable}[H]{l*{4}{r}|l*{4}{r}}
-  \captionsetup{justification=centering}
+  %\captionsetup{justification=centering}
     \caption{Tabla de mortalidad de pensionistas invalidez (2020)}
     \label{tab:iess_pen_inv_mort_2020}\\
     \toprule
@@ -176,7 +176,7 @@ Se presenta la tabla de mortalidad de montepío por viudedad detallado por edad 
 
 {\fontsize{10}{12}\selectfont
   \begin{longtable}[H]{l*{4}{r}|l*{4}{r}}
-  \captionsetup{justification=centering}
+  %\captionsetup{justification=centering}
     \caption{Tabla de mortalidad de pensionistas de montepío (2020)}
     \label{tab:iess_pen_mont_mort_2020}\\
     \toprule

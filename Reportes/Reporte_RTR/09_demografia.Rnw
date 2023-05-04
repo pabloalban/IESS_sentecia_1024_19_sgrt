@@ -14,7 +14,7 @@
 
 %---------------------------------------------------------------------------------------------------
 Para el presente estudio se considera el número de afiliados activos a diciembre de cada año; en la
-tabla \ref{tab:iess_pob_afi_ini} y figura \ref{fig:iess_pob_afi_ini} se muestra a la población
+tabla \ref{tab:iess_afliados} y figura \ref{fig:iess_pob_afi_ini} se muestra a la población
 afiliada en el período 2005 - 2020, observándose un crecimiento promedio del 5,99\% anual.
 
 
@@ -106,7 +106,7 @@ años.
 \subsection{Masa salarial}
 \label{chp_masa:salarial}
 
-En la tabla \ref{tab:iess_masa_salarial_ini} y figura \ref{fig:iess_masa_salarial_ini} se presenta
+En la tabla \ref{tab:iess_masa_salarial} y figura \ref{fig:iess_masa_salarial} se presenta
 la evolución anual de la masa salarial y la correspondiente al mes de diciembre para el período 2005
 al 2020.
 
@@ -590,8 +590,8 @@ Elaborado: DAIE}
 % beneficiarios. A partir del año 2016, se observa que la cifra ha ido decreciendo, llegando a tener
 % un número 555 beneficiarios en el año 2018.
 
-El desarrollo de esta serie se presenta en la figura \ref{fig:iess_indemnizaciones_rtr}. En cambio,
-en la figura \ref{fig:iess_indemnizaciones_edad_sexo_rtr} se muestra la distribución de los
+El desarrollo de esta serie se presenta en la figura \ref{fig:iess_evo_ben_indemnizaciones_rtr}. En cambio,
+en la figura \ref{fig:iess_evo_ben_indemnizaciones_rtr} se muestra la distribución de los
 beneficiarios, por edad y sexo.
 
 \begin{figure}[H]
@@ -896,7 +896,7 @@ USD 1.256.268,75  por este beneficio.
 
 La edad promedio de las mujeres es de 56,4 años; mientras, la edad media de los hombres es de 57,4
 años. La distribución de los beneficios pagados por este tipo de prestación se presenta en la tabla
-\ref{tab:iess_monto_incapacidad_parcial_sexo_rtr}.
+\ref{tab:tab_rango_monto_pp_rtr}.
 El valor del monto promedio pagado por incapacidad permanente parcial, del año 2020, de mujeres es
 USD 382,40 y para los hombres es de USD 399,89.
 
@@ -1288,7 +1288,7 @@ La edad promedio de las mujeres es de 46 años; mientras que, la edad media de l
 \end{figure}
 
 La pensión mensual promedio de mujeres y hombres por incapacidad permanente absoluta es de USD
-803,85 y USD 852,12, respectivamente. La tabla \ref{tab:iess_monto_incapacidad_absoluta_sexo_rtr}
+803,85 y USD 852,12, respectivamente. La tabla \ref{tab:tab_rango_monto_pa_rtr}
 muestra la distribución de la pensión mensual por sexo de los pensionistas por incapacidad
 permanente absoluta.
 
@@ -1564,7 +1564,7 @@ La edad media de hombres y mujeres es de 13,8 y 34,1 años, respectivamente.
 }
 
 La pensión mensual promedio de hombres y mujeres por orfandad es de USD 179,59 y USD 251,72,
-respectivamente. La tabla \ref{tab:iess_monto_pensionistas_orfandad_sex_rtr} muestra la distribución
+respectivamente. La tabla \ref{tab:tab_rango_monto_of_rtr} muestra la distribución
 de la pensión mensual por sexo de los pensionistas por orfandad.
 
 %---------------------------------------------------------------------------------------------------
@@ -1740,7 +1740,7 @@ La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
 \caption{Distribución de las rentas mensuales por viudedad, para cada sexo, en 2020}
-\label{tab:tab_rango_monto_of}\\
+\label{tab:tab_rango_monto_vo_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
 \multicolumn{2}{c}{Femenino} & 
@@ -1784,7 +1784,7 @@ La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
 }
 
 La pensión mensual promedio de hombres y mujeres por viudedad es de USD 469,61 y USD 505,52,
-respectivamente. La tabla \ref{tab:iess_monto_pensionistas_viudedad_sex_rtr} muestra la distribución
+respectivamente. La tabla \ref{tab:tab_rango_monto_vo_rtr} muestra la distribución
 de la pensión mensual por sexo de los pensionistas por viudedad.
 
 \section{Estructura demográfica de la población de beneficiarios y sus beneficios}

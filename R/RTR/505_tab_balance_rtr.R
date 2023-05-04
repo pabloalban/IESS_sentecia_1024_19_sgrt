@@ -13,7 +13,7 @@ for ( i in 1:length( escenarios_lista ) ) {
   # Masa salarial ----------------------------------------------------------------------------------
   if ( escenario == 'escenario_1' ) {
     aux <- balance_anual[ , list( t = t + parametros$anio_ini, M ) ]
-    aux <- aux[ t > 2018 ]
+    aux <- aux[ t > 2020 ]
     aux[ , t := as.character( t ) ]
     xtb_aux <- xtable( aux, digits = c( 0, 0, 2 ) ) #xtable transformar a latex.
     print( xtb_aux,
@@ -53,9 +53,9 @@ for ( i in 1:length( escenarios_lista ) ) {
          sanitize.text.function = identity )
   
   # Beneficios -------------------------------------------------------------------------------------
-  aux <- balance_anual[ , list( t = t + parametros$anio_ini, B9, B15, B10, B13, B14, B11, B_sal, B ) ]
+  aux <- balance_anual[ , list( t = t + parametros$anio_ini, B9, B15, B10, B13, B14, B11, B_16, B ) ]
   aux[ , t := as.character( t ) ]
-  xtb_aux <- xtable( aux, digits = c( 0, 0, 0, 2, 2, 2, 2, 2 ,2, 2 ) )
+  xtb_aux <- xtable( aux, digits = c( 0, 0, rep( 2, 8 ) ) )
   print( xtb_aux,
          file = paste0( parametros$resultado_tablas, 'iess_balance_beneficios_', escenario, '.tex' ),
          type = 'latex', 
@@ -95,9 +95,9 @@ for ( i in 1:length( escenarios_lista ) ) {
   
   # Balance dinámico (beneficios) ------------------------------------------------------------------
   aux <- balance_anual[ , list( anio = t + parametros$anio_ini, t, B9_vap, B15_vap, B10_vap,
-                                B13_vap, B14_vap, B11_vap, B_sal_vap,  B_vap ) ]
+                                B13_vap, B14_vap, B11_vap, B16_vap, B_vap ) ]
   aux[ , anio := as.character( anio ) ]
-  xtb_aux <- xtable( aux, digits = c( 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2) )
+  xtb_aux <- xtable( aux, digits = c( 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2 ) )
   print( xtb_aux,
          file = paste0( parametros$resultado_tablas, 'iess_balance_beneficios_vap_',
                         escenario, '.tex' ),
@@ -112,7 +112,7 @@ for ( i in 1:length( escenarios_lista ) ) {
   aux <- balance_anual[ t == max(t), 
                         list( V0, A2_vap, A9_vap, A15_vap, A13_vap, A14_vap, A_est_vap,
                               A_vap, Act_vap,
-                              B9_vap, B15_vap, B10_vap, B13_vap, B14_vap, B11_vap, B_sal_vap,
+                              B9_vap, B15_vap, B10_vap, B13_vap, B14_vap, B11_vap, B16_vap, B_sal_vap,
                               G_vap, B_vap, Pas_vap, 
                               V ) ]
   aux1 <- melt.data.table( aux, measure.vars = 1:ncol(aux) )
@@ -131,6 +131,7 @@ for ( i in 1:length( escenarios_lista ) ) {
                       B13_vap = 'Beneficios pensionistas montep\\\'{i}o de orfandad',
                       B14_vap = 'Beneficios pensionistas montep\\\'{i}o de viudedad',
                       B11_vap = 'Beneficios por incapacidad temporal',
+                      B16_vap = 'Valores generados por responsabilidad patronal',
                       B_sal_vap = 'Prestaciones m\\\'{e}dico asistenciales',
                       B_vap = 'Beneficios totales', 
                       G_vap = 'Gastos administrativos',
@@ -147,10 +148,10 @@ for ( i in 1:length( escenarios_lista ) ) {
          include.colnames = FALSE, include.rownames = FALSE, 
          format.args = list( decimal.mark = ',', big.mark = '.' ), 
          only.contents = TRUE, 
-         hline.after = c( 1, 7, 8, 9, 16, 18, 19 ),
+         hline.after = c( 1, 7, 8, 9, 17, 19, 20 ),
          sanitize.text.function = identity,
          add.to.row = 
-           list( pos = list(0, 9, 19), # posicion despues de 0 , 9 y 19
+           list( pos = list(0, 9, 20), # posicion despues de 0 , 9 y 19
                  command = c(paste(" \n \\multicolumn{2}{c}{\\textbf{Activo actuarial}} \\\\ \n \\hline \n"), 
                              paste(" \n \\hline \\multicolumn{2}{c}{\\textbf{Pasivo actuarial}} \\\\ \n"),
                              paste(" \n \\hline \\multicolumn{2}{c}{\\textbf{Balance actuarial}} \\\\ \n") ) 

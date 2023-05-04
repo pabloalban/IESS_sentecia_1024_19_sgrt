@@ -648,7 +648,7 @@ lbls_y <- paste0( "$", formatC( abs( brks_y ), digits = 0, format = 'f', big.mar
 brks_x <- seq( 15, 100, salto_y )
 lbls_x <- paste0( as.character( brks_x ) )
 
-iess_pir_pensiones_pt <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
+iess_pir_pensiones_pa <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
   xlab( 'Edad' ) +
   ylab( '' ) +
   geom_bar( data = aux %>% filter( sexo == 'M' ), stat = 'identity',colour="white", size=0.1) +
@@ -665,8 +665,8 @@ iess_pir_pensiones_pt <- ggplot( aux, aes( x = edad, y = fdp, fill=sexo ) ) +
   scale_fill_manual( values = c( parametros$male, parametros$female ),
                      labels = c( "Hombres", "Mujeres") )
 
-ggsave( plot = iess_pir_pensiones_pt, 
-        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_pt', parametros$graf_ext ),
+ggsave( plot = iess_pir_pensiones_pa, 
+        filename = paste0( parametros$resultado_graficos, 'iess_pir_pensiones_pa', parametros$graf_ext ),
         width = graf_width, height = graf_height, units = graf_units, dpi = graf_dpi )
 ##2.6 Pirámide de pensiones de viudedad-------------------------------------------------------------
 

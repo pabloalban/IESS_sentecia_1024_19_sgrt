@@ -296,7 +296,7 @@ Año
 & Beneficios de orfandad 
 & Beneficios de viudedad  
 & Beneficios por subsidios
-& Beneficios prestaciones médico asistenciales 
+& Valores generados por responsabilidad patronal
 & Beneficios totales \\
 &
 & $\sum\limits_{t=0}^T v^t B^9_t$
@@ -305,7 +305,7 @@ Año
 & $\sum\limits_{t=0}^T v^t B^{13}_t$
 & $\sum\limits_{t=0}^T v^t B^{14}_t$
 & $\sum\limits_{t=0}^T v^t B^{11}_t$
-& $\sum\limits_{t=0}^T v^t B^{sal}_t$
+& $\sum\limits_{t=0}^T v^t B^{16}_t$
 & $\sum\limits_{t=0}^T v^t B_t$ \\
 \midrule
 \endfirsthead
@@ -319,7 +319,7 @@ Año
 & Beneficios de orfandad 
 & Beneficios de viudedad  
 & Beneficios por subsidios
-& Beneficios prestaciones médico asistenciales 
+& Valores generados por responsabilidad patronal
 & Beneficios totales \\
 &
 & $\sum\limits_{t=0}^T v^t B^9_t$
@@ -328,7 +328,7 @@ Año
 & $\sum\limits_{t=0}^T v^t B^{13}_t$
 & $\sum\limits_{t=0}^T v^t B^{14}_t$
 & $\sum\limits_{t=0}^T v^t B^{11}_t$
-& $\sum\limits_{t=0}^T v^t B^{sal}_t$
+& $\sum\limits_{t=0}^T v^t B^{16}_t$
 & $\sum\limits_{t=0}^T v^t B_t$ \\
 \midrule
 \endhead
@@ -506,7 +506,7 @@ Año
 & Beneficios de orfandad 
 & Beneficios de viudedad  
 & Beneficios por subsidios
-& Beneficios prestaciones médico asistenciales 
+& Valores generados por responsabilidad patronal
 & Beneficios totales \\
      
 & $B^9_t$ 
@@ -515,7 +515,7 @@ Año
 & $B^{13}_t$ 
 & $B^{14}_t$ 
 & $B^{11}_t$ 
-& $B^{sal}_t$ 
+& $B^{16}_t$ 
 & $B_t$ \\
 \midrule
 \endfirsthead
@@ -528,7 +528,7 @@ Año
 & Beneficios de orfandad 
 & Beneficios de viudedad  
 & Beneficios por subsidios
-& Beneficios prestaciones médico asistenciales 
+& Valores generados por responsabilidad patronal
 & Beneficios totales \\
      
 & $B^9_t$ 
@@ -537,7 +537,7 @@ Año
 & $B^{13}_t$ 
 & $B^{14}_t$ 
 & $B^{11}_t$ 
-& $B^{sal}_t$ 
+& $B^{16}_t$ 
 & $B_t$ \\
 \midrule
 \endhead

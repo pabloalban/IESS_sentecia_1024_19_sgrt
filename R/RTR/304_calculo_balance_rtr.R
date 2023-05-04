@@ -4,10 +4,13 @@ load( paste0( parametros$RData_seg, 'IESS_proyeccion_salarios_escenario_1.RData'
 load( paste0( parametros$RData_seg, 'IESS_RTR_proy_beneficarios_prestacion.RData' ) )
 load( paste0( parametros$RData_seg, 'IESS_RTR_proyeccion_beneficios.RData' ) )
 load( paste0( parametros$RData_seg, 'IESS_RTR_grupo_familiar.RData' ) )
+load( paste0( parametros$RData_seg, 'IESS_RTR_grupo_familiar.RData' ) )
+load( paste0( parametros$RData, 'IESS_proy_masa_salarial.RData' ) )
+
 
 # Borrando variables, solo quedan variables a ser utilizadas
 rm( list = ls()[ !( ls() %in% c( parametros_lista, 'parametros', 'pob_proy', 'ben_proy', 
-                                 'sal_proy', 'pen_proy', 'rho' ) ) ] )
+                                 'sal_proy', 'pen_proy', 'rho', 'SALg', 'alpha' ) ) ] )
 
 message( '\tBalance seguro ', parametros$seguro, ' calculando escenario: ', esc$nombre )
 
@@ -30,7 +33,20 @@ balance[ is.na( pen_mv ), pen_mv := aux ]
 balance[ , aux := NULL ]
 
 message( '\tProyectando masa salarial' )
-balance[ , M := cal_mas * sal * l2_cot ]
+
+aux <- SALg %>%
+  mutate( t = t - 2020,
+          sexo = ifelse( sexo == 'H',
+                         'M',
+                         'F') ) %>%
+  dplyr::select( t, x, sexo, M:=SALg ) %>%
+  as.data.table( )
+
+balance <- merge( balance, 
+                  aux, 
+                  by = c( 't', 'sexo', 'x' ) )
+
+balance[ , M := cal_mas * M ]
 
 # 1.1.  Beneficios de renta vitalicia---------------------------------------------------------------
 message( '\tProyectando beneficios por pensiones de incapacidad' )
@@ -81,8 +97,7 @@ balance[ , B_sbu := B9_sbu + B13_sbu + B14_sbu + B15_sbu ]
 balance[ , B_dec := B9_dec + B13_dec + B14_dec + B15_dec ]
 balance[ , B_nodec := B9_nodec + B13_nodec + B14_nodec + B15_nodec ]
 
-# Beneficios totales
-balance[ , B := B_pen + B10 + B11 + B_sal ]
+
 
 # 1.7. Proyecciones de aportes de afiliados --------------------------------------------------------
 message( '\tProyectando aportes' )
@@ -94,6 +109,14 @@ balance[ , A2 := A2_cot + A2_sal ]
 balance[ t == 0 , A2_sal := 0 ]
 balance[ t == 0 , A2_cot := 0 ]
 balance[ t == 0 , A2 := 0 ]
+
+
+# 1.7.1.1  Valor generado por RP--------------------------------------------------------------------
+message( '\tProyectando valores generados por RP' )
+balance[ , B_16 := rp * A2 ]
+
+# Beneficios totales
+balance[ , B := B_pen + B10 + B11 + B_sal + B_16]
 
 # 1.7.2. Aportes de pensionistas de PA y PT sin décimos --------------------------------------------
 balance[ , A9 := apo_jub * B9_nodec ] 
@@ -185,6 +208,8 @@ balance_anual <- balance[ , list( M = sum( M , na.rm = TRUE ),
                                   
                                   B_sal = sum( B_sal , na.rm = TRUE ),
                                   
+                                  B_16 = sum( B_16, na.rm = TRUE ),
+                                  
                                   G = sum( G, na.rm = TRUE ) ), 
                           by = list( t ) ]
 
@@ -207,6 +232,7 @@ balance_anual[ t == 0, `:=`( M = 0,
                              B14 = 0, B14_sbu = 0, B14_dec = 0, B14_nodec = 0,
                              B15 = 0, B15_sbu = 0, B15_dec = 0, B15_nodec = 0,
                              B_sal = 0,
+                             B_16 = 0,
                              G = 0, 
                              V_cor = 0 , 
                              Act = 0, Pas = 0 ) ]
@@ -267,6 +293,8 @@ balance_anual[ , B15_sbu_vap := cumsum( v * B15_sbu ) ]
 balance_anual[ , B15_dec_vap := cumsum( v * B15_dec ) ]
 balance_anual[ , B15_nodec_vap := cumsum( v * B15_nodec ) ]
 
+balance_anual[ , B16_vap := cumsum( v * B_16 ) ]
+
 balance_anual[ , G_vap := cumsum( v * G ) ]
 balance_anual[ , V := v * V_cap ]
 balance_anual[ , V0 := esc$V0 ]
@@ -279,3 +307,4 @@ save( balance, balance_anual,
 message( paste( rep('-', 100 ), collapse = '' ) )
 rm( list = ls()[ !( ls() %in% c( parametros_lista, 'parametros' ) ) ] )
 gc()
+

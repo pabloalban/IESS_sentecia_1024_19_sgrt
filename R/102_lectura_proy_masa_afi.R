@@ -35,6 +35,9 @@ load( paste0( parametros$RData, 'IESS_proyeccion_poblacion.RData' ) )
 # csact: Number of average contributions from active members of sex s, group g and age x at time t.
 # ls_oldage : Number of individuals of sex s receiving old-age lump sum benefits at time t.
 # ls_death : Number of individuals of sex s and age x receiving death lump sum benefits at time t.
+# ICact: Initial active contributors of sex s, group g, age x and c past contributions. 
+# csinact: Number of contributions from inactive members of sex s and age x over the year t-1 to t.
+# csact: Number of average contributions from active members of sex s, group g and age x at time t.
 
 ##Masa Salarial-------------------------------------------------------------------------------------
 #sal : average salary of individuals from group g, with sex s and age x according to the corresponding theoretical salary curve (provided by the user for the initial period).

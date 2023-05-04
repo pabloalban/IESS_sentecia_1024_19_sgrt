@@ -698,7 +698,7 @@ De los resultados obtenidos se obtuvieron correlaciones entre 0,56 y -0,30, con 
 
 
 
-\subsubsection{Pruebas de Normalidad de los errores}
+\subsubsection{Pruebas de normalidad de los errores}
 
 El Test de Shapiro–Wilk se usa para contrastar la normalidad de un conjunto de datos. Se considera uno de los test más potentes para el contraste de normalidad. La prueba de normalidad de Shapiro-Wilk es aplicable cuando se analizan muestras compuestas por menos de 50 elementos (muestras pequeñas).
 
@@ -708,13 +708,13 @@ $H_0$ : $\mbox{La variable presenta una distribución normal.}$\\
 $H_1$ : $\mbox{La variable presenta una distribución nonormal.}$
 
 
-Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\% como se muestra en la tabla \ref{tab:iess_Shapiro–Wilk}. Por lo tanto, no se rechaza la hipótesis nula.
+Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\% como se muestra en la tabla \ref{tab:iess_shapiro_test}. Por lo tanto, no se rechaza la hipótesis nula.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrr}
   \caption{Prueba de normalidad de Shapiro-Wilk}
-\label{tab:iess_ma_multi_p_valores} \\
+\label{tab:iess_shapiro_test} \\
 \toprule
  \multicolumn{1}{c}{Variables:} &
  \multicolumn{1}{c}{Estadístico - $W$} &
@@ -839,7 +839,7 @@ Se utilizan varias pruebas. Primero, la serie vectorial $z_t$ se transforma en $
 Realizadas las cuatro pruebas de homocedasticidad, se tienen p valores mayores al nivel de significancia igual a 5\%. Por lo tanto, no se rechaza la hipótesis nula.
 
 \subsection{Resultados del modelo macroeconómico}
-La tabla \ref{tab:pob_proy_tot} presenta los resultados del modelo multivariante de series temporales utilizado para obtener una proyección de las variables económicas utilizadas en el presente estudio.
+La tabla \ref{tab:iess_tasas_macro_pred} presenta los resultados del modelo multivariante de series temporales utilizado para obtener una proyección de las variables económicas utilizadas en el presente estudio.
 
  
 {\setlength{\tabcolsep}{7pt}
@@ -1208,7 +1208,7 @@ lo que ocasionó una caída en el rendimiento; pero para el año 2019 la deuda p
 
 \end{enumerate}
 
-En la tabla \ref{tab:iess_portafolio_hist} y figura \ref{fig:iess_portaf_hist}, se presentan la evolución histórica de los rendimientos.
+En la figura \ref{fig:iess_portaf_hist} y en la tabla \ref{tab:iess_rendimiento_biess}, se estima el rendimiento de las inversiones del BIESS con sus intervalos de confianza para el período 2019 al 2058. El promedio de las predicciones del rendimiento neto de las inversiones del BIESS es 6,57\% para el período 2019 a 2058.
 
 
 
@@ -1297,7 +1297,6 @@ Elaborado: DAIE}
 
 La tasa de rendimiento neto del portafolio de inversiones del BIESS registra una clara tendencia a la baja, producida por diferentes factores, explicados anteriormente; en el año 2012, se registró una tasa del rendimiento neto de las inversiones igual a 9,08\%, como tasa máxima de rendimiento. A partir del año 2013, se inicia el descenso en las tasas llegando a obtener 5,63\% en el año 2018. El promedio de la tasa de rendimiento neta en el período 2011 a 2018 fue 7,54\% con una desviación estándar igual a 1,04\%.
 
-En la figura \ref{tab:iess_portaf_proy_1} y en la tabla \ref{tab:iess_portaf_proy}, se estima el rendimiento de las inversiones del BIESS con sus intervalos de confianza para el período 2019 al 2058. El promedio de las predicciones del rendimiento neto de las inversiones del BIESS es 6,57\% para el período 2019 a 2058.
 
 %---------------------------------------------------------------------------------------------------
 \section{Análisis de tendencias demográficas actuales y proyectadas}

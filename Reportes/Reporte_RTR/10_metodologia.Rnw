@@ -559,8 +559,7 @@ Por motivos de cálculo, se decidió agrupar la mortalidad de los pensionistas d
 permanente total, absoluta y parcial (antiguo régimen con rentas vitalicias), puesto que durante el
 período 2012 a 2020, solamente, se registró el deceso de 10 pensionistas de incapacidad permanente
 absoluta, 16 de incapacidad permanente total y 209 con incapacidad permanente parcial. Sumando en
-total 235 fallecidos en dicho lapso, y su tabla de mortalidad se encuentra en la tabla
-\ref{tab:iess_pen_incap_mort_rtr}.
+total 235 fallecidos en dicho lapso.
 
 %---------------------------------------------------------------------------------------------------
 \section{Modelo demográfico}
@@ -635,8 +634,7 @@ Para proyectar el número de beneficiarios del antiguo régimen de pensiones vit
 permanente parcial (15), hacemos uso de la tabla de mortalidad dinámica para los pensionistas de 
 invalidez sin tomar en cuenta interacciones como en el modelo markoviano. Así 
 la supervivencia viene dada directamente por la probabilidad independiente 
-$p_{t,g,x}^{4,5} = \exp( -\mu^{4,5} )$, valores descritos en \ref{tab:iess_pen_incap_mort_rtr}, 
-puesto que no se permiten nuevos ingresos a esta prestación vitalicia, cómo se sigue a continuación:
+$p_{t,g,x}^{4,5} = \exp( -\mu^{4,5} )$, puesto que no se permiten nuevos ingresos a esta prestación vitalicia, cómo se sigue a continuación:
 \begin{equation}
 \label{eq:l_15}
 l^{15}_{t+1,g,x+1}= p_{t,g,x}^{4,5} \, l^{15}_{t,g,x}.
@@ -659,7 +657,7 @@ FA_{t+1,g,x} + \mathbbm{1}_{ \left\{x<18\right\}}\, l_{t,g,x}^{13},
 \end{equation}
 donde: $f_{g,x}^{orf}$ es la función de densidad de probabilidades de las edades de los huérfanos;
 $GF_{g,x}^{orf}$ es el número de hijos promedio menores a 18 años que posee un afiliado de edad,
-$x$, y sexo, $g$, al momento de un accidente laboral fatal (ver tabla \ref{tab:factores_mon}); y
+$x$, y sexo, $g$, al momento de un accidente laboral fatal; y
 el número de accidentes laborales fatales por edad y sexo en el año $t$, $FA_{t,g,x}$, se obtiene de
 la siguiente fórmula:
 \begin{equation}
@@ -667,7 +665,7 @@ la siguiente fórmula:
 l_{t,g,x}^{12}=\, p_{g,x}^{2,12} \, l_{t,g,x}^{2,cot},
 \end{equation}
 donde: $p_{x}^{2,12}$ es la tasa de incidencia de accidentes laborales fatales en los afiliados de
-edad $x$ (ver tabla \ref{tab:factores_mon}) y $l_{t,g,x}^{2,cot}$ es el número de afiliados activos
+edad $x$ y $l_{t,g,x}^{2,cot}$ es el número de afiliados activos
 en el año $t$.
 
 De la misma manera, la población beneficiaria del pago de montepío por viudedad para cada genero,
@@ -684,8 +682,7 @@ mortalidad de montepío por viudedad, $p_{t,g,x}^{14,5}$; y el número de accide
 obtiene de la ecuación \ref{eq:l_12}.
 
 Por último, el numeró de beneficiarios de subsidios por incapacidad temporal se calcula, utilizando
-la tasa de incidencia del subsidio, $p_{t,g,x}^{2,11}$ (ver tabla
-\ref{tab:iess_factores_riesgos_subs}), de la siguiente manera:
+la tasa de incidencia del subsidio, $p_{t,g,x}^{2,11}$, de la siguiente manera:
 \begin{equation}
 \label{eq:l_11}
 l^{11}_{t+1,g,x+1}= p_{t,g,x}^{2,11} \, l^{2,cot}_{t,g,x}.
@@ -999,9 +996,8 @@ así las tasas de natalidad, nupcialidad, mortalidad y rotación.
 %---------------------------------------------------------------------------------------------------
 \subsection{Flujo de ingresos por aportaciones}
 \label{chp_modelo:aport}
-Los aportes son tomados según los porcentajes de contribución previamente determinados para el
-primer segmento de la población establecidos en las tablas: \ref{tab:apo_2015_2020} y
-\ref{tab:apo_2021_adelante}. En la siguiente expresión se incluye los aportes de los afiliados
+
+En la siguiente expresión se incluye los aportes de los afiliados
 activos y de los pensionistas de incapacidad permanente total y absoluta, de incapacidad permanente
 parcial, y de montepío (orfandad y viudedad; los valores $\pi^2_t$,  $\pi^9_t$, $\pi^{13}_t$, 
 $\pi^{14}_t$ y $\pi^{15}$ representan los porcentajes de aportes totales por cada grupo, 
@@ -1046,8 +1042,7 @@ M_t = \sum\limits_{g=1}^2 \sum\limits_{x=0}^\omega S_{t,g,x}\, l^{2,act}_{t,g,x}
 \subsection{Flujo de egresos por pago de beneficios}
 \label{chp_modelo:benef}
 
-El \Sexpr{REP_seg}, tal como fue descrito en las secciones \ref{chap_Intro:programa} y
-\ref{chap_Intro:prestaciones}, otorga pensiones vitalicias por incapacidad permanente total,
+El \Sexpr{REP_seg} otorga pensiones vitalicias por incapacidad permanente total,
 absoluta, parcial (en su antiguo régimen) y montepío (viudedad y orfandad); y, además, subsidios por
 incapacidad temporal e indemnizaciones por incapacidad permanente parcial (nuevo régimen).
 
@@ -1091,7 +1086,7 @@ prestación promedio, $B^{10}_{t,g,x}$, como una anualidad vencida, siguiendo la
   B^{10}_{t,g,x}= \min{\left\{60\,\beta^{Indem}_{g,x}\, S_{t,g,x},100\, SBU_{t}\right\}},
 \end{equation}
 donde: $\beta^{Indem}_{g,x}$ es el porcentaje promedio de incapacidad permanente parcial en la edad
-$x$ y sexo $g$ (ver tabla \ref{tab:iess_factores_riesgos_indm}).
+$x$ y sexo $g$.
 
 Las prestaciones promedio de orfandad y viudedad, $B^{13}_{t,g,x}$ y $B^{14}_{t,g,x}$, utilizan los
 siguientes cálculos:
@@ -1116,18 +1111,34 @@ incapacidad temporal se calculan, como una anualidad vencida, utilizando la sigu
 B^{11}_{t,g,x}= \beta_{g,x}^{Sub}\, d_{g,x}\, S_{t,g,x}/30 ,
 \end{equation}
 donde: $\beta_{g,x}^{Sub}$ es el porcentaje promedio de incapacidad temporal y $d_{g,x}$ es la
-duración promedio del subsidio por incapacidad temporal en días (ver tabla
-\ref{tab:iess_factores_riesgos_subs}).
+duración promedio del subsidio por incapacidad temporal en días.
 
 Por su parte, la concesión de auxilio de funerales de acuerdo con la ley y las normas reglamentarias
 correspondientes se otorga a través de la Dirección del Sistema de Pensiones.
 
 El total de gasto prestacional viene dado por la suma de cada uno de los beneficios antes descritos.
 
+
+%---------------------------------------------------------------------------------------------------
+\subsection{Flujo de valores generados por responsabilidad patronal}
+\label{chp_modelo:rp}
+
+
+\begin{table}[H] \centering
+{\fontsize{8}{9}\selectfont
+\input{tablas/iess_mod_rp.tex}
+\end{tabular}
+\caption*{\scriptsize Fuente: DAIE. \\
+\scriptsize Elaborado: DAIE. \\
+Nota: $^{*}$p$<$0,1; $^{**}$p$<$0,05; $^{***}$p$<$0,01}
+}
+\end{table}
+
+
 %---------------------------------------------------------------------------------------------------
 \subsection{Flujo de gastos administrativos}
 \label{chp_modelo:gasto}
-Tal como se lo ha establecido en la sección \ref{chp_reglamentacion:egresos:gadmin}, el gasto
+Tal como se lo ha establecido en la \legalcite{ResIESS_CD101}, el gasto
 administrativo es calculado a partir de los ingresos anuales por aportes:
 \begin{equation}
   G_t = 0,0003\, M_t.

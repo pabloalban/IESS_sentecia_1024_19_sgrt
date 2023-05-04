@@ -562,7 +562,6 @@ La cuenta con mayor representatividad en el período analizado es "Fondos capita
 
 {\setlength{\tabcolsep}{3pt}
 \begin{table}[H]
-%\captionsetup{justification=lefting}
 \begin{center}
 \caption{Análisis de los componentes del patrimonio del Fondo del \Sexpr{REP_seg} al 31 de diciembre de cada año}
 \label{tab:iess_componentes_patrimonio_fondo_rtr}
