@@ -127,10 +127,9 @@ print( aux_xtab,
 
 #Tabla de aumento de pensiones----------------------------------------------------------------------
 
-aux <- incre_pensiones %>%
-  dplyr::select( -x2022 )
+aux <- incre_pensiones
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 7 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep( 2, 8 ) ) )
 
 print( aux_xtab, 
        file = paste0( parametros$resultado_tablas, 'iess_incre_pensiones', '.tex' ),
@@ -337,8 +336,6 @@ print( aux_xtab,
 aux <- homocedasticidad
 
 aux_xtab <- xtable( aux, digits = c(0, 0, rep( 5, 2 ) ) )
-
-aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab, 
        file = paste0( parametros$resultado_tablas, 'iess_homocedasticidad', '.tex' ),

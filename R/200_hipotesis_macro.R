@@ -514,51 +514,6 @@ return( lista )
 }
 
 
-
-x_k = rbind( c_pib = 1,
-             c_a = 1,
-             c_p = 1,
-             c_s = 1,
-             c_su = 1,
-             c_i = 1 )
-
-e <- 100
-while (e > 10) {
-
-c_pib = x_k[1]
-c_a = x_k[2] 
-c_p = x_k[3]  
-c_s = x_k[4]
-c_su = x_k[5] 
-c_i = x_k[6]
-
-o <- c( 1.3, 8.2, 6.4, 1.7, 2, 1.54 )
-
-h = 2 
-th = 1.95
-fx_k = macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th ) - o
-dx1 = macro( c_pib + h, c_a, c_p,  c_s, c_su, c_i, th ) - macro( c_pib - h, c_a, c_p,  c_s, c_su, c_i, th )
-dx2 = macro( c_pib, c_a + h, c_p,  c_s, c_su, c_i, th ) - macro( c_pib, c_a - h, c_p,  c_s, c_su, c_i, th )
-dx3 = macro( c_pib, c_a, c_p + h,  c_s, c_su, c_i, th ) - macro( c_pib, c_a, c_p - h,  c_s, c_su, c_i, th )
-dx4 = macro( c_pib, c_a, c_p,  c_s + h, c_su, c_i, th ) - macro( c_pib, c_a, c_p,  c_s - h, c_su, c_i, th )
-dx5 = macro( c_pib, c_a, c_p,  c_s, c_su + h, c_i, th ) - macro( c_pib, c_a, c_p,  c_s, c_su - h, c_i, th )
-dx6 = macro( c_pib, c_a, c_p,  c_s, c_su, c_i + h, th ) - macro( c_pib, c_a, c_p,  c_s, c_su, c_i - h, th )
-
-
-dx = cbind( dx1,
-            dx2,       
-            dx3,
-            dx4,
-            dx5,
-            dx6 ) / ( 2 * h )
-
-x_k_1 = x_k - inv( dx ) %*% fx_k
-
-x_k = x_k_1
-
-e = norm( fx_k )
-
-}
 #---------------------------------------------------------------------------------------------------
 th = 1.96
 #Calibración modelo---------------------------------------------------------------------------------

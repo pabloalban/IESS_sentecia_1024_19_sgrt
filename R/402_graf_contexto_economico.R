@@ -38,8 +38,9 @@ iess_inflacion  <- ggplot( data = aux, aes( x = periodo ) ) +
                   group = 1L,
                   color="aIPC" ), 
              size = graf_line_size ) +
-
-  scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
+  scale_x_date( breaks = seq(as.Date("2002-12-01"), as.Date("2022-12-01"), by="24 months"),
+                date_labels = '%b %Y',
+                limits = as.Date( c("2002-12-01", "2022-12-01" ), "%Y-%m-%d")  ) +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim,
                       sec.axis = sec_axis( ~.*(1/10) - 2,
                                            name = "Inflación Acumulada",
@@ -50,7 +51,9 @@ iess_inflacion  <- ggplot( data = aux, aes( x = periodo ) ) +
   theme_bw( ) +
   plt_theme +
   labs( x = 'Año', y = 'IPC') +
-  theme( legend.position = "bottom" ) 
+  theme( legend.position = "bottom" )  +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) )
+
 
 
 ggsave( plot = iess_inflacion,
@@ -89,7 +92,9 @@ iess_desempleo  <- ggplot( data = aux, aes( x = periodo ) ) +
                   group = 1L,
                   color="adesempleo_nacional" ), 
              size = graf_line_size ) +
-  scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
+  scale_x_date( breaks = seq(as.Date("2007-12-01"), as.Date("2022-12-01"), by="18 months"),
+                date_labels = '%b %Y',
+                limits = as.Date( c("2007-12-01", "2022-12-01" ), "%Y-%m-%d")  ) +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim,
                       sec.axis = sec_axis( ~./( scl*hmts ) - 8.181818,
                                            name = "Empleo Pleno",
@@ -100,7 +105,8 @@ iess_desempleo  <- ggplot( data = aux, aes( x = periodo ) ) +
   theme_bw( ) +
   plt_theme +
   labs( x = 'Año', y = 'Tasa Desempleo') +
-  theme( legend.position = "bottom" ) 
+  theme( legend.position = "bottom" ) +
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) )
 
 
 ggsave( plot = iess_desempleo,
@@ -165,7 +171,7 @@ iess_salarios <- ggplot( data = aux,
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
   theme_bw( ) +
   plt_theme +
-  theme( axis.text.x = element_text( angle = -90, hjust = 0.5, vjust=0.5 ) )
+  theme( axis.text.x = element_text( angle = 90, hjust = 0.5, vjust=0.5 ) )
 
 ggsave( plot = iess_salarios,
         filename = paste0( parametros$resultado_graficos, 'iess_salarios', parametros$graf_ext ),
@@ -260,14 +266,15 @@ iess_tasas_interes  <- ggplot( data = aux, aes( x = periodo ) ) +
                   group = 1L,
                   color="tasa_pasiva" ), 
              size = graf_line_size ) +
-  scale_x_date(date_breaks = '2 year', date_labels = '%Y') +
+  scale_x_date(date_breaks = '2 year', date_labels = "%B-%Y") +
   scale_y_continuous( breaks = y_brk, labels = y_lbl, limits = y_lim ) +
   scale_color_manual( values =  c( parametros$iess_blue, parametros$iess_green ), 
                       labels = c( 'Tasa activa referencial', 'Tasa pasiva referencial' ) ) +
   theme_bw( ) +
   plt_theme +
   labs( x = 'Año', y = '') +
-  theme( legend.position = "bottom" ) 
+  theme( legend.position = "bottom" )  +
+  theme( axis.text.x=element_text( angle = 90, hjust = 0 ) )
 
 
 ggsave( plot = iess_tasas_interes,
@@ -278,7 +285,7 @@ ggsave( plot = iess_tasas_interes,
 message( '\tGraficando evolución histórica de las inversiones del BIESS' )
 
 aux <- rendimiento_biess %>%
-  filter( fecha <= as.Date("01/12/2022", "%d/%m/%Y" ) ) %>%
+  #filter( fecha <= as.Date("01/12/2022", "%d/%m/%Y" ) ) %>%
   mutate( rendimiento = rendimiento * 100,
           instrumento = 'Fondos administrados BIESS') %>%
   dplyr::select( fecha,
@@ -294,12 +301,12 @@ df_line = aux %>% select(fecha, rendimiento)
 scl = 1000000  # escala de millones
 hmts = 30 #homotecia
 
-y_lim <- c( 0, 22000000000 )
+y_lim <- c( 0, 25000000000 )
 y_brk <- seq( y_lim[1], y_lim[2], 3000000000 )
 y_lbl <- formatC( y_brk/scl, digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' )
 
-y_lim_dual <- c( 0, 16 )
-ydual_brk <- seq( 0, 16, 2)
+y_lim_dual <- c( 0, 18 )
+ydual_brk <- seq( 0, 18, 2)
 ydual_lbl <- paste0(formatC( ydual_brk, 
                              digits = 0, 
                              format = 'f', 
@@ -320,7 +327,9 @@ biess_rendimiento <- ggplot( data = df_bar,
             inherit.aes = FALSE,
             size = graf_line_size ) +
   scale_linetype_manual( NULL, values = 1) +
-  scale_x_date( date_breaks = '1 year', date_labels = "%B-%Y" ) +
+  scale_x_date( breaks = seq(as.Date("2011-12-01"), as.Date("2022-12-01"), by="12 months"),
+                date_labels = '%b %Y',
+                limits = as.Date( c("2011-12-01", "2022-12-01" ), "%Y-%m-%d")  ) +
   scale_y_continuous( name = 'Fondos administrados BIESS (millones USD)',
                       labels = y_lbl, breaks = y_brk, limits = y_lim,
                       sec.axis = sec_axis( ~./( scl*hmts*45 ),

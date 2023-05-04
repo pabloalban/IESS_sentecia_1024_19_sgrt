@@ -2,27 +2,26 @@
 \chapter{Análisis del contexto económico}
 \label{chp_contexto}
 % %------------------------------------------------------------------------------
-El artículo 7 del CAPÍTULO II:“REQUISITOS TÉCNICOS PARA LA ELABORACIÓN, PRESENTACIÓN, APROBACIÓN Y REVISIÓN DE LOS ESTUDIOS ACTUARIALES DE LAS ENTIDADES DE SEGURIDAD SOCIAL” del TÍTULO IV del LIBRO II, NORMAS DE CONTROL PARA LAS ENTIDADES DEL SISTEMA DE SEGURIDAD SOCIAL, establece en su literal B, lo siguiente:
+El artículo 7 del CAPÍTULO II:``REQUISITOS TÉCNICOS PARA LA ELABORACIÓN, PRESENTACIÓN, APROBACIÓN Y REVISIÓN DE LOS ESTUDIOS ACTUARIALES DE LAS ENTIDADES DE SEGURIDAD SOCIAL'' del TÍTULO IV del LIBRO II, NORMAS DE CONTROL PARA LAS ENTIDADES DEL SISTEMA DE SEGURIDAD SOCIAL, establece en su literal B, lo siguiente:
 
-“iv. Evolución y tendencia económica de al menos los últimos cinco (5) años:
-• Inflación, tasa de interés financiero, incremento de salarios y pensiones, entre otros”.
+``\textit{iv. Evolución y tendencia económica de al menos los últimos cinco (5) años: inflación, tasa de interés financiero, incremento de salarios y pensiones, entre otros}''.
 
 En concordancia a la normativa antes señalada, en el presente capítulo se presenta un análisis del contexto económico del Ecuador, en el cual se abordarán: la evolución histórica desde la dolarización, predicciones en futuro de la condición económica del país, un breve análisis de la situación actual y prevista del mercado de inversiones en el Ecuador y un análisis de las tendencias demográficas de la población total del Ecuador y su población económicamente activa para dentro de 20 y 40 años.
 
 \section{Análisis de las tasas históricas relevantes para el estudio}
 % 
 % %----------------------------------------------------------------------------------
-En la presente sección se abordará la evolución histórica de la inflación, desempleo, salario básico unificado, salarios promedio de los afiliados al SGO, producto interno bruto del Ecuador y crecimiento de las pensiones del IESS.
+En la presente sección, se abordará la evolución histórica de la inflación, desempleo, salario básico unificado, salarios promedio de los afiliados al SGO, producto interno bruto del Ecuador y crecimiento de las pensiones del IESS.
 
-Se presenta un análisis desde que se declaró al dólar con moneda oficial del Ecuador debido, a que se evidencian dos situaciones claramente diferentes, la primera, en la época del Sucre, período marcado por alta inflación, pérdida de valor adquisitivo de los salarios y estancamiento del salario básico y altas tasas de intereses para compensar la inflación. 
+Además, se presenta un análisis desde que se declaró al dólar con moneda oficial del Ecuador debido, a que se evidencian dos situaciones claramente diferentes, la primera, en la época del Sucre, período marcado por alta inflación, pérdida de valor adquisitivo de los salarios y estancamiento del salario básico y altas tasas de intereses para compensar la inflación. 
 
-Por otro lado, tenemos otro escenario totalmente distinto con la implementación de la dolarización, en el cual se conserva una inflación baja (incluso durante 2018 y 2020 se presenta deflación), lo cual permite conservar el poder adquisitivo tanto de los sueldos como de las pensiones; y, además, permitió un crecimiento aritmético del salario básico unificado, ubicándolo en el segundo más alto en la región. 
+Por otro lado, tenemos otro escenario totalmente distinto con la implementación de la dolarización, en el cual se conserva una inflación baja (incluso durante 2018 y 2020 se presenta deflación), lo cual permite conservar el poder adquisitivo tanto de los sueldos como de las pensiones; y, además, permitió un crecimiento lineal del salario básico unificado, ubicándolo entre los más altos en la región. 
 
 Por las razones antes señaladas, esta Dirección considera que lo más apropiado es considerar, dentro del análisis de las hipótesis macroeconómicas, los datos e información desde la implementación de la dolarización; puesto que la principal suposición de las valuaciones actuariales es que el Ecuador continuará con el dólar como moneda oficial y que el primer escenario antes descrito con el Sucre o una posible moneda propia, es muy improbable.
 
 \subsection{Evolución histórica de la inflación en el Ecuador}
 
-Una de las hipótesis importantes a considerar en los modelos matemáticos – actuariales es la inflación, que mide el aumento generalizado y sostenido de los precios de bienes y servicios en un país, cuya medición consiste en el cálculo de los incrementos que presenta el Índice de Precios al Consumidor (IPC). Es por ello que se pone especial atención en dicho fenómeno económico en razón de que este afecta tanto las tasas de interés como al incremento salarial, que es la base del crecimiento de las reservas y del crecimiento salarial en el tiempo, referente tanto de aportes como de beneficios.
+Una de las hipótesis importantes a considerar en los modelos matemáticos – actuariales es la inflación, que mide el aumento generalizado y sostenido de los precios de bienes y servicios en un país, cuya medición consiste en el cálculo de los incrementos que presenta el Índice de Precios al Consumidor (IPC). Es por ello que se pone especial atención en dicho fenómeno económico en razón de que este afecta tanto a las tasas de interés como al incremento salarial, que es la base del crecimiento de las reservas y del crecimiento salarial en el tiempo, referente tanto de aportes como de beneficios.
 
 La información presentada se descargo de la pagina\footnote{\url{https://www.ecuadorencifras.gob.ec/indice-de-precios-al-consumidor/}} oficial del Instituto Nacional de Estadística y Censos (INEC). A continuación, se muestra la evolución histórica del índice de precios en la tabla \ref{tab:iess_inflacion} y la figura \ref{fig:iess_inflacion}.
 
@@ -85,9 +84,9 @@ Los años con mayor inflación interanual fueron 2000, 2001, 2002 y 2008 con val
 
 \subsection{Evolución histórica del desempleo}
 
-Según la información levantada por el INEC\footnote{\url{https://www.ecuadorencifras.gob.ec/estadisticas-laborales-febrero-2023-2/}}, mediante la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), el Ecuador es un país con bajo porcentaje de empleo pleno o adecuado \footnote{ Empleo adecuado/Pleno: Personas con empleo que, durante la semana de referencia, perciben ingresos laborales iguales o superiores al salario mínimo, trabajan igual o más de 40 horas a la semana, independientemente del deseo y disponibilidad de trabajar horas adicionales.}, con 36,04\% de la población económicamente activa en 2021, y que antes de la pandemia de la COVID-19, se registraba al 31 de diciembre de 2019 el 38,85\%. Históricamente el empleo pleno tiene un tendencia a la baja; puesto que a diciembre de 2007, se registró el 43,20\% de empleo pleno en la población económicamente activa del Ecuador. Por otro lado, las mujeres ecuatorianas son las que registran menor empleo pleno (28,81\%), que los hombres con el 41,12\% a diciembre de 2022.
+Según la información levantada por el INEC\footnote{\url{https://www.ecuadorencifras.gob.ec/estadisticas-laborales-febrero-2023-2/}}, mediante la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), el Ecuador es un país con bajo porcentaje de empleo pleno o adecuado \footnote{ Empleo adecuadoo pleno: Personas con empleo que, durante la semana de referencia, perciben ingresos laborales iguales o superiores al salario mínimo, trabajan igual o más de 40 horas a la semana, independientemente del deseo y disponibilidad de trabajar horas adicionales.}, con 36,04\% de la población económicamente activa en 2021, y que antes de la pandemia de la COVID-19, se registraba al 31 de diciembre de 2019 el 38,85\%. Históricamente el empleo pleno tiene un tendencia a la baja; puesto que a diciembre de 2007, se registró el 43,20\% de empleo pleno en la población económicamente activa del Ecuador. Por otro lado, las mujeres ecuatorianas son las que registran menor empleo pleno (28,81\%), que los hombres con el 41,12\% a diciembre de 2022.
 
-Po otro lado, la evolución histórica del subempleo \footnote{ Subempleados: Personas con empleo que, durante la semana de referencia, percibieron ingresos inferiores al salario mínimo y/o trabajaron menos de la jornada legal y tienen el deseo y disponibilidad de trabajar horas adicionales.} en el Ecuador se registró en 19,37\% a diciembre de 2022, con el 23,43\% en los hombres y 19,05\ en las mujeres. Cabe señalar que el subempleo aumentó del 17,79\% a diciembre de 2019 a 22,85\% a diciembre de 2020, debido a la pandemia. Y el año que se registró menor tasa de subempleo fue en diciembre de 2012, con el 9,01\%.
+Por otro lado, la evolución histórica del subempleo \footnote{Subempleados: Personas con empleo que, durante la semana de referencia, percibieron ingresos inferiores al salario mínimo y/o trabajaron menos de la jornada legal y tienen el deseo y disponibilidad de trabajar horas adicionales.} en el Ecuador se registró en 19,37\% a diciembre de 2022, con el 23,43\% en los hombres y 19,05\% en las mujeres. Cabe señalar que el subempleo aumentó del 17,79\% a diciembre de 2019 a 22,85\% a diciembre de 2020, debido a la pandemia. Y el año que se registró menor tasa de subempleo fue en diciembre de 2012, con 9,01\%.
 
 \begin{figure}[H]
 \centering
@@ -146,10 +145,9 @@ Elaborado: DAIE}
 }
 }
 
-
 \subsection{Evolución histórica del salario básico unificado}
 
-Otra de las hipótesis a considerarse en los modelos matemáticos – actuariales es el comportamiento del salario básico unificado (SBU), debido a que las pensiones máximas y mínimas están dependen de un porcentaje del SBU y del número de aportes. El Salario Básico Unificado en el Ecuador presenta un crecimiento lineal desde la dolarización en el 2000, año el cual el SBU era igual a USD 48,17.
+Otra de las hipótesis a considerarse en los modelos matemáticos – actuariales es el comportamiento del salario básico unificado (SBU), debido a que las pensiones máximas y mínimas dependen de un porcentaje del SBU y del número de aportaciones. El Salario Básico Unificado en el Ecuador presenta un crecimiento lineal desde la dolarización en el 2000, año el cual el SBU era igual a USD 48,17.
 
 {\setlength{\tabcolsep}{16pt}
 {\fontsize{11}{14}\selectfont
@@ -204,7 +202,7 @@ En términos monetarios, los años con mayores incrementos fueron el año 2003, 
 % % ------------------------------------------------------------------------------------------------
 \subsection{Evolución histórica de los salarios}
 
-Los ingresos por aportes que recibe el IESS es un porcentaje fijo de la materia gravada y está normado mediante la \legalcite{ResIESS_CD515}. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de los aportes. A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_salarios} y la figura \ref{fig:iess_salarios}, los cuales fueron extraídos de las bases de datos de la DNAC.
+Los ingresos por aportes que recibe el IESS es un porcentaje fijo de la materia gravada y está normado mediante la \legalcite{ResIESS_CD515}. Una de las variables claves de este estudio es la tasa de crecimiento de los salarios; pues de esta, se determina de cierta manera el ingreso futuro por concepto de los aportes. A continuación, se muestra la evolución histórica de los salarios en la tabla \ref{tab:iess_salarios} y la figura \ref{fig:iess_salarios}, los cuales fueron extraídos de las bases de datos de la Dirección Nacional de Afiliación y Cobertura (DNAC).
 
 \begin{figure}[H]
 \centering
@@ -260,14 +258,14 @@ A diciembre de 2022, los cotizantes del Seguro General Obligatorio registraron u
 % % % % --------------------------------------------------------------------------------------------
 \subsection{Evolución histórica de la tasa de crecimiento real del PIB del Ecuador}
 
-La información referente al Producto Interno Bruto del Ecuador se obtuvo de la página oficial del BCE\footnote{\url{https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/CuentasNacionales/Indices/c122032023.htm}}. En primer lugar, se debe indicar que el PIB a precios constantes se mide en términos de dólares constantes del año 2007, a diferencia del PIB a precios actuales, los cuales se presentan en la tabla \ref{tab:iess_sbu} y figura \ref{fig:iess_pib_real}.
+La información referente al Producto Interno Bruto del Ecuador se obtuvo de la página oficial del BCE\footnote{\url{https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/CuentasNacionales/Indices/c122032023.htm}}. En primer lugar, se debe indicar que el PIB a precios constantes se mide en términos de dólares constantes del año 2007, a diferencia del PIB a precios actuales, los cuales se presentan en la tabla \ref{tab:iess_pib_real} y figura \ref{fig:iess_pib_real}.
 
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{crrc}
   \caption{Evolución histórica del PIB del Ecuador}
-\label{tab:iess_sbu} \\
+\label{tab:iess_pib_real} \\
 \toprule
  \multicolumn{1}{c}{\multirow{2}[2]{*}{Año:}}  &
  \multicolumn{1}{c}{PIB a precios} &
@@ -312,7 +310,7 @@ Elaborado: DAIE}
   Elaborado: DAIE}
 \end{figure}
 
-Desde la recesión atribuida a la caída del precio del petróleo en diciembre de 2014, la cual afectó directamente en la inversión pública y austeridad por parte del Estado, lo cual condujo a una contracción del PIB igual a 1,23\% en 2016, la tasa de crecimiento promedio del PIB en términos constantes es igual 1,67\% (período 2015 a 2022).
+Desde la recesión atribuida a la caída del precio del petróleo en diciembre de 2014, la cual afectó directamente en la inversión pública y austeridad por parte del Estado, se observó una contracción del PIB igual a 1,23\% en 2016 y bajas tasas de crecimiento. En promedio, la tasa de crecimiento del PIB en términos constantes es igual 1,67\% (período 2015 a 2022).
 
 Por último, la crisis económica provocada por la pandemia de la COVID - 19 condujo a la saturación del sistema de salud público y varios confinamientos, lo cual conllevó a la reducción del PIB en 7,75\% en 2020; y, en recuperación de la pandemia de la COVID – 19, se creció en 4,24\% en 2021 y 2,95\% en 2022.
 
@@ -328,7 +326,7 @@ A partir del año 2016, con la expedición de la \legalcite{Leyjlab}; la cual en
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{11}{13}\selectfont
-\begin{longtable}[H]{lrrrrrrr}
+\begin{longtable}[H]{lrrrrrrrr}
   \caption{Crecimiento de las pensiones en el IESS}
 \label{tab:iess_incre_pensiones} \\
 \toprule
@@ -339,9 +337,11 @@ A partir del año 2016, con la expedición de la \legalcite{Leyjlab}; la cual en
 \multicolumn{1}{c}{2018} &
 \multicolumn{1}{c}{2019} &
 \multicolumn{1}{c}{2020} &
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} &
+\multicolumn{1}{c}{2022} \\
 
 \multicolumn{1}{c}{rangos del SBU} &
+\multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
@@ -360,9 +360,11 @@ A partir del año 2016, con la expedición de la \legalcite{Leyjlab}; la cual en
 \multicolumn{1}{c}{2018} &
 \multicolumn{1}{c}{2019} &
 \multicolumn{1}{c}{2020} &
-\multicolumn{1}{c}{2021} \\
+\multicolumn{1}{c}{2021} &
+\multicolumn{1}{c}{2022} \\
 
 \multicolumn{1}{c}{rangos del SBU} &
+\multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
 \multicolumn{1}{c}{(\%)} &
@@ -373,7 +375,7 @@ A partir del año 2016, con la expedición de la \legalcite{Leyjlab}; la cual en
 	\midrule
 \endhead
 
-\bottomrule \multicolumn{8}{c}{continúa...} \\
+\bottomrule \multicolumn{9}{c}{continúa...} \\
 \endfoot
 %\hline
 \caption*{ %\scriptsize Fuente: Sentecia XXX \\
@@ -563,8 +565,8 @@ Elaborado: DAIE}
 
 El modelo macroeconómico emplea una serie temporal multivariante, esto lo hemos realizado con la finalidad de incluir la interacción entre diferentes variables económicas a través del tiempo y así superar las falencias de otros modelos macroeconómicos que obvian la dinámica y estrecha correlación de diferentes variables económicas.
 
-En la actualidad y cada vez más encontramos excelente literatura al respecto de modelos
-de series temporales multivariantes; en particular hemos fundamentado nuestra aproximación basados en la teoría y metodología propuesta en \textcite{madsen2007time} y \textcite{tsay2013multivariate}, Hemos seleccionado el modelo MARIMA por sus cualidades estadísticas y amplia aceptación, para más detalle el modelo está expuesto en el capítulo 9 de \textcite{madsen2007time}, el mismo depende de tres parámetros: $p$ para especificar el orden de auto regresión, $d$ el orden de diferenciación y $q$ para el orden de medias móviles.
+En la actualidad, se encuentra excelente literatura al respecto de modelos
+de series temporales multivariantes; en particular hemos fundamentado nuestra aproximación basados en la teoría y metodología propuesta en \textcite{madsen2007time} y \textcite{tsay2013multivariate}. Se ha seleccionado el modelo MARIMA por sus cualidades estadísticas y amplia aceptación; para más detalle, el modelo está expuesto en el capítulo 9 del libro de \textcite{madsen2007time}, el mismo depende de tres parámetros: $p$ para especificar el orden de auto regresión, $d$ el orden de diferenciación y $q$ para el orden de medias móviles.
 
 
 \begin{definition}[Proceso MARIMA]
@@ -614,7 +616,7 @@ El proceso vectorial ($Y_t$) de dimensión $n$, $Y_t \in  \mathbb{R}^n$, se lo d
 La multicolinealidad (también colinealidad) es un fenómeno en el que una variable predictora en un modelo de regresión múltiple puede predecirse linealmente a partir de las demás con un grado sustancial de precisión. En esta situación, las estimaciones de los coeficientes de la regresión múltiple pueden cambiar erráticamente en respuesta a pequeños cambios en el modelo o los datos. La multicolinealidad no reduce el poder predictivo o la confiabilidad del modelo como un todo, al menos dentro del conjunto de datos de muestra; solo afecta los cálculos relacionados con los predictores individuales. Es decir, un modelo de regresión multivariable con predictores colineales puede indicar qué tan bien predice el paquete completo de predictores la variable de resultado, pero es posible que no proporcione resultados válidos sobre ningún predictor individual o sobre qué predictores son redundantes con respecto a otros.
 
 
-Utilizando la función pcor del paquete PPCOR del software estadístico R, se comprueba la existencia de una fuerte correlación entre variables explicativas (todas las variables una vez diferenciadas con registros hasta el año 2020) del modelo utilizando la matriz de covarianzas de Pearson y los p valores para contrarrestar la existencia de una baja correlación, como hipótesis nula.
+Utilizando la función pcor del paquete PPCOR del software estadístico R, se comprueba la existencia de una fuerte correlación entre los valores históricos de las variables explicativas del modelo utilizando la matriz de covarianzas de Pearson y los p valores para contrarrestar la existencia de una baja correlación, como hipótesis nula.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{12}\selectfont
@@ -652,8 +654,6 @@ Utilizando la función pcor del paquete PPCOR del software estadístico R, se co
 \end{longtable}
 }
 }
-
-
 
 
 {\setlength{\tabcolsep}{5pt}
@@ -694,7 +694,7 @@ Utilizando la función pcor del paquete PPCOR del software estadístico R, se co
 }
 
 
-De los resultados obtenidos se obtuvieron correlaciones entre 0,56 y -0,30, con p valores mayores a 0,096. Por lo tanto, no existe evidencias de multicolinealidad entre las variables del modelo propuesto.
+De los resultados obtenidos se obtuvieron correlaciones entre 0,55 y -0,30, con p valores mayores a 0,096. Por lo tanto, no existe evidencias de multicolinealidad entre las variables del modelo propuesto.
 
 
 
@@ -704,9 +704,10 @@ El Test de Shapiro–Wilk se usa para contrastar la normalidad de un conjunto de
 
 Las hipótesis estadísticas son las siguientes:
 
+\begin{center}
 $H_0$ : $\mbox{La variable presenta una distribución normal.}$\\
 $H_1$ : $\mbox{La variable presenta una distribución nonormal.}$
-
+\end{center}
 
 Al realizar la prueba de normalidad a los residuos del modelo presentado en la sección anterior, se obtiene que todas las series de residuos tienen un p – valor mayor al nivel de significancia de 5\% como se muestra en la tabla \ref{tab:iess_shapiro_test}. Por lo tanto, no se rechaza la hipótesis nula.
 
@@ -741,13 +742,15 @@ Al realizar la prueba de normalidad a los residuos del modelo presentado en la s
 
 \subsubsection{Pruebas de independecia de errores}
 
-La prueba de Box - Ljung (a veces llamada Box-Pierce modificada, o simplemente prueba de caja) es una forma de probar la ausencia de autocorrelación serial, hasta un retraso $k$ especificado. La prueba determina si los errores son o no independientes idénticamente distribuidos (es decir, ruido blanco) o si hay algo más detrás de ellos; si las autocorrelaciones para los errores o residuos son distintas de cero o no.
+La prueba de Box - Ljung (a veces llamada Box-Pierce modificada, o simplemente prueba de caja) es una forma de probar la ausencia de autocorrelación serial, hasta un retraso $k$ especificado. La prueba determina si los errores son o no independientes idénticamente distribuidos (es decir, ruido blanco) o si hay algo más detrás de ellos; si las autocorrelaciones para los errores o residuos son distintas de cero o no (es decir, las correlaciones en la población de la que se toma la muestra son cero (0), por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).
 Esencialmente, es una prueba de falta de ajuste: si las autocorrelaciones de los residuos son muy pequeñas, decimos que el modelo no muestra una "falta de ajuste significativa".
 
 Las hipótesis estadísticas son las siguientes:
 
-$H_0$: Los residuos del modelo se distribuyen de forma independiente (es decir, las correlaciones en la población de la que se toma la muestra son 0, por lo que cualquier correlación observada en los datos resulta de la aleatoriedad del proceso de muestreo).\\
+\begin{center}
+$H_0$: Los residuos del modelo se distribuyen de forma independiente.\\
 $H_1$: Los datos no se distribuyen de forma independiente; exhiben correlación serial.
+\end{center}
 
 Un valor p significativo en esta prueba rechaza la hipótesis nula de que la serie temporal no está autocorrelacionada.
 
@@ -805,7 +808,7 @@ Al utilizar el comando mq del paquete MTS del software estadístico R, se estima
 
 Una de las principales suposiciones del modelo de series de tiempo VARMA es la heterocedasticidad de los errores; es decir, los errores deben seguir una distribución con una varianza constante a través del tiempo. Para desarrollar esta prueba, se utiliza la función MarchTest del paquete MTS del software estadístico R, el cual realiza las pruebas para comprobar la heterocedasticidad condicional en una serie temporal vectorial.
 
-Se utilizan varias pruebas. Primero, la serie vectorial $z_t$ se transforma en $r_t = t(z_t)$ y se realiza la prueba. La segunda prueba se basa en los rangos de la serie $r_t$ transformada. La tercera prueba es la estadística multivariante Ljung-Box para la serie de vectores al cuadrado $z_t^2$. La cuarta prueba es el estadístico Ljung-Box multivariante aplicado a la serie recortada al 5\% de la serie transformada $r_t$. La hipótesis nula es idéntica para todas estas pruebas, la varianza de los residuos del modelo es constante.
+Se utilizan cuatro pruebas de homocedasticidad; en primer lugar, se utilizó la prueba de los Multiplicadores de Lagrange (Test LM) para la homocedasticidad en un proceso estacionario. La segunda prueba se basa en los rangos de la serie $r_t$ transformada. La tercera prueba es la estadística multivariante Ljung-Box para la serie de vectores al cuadrado $z_t^2$. La cuarta prueba es el estadístico Ljung-Box multivariante aplicado a la serie recortada al 5\% de la serie transformada $r_t$. La hipótesis nula es idéntica para todas estas pruebas, la varianza de los residuos del modelo es constante.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{11}{12}\selectfont
@@ -1045,11 +1048,12 @@ Spread se la obtuvo de la diferencia entre la tasa activa y la tasa pasiva.
 \end{longtable}
 }
 
-Se observa que la tasa activa sufrió un descenso a principios de la década pasada, decreció del 2000 
-hasta el 2004, en 6,5\%, y  desde el  año 2005 hasta el año 2016 decreció en 0,3\% del 9\% al 8,7\%, 
-respectivamente. De igual manera, la tasa pasiva decreció  entre el año 2000 y 2004 del 7,7\% al 4,1\%, 
-respectivamente, pero solo registró un crecimiento del 1,7\% desde el año 2004 al 2016, aunque, se 
-registró su máximo en 2008 (5,5\%).
+La tasa activa sufrió un descenso a principios de la década pasada, decreció del 2000 hasta el 2004, en 6,5\%, y desde el año 2005 hasta el año 2016 decreció en 0,3\% del 9\% al 8,7\%, respectivamente. Más recientemente, la tasa activa alcanzó 9,12\% en julio de 2020; pero empezó a decrecer a 6,74\% en mayo de 2022; es decir una reducción de 2,38\% en 22 meses. Debido al proceso inflacionario del 2022, la tasa activa empezó a subir hasta 8,48\% a diciembre de 2022, lo cual representó un incremento igual a 1,74\% en siete (7) meses. La menor tasa activa registrada fue en mayo de 2018 (6,67\%) y la máxima registrada fue en agosto de 2000 (16,74\%).
+
+De igual manera, la tasa pasiva decreció entre el año 2000 y 2004 del 7,7\% al 4,1\%, respectivamente, pero solo registró un crecimiento del 1,7\% desde el año 2004 al 2016, aunque, se registró su máximo en 2008 (5,5\%). Desde octubre de 2017, la tasa pasiva referencial creció de 4,8\% a 7,24\% en abril de 2020, para luego decrecer a 5,51\% en junio de 2021. Gracias al proceso inflacionario de 2022, la tasa pasiva referencial creció a 6,35\% a diciembre 2022. La menor tasa pasiva registrada fue en enero de 2005 (3,48\%) y la máxima registrada fue en abril de 2000 (8,79 \%).
+
+En cuanto a la tasa spread, se registró la menor en junio de 2022, con 1,01\% y su máxima diferencia entre tasa activa y pasiva fue en febrero de 2002, con 11,05\%. Y, en promedio, la tasa spread es 2,64\% durante el período 2015 a 2022.
+
 
 %--------------------------------------------------------------------------------------------------
 \subsection{Rentabilidad sobre activos y sobre capital invertido en el ámbito nacional}
@@ -1067,7 +1071,7 @@ una mejor condición de la empresa; en cambio, el ROE mide la rentabilidad del p
 de esta ratio representan una mejor condición.
 
 Los índices ROA y ROE, para bancos privados, mutualistas, sociedades financieras e instituciones
-públicas, se obtuvieron de la página de la Superintendencia de Bancos (SB). Los índices fueron
+públicas, se obtuvieron de la página\footnote{\url{https://www.superbancos.gob.ec/estadisticas/portalestudios/boletines-financieros-mensuales/}} de la Superintendencia de Bancos (SB). Los índices fueron
 publicados en los boletines mensuales que la SB publica en su página, especialmente, se utilizan los
 estados de pérdidas y ganancias a diciembre para obtener los rendimientos del período, y las cuentas
 de los activos y patrimonios.
@@ -1168,6 +1172,13 @@ de los activos y patrimonios.
 \end{longtable}
 }
 
+Utilizando el indicador ROA, calculado por la SB, la CFN registró el ROA más por ejercicio del año 2022 (5\%), debido a que la CFN registró USD 156.403.350,00 de ganancias del ejercicio del 2022, muy diferente a que durante 2020 y 2021 registro altas perdidas e índices ROA -3,54\% en 2020 y -7,03\% en 2021. En segundo lugar, se encuentra el Banco del Estado con un índice ROA igual a 2,74\% para el 2022. En cambio, BanEcuador registró un ROA igual a -5,60\% en el 2022, debido a sus pérdidas de USD 110.051.500 en el 2022.
+
+Por otro lado, al utilizar el índice financiero ROE, la CFN alcanzó 13,92\% en el 2022, seguido de los Bancos Privados, con 12,21\%; en cambio, BanEcuador obtuvo el peor resultado durante el 2022, con un ROE igual a -23,01\%. En promedio, las Instituciones Públicas tienen un índice financiero ROE igual a 4,41\% durante el 2022.
+
+En la siguiente sección, se presenta un análisis de los rendimientos financieros del BIESS durante enero de 2012 a diciembre de 2022.
+
+
 %---------------------------------------------------------------------------------------------------
 \subsection{Comportamiento de las tasas de rendimiento del portafolio de inversiones del BIESS}
 El BIESS se crea mediante la Ley del Banco del Instituto Ecuatoriano de Seguridad Social, publicada
@@ -1198,13 +1209,15 @@ administrado sea menor y genere resultados superiores con respecto a los años s
 Bonos del Estado del 40\% de aporte del Estado, estos fueron transferidos al BIESS en los años 2015 y 2016,
 incrementando el fondo administrado y generando una reducción de los rendimientos para esos años.
 
-\item A fin de cumplir con la programación de desinversión del fondo IVM solicitada por el IESS, en
-los años 2016 y 2017, se vendieron cupones de interés, anticipando los ingresos en ese año y
-reduciendo los ingresos para los años subsiguientes.
+\item Desde abril de 2015 a diciembre de 2018, el Estado no canceló su aporte por el 40\% de las pensiones y otras obligaciones con el IESS, debido a la expedición de la “Ley Orgánica para la Justicia Laboral y Reconocimiento del Trabajo en el Hogar”. La falta de estos ingresos tuvo un impacto negativo en el crecimiento de las reservas (portafolio de inversiones) del Seguro de IVM, que a fin de cumplir con la programación de desinversión del fondo IVM solicitada por el IESS, en los años 2016 y 2017, se vendieron cupones de interés, anticipando los ingresos en ese año y reduciendo los ingresos para el año 2018 (tasa de rendimiento del Seguro de IVM en 2018 fue 4,87\%).
 
-\item Para octubre del año 2018, de acuerdo con la disposición normativa del organismo de control, se
-registraron gastos por provisiones del Fideicomiso Toachi Pilaton por USD 145 millones aproximadamente,
-lo que ocasionó una caída en el rendimiento; pero para el año 2019 la deuda pendiente fue cancelada.
+\item Para octubre del año 2018, de acuerdo con la disposición normativa del organismo de control, se registraron gastos por provisiones del Fideicomiso Toachi Pilatón por USD 145 millones aproximadamente, lo que ocasionó una caída en el rendimiento; pero para el año 2019 BIESS recupero el valor provisionado, lo cual incentivó a los rendimientos netos del Seguro de Cesantía General y Adicional, y del Portafolio Global del BIESS.
+
+\item La Corte Constitucional declaró la inconstitucionalidad del artículo 68.1, en el segundo y tercer inciso de la “Ley Orgánica para la Justicia Laboral y Reconocimiento del Trabajo en el Hogar”, mediante Sentencia No. 002-18-SIN-CC y su Auto Aclaración, la cual dictamina su aplicación desde el año 2019. Gracias a el aporte del Estado, las reservas de los fondos administrados por el BIESS han crecido desde 2019, evitando las desinversiones.
+
+\item Para octubre de 2020, se completó la separación de los portafolios de inversiones del Seguro de Cesantía General y Adicional; y el Seguro de Desempleo.
+
+\item En enero de 2022, el Consejo Directivo del BIESS aprobó el manual de crédito, modificando el tarifario de los créditos quirografarios, en el cual redujo de 14\% a 11\% para todo crédito con plazo mayor o igual a 13 meses, a pesar que la Subgerencia de Riesgos del BIESS en su informe BIESS-INF-SRIE-211-2021, de fecha 23 de diciembre de 2021, denominado: “INFORME FIJACIÓN TASAS DE INTERÉS PARA EL PRODUCTO QUIROGRAFARIO EN EL MES DE ENERO 2022”, establece en su cuadro 4, una reducción de ingresos de USD 69.014.033 por la reducción de cada punto (-1\%) en la tasa nominal de los créditos quirografarios.
 
 \end{enumerate}
 
@@ -1294,9 +1307,6 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
-
-La tasa de rendimiento neto del portafolio de inversiones del BIESS registra una clara tendencia a la baja, producida por diferentes factores, explicados anteriormente; en el año 2012, se registró una tasa del rendimiento neto de las inversiones igual a 9,08\%, como tasa máxima de rendimiento. A partir del año 2013, se inicia el descenso en las tasas llegando a obtener 5,63\% en el año 2018. El promedio de la tasa de rendimiento neta en el período 2011 a 2018 fue 7,54\% con una desviación estándar igual a 1,04\%.
-
 
 %---------------------------------------------------------------------------------------------------
 \section{Análisis de tendencias demográficas actuales y proyectadas}
