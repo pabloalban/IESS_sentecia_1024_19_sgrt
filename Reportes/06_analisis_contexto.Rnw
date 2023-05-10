@@ -755,7 +755,7 @@ $H_1$: Los datos no se distribuyen de forma independiente; exhiben correlación 
 Un valor p significativo en esta prueba rechaza la hipótesis nula de que la serie temporal no está autocorrelacionada.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{10}{12}\selectfont
+{\fontsize{11}{14}\selectfont
 \begin{longtable}[H]{crcr}
   \caption{Prueba de independencia de errores de Box - Ljung}
 \label{tab:iess_ma_multi_p_valores} \\
@@ -846,7 +846,7 @@ La tabla \ref{tab:iess_tasas_macro_pred} presenta los resultados del modelo mult
 
  
 {\setlength{\tabcolsep}{7pt}
-{\fontsize{11}{13}\selectfont
+{\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crccrrc}
   \caption{Proyecciones de las variables macroeconómicas}
 \label{tab:iess_tasas_macro_pred} \\
@@ -913,7 +913,6 @@ La tabla \ref{tab:iess_tasas_macro_pred} presenta los resultados del modelo mult
 
 Las siguientes figuras describen las proyecciones realizadas utilizando el modelo antes mencionado:
 
-
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \begin{center}
@@ -924,7 +923,8 @@ Las siguientes figuras describen las proyecciones realizadas utilizando el model
 \end{center}
 \end{figure}
 
-
+\newpage
+\vspace*{\fill}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -936,6 +936,7 @@ Las siguientes figuras describen las proyecciones realizadas utilizando el model
 \end{center}
 \end{figure}
 
+\vspace*{\fill}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -947,6 +948,11 @@ Las siguientes figuras describen las proyecciones realizadas utilizando el model
 \end{center}
 \end{figure}
 
+\vspace*{\fill}
+
+\newpage 
+
+\vspace*{\fill}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -958,6 +964,7 @@ Las siguientes figuras describen las proyecciones realizadas utilizando el model
 \end{center}
 \end{figure}
 
+\vspace*{\fill}
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -969,6 +976,9 @@ Las siguientes figuras describen las proyecciones realizadas utilizando el model
 \end{center}
 \end{figure}
 
+\vspace*{\fill}
+
+\newpage
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -1221,19 +1231,7 @@ incrementando el fondo administrado y generando una reducción de los rendimient
 
 \end{enumerate}
 
-En la figura \ref{fig:iess_portaf_hist} y en la tabla \ref{tab:iess_rendimiento_biess}, se estima el rendimiento de las inversiones del BIESS con sus intervalos de confianza para el período 2019 al 2058. El promedio de las predicciones del rendimiento neto de las inversiones del BIESS es 6,57\% para el período 2019 a 2058.
-
-
-
-\begin{figure}[H]
-\centering
-\caption{Evolución del rendimiento neto del portafolio global de inversiones del BIESS}
-\label{fig:iess_portaf_hist}
- \includegraphics[scale=1.2]{graficos/biess_rendimiento.png}
- \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Dirección de Tesorería - BIESS \\
-Elaborado: DAIE}
-\end{figure}
-
+En la figura \ref{fig:iess_portaf_hist}, se presentan la evolución histórica de los fondos administrados por el BIESS y su tasa de rendimiento neto del portafolio global de inversiones; y, en la tabla \ref{tab:iess_rendimiento_biess}, se presenta la tasa de rendimiento neto del portafolio global del BIESS, la cual es el cociente entre los ingresos por inversiones, menos los gastos operativos y administrativos, sobre el fondo administrado promedio de los últimos doce (12) meses.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{8.5}{13}\selectfont
@@ -1307,6 +1305,16 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+
+\begin{figure}[H]
+\centering
+\caption{Evolución del rendimiento neto del portafolio global de inversiones del BIESS}
+\label{fig:iess_portaf_hist}
+ \includegraphics[scale=1.2]{graficos/biess_rendimiento.png}
+ \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión - BIESS y Dirección de Tesorería - BIESS \\
+Elaborado: DAIE}
+\end{figure}
 
 %---------------------------------------------------------------------------------------------------
 \section{Análisis de tendencias demográficas actuales y proyectadas}
