@@ -163,8 +163,10 @@ aux <- detalle_bonos %>%
               NA,
               NA,
               as.character( colSums( .[,5:6],  na.rm =TRUE ) ),
-              '846.45' ) ) %>%
+              '846.45',
+              NA ) ) %>%
   mutate_at( c( 4:7 ), as.numeric ) %>%
+  arrange( fecha_de_compra ) %>%
   mutate( fecha_de_compra = as.character( fecha_de_compra ),
           fecha_de_vencimiento = as.character( fecha_de_vencimiento ) )
   
@@ -180,6 +182,43 @@ print( aux_xtab,
        hline.after = c( nrow( aux ) - 1,
                         nrow( aux ) ),
        sanitize.text.function = identity )
+
+# Tabla colocación de bonos de IVM------------------------------------------------------------------
+aux <- detalle_bonos %>%
+  filter(tipo_de_papel  == 'Bonos') %>%
+  dplyr::select(-tipo_de_papel) %>%
+  mutate(anio = year(fecha_de_compra)) %>%
+  mutate( plazo = as.integer(difftime( fecha_de_vencimiento, fecha_de_compra,  units = "days")) ) %>%
+  group_by(anio) %>%
+  mutate(colocacion = sum(valor_nominal_de_compra, na.rm = TRUE)) %>%
+  mutate(tasa =  sum(valor_nominal_de_compra * tasa_cupon, na.rm = TRUE) /
+         colocacion) %>%
+  mutate( plazo =  sum(valor_nominal_de_compra * plazo, na.rm = TRUE) /
+            colocacion) %>%
+  ungroup() %>%
+  distinct(., anio, .keep_all = TRUE) %>%
+  dplyr::select( anio, colocacion, tasa, plazo ) %>%
+  arrange( anio ) %>%
+  rbind( ., c("Total",
+              as.character( colSums( .[,2],  na.rm =TRUE ) ),
+              as.character( sum(.$colocacion * .$tasa, na.rm = TRUE) / sum(.$colocacion, na.rm = TRUE ) ),
+              as.character( sum(.$colocacion * .$plazo, na.rm = TRUE) / sum(.$colocacion, na.rm = TRUE ) ) ) ) %>%
+  mutate_at( c( 2:4 ), as.numeric ) 
+
+
+aux_xtab <- xtable( aux, digits = c( 0, 0, rep(2, 3) ) )
+
+print( aux_xtab, 
+       file = paste0( parametros$resultado_tablas, 'iess_bonos_colocacion_inv', '.tex' ),
+       type = 'latex',
+       include.colnames = FALSE, 
+       include.rownames = FALSE,
+       format.args = list( decimal.mark = ',', big.mark = '.' ),
+       only.contents = TRUE,
+       hline.after = c( nrow( aux ) - 1,
+                        nrow( aux ) ),
+       sanitize.text.function = identity )
+
 
 # Tabla recuperación de Bonos del Estado Ecuatoriano al corte---------------------------------------
 aux <- recuperacion_bonos %>%
@@ -268,7 +307,10 @@ aux <- detalle_bonos %>%
               NA,
               as.character( colSums( .[,5:6],  na.rm =TRUE ) ),
               '140.30' ) ) %>%
-  mutate_at( c( 4:7 ), as.numeric )
+  mutate_at( c( 4:7 ), as.numeric )  %>%
+  arrange( fecha_de_compra ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) )
 
 aux_xtab <- xtable( aux, digits = c( 0, rep(0, 3), rep(2, 4), 0 ) )
 
@@ -346,6 +388,7 @@ aux <- detalle_obligaciones %>%
               '1048.96',
               NA ) ) %>%
   mutate_at( c( 4:7 ), as.numeric ) %>%
+  arrange( fecha_de_compra ) %>%
   mutate( fecha_de_compra = as.character( fecha_de_compra ),
           fecha_de_vencimiento = as.character( fecha_de_vencimiento ) )
 
@@ -386,6 +429,9 @@ print( aux_xtab,
 
 #Tabla detalle de las inversiones en Titularizaciones-----------------------------------------------
 aux <- detalle_titularizaciones %>%
+  arrange( fecha_de_compra ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) ) %>%
   rbind( ., c("Total",
               NA,
               NA,
@@ -409,7 +455,7 @@ print( aux_xtab,
        sanitize.text.function = identity )
 
 
-# Tabla evolución Inversiones en Papel Comercial----------------------------------------------------
+# Tabla evolución inversiones en Papel Comercial----------------------------------------------------
 aux <- inv_instrumento %>%
   filter( instrumento == 'Papel Comercial') %>%
   na.omit( ) %>%
@@ -434,6 +480,9 @@ print( aux_xtab,
 
 #Tabla detalle de las inversiones en Papel Comercial------------------------------------------------
 aux <- detalle_papel_comercial %>%
+  arrange( fecha_de_compra ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) ) %>%
   rbind( ., c("Total",
               NA,
               NA,
@@ -459,6 +508,9 @@ print( aux_xtab,
 
 #Tabla detalle de las inversiones en Certificados de depósito---------------------------------------
 aux <- detalle_certificado_deposito %>%
+  arrange( fecha_de_compra ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) ) %>%
   rbind( ., c("Total",
               NA,
               NA,
@@ -481,7 +533,7 @@ print( aux_xtab,
                         nrow( aux ) ),
        sanitize.text.function = identity )
 
-# Tabla evolución Inversiones en Certificados de Inversión------------------------------------------
+# Tabla evolución inversiones en Certificados de Inversión------------------------------------------
 aux <- inv_instrumento %>%
   filter(instrumento=='Certificados de Inversión') %>%
   na.omit() %>%
@@ -507,6 +559,9 @@ print( aux_xtab,
 
 #Tabla detalle de las inversiones en certificados de inversión--------------------------------------
 aux <- detalle_certificado_inversiones %>%
+  arrange( fecha_de_compra ) %>%
+  mutate( fecha_de_compra = as.character( fecha_de_compra ),
+          fecha_de_vencimiento = as.character( fecha_de_vencimiento ) ) %>%
   rbind( ., c("Total",
               NA,
               NA,

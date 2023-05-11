@@ -1199,8 +1199,7 @@ Para el año 2022, los egresos del Fondo se conformaron de la siguiente manera, 
 
 \subsection{Análisis horizontal y vertical de los componentes del gasto}
 
-En las tablas \ref{tab:iess_analisis_horizontal_gastos_rtr} y \ref{tab:iess_analisis_vertical_gastos_rtr}, se presentan los análisis horizontal y vertical del gasto del Fondo del \Sexpr{REP_seg} para el periodo comprendido entre el 2012 y 2020.
-
+En las tablas \ref{tab:iess_analisis_horizontal_gastos_rtr} y \ref{tab:iess_analisis_vertical_gastos_rtr}, se presentan los análisis horizontal y vertical del gasto del Fondo del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{1.5pt}
 {\fontsize{8.5}{12}\selectfont
@@ -1266,6 +1265,9 @@ Elaborado: DAIE}
 }
 }
 
+El crecimiento de los Gastos del Fondo del \Sexpr{REP_seg} respecto a los Gastos en el año 2010 el crecimiento anual en el 2011 fue de 16,42\%; para el 2012 el crecimiento es de 22,73\% respecto al 2011; el crecimiento en el 2013 fue de 7,51\%, en tanto que para el 2014, el crecimiento anual alcanzó el 13,20\%; para el 2015 con respecto al 2014 alcanzó un 14,36\%. Desde el 2016 al 2020 los egresos del Seguro decrecieron, comenzando en el 2016 con -3,45\%, para el año 2017 con un -6,79\%; para el año 2018 con un decrecimiento de -3,99\% con respecto al 2017, -1,99\% en el 2019 y -5,89\% en 2020: Nuevamente, en el año 2021 vuelven a crecer los gastos desde el 2015, con 6,72\%. Finalmente, en el año 2022, los egresos crecieron en 6,98\%. En el año 2012 que presenta el crecimiento más alto, y en el año 2017 punto más bajo en el periodo.
+
+Durante los últimos diez (10) años, las pensiones por Riesgos del Trabajo crecieron anualmente 4,72\% en promedio y las pensiones de montepío crecieron 3,97\% en promedio en el mismo periodo; por otro lado, los montos entregados por subsidios crecieron 5,08\% en promedio. Los gastos de administración del Fondo alcanzaron los USD 348.166,42 y su crecimiento promedio, entre 2014 a 2022, es igual a 33,62\% anual, siendo el año de mayor registro de gastos administrativos el año 2019 con USD 1.246.183,42, lo que representó un crecimiento del 338,24\% respecto al año anterior.
 
 
 {\setlength{\tabcolsep}{2pt}
@@ -1336,50 +1338,18 @@ Elaborado: DAIE}
 }
 }
 
-El crecimiento de los Gastos del Fondo del \Sexpr{REP_seg} es variable en el periodo 2010 – 2020. Respecto a los Gastos en el año 2010 el crecimiento anual en el 2011 fue de 16,42\%; para el 2012 el crecimiento es de 22,73\% respecto al 2011; el crecimiento en el 2013 fue de 7,51\%, en tanto que para el 2014, el crecimiento anual alcanzó el 13,20\%; para el 2015 con respecto al 2014 alcanzó un 14,36\%; para el 2016 presenta un decrecimiento de -3,45\%, para el año 2017  un -6,79\%; para el año 2018 con un decrecimiento de -3,99\% con respecto al 2017, -1,99\% en el 2019 y -5,89\% en 2020; siendo el año 2012 que presenta el crecimiento más alto, y en el año 2017 punto más bajo en el periodo.
-
-
-La cuenta Pensiones por Riesgo de Trabajo representan el mayor valor con un 50,79\% como promedio anual en referencia a la representación de los gastos totales del Fondo para el periodo 2012-2020; siendo este para el año 2012 alcanza el 44,84\%, en el 2013 alcanza el 52,07\%, en el 2014 alcanza el 53,33\%, en el año 2015 alcanza el 54,88\%; el 2016 alcanza el 53,04\%, en el 2017 alcanza el 52,44\%, en el año 2018 alcanza el 52,73\%, en el año 2019 50,80\% y 52,58\% en el año 2020, siendo la cuenta que ocupa la mayor parte de los gastos totales del Fondo del \Sexpr{REP_seg}.
-
-Para el periodo 2013 - 2020, el concepto de incremento ley 2004-39 y servicios
-prestacionales u provinciales aparecen sumado al rubro de pensiones.
-
-El crecimiento de los egresos sigue una tendencia positiva desde el 2010 hasta el 2015 con un promedio anual del 6,36\%, entre 2011 y 2020. El aumento sostenido de estos rubros obedece a su incremento anual atado a la inflación, a la incorporación de nuevos pensionistas y a la variación del alza de sueldos que es la base de cálculo para las nuevas pensiones.
-
-Las pensiones de riesgos del trabajo representan aproximadamente el 61,32\% del total de egresos por pago de prestaciones.  Entre el 2010 – 2020 el egreso por pago de prestaciones se incrementó en 58,86\%, con un crecimiento promedio anual de 7,36\%.
-
-Las cuentas  Décima Tercera Pensión y Décima Cuarta Pensión del Balance contable del Fondo son independientes de las otras cuentas de prestaciones.
-
-Las décimas tercera y cuarta pensiones crecieron en 1,59 veces entre el 2010 y el 2020. Además, el pago de decimas muestra un clara tendencia a crecer con el tiempo hasta el 2019 y, para el año 2020, se registra una reducción igual a 1,95\%, respecto a 2019.
-
-
-Se observa que desde el año 2013 tenemos la cuenta de Gastos Administrativos compuesto por la
-Contribución a la Administradora y Gasto por Depreciaciones como otros egresos del Fondo del
-\Sexpr{REP_seg}. Se aprecia que en el año 2013 al 2015 existe una disminución en un promedio del
-10,15\%; del 2015 al 2016 se produce un crecimiento precipitado del 81,88\%, siendo este el punto
-más alto en el periodo por la inclusión de la Contribución a la Administradora, al 2018 existe una
-caída precipitada en la Contribución a la Administradora en un -47,89\%. Después, crecieron a 338,24\% en el año 2019 y se redujeron a USD 327.168,43 en 2020, lo que representa un reducción igual a 73,75\%, con respecto al año 2019.
+La distribución de los egresos durante el 2022, en términos porcentuales, se compone de la siguiente manera: gastos por pensiones de Riesgos del Trabajo representan el 53,10\% de los egresos, seguido en segundo lugar, por las pensiones por montepío con el 31,68\%; en tercer lugar, los montos entregados por subsidios representaron el 8,54\%; en cuarto lugar, los gastos por personal con el 5,46\%; en quinto lugar, los gastos administrativos representaron el 0,72\%; en sexto lugar, los otros gastos con 0,48\%; y, finalmente, gastos financieros solo representa el 0,01\%.
 
 \section{Resultado del Ejercicio}
 
-
-\begin{figure}[H]
-\captionsetup{justification=centering}
-\centering
-\caption{Evolución del resultado del ejercicio del Fondo del \Sexpr{REP_seg} }
-\label{fig:iess_resultado_del_ejercicio_rtr}
-\includegraphics[scale=1]{graficos/iess_resultado_del_ejercicio_rtr.png}
-\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
-\\ Elaborado: DAIE}
-\end{figure}
-
+Se analiza los resultados de ejercicio histórico de los últimos años, donde se registra el resultado neto, el cual es la diferencia entre los ingresos y egresos del Fondo obtenido en el transcurso del ejercicio de cada año. En la tabla \ref{tab:iess_resultado_ejercicio_rtr} y figura \ref{fig:iess_resultado_del_ejercicio_rtr} se presenta la evolución histórica del resultado del ejercicio del Fondo.
 
 {\setlength{\tabcolsep}{6pt}
 {\fontsize{11}{14}\selectfont
 \begin{longtable}[H]{lrrrr}
 \captionsetup{justification=centering}
 \caption{Evolución del resultado del ejercicio anual del Fondo del \Sexpr{REP_seg} a 31 de diciembre de cada año}
-\label{tab:iess_activo_del_fondo_rtr} \\
+\label{tab:iess_resultado_ejercicio_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{1}{c}{Ingresos} & 
@@ -1407,6 +1377,7 @@ caída precipitada en la Contribución a la Administradora en un -47,89\%. Despu
 \midrule
 \endhead
 %\bottomrule
+\hline
 \multicolumn{4}{r}{continúa...} \\
 \endfoot
 %\bottomrule
@@ -1417,3 +1388,17 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+El resultado del ejercicio del año 2022 arrojó un superávit o ingreso neto de USD 198.495.029,30, debido que el Fondo del \Sexpr{REP_seg} solo obtuvo egresos por USD 72.047.794,69, mientras que obtuvo ingresos por USD 270.542.823,99, de los cuales la mayoría (49,33\%) provienen de los rendimientos de sus inversiones administradas por el BIESS; es decir, durante el año 2022, solo se utilizó el 26,63\% de los ingresos. Además, los ingresos financieros (USD 133.467.536,10) fueron más que suficientes para pagar los gastos prestacionales, operativos de personal y administrativos del \Sexpr{REP_seg}; y esto se refleja en el crecimiento constante de las reservas de este Seguro.
+
+\begin{figure}[H]
+\captionsetup{justification=centering}
+\centering
+\caption{Evolución del resultado del ejercicio del Fondo del \Sexpr{REP_seg} }
+\label{fig:iess_resultado_del_ejercicio_rtr}
+\includegraphics[scale=1]{graficos/iess_resultado_del_ejercicio_rtr.png}
+\caption*{\scriptsize Fuente: Estados Financieros IESS del Fondo Administrado de Riesgos del Trabajo.
+\\ Elaborado: DAIE}
+\end{figure}
+
+En términos porcentuales, el resultado del ejercicio del año 2022 es 543,80\% mayor que en el año 2016; que términos monetarios es un crecimiento de USD 30.831.608,72 en 2016 a USD 198.495.029,30 en 2022. Durante los últimos 10 años, los egresos del Fondo del \Sexpr{REP_seg} han utilizado en promedio el 41,35\% de los ingresos.
