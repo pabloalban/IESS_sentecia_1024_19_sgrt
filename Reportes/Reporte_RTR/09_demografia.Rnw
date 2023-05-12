@@ -1,10 +1,12 @@
 %---------------------------------------------------------------------------------------------------
-\chapter[Análisis demográfico, de salarios y pensiones]{Análisis demográfico, de salarios y pensiones}
+\chapter[Análisis demográfico, de salarios y prestaciones]{Análisis demográfico, de salarios y prestaciones}
 \label{chp_demog}
 %--------------------------------------------------------------------------------------------------
 % Población Afiliada y Pensionistas del SGO
 
- A continuación presentamos un análisis tabular y gráfico de las principales variables demográficas, salariales, aportaciones y montos de pensiones pagadas, de la población asegurada y beneficiaria.
+En cumplimento del punto A del artículo 7 del CAPÍTULO II: ``REQUISITOS TÉCNICOS PARA LA ELABORACIÓN, PRESENTACIÓN, APROBACIÓN Y REVISIÓN DE LOS ESTUDIOS ACTUARIALES DE LAS ENTIDADES DE SEGURIDAD SOCIAL, el cual establece la evolución y tendencia financiera de las ``\textit{i. Evolución demográfica de al menos los últimos cinco (5) años:}'', se presenta el análisis demográfico, de salarios y prestaciones del Fondo del \Sexpr{REP_seg}.
+
+A continuación, se presenta un análisis tabular y gráfico de las principales variables demográficas, salariales, aportaciones y montos de pensiones pagadas, de la población asegurada y beneficiaria.
 
 \section{Estructura demográfica de la población afiliada}
 
@@ -79,7 +81,7 @@ A diciembre de 2020 existen 2.847.077 afiliados activos, que representa un creci
 \captionsetup{justification=centering}
 \caption{Evolución la población cotizante del \Sexpr{REP_seg}}
 \label{fig:iess_pob_afi_ini}
-\includegraphics[scale=1]{graficos/iess_afi.png}
+\includegraphics[scale=1.15]{graficos/iess_afi.png}
 \caption*{\scriptsize {\bf Fuente:} DNAC - IESS \\
 {\bf Elaborado:} DAIE}
 \end{figure}

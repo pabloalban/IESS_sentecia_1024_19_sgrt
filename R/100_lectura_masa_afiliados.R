@@ -15,7 +15,7 @@ afiliados_sgo_edad_sexo <- read_excel( file_afiliados,
 
 afi_edad_sexo <- afiliados_sgo_edad_sexo %>%
   mutate( anio = year( afiliados_sgo_edad_sexo$fecha_corte) ) %>%
-  filter( anio == 2021 ) %>%
+  filter( anio == 2022 ) %>%
   mutate( edad = if_else( edad > 115,
                           115,
                           edad ) ) %>%

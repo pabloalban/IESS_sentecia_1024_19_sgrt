@@ -2,7 +2,7 @@
 \chapter{Análisis de la información financiera y contable con sus tendencias}
 \label{chp_infofinan}
 
-En cumplimento del punto B del artículo 7 del CAPÍTULO II: ``REQUISITOS TÉCNICOS PARA LA ELABORACIÓN, PRESENTACIÓN, APROBACIÓN Y REVISIÓN DE LOS ESTUDIOS ACTUARIALES DE LAS ENTIDADES DE SEGURIDAD SOCIAL B. ANÁLISIS DEL CONTEXTO ECONÓMICO Y FINANCIERO'', el cual establece la evolución y tendencia financiera de las ``\textit{Principales cuentas del balance general}'', ``\textit{Inversiones privativas y no privativas, descripción del portafolio y rendimiento}'', ``\textit{Principales cuentas del estado de resultados}''; y el ``\textit{Análisis de las reservas disponibles}'', se presenta el análisis de la información financiera del Fondo del \Sexpr{REP_seg}.
+En cumplimento del punto B del artículo 7 del CAPÍTULO II: ``REQUISITOS TÉCNICOS PARA LA ELABORACIÓN, PRESENTACIÓN, APROBACIÓN Y REVISIÓN DE LOS ESTUDIOS ACTUARIALES DE LAS ENTIDADES DE SEGURIDAD SOCIAL'', el cual establece la evolución y tendencia financiera de las ``\textit{Principales cuentas del balance general}'', ``\textit{Inversiones privativas y no privativas, descripción del portafolio y rendimiento}'', ``\textit{Principales cuentas del estado de resultados}''; y el ``\textit{Análisis de las reservas disponibles}'', se presenta el análisis de la información financiera del Fondo del \Sexpr{REP_seg}.
 
 La DNGF ha elaborado los estados financieros de los fondos administrados del IESS; y, a puesto en conocimiento de esta Dirección y ha enviado a la Contraloría General para su auditoría financiera, las cuales se encuentran en la página de esta, siguiendo el plan de cuentas de los fondos administrados del IESS, emitido por la Superintendencia de Bancos del Ecuador.
 

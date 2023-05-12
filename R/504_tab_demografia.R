@@ -87,7 +87,7 @@ print( aux_xtab,
 message( '\tTabla afiliados anuales' )
 
 aux <- afi_mensual %>%
-  filter( mes == '12', anio <= 2021 ) %>%
+  filter( mes == '12', anio <= 2022 ) %>%
   mutate( por_afi_f = 100 * afi_femenino / afiliados,
           por_afi_m = 100 * afi_masculino / afiliados,
           incremento = ( afiliados - lag( afiliados ) ),
