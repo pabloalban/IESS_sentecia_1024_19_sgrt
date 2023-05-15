@@ -914,6 +914,8 @@ aux <- estadisticas_fun(prestaciones_orfandad_2022) %>%
   mutate_if(is.numeric, round, digits = 2) %>%
   mutate_at( c(2:ncol(.)), as.character)
 
+(aux)
+
 #Guardar en Rdatas----------------------------------------------------------------------------------
 message("\tGuardando Rdatas")
 save( tab_evo_ben_pt,

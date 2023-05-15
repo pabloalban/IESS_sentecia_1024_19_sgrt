@@ -16,7 +16,7 @@ message( '\tTablas Subsidios' )
 aux <- tab_evo_ben_subsidios %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 8 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_subsidios_rtr', '.tex' ),
@@ -68,7 +68,7 @@ message("\tTablas sobre indemnizaciones del SGRT")
 aux <- tab_evo_ben_indemnizaciones %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep( 0, 8 ) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_indemnizaciones_rtr', '.tex' ),
@@ -117,7 +117,7 @@ message("\tTablas evolución de pensionistas del SGRT")
 aux <- tab_evo_ben_pp %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pp_rtr', '.tex' ),
@@ -132,7 +132,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_pt %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pt_rtr', '.tex' ),
@@ -148,7 +148,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_pa %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_pa_rtr', '.tex' ),
@@ -163,7 +163,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_vo %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_vo_rtr', '.tex' ),
@@ -178,7 +178,7 @@ print( aux_xtab,
 aux <- tab_evo_ben_of %>%
   mutate( anio = as.character( anio ) )
 
-aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 8) ) )
+aux_xtab <- xtable( aux, digits = c(0, 0, rep(0, 7), 2  ) )
 
 print( aux_xtab,
        file = paste0( parametros$resultado_tablas, 'tab_evo_ben_of_rtr', '.tex' ),

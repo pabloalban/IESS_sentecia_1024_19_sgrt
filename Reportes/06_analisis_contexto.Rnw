@@ -1377,6 +1377,9 @@ La pirámide de la población económicamente activa se presenta en las siguient
   Elaborado: DAIE}
 \end{figure}
 
+Las pirámides \ref{fig:iess_pir_pea2022}, \ref{fig:iess_pir_pea2042} y \ref{fig:iess_pir_pea2062} muestran el envejecimiento de la PEA, pasando de una población joven en el año 2022 a una más adulta en el año 2062, debido a la reducción de la tasa de natalidad del Ecuador y a una alta esperanza de vida.
+
+
 \begin{figure}[H]
 \caption{Pirámides poblacionales de la PEA para el año 2042}
 \label{fig:iess_pir_pea2042}
@@ -1395,4 +1398,3 @@ La pirámide de la población económicamente activa se presenta en las siguient
   Elaborado: DAIE}
 \end{figure}
 
-Las pirámides \ref{fig:iess_pir_pea2022}, \ref{fig:iess_pir_pea2042} y \ref{fig:iess_pir_pea2062} muestran el envejecimiento de la PEA, pasando de una población joven en el año 2022 a una más adulta en el año 2062, debido a la reducción de la tasa de natalidad del Ecuador y a una alta esperanza de vida.

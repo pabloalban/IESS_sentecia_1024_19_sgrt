@@ -15,10 +15,7 @@ A continuación, se presenta un análisis tabular y gráfico de las principales 
 \label{chp_demog:afi}
 
 %---------------------------------------------------------------------------------------------------
-Para el presente estudio se considera el número de afiliados activos a diciembre de cada año; en la
-tabla \ref{tab:iess_afliados} y figura \ref{fig:iess_pob_afi_ini} se muestra a la población
-afiliada en el período 2005 - 2020, observándose un crecimiento promedio del 5,99\% anual.
-
+A diciembre de 2022, se registraron 3.087.759 cotizantes al Seguro General Obligatorio, de los cuales 1.758.915 (56,96\%) son hombres y 1.328.844 (43,04\%) son mujeres. En comparación a diciembre de 2021, existe un aumento de 118.153 cotizantes activos, lo que representa un crecimiento igual a 3,98\%. El mayor numero de afiliados activos se registró en noviembre de 2018, con 3.137.439; debido a la pandemia de la COVID – 19, solo cotizaron 2.818.491 afiliados en septiembre de 2020, desde ese punto, el número de cotizantes creció en promedio 9,973 cada mes hasta diciembre de 2022; pero lamentablemente no se ha logrado alcanzar el número de afiliados activos a diciembre de 2019 (3.116.555). En la tabla \ref{tab:iess_afliados}, se presente el número de cotizantes al SGO a diciembre de cada año ; en cambio en la figura \ref{fig:iess_pob_afi_ini}, se presenta la evolución mensual de afiliados activos.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{13}\selectfont
@@ -74,7 +71,7 @@ Elaborado: DAIE}
 }
 }
 
-A diciembre de 2020 existen 2.847.077 afiliados activos, que representa un crecimiento del 130,81\% en comparación al año 2005. Entre el 2005 y el  2014 se observa un crecimiento sostenido de los afiliados. En los años 2015 y 2016 se evidencia un decremento del número de afiliados producto de la disminución de más del 50\% del precio del crudo, la apreciación del dólar y el terremoto de abril de 2016. Si bien la población afiliada se recuperó lentamente entre el año 2017 y 2019, sin embargo en el 2020 se observa nuevamente una caida importante del 8,51\% producto de la crisis sanitaria, económica y social producida por la pandemia COVID-19.
+
 
 \begin{figure}[H]
 \centering
@@ -86,8 +83,7 @@ A diciembre de 2020 existen 2.847.077 afiliados activos, que representa un creci
 {\bf Elaborado:} DAIE}
 \end{figure}
 
-
-En la figura \ref{fig:iess_pir_afiliados} se presenta la distribución por edad y sexo de población afiliada.
+La pirámide poblacional de los cotizante a diciembre de 2022 presenta una forma regresiva, con las siguientes características: la esperanza de vida va aumentando, una baja entrada de a la vida laboral formal para los jóvenes menores de 25 años, sustitución de la fuerza laboral débil y una población en proceso de envejecimiento (ver pirámide poblacional de los cotizantes al SGO a diciembre de 2022 en la figura \ref{fig:iess_pir_afiliados}).
 
 \begin{figure}[H]
 \centering
@@ -99,19 +95,63 @@ En la figura \ref{fig:iess_pir_afiliados} se presenta la distribución por edad 
 {\bf Elaborado:} DAIE}
 \end{figure}
 
-\begin{landscape}
+Del total de afiliados activos a diciembre de 2022, el 43,04\% son mujeres y el 56,96\% son hombres. La edad promedio de la población femenina es de 41,3 años, mientras que la población masculina es de 39,7 años. La población de cotizantes se distribuye de la siguiente forma: solo el 1,95\% de los cotizantes tiene menos de 20 años; los cotizantes entre 20 y 30 años representan el 24,02\%; los cotizantes entre 30 y 40 años representan el 28,91\%, siendo el grupo más numeroso; el 21,92\% tiene entre 40 y 50 años y solo el 16,11\% tiene entre 50 y 60 años. Respecto a las personas mayores a 60 años, esta población solo representa el 7,08\%. En la tabla \ref{tab:iess_rangos_afiliados_sgo}, se presenta la distribución por rangos de edad y sexo de los cotizantes del SGO a diciembre de 2022.
 
-Del total de afiliados a diciembre de 2020, el 42,7\% son mujeres y el 57,3\% son hombres. La edad
-promedio de la población femenina es de 41,3 años, mientras que la  población masculina es de 39,7
-años.
+{\fontsize{9}{11}\selectfont
+\begin{longtable}[H]{crrrrrr}
+\caption{Distribución de los cotizantes del SGO a diciembre de 2022, por rangos de edad y sexo}
+\label{tab:iess_rangos_afiliados_sgo}\\
+\toprule
+\multirow{2}[2]{*}{Rango edad:} &
+\multicolumn{2}{c}{Hombres} & 
+\multicolumn{2}{c}{Mujeres} &
+\multicolumn{2}{c}{Total}\\
+\cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
+&
+\multicolumn{1}{c}{Cotizantes}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Cotizantes}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Cotizantes} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
+\midrule
+\endfirsthead
+
+\toprule
+\multirow{2}[2]{*}{Rango edad:} &
+\multicolumn{2}{c}{Hombres} & 
+\multicolumn{2}{c}{Mujeres} &
+\multicolumn{2}{c}{Total}\\
+\cmidrule(r){2-3} \cmidrule(r){4-5}\cmidrule(r){6-7}
+&
+\multicolumn{1}{c}{Cotizantes}   &
+\multicolumn{1}{c}{Porcentaje (\%)}   & 
+\multicolumn{1}{c}{Cotizantes}   &
+\multicolumn{1}{c}{Porcentaje (\%)} & 
+\multicolumn{1}{c}{Cotizantes} & 
+\multicolumn{1}{c}{Porcentaje (\%)} \\
+\midrule
+\endhead
+
+\bottomrule \multicolumn{7}{r}{continúa...} \\
+\endfoot
+%\bottomrule
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\endlastfoot
+  \input{tablas/iess_rangos_afiliados_sgo.tex}
+\end{longtable}
+}
+
+
+\begin{landscape}
 
 \subsection{Masa salarial}
 \label{chp_masa:salarial}
 
 En la tabla \ref{tab:iess_masa_salarial} y figura \ref{fig:iess_masa_salarial} se presenta
 la evolución anual de la masa salarial y la correspondiente al mes de diciembre para el período 2005
-al 2020.
-
+al 2022.
 
 {\setlength{\tabcolsep}{7pt}
 {\fontsize{11}{14}\selectfont
@@ -169,37 +209,6 @@ Elaborado: DAIE}
 
 \end{landscape}
 
-
-Para el año 2020, la masa salarial tiene un valor de USD  25.688.790.710,51, que representa un crecimiento del 526,29\% en comparación al año 2005.
-
-\begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\caption{Evolución anual de la Masa salarial}
-\label{fig:iess_masa_salarial}
-\includegraphics[scale=0.9]{graficos/iess_masa_salarial.png}
-\caption*{\scriptsize Fuente: DNAC - IESS \\
-Elaborado: DAIE}
-\end{figure}
-
-Se observa un rápido crecimiento de la masa salarial en el período 2005 al 2015, con una tasa promedio anual del 20,50\%. En el año 2016 se evidencia una disminución de la masa salarial producto de la caída de más del 50\% del precio del petróleo en el 2015 y del terremoto de abril de 2016. Si bien la masa salarial se recuperó lentamente entre el año 2017 y 2019; sin embargo en el 2020 se observa nuevamente un decremento importante del 7,33\% debido a la crisis sanitaria, económica y social producida por la pandemia de la COVID-19, que incrementó la tasa de desempleo en el país provocando una enorme cantidad de desafiliaciones.
-
-\begin{figure}[H]
-\centering
-\captionsetup{justification=centering}
-\caption{Distribución por sexo del salario declarado de los afiliados a diciembre de 2022}
-\label{fig:iess_pir_masa_salarial}
-\includegraphics[scale=0.9]{graficos/iess_pir_masa_salarial.png}
-\caption*{\scriptsize Fuente: DNAC - IESS\\
-Elaborado: DAIE}
-\end{figure}
-
-En la figura \ref{fig:iess_pir_masa_salarial} se muestra la distribución por sexo del salario declarado de los afiliados a diciembre de 2020.
-
-El promedio declarado por parte de las mujeres a diciembre 2020 es USD  742,93 y para los hombres es de USD 772,29.El promedio total es de USD 756,48.
-
-En la tabla \ref{tab:iess_afi_tiempo_aportacion} se presenta la cantidad de afiliados activos a la fecha corte de este estudio, clasificados por edad, tiempo de aportes en años y el valor promedio del sueldo sobre el que se aporta. En esta matriz se detectan afiliados con edades superiores a los 90 años y se observa que el 28,5\% de la población afiliada tiene entre 0 y 5 años aportados; más del 50\% de la población afiliada está comprendida entre 26 y 45 años de edad; y, que las personas que más años aportados tienen les corresponden los salarios promedios más altos. La población entre 41 y 45 años tiene el promedio de sueldos más altos (USD 870,12 en promedio de sueldos).
-
 \begin{landscape}
 \begin{table}[H]
 \centering
@@ -222,6 +231,34 @@ Elaborado: DAIE}
 \end{table}
 \end{landscape}
 
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Evolución anual de la Masa salarial}
+\label{fig:iess_masa_salarial}
+\includegraphics[scale=0.9]{graficos/iess_masa_salarial.png}
+\caption*{\scriptsize Fuente: DNAC - IESS \\
+Elaborado: DAIE}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Distribución por sexo del salario declarado de los afiliados a diciembre de 2022}
+\label{fig:iess_pir_masa_salarial}
+\includegraphics[scale=0.9]{graficos/iess_pir_masa_salarial.png}
+\caption*{\scriptsize Fuente: DNAC - IESS\\
+Elaborado: DAIE}
+\end{figure}
+
+Para el año 2022, la masa salarial tiene un valor de USD 26.133.768.816,71, que representa un crecimiento del 537,14\% en comparación al año 2005. Se observa un rápido crecimiento de la masa salarial en el período 2005 al 2015, con una tasa promedio anual del 20,50\%. En el año 2016 se evidencia una disminución de la masa salarial producto de la caída de más del 50\% del precio del petróleo en el 2015 y del terremoto de abril de 2016. Si bien la masa salarial se recuperó lentamente entre el año 2017 y 2019; sin embargo, en el 2020, nuevamente se registró un decremento importante del 7,33\% debido a la crisis sanitaria, económica y social producida por la pandemia de la COVID-19, que incrementó la tasa de desempleo en el país provocando una enorme cantidad de desafiliaciones. En el año 2021, todavía se sintió los estragos económicos de la pandemia y se alcanzó un amasa salarial igual a USD 25.678.939.665,57, un 0,04\% menos que en el 2020; pero para el año 2022, la masa salarial creció en 1,77\% a USD 26.133.768.816,71; es decir un incremento de USD 454.829.151,14, respecto al año anterior.
+
+En la figura \ref{fig:iess_pir_masa_salarial} se muestra la distribución por sexo del salario declarado de los afiliados a diciembre de 2022. El promedio declarado por parte de las mujeres a diciembre 2022 es USD 742,93 y para los hombres es de USD 772,29.El promedio total es de USD 756,48. En la tabla \ref{tab:iess_afi_tiempo_aportacion} se presenta la cantidad de afiliados activos a la fecha corte de este estudio, clasificados por edad, tiempo de aportes en años y el valor promedio del sueldo sobre el que se aporta. 
+
+En esta matriz se detectan afiliados con edades superiores a los 90 años y se observa que el 28,5\% de la población afiliada tiene entre 0 y 5 años aportados; más del 50\% de la población afiliada está comprendida entre 26 y 45 años; y, que las personas que más años aportados tienen les corresponden los salarios promedios más altos. La población entre 41 y 45 años tiene el promedio de sueldos más altos (USD 870,12 en promedio de sueldos).
+
+
+
 %---------------------------------------------------------------------------------------------------
 \section{Estructura demográfica de la población de beneficiarios y sus beneficios}
 
@@ -230,24 +267,13 @@ A continuación, se detalla la población beneficiaria por cada una de las prest
 
 % %---------------------------------------------------------------------------------------------------
 \subsection{Subsidios por incapacidad temporal}
-En la siguiente tabla y gráfica, se expone la serie histórica a partir del año 2009 del número de
-beneficiarios de subsidios de Seguro de Riesgos del Trabajo y el monto pagado anualmente.
 
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica de los beneficiarios de subsidios del \Sexpr{REP_seg}}
-\label{fig:iess_subsidios_rtr}
-\includegraphics[scale=1]{graficos/iess_evo_ben_subsidios_rtr.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-El mayor número de afiliados con derecho a subsidios se presenta en el año 2015 con 15.019 personas
-beneficiarias. A partir del 2016, se observa que la cifra ha ido decreciendo, llegando a tener un
-número inferior de subsidios en el año 2020 con referencia al año 2019, comportamiento que se
-presenta en la figura \ref{fig:iess_subsidios_rtr}.
+En concordancia al artículo 22 del \legalcite{ResIESS_CD513}, que determina: “\textit{En los casos de incapacidad temporal que produzcan una imposibilidad p ara concurrir a laborar, el asegurado tendrá derecho a percibir el subsidio desde el día siguiente de producida la misma, por el período que señale el médico tratante, el mismo que será de hasta un año en los porcentajes fijados sobre la remuneración base de aportación al IESS (...)}”.
+
+Los subsidios por accidente de trabajo se calcularán en la forma establecida en el artículo 18 para el subsidio por enfermedad común, y se pagará en una cuantía igual al 75\% del sueldo o salario promedio durante las diez primeras semanas, y al 66\% del mismo sueldo o salario promedio hasta completar cincuenta y dos semanas. (artículo 30 de la \legalcite{ResIESS_CS358}, de 30 de octubre de 1979). En la siguiente tabla y gráfica, se expone la serie histórica del número de beneficiarios de subsidios de Seguro de Riesgos del Trabajo y el monto pagado anualmente.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{14}\selectfont
+{\fontsize{11}{12}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de los beneficiarios de subsidios del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_subsidios_rtr} \\
@@ -300,9 +326,19 @@ Elaborado: DAIE}
 }
 }
 
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica de los beneficiarios de subsidios del \Sexpr{REP_seg}}
+\label{fig:iess_subsidios_rtr}
+\includegraphics[scale=1]{graficos/iess_evo_ben_subsidios_rtr.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+Durante el año 2022, se entregó subsidios a 7.727 beneficiarios, de los cuales la mayoría 6.439 (83,33\%) son hombres y solo 1.288 (16,67\%) mujeres, lo que representó un incremento del 26,71\%, respecto al año anterior. Solamente en el mes de diciembre de 2021, se entregó subsidios a 1.275 beneficiarios. Además, el año 2020, fue el año con menos número de beneficiarios de subsidios (6.098) se registró, un 34,56\% menos que el año 2019. Y, el máximo número de entrega de subsidios se dio en el año 2015 (15.019), que desde ese entonces se observa una tendencia a la baja. En la tabla \ref{tab:tab_evo_ben_subsidios_rtr} y figura \ref{fig:iess_subsidios_rtr}, se presenta la evolución histórica de los beneficiarios de subsidios por incapacidad temporal del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{10}{14}\selectfont
+{\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de los montos entregados por subsidios del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_subsidios_rtr} \\
@@ -373,8 +409,8 @@ Elaborado: DAIE}
 }
 }
 
-La distribución de los beneficiarios de subsidios en 2020, por edad y sexo, se muestra en la figura
-\ref{fig:iess_pir_ben_subsidios}.
+La edad promedio de los beneficiarios es 36,3 años en los hombres y 39,36 en las mujeres. En la figura \ref{fig:iess_pir_ben_subsidios}, se muestra la pirámide poblacional de los beneficiaros de subsidios en el año 2022, la cual posee una forma regresiva, que muestra que la mayoría de los beneficiarios son entre 20 y 45 años.
+
 \begin{figure}[H]
 \centering
 \caption{Distribución de beneficiarios de subsidios, por edad y sexo}
@@ -384,15 +420,7 @@ La distribución de los beneficiarios de subsidios en 2020, por edad y sexo, se 
 \\Elaborado: DAIE}
 \end{figure}
 
-De los 4.119 beneficiarios por subsidios que existen en el año 2020, el 17,1\% son mujeres y el
-82,9\% son hombres. La edad promedio de mujeres pertenecientes a este grupo es de 39,9 años;
-mientras que la edad promedio de hombres es de 37,4 años.
-
-La distribución de los montos pagados a diciembre por sexo de los beneficiarios de subsidios se
-muestra en la tabla \ref{tab:tab_rango_monto_subsidios_rtr}.
-
-Para el año 2020, el beneficio mensual promedio por subsidios para las mujeres es de USD 364,30 y
-para los hombres de USD 421,45.
+Durante el año 2022, se entregaron USD 1.015.819,08 por subsidios, lo que representó un incremento igual a 24,23\%, respeto al 2020, de los cuales USD 859.770,32 fueron entregados a hombres y solo USD 156.048,76 a mujeres. En cambio, en el mes de diciembre de 2021, se entregó USD 221.931,50 por subsidios. El subsidio promedio entregado a los hombres fue USD 181,09 y a las mujeres fue USD 172,02. En la figura \ref{tab:tab_evo_ben_subsidios_rtr}, se presenta la evolución histórica de los beneficios entregados por subsidios del \Sexpr{REP_seg}.
 
 \begin{figure}[H]
 \centering
@@ -404,7 +432,7 @@ para los hombres de USD 421,45.
 \end{figure}
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{10}{11}\selectfont
+{\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{crrrrrr}
 \caption{Beneficiarios por rango de montos pagados en subsidios durante 2021}
 \label{tab:tab_rango_monto_subsidios_rtr}\\
@@ -451,18 +479,20 @@ para los hombres de USD 421,45.
 \end{longtable}
 }
 }
+Durante el año 2022, el 40\% de los beneficiarios por subsidios recibieron menos de USD 77; el otro 40\% recibió entre USD 77 y USD 680; el 10\% de beneficiarios recibió entre USD 680 y USD 1.213; y, solamente, el 10\% restante recibió más de USD 1.213 por beneficio de subsidio del \Sexpr{REP_seg}. Y, por último, durante el 2022, se registró subsidios de hasta por USD 22.861 (ver tabla \ref{tab:tab_rango_monto_subsidios_rtr} y la figura \ref{fig:iess_pir_montos_subsidios} para la distribución de los beneficios entregados).
 
 %---------------------------------------------------------------------------------------------------
 \subsection{Indemnización por incapacidad permanente parcial}
-A partir de la expedición de la Resolución No. C.D. 390, la misma que es ratificada en la Resolución
-No. C.D. 513, Artículo 29, se suspende la entrega de pensiones vitalicias, por incapacidad
-permanente parcial, en su remplazo se entrega indemnizaciones. Esta prestación se entregó en el año
-2019 a 370 beneficiarios y a 300 en el año 2020, con gastos anuales de USD 3.757.165,55 y USD
-2.288.812,44, respectivamente.
+A partir de la expedición de la \legalcite{ResIESS_CD390}, la misma que es ratificada en la \legalcite{ResIESS_CD513}, se suspende la entrega de pensiones vitalicias, por incapacidad
+permanente parcial, en su remplazo se entrega indemnizaciones. En concordancia al artículo 32 de la \legalcite{ResIESS_CD513}, los montos entregados por indemnizaciones es el promedio mensual de la remuneración de aportación del año anterior a la fecha del accidente o a la fecha de calificación de la enfermedad profesional u ocupacional por parte del Comité de Valuación de Incapacidades y de Responsabilidad Patronal “CVIRP”, multiplicado por sesenta mensualidades (60).
 
+El límite máximo es de cien (100) salarios básicos unificados del trabajador en general. Además, según lo establecido en el artículo 32 de la \legalcite{ResIESS_CD513}, la valoración total de la incapacidad, incluido los factores de ponderación, en ningún caso superará el ochenta por ciento (80\%) de disminución de la capacidad para el trabajo.
+
+
+Durante el año 2022, se entregó indemnizaciones por incapacidad permanente parcial a 857 beneficiarios, de los cuales la mayoría 747 (87,16\%) son hombres y solo 110 (12,84\%) mujeres, lo que representó un incremento del 150,58\%, respecto al año anterior. Solamente en el mes de diciembre de 2021, se entregó indemnizaciones a 30 beneficiarios. Además, el año 2020, fue el año con menos número de beneficiarios de indemnizaciones (342) se registró, un 7,57\% menos que el año 2019. Y, el máximo número de entrega de indemnizaciones se proporcionó en el año 2015 (1.175). En la tabla \ref{tab:tab_evo_ben_indemnizaciones_rtr} y figura \ref{fig:iess_evo_ben_indemnizaciones_rtr}, se presenta la evolución histórica de los beneficiarios de indemnizaciones por incapacidad permanente parcial del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{14}\selectfont
+{\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población beneficiaria por indemnizaciones del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_indemnizaciones_rtr} \\
@@ -515,6 +545,27 @@ Elaborado: DAIE}
 }
 }
 
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica de la población beneficiaria de indemnizaciones del \Sexpr{REP_seg}}
+\label{fig:iess_evo_ben_indemnizaciones_rtr}
+\includegraphics[scale=1]{graficos/iess_evo_ben_indemnizaciones_rtr.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de la población beneficiaria de indemnizaciones, por edad y sexo}
+\label{fig:iess_pir_ben_indemnizaciones}
+\includegraphics[scale=1]{graficos/iess_pir_ben_indemnizaciones.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+La edad promedio de los beneficiarios es 39,85 años en los hombres y 42,47 en las mujeres. En la figura \ref{fig:iess_pir_ben_indemnizaciones}, se muestra la pirámide poblacional de los beneficiaros de indemnizaciones en el año 2022, la cual posee una forma regresiva, que muestra que la mayoría de los beneficiarios son entre 25 y 45 años y en su mayoría son varones.
+
+Durante el año 2022, se entregaron USD 6.431.096,25 por indemnizaciones, lo que representó un incremento igual a 147,53\%, respeto al 2020, de los cuales USD 5.740.257,37 fueron entregados a hombres y solo USD 690.838,88 a mujeres. En cambio, en el mes de diciembre de 2021, se entregó USD 186.759,64 por indemnizaciones. Las indemnizaciones promedio entregado a los hombres fue USD 7.647,66 y a las mujeres fue USD 6.280,35. En la figura \ref{tab:tab_evo_monto_indemnizaciones_rtr}, se presenta la evolución histórica de los beneficios entregados por indemnizaciones del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{14}\selectfont
@@ -588,51 +639,10 @@ Elaborado: DAIE}
 }
 }
 
-% El mayor número de afiliados con derecho a indemnizaciones se presenta en el año 2015, con 1.175
-% beneficiarios. A partir del año 2016, se observa que la cifra ha ido decreciendo, llegando a tener
-% un número 555 beneficiarios en el año 2018.
-
-El desarrollo de esta serie se presenta en la figura \ref{fig:iess_evo_ben_indemnizaciones_rtr}. En cambio,
-en la figura \ref{fig:iess_evo_ben_indemnizaciones_rtr} se muestra la distribución de los
-beneficiarios, por edad y sexo.
-
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica de la población beneficiaria de indemnizaciones del \Sexpr{REP_seg}}
-\label{fig:iess_evo_ben_indemnizaciones_rtr}
-\includegraphics[scale=1]{graficos/iess_evo_ben_indemnizaciones_rtr.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\caption{Distribución de la población beneficiaria de indemnizaciones, por edad y sexo, en 2020}
-\label{fig:iess_pir_ben_indemnizaciones}
-\includegraphics[scale=1]{graficos/iess_pir_ben_indemnizaciones.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-
-Del total de beneficiarios, el 14,2\% son mujeres y el son 85,8\% hombres. La edad promedio de las
-mujeres es de 45,5 años, mientras que la de los hombres es de 39,4 años.
-
-La distribución de los montos pagados por indemnizaciones para cada sexo en 2020 se presenta en la
-tabla \ref{tab:tab_rango_monto_indemnizaciones_rtr}.
-
-\begin{figure}[H]
-\centering
-\caption{Distribución de los montos promedios entregados por indemnizaciones, por edad y sexo}
-\label{fig:iess_pir_montos_indemnizaciones}
-\includegraphics[scale=1]{graficos/iess_pir_montos_indemnizaciones.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de los montos pagados por indemnizaciones, para cada sexo, en 2020}
+\caption{Distribución de los montos pagados por indemnizaciones, para cada sexo}
 \label{tab:tab_rango_monto_indemnizaciones_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
@@ -676,21 +686,26 @@ tabla \ref{tab:tab_rango_monto_indemnizaciones_rtr}.
 \end{longtable}
 }
 
-El valor del monto promedio pagado por indemnizaciones, del año 2020, de mujeres es USD 7.950,70 y
-para los hombres es de USD 8.183,54.
+Durante el año 2022, el 40\% de los beneficiarios por indemnizaciones recibieron entre USD 779 y USD 4.136; el otro 40\% recibió entre USD 4.136 y USD 11.440; el 10\% de beneficiarios recibió entre USD 11.440 y USD 16.297; y, solamente, el 10\% restante recibió más de USD 16.297 por beneficio de indemnizaciones del \Sexpr{REP_seg}. Y, por último, durante el 2022, se registró indemnizaciones de hasta por USD 40.000 (ver tabla \ref{tab:tab_rango_monto_indemnizaciones_rtr} y la figura \ref{fig:iess_pir_montos_indemnizaciones} para la distribución de los beneficios entregados).
 
-A continuación, se presenta la serie histórica de beneficiarios de pensiones vitalicias por
-incapacidad: permanente parcial, temporal, permanente total, permanente absoluta; además de los
-pensionistas de montepío. 
+\begin{figure}[H]
+\centering
+\caption{Distribución de los montos promedios entregados por indemnizaciones, por edad y sexo}
+\label{fig:iess_pir_montos_indemnizaciones}
+\includegraphics[scale=1]{graficos/iess_pir_montos_indemnizaciones.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
 
 %---------------------------------------------------------------------------------------------------
 \subsection{Pensionistas por incapacidad permanente parcial}
 
-El número de pensionistas por incapacidad permanente parcial, a diciembre de cada año, junto con el crecimiento
-anual del beneficio pagado, se presenta en la tabla \ref{tab:tab_evo_ben_pt_rtr} y figura \ref{fig:iess_evo_ben_pp_rtr}.
+Hasta la fecha el Seguro General de Riesgos del Trabajo aún mantiene pensionistas por incapacidad permanente parcial conforme lo dispuesto en el artículo 23 de la \legalcite{ResIESS_CS741}, de 18 de septiembre de 1990. A partir de la expedición de la \legalcite{ResIESS_CD390}, la misma que es ratificada en la \legalcite{ResIESS_CD513}, se suspende la entrega de pensiones vitalicias, por incapacidad
+permanente parcial, en su remplazo se entrega indemnizaciones.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{12}\selectfont
+{\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de incapacidad permanente parcial del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_pt_rtr} \\
@@ -742,6 +757,38 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+En el año 2021, se entregó pensiones por incapacidad permanente parcial a 4.857 beneficiarios, de los cuales la mayoría 4.410 (90,80\%) son hombres y solo 447 (9,20\%) mujeres, lo que representó un decremento igual a 2,98\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, debido a que no existe ingresos de nuevos pensionistas. Y, el máximo número de beneficiarios de pensiones por incapacidad permanente parcial se proporcionó en el año 2015 (1.175). En la tabla \ref{tab:tab_evo_ben_pt_rtr} y figura \ref{fig:iess_evo_ben_pp_rtr}, se presenta la evolución histórica de los pensionistas de incapacidad permanente parcial del \Sexpr{REP_seg}.
+
+La edad promedio de los beneficiarios es 59,55 años en los hombres y 58,92 en las mujeres. En la figura \ref{fig:iess_pir_pensiones_pp}, se muestra la pirámide poblacional de los pensionistas de incapacidad permanente parcial en el año 2021, la cual posee una forma regresiva, que muestra una población envejecida y en su mayoría son mayores de 60 años; y la cual se está reduciendo cada año, puesto que no hay nuevas entradas de pensionistas.
+
+Durante el año 2021, se entregaron USD 15.593.885,44 por pensiones de incapacidad permanente parcial y décimos, de los cuales USD 13.784.071,55 (88,39\%) corresponden a las pensiones mensuales; USD 1.139.632,21 (7,31\%) al pago de decimotercero y solo USD 670.181,68 por decimocuarto. En cambio, los descuentos\footnote{Cabe señalar desde la expedición de la Sentencia de la Corte Constitucional No. 23-18-IN/19, de fecha 18 de diciembre de 2019, se declaró la inconstitucionalidad del inciso primero del artículo 3 de la Resolución No. C.D. 501, de 13 de noviembre de 2015 y ordenó la suspensión de la retención del 2,76\% de las pensiones de los jubilados para la financiación de décimos y fondo mortuorio.} establecidos en la Ley ascendieron a USD 3.378.532,13 por: retención judicial, retención préstamos, seguro médico, atenciones de médica de cónyuges e hijos, federaciones y asociaciones de jubilados. 
+
+Por consiguiente, el valor liquido a pagar a los pensionistas de incapacidad permanente parcial fue igual a USD 12.215.353,31 en el 2021. Durante el último año, monto entregado por pensiones y décimos decreció de USD 16.061.662,05 en el 2020 a USD 15.593.885,44, es decir, una reducción del 2,91\%, debido a la extinción de pensionistas; en cambio, los descuentos a los pensionistas crecieron en 18,75\%, durante el último año. En la tabla \ref{tab:tab_evo_monto_pt_rtr}, se presenta la evolución histórica de los beneficios entregados por pensiones de incapacidad permanente parcial del \Sexpr{REP_seg}.
+\clearpage
+
+
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica de la población beneficiaria de rentas vitalicias por incapacidad permanente parcial del \Sexpr{REP_seg}}
+\label{fig:iess_evo_ben_pp_rtr}
+\includegraphics[scale=1]{graficos/iess_evo_ben_pp_rtr.png}
+\caption*{\scriptsize Fuente: DSGRT
+\\Elaborado: DAIE}
+\end{figure}
+
+\vspace*{\fill}
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de la población pensionistas por incapacidad permanente parcial, por edad y sexo, a la fecha de corte}
+\label{fig:iess_pir_ben_pp}
+\includegraphics[scale=1]{graficos/iess_pir_ben_pp.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
+\newpage
 
 \begin{landscape}
 \vspace*{\fill}
@@ -821,21 +868,6 @@ Elaborado: DAIE}
 \vspace*{\fill}
 \end{landscape}
 
-
-
-
-
-
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica de la población beneficiaria de rentas vitalicias por incapacidad permanente parcial del \Sexpr{REP_seg}}
-\label{fig:iess_evo_ben_pp_rtr}
-\includegraphics[scale=1]{graficos/iess_evo_ben_pp_rtr.png}
-\caption*{\scriptsize Fuente: DSGRT
-\\Elaborado: DAIE}
-\end{figure}
-
-
 \begin{figure}[H]
 \centering
 \caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente parcial, por edad y sexo}
@@ -845,10 +877,12 @@ Elaborado: DAIE}
 \\Elaborado: DAIE}
 \end{figure}
 
+Durante el año 2021, el 50\% de los beneficiarios por pensiones de incapacidad permanente parcial recibieron menos de USD 238; el otro 40\% recibió entre USD 238 y USD 352; y, solamente, el 10\% restante recibió más de USD 352 de renta mensual, incluido décimas. Y, por último, durante el 2021, la pensión promedio de incapacidad permanente parcial fue igual a USD 276,79 para los hombres y USD 263,86 para las mujeres, incluyendo todos los ingresos por Ley (ver tabla \ref{tab:tab_rango_monto_pp_rtr} y la figura \ref{fig:iess_pir_ben_pp} para la distribución de las pensiones promedio por edad y sexo).
+
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de las rentas mensuales por incapacidad permanente parcial, para cada sexo, en 2020}
+\caption{Distribución de las rentas mensuales por incapacidad permanente parcial, para cada sexo}
 \label{tab:tab_rango_monto_pp_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
@@ -892,34 +926,28 @@ Elaborado: DAIE}
 \end{longtable}
 }
 
-A diciembre del 2020 existen 4.982 beneficiarios de pensiones vitalicias por incapacidad permanente
-parcial, de los cuales 9\% son mujeres y el 91\% son hombres. Y, durante el mismo año, se entregaron
-USD 1.256.268,75  por este beneficio.
 
-La edad promedio de las mujeres es de 56,4 años; mientras, la edad media de los hombres es de 57,4
-años. La distribución de los beneficios pagados por este tipo de prestación se presenta en la tabla
-\ref{tab:tab_rango_monto_pp_rtr}.
-El valor del monto promedio pagado por incapacidad permanente parcial, del año 2020, de mujeres es
-USD 382,40 y para los hombres es de USD 399,89.
+
+
+%---------------------------------------------------------------------------------------------------
+\subsection{Pensionistas por incapacidad permanente total}
+
+Según lo establecido en el artículo 33 de la \legalcite{ResIESS_CD513}, la incapacidad permanente total es aquella que inhabilita al trabajador para la realización de todas o las fundamentales tareas de su profesión u oficio habitual. 
+
+El artículo 34 de la \legalcite{ResIESS_CD513} establece que la pensión es equivale al ochenta por ciento (80\%) del promedio mensual de la remuneración base de aportación del último año anterior de trescientos sesenta días (360) o del promedio mensual de los cinco (5) años de mayor aportación si éste fuere superior, calculada desde la fecha del accidente de trabajo o de la fecha de calificación de la enfermedad profesional u ocupacional por el Comité de Valuación de Incapacidades y de Responsabilidad Patronal “CVIRP”.
 
 \begin{figure}[H]
 \centering
-\caption{Distribución de la población pensionistas por incapacidad permanente parcial, por edad y sexo, en 2020}
-\label{fig:iess_pir_ben_pp}
-\includegraphics[scale=1]{graficos/iess_pir_ben_pp.png}
+\caption{Evolución histórica de la población beneficiaria por incapacidad permanente total del \Sexpr{REP_seg}}
+\label{fig:iess_evo_ben_pt_rtr}
+\includegraphics[scale=1]{graficos/iess_evo_ben_pt_rtr.png}
 \caption*{\scriptsize Fuente: DSGRT - IESS
 \\Elaborado: DAIE}
 \end{figure}
 
 
-%---------------------------------------------------------------------------------------------------
-\subsection{Pensionistas por incapacidad permanente total}
-A diciembre del 2020 existen 1.208 pensionistas por incapacidad permanente total, de los cuales
-13,3\% son mujeres y el 86,7\% son hombres.
-
-
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{12}\selectfont
+{\fontsize{11}{14}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de incapacidad permanente total del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_pt_rtr} \\
@@ -971,6 +999,21 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+En el año 2021, se entregó pensiones por incapacidad permanente total a 1.210 beneficiarios, de los cuales la mayoría 1.048 (86,61\%) son hombres y solo 162 (13,39\%) mujeres, lo que representó un decremento igual a 0,74\%, respecto al año anterior. Además, el año 2012, fue el año con menos número de pensionistas, durante los últimos diez (10) años. Y, el máximo número de beneficiarios de pensiones por incapacidad permanente total se proporcionó en el año 2018 (1.223). En la tabla \ref{tab:tab_evo_ben_pt_rtr} y figura \ref{fig:iess_evo_ben_pt_rtr}, se presenta la evolución histórica de los pensionistas de incapacidad permanente total del \Sexpr{REP_seg}.
+
+
+La edad promedio de los beneficiarios es 58,07 años en los hombres y 58,7 en las mujeres. En la figura \ref{fig:iess_pir_pensiones_pt}, se muestra la pirámide poblacional de los pensionistas de incapacidad permanente total en el año 2021, la cual posee una forma regresiva, que muestra una población que continúa envejeciendo y en su mayoría son mayores de 55 años; y pocas entradas de nuevos pensionistas.
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de la población de pensionistas por incapacidad permanente total, por edad y sexo}
+\label{fig:iess_pir_ben_pt}
+\includegraphics[scale=1]{graficos/iess_pir_ben_pt.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
 
 \begin{landscape}
 \vspace*{\fill}
@@ -1043,36 +1086,17 @@ Elaborado: DAIE}
 \caption*{\scriptsize Fuente: DSGRT - IESS \\
 Elaborado: DAIE}
 \endlastfoot
-  \input{tablas/tab_evo_monto_pp_rtr.tex}
+  \input{tablas/tab_evo_monto_pt_rtr.tex}
 \end{longtable}
 }
 }
 \vspace*{\fill}
 \end{landscape}
 
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica de la población beneficiaria por incapacidad permanente total del \Sexpr{REP_seg}}
-\label{fig:iess_evo_ben_pt_rtr}
-\includegraphics[scale=1]{graficos/iess_evo_ben_pt_rtr.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-
-La edad promedio de las mujeres es de 56,3 años; mientras, la edad media de los hombres es de 56,8 años.
-\begin{figure}[H]
-\centering
-\caption{Distribución de la población de pensionistas por incapacidad permanente total, por edad y sexo, en 2020}
-\label{fig:iess_pir_ben_pt}
-\includegraphics[scale=1]{graficos/iess_pir_ben_pt.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
+Durante el año 2021, se entregaron USD 8.896.545,91 por pensiones de incapacidad permanente total y décimos, de los cuales USD 7.779.197,84 (87,44\%) corresponden a las pensiones mensuales; USD 645.321,42 (7,25\%) al pago de decimotercero y solo USD 472.026,65 (5,31\%) por decimocuarto. En cambio, los descuentos\footnote{Cabe señalar desde la expedición de la Sentencia de la Corte Constitucional No. 23-18-IN/19, de fecha 18 de diciembre de 2019, se declaró la inconstitucionalidad del inciso primero del artículo 3 de la Resolución No. C.D. 501, de 13 de noviembre de 2015 y ordenó la suspensión de la retención del 2,76\% de las pensiones de los jubilados para la financiación de décimos y fondo mortuorio.} establecidos en la Ley ascendieron a USD 2.205.621,61 por: retención judicial, retención préstamos, seguro médico, atenciones de médica de cónyuges e hijos, federaciones y asociaciones de jubilados; es decir, que los descuentos representan el 24,79\% de los ingresos por pensiones y décimas.
 
 
-La pensión mensual promedio de mujeres y hombres por incapacidad permanente total es de USD 983,86 y
-USD 957,75 respectivamente. La tabla \ref{tab:iess_iess_monto_incapacidad_total_sexo_rtr} muestra la
-distribución de la pensión mensual por sexo de los pensionistas por incapacidad permanente total.
+Por consiguiente, el valor liquido a pagar a los pensionistas de incapacidad permanente total fue USD 6.690.924,30 en el 2021. Durante el último año, monto entregado por pensiones y décimos decreció de USD 9.059.076,83 en el 2020 a USD 8.896.545,91, es decir, una reducción del 1,79\%, debido a la extinción de pensionistas; en cambio, los descuentos a los pensionistas crecieron en 3,59\%, durante el último año. En la tabla \ref{tab:tab_evo_monto_pt_rtr}, se presenta la evolución histórica de los beneficios entregados por pensiones de incapacidad permanente total del \Sexpr{REP_seg}.
 
 \begin{figure}[H]
 \centering
@@ -1083,10 +1107,12 @@ distribución de la pensión mensual por sexo de los pensionistas por incapacida
 \\Elaborado: DAIE}
 \end{figure}
 
+Durante el año 2021, el 50\% de los beneficiarios por pensiones de incapacidad permanente total recibieron menos de USD 578; el otro 40\% recibió entre USD 578 y USD 755; y, solamente, el 10\% restante recibió más de USD 755 a USD 2.104 de renta mensual, incluido décimas. Y, por último, durante el 2021, la pensión promedio de incapacidad permanente total fue igual a USD 635,31 para los hombres y USD 675,82 para las mujeres, incluyendo todos los ingresos por Ley (ver tabla \ref{tab:tab_rango_monto_pt_rtr} y la figura \ref{fig:iess_pir_ben_pt} para la distribución de las pensiones promedio por edad y sexo).
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de las rentas mensuales por incapacidad permanente total, para cada sexo, en 2020}
-\label{tab:iess_iess_monto_incapacidad_total_sexo_rtr}\\
+\caption{Distribución de las rentas mensuales por incapacidad permanente total, para cada sexo}
+\label{tab:tab_rango_monto_pt_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
 \multicolumn{2}{c}{Femenino} & 
@@ -1131,8 +1157,14 @@ distribución de la pensión mensual por sexo de los pensionistas por incapacida
 
 %---------------------------------------------------------------------------------------------------
 \subsection{Pensionistas por incapacidad permanente absoluta}
-A diciembre del 2020 existen 148 pensionistas por incapacidad permanente absoluta, de los cuales
-4,8\% son mujeres y el 95,2\% son hombres.
+
+El artículo 36 de la \legalcite{ResIESS_CD513} define a la incapacidad permanente absoluta como aquella que le inhabilita por completo al asegurado para el ejercicio de toda profesión u ocupación, requiriendo de otra persona para su cuidado y atención permanente, producida por consecuencia de un accidente de trabajo, o enfermedad profesional u ocupacional. El asegurado que fuere declarado con incapacidad permanente absoluta tendrá derecho a una pensión mensual equivalente al ciento por ciento (100\%) del promedio mensual de la remuneración del último año anterior o del promedio mensual de los cinco (5) años de mayor aportación, si éste fuere superior, calculada desde la fecha del accidente de trabajo, en concordancia al artículo 38 de la \legalcite{ResIESS_CD513}.
+
+En el año 2021, se entregó pensiones por incapacidad permanente absoluta a 157 beneficiarios, de los cuales la mayoría 149 (94,90\%) son hombres y solo 8 (5,20\%) mujeres, lo que representó un incremento igual a 3,97\%, respecto al año anterior. Además, el año 2012, fue el año con menos número de pensionistas, durante los últimos diez (10) años. Y, el máximo número de beneficiarios de pensiones por incapacidad permanente absoluta se proporcionó en el año 2021 (157), debido a una tendencia creciente del número de afiliados. En la tabla \ref{tab:tab_evo_ben_pa_rtr} y figura \ref{fig:iess_evo_ben_pa_rtr}, se presenta la evolución histórica de los pensionistas de incapacidad permanente absoluta del \Sexpr{REP_seg}.
+
+La edad promedio de los beneficiarios es 46,22 años en los hombres y 49,52 en las mujeres. En la figura \ref{fig:iess_pir_pensiones_pa}, se muestra la pirámide poblacional de los pensionistas de incapacidad permanente absoluta en el año 2021, la cual posee una forma regresiva, que muestra una población que continúa envejeciendo y en su mayoría se encuentran entre 35 y 60 años de sexo masculino; y pocas entradas de nuevos pensionistas.
+
+Durante el año 2021, se entregaron USD 1.117.097,10 por pensiones de incapacidad permanente total y décimos, de los cuales USD 974.207,52 (87,21\%) corresponden a las pensiones mensuales; USD 82.376,76 (7,37\%) al pago de decimotercero y solo USD 60.512,82 (5,42\%) por decimocuarto. En cambio, los descuentos\footnote{Cabe señalar desde la expedición de la Sentencia de la Corte Constitucional No. 23-18-IN/19, de fecha 18 de diciembre de 2019, se declaró la inconstitucionalidad del inciso primero del artículo 3 de la Resolución No. C.D. 501, de 13 de noviembre de 2015 y ordenó la suspensión de la retención del 2,76\% de las pensiones de los jubilados para la financiación de décimos y fondo mortuorio.} establecidos en la Ley ascendieron a USD 270.781,16 por: retención judicial, retención préstamos, seguro médico, atenciones de médica de cónyuges e hijos, federaciones y asociaciones de jubilados; es decir, que los descuentos representan el 24,24\% de los ingresos por pensiones y décimas.
 
 \begin{figure}[H]
 \centering
@@ -1142,8 +1174,6 @@ A diciembre del 2020 existen 148 pensionistas por incapacidad permanente absolut
 \caption*{\scriptsize Fuente: DSGRT - IESS
 \\Elaborado: DAIE}
 \end{figure}
-
-
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{11}{12}\selectfont
@@ -1279,33 +1309,20 @@ Elaborado: DAIE}
 
 
 
-La edad promedio de las mujeres es de 46 años; mientras que, la edad media de los hombres es de 44 años.
+Por consiguiente, el valor liquido a pagar a los pensionistas de incapacidad permanente absoluta fue igual a USD 846.315,94 en el 2021. Durante el último año, monto entregado por pensiones y décimos creció de USD 1.082.414,84 en el 2020 a USD 1.117.097,10, es decir, un aumento igual a 3,20\%, debido al pequeño aumento de pensionistas; de igual manera, los descuentos a los pensionistas crecieron en 7,43\%, durante el último año. En la tabla \ref{tab:tab_evo_monto_pa_rtr}, se presenta la evolución histórica de los beneficios entregados por pensiones de incapacidad permanente absoluta del \Sexpr{REP_seg}.
+
 \begin{figure}[H]
 \centering
-\caption{Distribución de la población de pensionistas por incapacidad permanente absoluta, por edad y sexo, en 2020}
+\caption{Distribución de la población de pensionistas por incapacidad permanente absoluta, por edad y sexo}
 \label{fig:iess_pir_ben_pa}
 \includegraphics[scale=1]{graficos/iess_pir_ben_pa.png}
 \caption*{\scriptsize DSGRT - IESS
 \\Elaborado: DAIE}
 \end{figure}
 
-La pensión mensual promedio de mujeres y hombres por incapacidad permanente absoluta es de USD
-803,85 y USD 852,12, respectivamente. La tabla \ref{tab:tab_rango_monto_pa_rtr}
-muestra la distribución de la pensión mensual por sexo de los pensionistas por incapacidad
-permanente absoluta.
-
-\begin{figure}[H]
-\centering
-\caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente absoluta, por edad y sexo}
-\label{fig:iess_pir_pensiones_pa}
-\includegraphics[scale=1]{graficos/iess_pir_pensiones_pa.png}
-\caption*{\scriptsize Fuente: DSGRT - IESS
-\\Elaborado: DAIE}
-\end{figure}
-
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de las rentas mensuales por incapacidad permanente absoluta, para cada sexo, en 2020}
+\caption{Distribución de las rentas mensuales por incapacidad permanente absoluta, para cada sexo}
 \label{tab:tab_rango_monto_pa_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
@@ -1349,11 +1366,25 @@ permanente absoluta.
 \end{longtable}
 }
 
+Durante el año 2021, el 50\% de los beneficiarios por pensiones de incapacidad permanente absoluta recibieron menos de USD 490; el otro 40\% recibió entre USD 490 y USD 919; y, solamente, el 10\% restante recibió de USD 919 a USD 1.983 de renta mensual, incluido décimas. Y, por último, en el 2021, la pensión promedio de incapacidad permanente absoluta fue igual a USD 621,55 para los hombres y USD 513,46 para las mujeres, incluyendo todos los ingresos por Ley (ver tabla \ref{tab:tab_rango_monto_pa_rtr} y la figura \ref{fig:iess_pir_ben_pa} para la distribución de las pensiones promedio por edad y sexo).
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de las pensiones promedio, incluido décimos, entregados por incapacidad permanente absoluta, por edad y sexo}
+\label{fig:iess_pir_pensiones_pa}
+\includegraphics[scale=1]{graficos/iess_pir_pensiones_pa.png}
+\caption*{\scriptsize Fuente: DSGRT - IESS
+\\Elaborado: DAIE}
+\end{figure}
+
 
 %---------------------------------------------------------------------------------------------------
 \subsection{Pensionistas por orfandad}
-A diciembre del 2020 existen 3.388 pensionistas por orfandad, de los cuales 64,8\% son mujeres y el
-35,2\% son hombres.
+
+Cuando el asegurado que falleciere a consecuencia de un accidente de trabajo o de una enfermedad profesional u ocupacional, generará derecho a la prestación de montepío cualquiera sea el número de aportaciones; igualmente, al fallecimiento del pensionista por incapacidad permanente total o incapacidad permanente absoluta, según el artículo 40 de la \legalcite{ResIESS_CD513}. Por la muerte del asegurado las pensiones de viudedad y orfandad se concederán con sujeción a los porcentajes fijados en la Ley de Seguridad Social y en la normativa interna, se calcularán sobre la pensión de incapacidad permanente total que le habría correspondido al causante al momento de su muerte, establecido por el artículo 41 de la \legalcite{ResIESS_CD513}.
+
+Anteriormente, se entregó el derecho a una pensión vitalicia de montepío a hijas solteras y hermanos hasta 1956; a partir del año 1984, se restringe la entrega de pensiones de orfandad solo a hijos menores de dieciocho (18) años e hijos mayores a dieciocho (18) años con alguna incapacidad y se deja de entregar el beneficio a padres. Desde la expedición de la \legalcite{ResIESS_CD100}, se limita a solo los hijos menores de dieciocho (18) años y menores de veintiuno (21) que se encuentren estudiando. Por esta razón, se IESS se encuentra pagando pensiones de orfandad a mayores de edad y personas de noventa (90) años.
+
 
 \begin{figure}[H]
 \centering
@@ -1364,10 +1395,10 @@ A diciembre del 2020 existen 3.388 pensionistas por orfandad, de los cuales 64,8
 \\Elaborado: DAIE}
 \end{figure}
 
-
+En el año 2021, se entregó pensiones de orfandad del \Sexpr{REP_seg} a 3.150 beneficiarios, de los cuales la mayoría 1.987 (63,08\%) son mujeres y solo 1.163 (36,92\%) son mujeres, lo que representó un decrecimiento igual a 3,43\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, durante los últimos diez (10) años. Y, el número máximo de beneficiarios de pensiones de orfandad del \Sexpr{REP_seg} se alcanzó en el año 2016 (4.056). En la tabla \ref{tab:tab_evo_ben_of_rtr} y figura \ref{fig:iess_evo_ben_of_rtr}, se presenta la evolución histórica de los beneficiarios de orfandad del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{5pt}
-{\fontsize{11}{12}\selectfont
+{\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de orfandad del \Sexpr{REP_seg}}
 \label{tab:tab_evo_ben_pt_rtr} \\
@@ -1419,6 +1450,18 @@ Elaborado: DAIE}
 \end{longtable}
 }
 }
+
+La edad promedio de los beneficiarios es 14,16 años en los hombres y 36 años en las mujeres, debido a que antiguamente el IESS entregaba pensiones de montepío a los hijos mayores de dieciocho años incapacitados e hijas solteras. En la figura \ref{fig:iess_pir_pensiones_of}, se muestra la pirámide poblacional de los beneficiarios de una pensión de orfandad del \Sexpr{REP_seg} en el año 2021, la cual posee una forma irregular, que muestra una población dos poblaciones claramente diferentes; la primera, de los huérfanos menores de dieciocho (18) años, los cuales se van acumulando hasta los diecisiete (17) años, y se encuentra equilibrada en genero; en segundo lugar, una población compuesta mayormente por mujeres entre 45 a 63 años, las cuales obtuvieron el derecho bajo el antiguo régimen que permitía a entregar el beneficio a hijas solteras, y se encuentra envejeciendo.
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de la población de pensionistas por orfandad, por edad y sexo}
+\label{fig:iess_pir_ben_of}
+\includegraphics[scale=1]{graficos/iess_pir_ben_of.png}
+\caption*{\scriptsize Fuente: DSGRT
+\\Elaborado: DAIE}
+\end{figure}
+
 
 \begin{landscape}
 \vspace*{\fill}
@@ -1498,17 +1541,9 @@ Elaborado: DAIE}
 \vspace*{\fill}
 \end{landscape}
 
+Durante el año 2021, se entregaron USD 6.145.332,92 por pensiones de orfandad del \Sexpr{REP_seg} y décimos, de los cuales USD 5.116.543,62 (83,26\%) corresponden a las pensiones mensuales; USD 433.198,43 (7,05\%) al pago de decimotercero y USD 595.590,87 (9,69\%) por decimocuarto. En cambio, los descuentos\footnote{Cabe señalar desde la expedición de la Sentencia de la Corte Constitucional No. 23-18-IN/19, de fecha 18 de diciembre de 2019, se declaró la inconstitucionalidad del inciso primero del artículo 3 de la Resolución No. C.D. 501, de 13 de noviembre de 2015 y ordenó la suspensión de la retención del 2,76\% de las pensiones de los jubilados para la financiación de décimos y fondo mortuorio.} establecidos en la Ley ascendieron a USD 107.190,40 por: retención judicial, retención préstamos, seguro médico, atenciones de médica de cónyuges e hijos, federaciones y asociaciones de jubilados; es decir, que los descuentos solo representan el 1,74\% de los ingresos por pensiones y décimas.
 
-La edad media de hombres y mujeres es de 13,8 y 34,1 años, respectivamente.
-
-\begin{figure}[H]
-\centering
-\caption{Distribución de la población de pensionistas por orfandad, por edad y sexo, en 2020}
-\label{fig:iess_pir_ben_of}
-\includegraphics[scale=1]{graficos/iess_pir_ben_of.png}
-\caption*{\scriptsize Fuente: DSGRT
-\\Elaborado: DAIE}
-\end{figure}
+Por consiguiente, el valor liquido a pagar a los beneficiarios de una pensión de orfandad del \Sexpr{REP_seg} fue igual a USD 6.038.142,52 en el 2021. Durante el último año, monto entregado por pensiones y décimos decreció de USD 6.316.515,77 en el 2020 a USD 6.145.332,92; es decir, un decrecimiento igual a 1,74\%; en cambio, los descuentos a los pensionistas crecieron en 139,83\%, durante el último año. En la tabla \ref{tab:tab_evo_monto_of_rtr}, se presenta la evolución histórica de los beneficios entregados por pensiones de orfandad del \Sexpr{REP_seg}.
 
 \begin{figure}[H]
 \centering
@@ -1519,9 +1554,11 @@ La edad media de hombres y mujeres es de 13,8 y 34,1 años, respectivamente.
 \\Elaborado: DAIE}
 \end{figure}
 
+Durante el año 2021, el 50\% de los beneficiarios por pensiones de orfandad recibieron menos de USD 143; el otro 40\% recibió entre USD 143 y USD 250; y, solamente, el 10\% restante recibió de USD 250 a USD 961 de renta mensual, incluido décimas. Y, por último, en el 2021, la pensión promedio de orfandad del \Sexpr{REP_seg} fue igual a USD 157,52 para los hombres y USD 193,8 para las mujeres, incluyendo todos los ingresos por Ley (ver tabla \ref{tab:tab_rango_monto_of_rtr} y la figura \ref{fig:iess_pir_ben_of} para la distribución de las pensiones promedio de orfandad por edad y sexo).
+
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de las rentas mensuales por orfandad, para cada sexo, en 2020}
+\caption{Distribución de las rentas mensuales por orfandad, para cada sexo}
 \label{tab:tab_rango_monto_of_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
@@ -1565,21 +1602,16 @@ La edad media de hombres y mujeres es de 13,8 y 34,1 años, respectivamente.
 \end{longtable}
 }
 
-La pensión mensual promedio de hombres y mujeres por orfandad es de USD 179,59 y USD 251,72,
-respectivamente. La tabla \ref{tab:tab_rango_monto_of_rtr} muestra la distribución
-de la pensión mensual por sexo de los pensionistas por orfandad.
-
 %---------------------------------------------------------------------------------------------------
 \subsection{Pensionistas por viudedad}
-A diciembre del 2020 existen 4.140 pensionistas por viudedad, de los cuales 98,9\% son mujeres y
-apenas el 1,1\% son hombres.
 
+De igual manera que con las pensiones de orfandad, se entregan beneficios de acuerdo con los artículos 40 y 41 de la \legalcite{ResIESS_CD513}. Anteriormente, se entregó el derecho a una pensión vitalicia de montepío a hijas solteras hasta 1956; a partir del año 1984, se restringe la entrega de pensiones de viudedad al cónyuge y se deja de entregar el beneficio a padres.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{11}{12}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de  montepío por viudez del \Sexpr{REP_seg}}
-\label{tab:tab_evo_ben_pt_rtr} \\
+\label{tab:tab_evo_ben_vo_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{3}{c}{Beneficiarios en diciembre} &
@@ -1629,13 +1661,37 @@ Elaborado: DAIE}
 }
 }
 
+En el año 2021, se entregó pensiones de viudedad del \Sexpr{REP_seg} a 4.426beneficiarios, de los cuales la mayoría 4.370 (\%) son mujeres y solo 56 (\%) son mujeres, lo que representó un decrecimiento igual a 0,61\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, durante los últimos diez (10) años. Y, el número máximo de beneficiarios de pensiones de viudedad del \Sexpr{REP_seg} se alcanzó en el año 2019 (4.500). En la tabla \ref{tab:tab_evo_ben_vo_rtr} y figura \ref{fig:iess_evo_ben_vo_rtr}, se presenta la evolución histórica de los beneficiarios de viudedad del \Sexpr{REP_seg}.
+
+
+\begin{figure}[H]
+\centering
+\caption{Evolución histórica de pensionistas de montepío por viudez del \Sexpr{REP_seg}}
+\label{fig:iess_evo_ben_vo_rtr}
+\includegraphics[scale=1]{graficos/iess_evo_ben_of_rtr.png}
+\caption*{\scriptsize Fuente: Base nómina de pensiones de Riesgos del Trabajo
+\\Elaborado: DAIE}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\caption{Distribución de la población de pensionista de montepío por viudez, por edad y sexo}
+\label{fig:iess_pir_ben_vo}
+\includegraphics[scale=1]{graficos/iess_pir_ben_vo.png}
+\caption*{\scriptsize Fuente: DSGRT
+\\Elaborado: DAIE}
+\end{figure}
+
+
+
 \begin{landscape}
 \vspace*{\fill}
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{18}\selectfont
 \begin{longtable}[H]{crrrrrrrrr}
   \caption{Evolución histórica de los beneficios entregados a los pensionistas de montepío por viudez del \Sexpr{REP_seg}}
-\label{tab:tab_evo_monto_pt_rtr} \\
+\label{tab:tab_evo_monto_vo_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{4}{c}{Pensiones u otros ingresos} &
@@ -1708,26 +1764,7 @@ Elaborado: DAIE}
 \end{landscape}
 
 
-
-\begin{figure}[H]
-\centering
-\caption{Evolución histórica de pensionistas de montepío por viudez del \Sexpr{REP_seg}}
-\label{fig:iess_evo_ben_of_rtr}
-\includegraphics[scale=1]{graficos/iess_evo_ben_of_rtr.png}
-\caption*{\scriptsize Fuente: Base nómina de pensiones de Riesgos del Trabajo
-\\Elaborado: DAIE}
-\end{figure}
-
-La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
-\begin{figure}[H]
-\centering
-\caption{Distribución de la población de pensionista de montepío por viudez, por edad y sexo, en 2020}
-\label{fig:iess_pir_ben_vo}
-\includegraphics[scale=1]{graficos/iess_pir_ben_vo.png}
-\caption*{\scriptsize Fuente: DSGRT
-\\Elaborado: DAIE}
-\end{figure}
-
+En el año 2021, se entregó pensiones de viudedad del \Sexpr{REP_seg} a 4.426beneficiarios, de los cuales la mayoría 4.370 (\%) son mujeres y solo 56 (\%) son mujeres, lo que representó un decrecimiento igual a 0,61\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, durante los últimos diez (10) años. Y, el número máximo de beneficiarios de pensiones de viudedad del \Sexpr{REP_seg} se alcanzó en el año 2019 (4.500). En la tabla \ref{tab:tab_evo_ben_vo_rtr} y figura \ref{fig:iess_evo_ben_vo_rtr}, se presenta la evolución histórica de los beneficiarios de viudedad del \Sexpr{REP_seg}.
 
 \begin{figure}[H]
 \centering
@@ -1738,10 +1775,15 @@ La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
 \\Elaborado: DAIE}
 \end{figure}
 
+Durante el año 2021, se entregaron USD 18.322.646,49 por pensiones de viudedad del \Sexpr{REP_seg} y décimos, de los cuales USD 15.575.558,27 (\%) corresponden a las pensiones mensuales; USD 1.307.512,07 (\%) al pago de decimotercero y USD 1.439.576,15 (\%) por decimocuarto. En cambio, los descuentos\footnote{Cabe señalar desde la expedición de la Sentencia de la Corte Constitucional No. 23-18-IN/19, de fecha 18 de diciembre de 2019, se declaró la inconstitucionalidad del inciso primero del artículo 3 de la Resolución No. C.D. 501, de 13 de noviembre de 2015, y ordenó la suspensión de la retención del 2,76\% de las pensiones de los jubilados para la financiación de décimos y fondo mortuorio.} establecidos en la Ley ascendieron a USD 3.537.664,02 por: retención judicial, retención préstamos, seguro médico, atenciones de médica de cónyuges e hijos, federaciones y asociaciones de jubilados; es decir, que los descuentos representan el 19,31\% de los ingresos por pensiones y décimas.
+
+Por consiguiente, el valor liquido a pagar a los pensionistas de viudedad del \Sexpr{REP_seg} fue igual a USD 14.784.982,47 en el 2021. Durante el último año, monto entregado por pensiones y décimos decreció de USD 18.416.390,20 en el 2020 a USD 18.322.646,49; es decir, un decrecimiento igual a 0,51\%; en cambio, los descuentos a los pensionistas crecieron en 9,37\%, durante el último año. En la tabla \ref{tab:tab_evo_monto_vo_rtr}, se presenta la evolución histórica de los beneficios entregados por pensiones de viudedad del \Sexpr{REP_seg}.
+
+Durante el año 2021, el 50\% de los beneficiarios por pensiones de viudedad recibieron menos de USD 312; el otro 40\% recibió entre USD 312 y USD 451; y, solamente, el 10\% restante recibió de USD 451 a USD 1.580 de renta mensual, incluido décimas. Y, por último, en el 2021, la pensión promedio de viudedad del \Sexpr{REP_seg} fue igual a USD 359,89 para los hombres y USD 423,19 para las mujeres, incluyendo todos los ingresos por Ley (ver tabla \ref{tab:tab_rango_monto_vo_rtr} y la figura \ref{fig:iess_pir_ben_vo} para la distribución de las pensiones promedio de viudedad por edad y sexo).
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-\caption{Distribución de las rentas mensuales por viudedad, para cada sexo, en 2020}
+\caption{Distribución de las rentas mensuales por viudedad, para cada sexo}
 \label{tab:tab_rango_monto_vo_rtr}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
@@ -1785,10 +1827,6 @@ La edad media de hombres y mujeres es de 49,7 y 57,7 años, respectivamente.
 \end{longtable}
 }
 
-La pensión mensual promedio de hombres y mujeres por viudedad es de USD 469,61 y USD 505,52,
-respectivamente. La tabla \ref{tab:tab_rango_monto_vo_rtr} muestra la distribución
-de la pensión mensual por sexo de los pensionistas por viudedad.
-
 \section{Estructura demográfica de la población de beneficiarios y sus beneficios}
 
 En los casos de generarse derecho al otorgamiento de pensiones por accidente de trabajo o enfermedad profesional, hay responsabilidad patronal cuando:
@@ -1815,7 +1853,7 @@ En los casos de generarse derecho al otorgamiento de pensiones por accidente de 
 
 \begin{figure}[H]
 \centering
-\caption{Distribución de la población de pensionista de montepío por viudez, por edad y sexo, en 2020}
+\caption{Distribución de la población de pensionista de montepío por viudez, por edad y sexo}
 \label{fig:iess_pir_rp_edad_sexo}
 \includegraphics[scale=1]{graficos/iess_pir_rp_edad_sexo.png}
 \caption*{\scriptsize Fuente: DSGRT

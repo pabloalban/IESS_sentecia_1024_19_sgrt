@@ -17,7 +17,7 @@ cortes_edad <- c( 15, seq( 20, 100, 10 ), 115 )
 
 etiquetas_edad<-c(paste0("(",formatC( cortes_edad[1:length(cortes_edad)-1], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),
-                          "-",formatC( cortes_edad[2:length(cortes_edad)], 
+                          " - ",formatC( cortes_edad[2:length(cortes_edad)], 
                                         digits = 0, format = 'f', big.mark = '.', decimal.mark = ',' ),"]"))
 
 aux <- a %>%
@@ -59,7 +59,8 @@ print( aux_xtab,
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),
        only.contents = TRUE,
-       hline.after = nrow(aux),
+       hline.after = c( nrow(aux)-1,
+                        nrow(aux) ),
        sanitize.text.function = identity )
 
 #Tabla masa salarial--------------------------------------------------------------------------------
@@ -91,7 +92,7 @@ aux <- afi_mensual %>%
   mutate( por_afi_f = 100 * afi_femenino / afiliados,
           por_afi_m = 100 * afi_masculino / afiliados,
           incremento = ( afiliados - lag( afiliados ) ),
-          tasa_crecimiento = 100 * ( lag( afiliados ) - afiliados ) / lag( afiliados ) ) %>%
+          tasa_crecimiento = 100 * ( afiliados - lag( afiliados ) ) / lag( afiliados ) ) %>%
   dplyr::select( anio,
                  afi_masculino,
                  por_afi_m,
