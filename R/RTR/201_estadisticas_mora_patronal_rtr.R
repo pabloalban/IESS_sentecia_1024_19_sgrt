@@ -131,7 +131,7 @@ aux <- reporte_resp_patronal %>%
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR MULTA SIN OTRA CAUSA DE RP',
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR PRESTACIONES',
                                                'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR SEGUIMIENTOS' ),
-                              'OTROS',
+                              'SANCIONES Y MULTAS',
                               concepto ) ) %>%
   mutate( concepto = if_else( concepto %in% c( 'RIESGOS DEL TRABAJO SANCIONES Y MULTAS POR INOBSERVANCIA DE MEDIDAS DE PREVENCIÓN' ),
                               'POR INOBSERVANCIA DE MEDIDAS DE PREVENCIÓN',
@@ -190,7 +190,9 @@ tab_concepto_prom <- aux %>%
   mutate( monto_prom = monto / rp ) %>%
   dplyr::select( concepto, rp, rp_por, monto_prom, monto ) %>%
   replace( is.na(.), 0 ) %>%
-  rbind( ., c("TOTAL", as.character(colSums(.[,2:ncol(.)],  na.rm =TRUE ))))  %>%
+  rbind( ., c("TOTAL", as.character(colSums(.[,2:3], na.rm = TRUE )), 
+              as.character( mean( aux$valor_pendiente, na.rm = TRUE ) ),
+              as.character(colSums(.[,ncol(.)], na.rm = TRUE ))))  %>%
   mutate_at( c(2:ncol(.)), as.numeric )
 
 #Pirámide por edad y sexo de los afiliados----------------------------------------------------------

@@ -708,7 +708,7 @@ permanente parcial, en su remplazo se entrega indemnizaciones.
 {\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de incapacidad permanente parcial del \Sexpr{REP_seg}}
-\label{tab:tab_evo_ben_pt_rtr} \\
+\label{tab:tab_evo_ben_pp_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{3}{c}{Beneficiarios en diciembre} &
@@ -758,7 +758,7 @@ Elaborado: DAIE}
 }
 }
 
-En el año 2021, se entregó pensiones por incapacidad permanente parcial a 4.857 beneficiarios, de los cuales la mayoría 4.410 (90,80\%) son hombres y solo 447 (9,20\%) mujeres, lo que representó un decremento igual a 2,98\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, debido a que no existe ingresos de nuevos pensionistas. Y, el máximo número de beneficiarios de pensiones por incapacidad permanente parcial se proporcionó en el año 2015 (1.175). En la tabla \ref{tab:tab_evo_ben_pt_rtr} y figura \ref{fig:iess_evo_ben_pp_rtr}, se presenta la evolución histórica de los pensionistas de incapacidad permanente parcial del \Sexpr{REP_seg}.
+En el año 2021, se entregó pensiones por incapacidad permanente parcial a 4.857 beneficiarios, de los cuales la mayoría 4.410 (90,80\%) son hombres y solo 447 (9,20\%) mujeres, lo que representó un decremento igual a 2,98\%, respecto al año anterior. Además, el año 2021, fue el año con menos número de pensionistas, debido a que no existe ingresos de nuevos pensionistas. Y, el máximo número de beneficiarios de pensiones por incapacidad permanente parcial se proporcionó en el año 2015 (1.175). En la tabla \ref{tab:tab_evo_ben_pp_rtr} y figura \ref{fig:iess_evo_ben_pp_rtr}, se presenta la evolución histórica de los pensionistas de incapacidad permanente parcial del \Sexpr{REP_seg}.
 
 La edad promedio de los beneficiarios es 59,55 años en los hombres y 58,92 en las mujeres. En la figura \ref{fig:iess_pir_pensiones_pp}, se muestra la pirámide poblacional de los pensionistas de incapacidad permanente parcial en el año 2021, la cual posee una forma regresiva, que muestra una población envejecida y en su mayoría son mayores de 60 años; y la cual se está reduciendo cada año, puesto que no hay nuevas entradas de pensionistas.
 
@@ -1179,7 +1179,7 @@ Durante el año 2021, se entregaron USD 1.117.097,10 por pensiones de incapacida
 {\fontsize{11}{12}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de incapacidad permanente absoluta del \Sexpr{REP_seg}}
-\label{tab:tab_evo_ben_pt_rtr} \\
+\label{tab:tab_evo_ben_pa_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{3}{c}{Beneficiarios en diciembre} &
@@ -1401,7 +1401,7 @@ En el año 2021, se entregó pensiones de orfandad del \Sexpr{REP_seg} a 3.150 b
 {\fontsize{11}{15}\selectfont
 \begin{longtable}[H]{crrrrrrrr}
   \caption{Evolución histórica de la población pensionista de orfandad del \Sexpr{REP_seg}}
-\label{tab:tab_evo_ben_pt_rtr} \\
+\label{tab:tab_evo_ben_of_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{3}{c}{Beneficiarios en diciembre} &
@@ -1827,7 +1827,8 @@ Durante el año 2021, el 50\% de los beneficiarios por pensiones de viudedad rec
 \end{longtable}
 }
 
-\section{Estructura demográfica de la población de beneficiarios y sus beneficios}
+\chapter[Análisis de las responsabilidades patronales] {Análisis de las responsabilidades patronales}
+\label{chp_rp}
 
 En los casos de generarse derecho al otorgamiento de pensiones por accidente de trabajo o enfermedad profesional, hay responsabilidad patronal cuando:
 
@@ -1839,6 +1840,11 @@ En los casos de generarse derecho al otorgamiento de pensiones por accidente de 
 \item Los aportes correspondientes a uno de los 12 meses de aportación, anteriores a la fecha del siniestro, fueron pagados con una extemporaneidad mayor de 3 meses.
 \end{enumerate}
 
+Históricamente, se registran responsabilidades patronales del \Sexpr{REP_seg}, desde el año 2010, que se han generado valores por pagar por USD 750.489,34 de 472 acuerdos; pero a 2021, se registró USD 6.089.861,39 por pagar por 987 acuerdos. Por el período 2010 a 2021 se han generado USD 37.954.946,82 por responsabilidad patronal del \Sexpr{REP_seg}, desde el año 2017, se observa una tendencia creciente en los valores generados por responsabilidad patronal, siendo el 2021 el año con mayores valores generados, con 40,59\% de incremento respecto al 2020. En la figura \ref{fig:iess_evo_rp_montos_anio}, se presenta la evolución histórica de los valores por pagar generados por responsabilidad patronal en el del \Sexpr{REP_seg}.
+
+La edad promedio de los afiliados que generaron un acuerdo de pago de responsabilidad patronal es 36,40 años para los hombres y 40,30 años para las mujeres. Por otro lado, los hombres representan el 85,70\% de los acuerdos generados y las mujeres solo el 14,30\%. En la figura \ref{fig:iess_pir_rp_edad_sexo}, se presenta su pirámide poblacional, la cual presenta una forma regresiva, y desequilibraba, puesto que la mayoría es de género masculino, y el gran porcentaje de las responsabilidades patronales sucedieron en edades entre 21 a 45, en hombres. Debido a que los hombres generalmente realizan trabajos en los cuales están expuestos a riesgos laborales.
+
+Por sector, en el período 2010 a 2021, se han registrado 11.936 acuerdos, de los cuales 10.663 (89,33\%) son del sector privado y solo 1.273 (10,67\%) del público. Los valores a pagar por el mismo periodo de tiempo fue igual a USD 37.954.946,82, de los cuales USD 29.595.497,00 (77,98\%) eran en el sector privado y solo USD 8.359.449,82(22,02\%), en el público; es decir, que el promedio por acuerdo en el sector privado es USD 2.775,53; mientras que el público es USD 6.566,73.
 
 \begin{figure}[H]
 \centering
@@ -1849,26 +1855,21 @@ En los casos de generarse derecho al otorgamiento de pensiones por accidente de 
 \\Elaborado: DAIE}
 \end{figure}
 
-
-
 \begin{figure}[H]
 \centering
-\caption{Distribución de la población de pensionista de montepío por viudez, por edad y sexo}
+\caption{Distribución de la población de los afiliados que generaron responsabilidad patronal del \Sexpr{REP_seg}}
 \label{fig:iess_pir_rp_edad_sexo}
 \includegraphics[scale=1]{graficos/iess_pir_rp_edad_sexo.png}
 \caption*{\scriptsize Fuente: DSGRT
 \\Elaborado: DAIE}
 \end{figure}
 
-
-
-
 \begin{landscape}
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-  \caption{Evolución histórica de la responsabilidad patronal del \Sexpr{REP_seg} por sector}
-\label{tab:tab_evo_ben_pt_rtr} \\
+  \caption{Responsabilidad patronal del \Sexpr{REP_seg} por sector}
+\label{tab:tab_acuerdo_sector} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Estado del acuerdo:}} & 
 \multicolumn{3}{c}{Afiliados} &
@@ -1912,12 +1913,10 @@ Elaborado: DAIE}
 }
 
 
-
-
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{12}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-  \caption{Valores por estado de la glosa de los acuerdos transferidos a glosa}
+  \caption{Valores por estado de los acuerdos transferidos a glosa}
 \label{tab:tab_transferido_glosa_sector} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Estado de la glosa:}} & 
@@ -2014,12 +2013,16 @@ Elaborado: DAIE}
 \end{landscape}
 
 
+De estos valores generados por responsabilidad patronal del \Sexpr{REP_seg}, se cancelaron USD 28.645.311,56 a la fecha; USD 19.042.705,61 (10,85\%) se cancelaron mediante glosa emitida, USD 3.107.212,15 (10,85\%) se canceló mediante convenio y USD 6.495.393,80 (22,68\%) se canceló mediante título de crédito (ver tabla \ref{tab:tab_acuerdo_sector} para más detalle). Por otro lado, existen USD 7.157,35 con estado de acuerdo emitido y USD 9.302.477,91 fueron transferidos a glosas.
 
+De los valores transferidos a glosas (USD 9.302.477,91), se encuentran cancelados a la fecha USD 188.371,84 (2,02\%); USD 52.729,31 (0,57\%) se encuentran con estado de glosa “EMITIDO”; USD 89.052,94 (0,96\%), se encuentran en espera de notificación; USD 39.888,23 (0,43\%) en espera de publicación ; USD 197.569,25 (2,12\%) están en segunda instancia de impugnación; USD 2.330.968,60 (25,06\%) en impugnación de primera instancia; USD 89.226,10 (0,96\%) en impugnación en el trámite de coactiva; USD 173.695,85 (1,87\%) no se encuentran notificados; USD 105.667,68 (1,14\%) no se notificaron electrónicamente; USD 16.760,01 (0,18\%) se encuentran con la glosa notificada; USD 1.154,23 (0,01\%) con glosa publicada; USD 525.896,66 (5,65\%) trasferida a convenios; y ,finalmente, USD	 5.491.497,21 (59,03\%) se encuentran transferido a títulos de crédito. Por lo tanto, de los valores transferidos a glosas, existen USD 9.114.106,07 (97,98\%) pendientes.
+
+Por concepto de generación de responsabilidad patronal, los valores pendientes de recibir por glosas emitidas (USD 9.114.106,07) se distribuyen de la siguiente manera: USD 109.618,76 (1,2\%) por incapacidad permanente absoluta; USD 235.260,43 (2,58\%) por incapacidad permanente parcial; USD 255.462,99 (2,8\%) por incapacidad permanente total; USD 360.161,84 (3,95\%) por indemnizaciones; USD 216.762,28 (2,38\%) por montepío; USD 47.228,91 (0,52\%) no especifica en las bases de datos; USD 36.013 (0,4\%) en sanciones y multas; USD 7.622.547,3 (83,63\%) por inobservancia de medidas de prevención; y, finalmente, USD 231.050,56 (2,54\%) por subsidios.
 
 {\setlength{\tabcolsep}{3pt}
 {\fontsize{10}{13}\selectfont
 \begin{longtable}[H]{lrrrr}
-  \caption{Valores de lo acuerdos por concepto, porcentaje y monto promedio de las glosas sin cancelar}
+  \caption{Valores de lo acuerdos por concepto, porcentaje y monto promedio de las glosas pendientes de cancelar}
 \label{tab:tab_concepto_prom} \\
 \toprule
 \multicolumn{1}{l}{\multirow{2}{*}{Concepto:}} & 
@@ -2061,12 +2064,12 @@ Elaborado: DAIE}
 }
 }
 
-
+El valor promedio de las glosas emitidas pendientes de pago es USD 12.200,95; y por concepto: USD 23.820,46 por inobservancia de medidas de prevención; USD 4.001,44 por sanciones y multas; USD 958,72 por subsidios; USD 6.992,33 por montepío; USD 8.112,43 por incapacidad permanente parcial; USD 5.219,74 por indemnizaciones; USD 18.247,36por incapacidad permanente total; USD 36.539,59 por incapacidad permanente absoluta; y, finalmente, USD 1.523,51 no especifica en las bases de datos (ver tabla \ref{tab:tab_concepto_prom}).
 
 {\setlength{\tabcolsep}{3pt}
 {\fontsize{10}{13}\selectfont
 \begin{longtable}[H]{lrrrrrr}
-  \caption{Responsabilidades patronales sin cancelar por provincia}
+  \caption{Responsabilidades patronales con glosas pendientes de cancelar por provincia}
 \label{tab:tabla_rp_provincia} \\
 \toprule
 \multicolumn{1}{l}{\multirow{2}{*}{Provincia:}} & 
@@ -2110,7 +2113,7 @@ Elaborado: DAIE}
 }
 }
 
-
+Por provincias; el Guayas registra USD 2.632.400,40 por valores pendientes de cancelar por glosas generadas por RP, lo que representa el 28,88\%; en segundo lugar, se encuentra Pichincha con USD 2.433.077,94 (26,70\%); en tercer lugar, la provincia del ORO, con USD 1.060.111,45 (11,63\%); seguida de Azuay con USD 348.520,48; USD 333.104,70 Chimborazo; USD 270.659,57 Imbabura; USD 266.481,20 Loja; USD 250.904,36 Manabí; USD 203.031,85 Galápagos; USD 192.392,49 Esmeraldas; USD 158.597,67 Tungurahua; USD 137.510,56 Santa Elena, USD 130.594,96 Sucumbíos; USD 134.444,63 Los Ríos; USD 104.894,43 Cotopaxi; USD 91.265,82 Bolívar; USD 74.746,57 Orellana;  USD 69.183,14 Morona Santiago; USD 68.848,82 Zamora Chinchipe; USD 42.882,53 Napo; USD 40.291,27 Carchi; USD 39.034,57 Santo Domingo de los Tsáchilas; y, por último, USD 31.126,66 Cañar (ver tabla \ref{tab:tabla_rp_provincia}).
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{crrrrrr}
@@ -2157,3 +2160,5 @@ Elaborado: DAIE}
   \input{tablas/tabla_rangos_montos_rp.tex}
 \end{longtable}
 }
+
+Los valores pendientes de cancelar por glosas generadas por RP por rangos se distribuyen de la siguiente forma: el 50\% de las glosas son por menos de USD 1.445; el 30\% son glosas entre USD 1.445 y USD 13.308; el 10\% es por glosas entre USD 13.308 y 36.126; y, solo el 10\% restante son glosas por más de USD 36.126 y hasta USD 306.663. En la tabla \ref{tab:tabla_rangos_montos_rp}, se presenta la distribución más detallada de los rangos de las glosas pendientes de cancelar por responsabilidad patronal.
