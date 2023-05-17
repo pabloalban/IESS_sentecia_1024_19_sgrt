@@ -3,7 +3,7 @@ message( '\tLectura del contexto económico' )
 
 # Carga de datos -----------------------------------------------------------------------------------
 load( file = paste0( parametros$RData, 'IESS_contexto_economico.RData' ) )
-load( paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
+load( paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
 
 # Cargar función tildes a latex---------------------------------------------------------------------
 source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
@@ -260,14 +260,14 @@ print( aux_xtab,
 
 #Tabla de resumen de hipótesis----------------------------------------------------------------------
 
-aux <- hip_macro_resumen
+aux <- Hipotesis
 
 aux_xtab <- xtable( aux, digits = c(0, 0, 3 ) )
 
 aux_xtab <- tildes_a_latex( aux_xtab )
 
 print( aux_xtab, 
-       file = paste0( parametros$resultado_tablas, 'iess_hip_macro_resumen', '.tex' ),
+       file = paste0( parametros$resultado_tablas, 'iess_hip_macro', '.tex' ),
        type = 'latex',
        include.colnames = FALSE, include.rownames = FALSE,
        format.args = list( decimal.mark = ',', big.mark = '.' ),

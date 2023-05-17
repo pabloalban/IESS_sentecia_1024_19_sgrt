@@ -2,7 +2,6 @@ message(paste(rep("-", 100), collapse = ""))
 
 # Cargando información -----------------------------------------------------------------------------
 message("\tCargando datos")
-load(paste0(parametros$RData, "IESS_macro_estudio.RData"))
 load( file = paste0( parametros$RData, 'IESS_SGO_masa_afiliados.RData' ) )
 load( file = paste0( parametros$RData_seg, 'IESS_RTR_tablas_mora_patronal.RData' ) )
 load( file =  paste0( parametros$RData_seg, 'IESS_RTR_causas_desfinanciamiento.RData' ) )
@@ -37,5 +36,5 @@ save(mod,
 )
 # Borrar elementos restantes -----------------------------------------------------------------------
 message(paste(rep("-", 100), collapse = ""))
-rm(list = ls()[!(ls() %in% c("parametros", "Hipotesis"))])
+rm(list = ls()[!(ls() %in% c("parametros"))])
 gc()

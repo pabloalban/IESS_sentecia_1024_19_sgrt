@@ -68,12 +68,12 @@ dickey_fuller <- data.frame( variable = c('$\\Delta$ PIB',
                                           aux_6@test$p.value ) )
 
 #Reducción de variables-----------------------------------------------------------------------------
-pi =  c_pib * sqrt(var(tasas_macro$pib, na.rm = TRUE)); #10 #inv
-i1 = c_i * sqrt(var(tasas_macro$inflacion, na.rm = TRUE)); #4 #inv
-s = c_s * sqrt(var(tasas_macro$sal, na.rm = TRUE));  #100 #inv
-a = c_a * sqrt(var(tasas_macro$tasa_activa, na.rm = TRUE)); #120 #prop
-p = c_p * sqrt(var(tasas_macro$tasa_pasiva, na.rm = TRUE)); #200 #prop
-su = c_su * sqrt(var(tasas_macro$sbu, na.rm = TRUE)) ; #1.8 #inv max 50
+pi =  c_pib * sqrt(stats::var(tasas_macro$pib, na.rm = TRUE)); #10 #inv
+i1 = c_i * sqrt(stats::var(tasas_macro$inflacion, na.rm = TRUE)); #4 #inv
+s = c_s * sqrt(stats::var(tasas_macro$sal, na.rm = TRUE));  #100 #inv
+a = c_a * sqrt(stats::var(tasas_macro$tasa_activa, na.rm = TRUE)); #120 #prop
+p = c_p * sqrt(stats::var(tasas_macro$tasa_pasiva, na.rm = TRUE)); #200 #prop
+su = c_su * sqrt(stats::var(tasas_macro$sbu, na.rm = TRUE)) ; #1.8 #inv max 50
 
 #Diferenciación de la series------------------------------------------------------------------------
 data <- tasas_macro %>%
@@ -100,7 +100,6 @@ train <- tasas_macro %>%
          diff_inflacion = c(NA,base::diff((inflacion),1))/i1) %>%
   dplyr::select(-pib, -tasa_activa, -tasa_pasiva, -sal, -anio, -sbu, -inflacion) %>%
   na.omit( . )
-
 
 #Estimación del modelo VAR(1)-----------------------------------------------------------------------
 m1<-VAR(train, include.mean = F, p = 1)
@@ -482,7 +481,7 @@ tasas_macro_crec <- aux
 
 #Tabla resumen de parámetros------------------------------------------------------------------------
 
-hip_macro_resumen <- tasas_macro_crec %>%
+Hipotesis <- tasas_macro_crec %>%
   dplyr::filter(anio>=2023, anio<=2062) %>%
   dplyr::mutate(t_pib = 100 * mean( t_pib,   na.rm = TRUE),
                 ta = 100 * mean( ta,   na.rm = TRUE),
@@ -500,7 +499,7 @@ hip_macro_resumen <- tasas_macro_crec %>%
                         'Crecimiento del SBU',
                         'Inflación Promedio Acumulada'))
 
-lista = list( hip_macro_resumen = hip_macro_resumen,
+lista = list( Hipotesis = Hipotesis,
              coeficientes = coeficientes,
              shapiro_test = shapiro_test,
              homocedasticidad = homocedasticidad,
@@ -534,7 +533,7 @@ c_su = 0.5
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 #  1.575492 8.587327 5.926767 1.587014 2.797914 1.552025
@@ -547,7 +546,7 @@ c_su = 0.7
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 #---------------------------------------------------------------------------------------------------
 # 2.019144 9.153392 6.034336 2.314659 3.770772 1.552025
 c_i = 1
@@ -559,7 +558,7 @@ c_su = 0.7
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 1.418709 13.420878  5.919735  1.332374  1.355884  1.552025
@@ -572,7 +571,7 @@ c_su = 0.1
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 #  1.435170 8.329428 5.891385 1.343333 2.350605 1.552025
@@ -585,7 +584,7 @@ c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 1.445563 8.389744 5.891635 1.359389 2.279574 1.552025
@@ -598,7 +597,7 @@ c_su = 0.60
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 #---------------------------------------------------------------------------------------------------
 # 1.435170 8.329428 5.891385 1.343333 2.350605 1.552025
 c_i = 1
@@ -610,7 +609,7 @@ c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
 
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 #---------------------------------------------------------------------------------------------------
 # 2.054509 11.243145  6.100424  2.378580  2.836040  1.552025
 c_i = 1
@@ -621,7 +620,7 @@ c_s = 0.88
 c_su = 0.3
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 2.054509 11.243145  6.100424  2.378580  2.836040  1.552025
@@ -633,7 +632,7 @@ c_s = 0.88
 c_su = 0.3
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 
@@ -647,7 +646,7 @@ c_s = 0.88
 c_su = 0.5
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 #---------------------------------------------------------------------------------------------------
 # 1.558945 8.451947 5.904017 1.536589 2.554934 1.552025
 c_i = 1
@@ -658,7 +657,7 @@ c_s = 1.082
 c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -671,7 +670,7 @@ c_s = 1.045
 c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 1.811658 8.763022 5.949114 1.964901 3.035517 1.552025
@@ -683,7 +682,7 @@ c_s = 1.043
 c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 
@@ -697,7 +696,7 @@ c_s = 1.035
 c_su = 0.65
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -710,7 +709,7 @@ c_s = 0.99
 c_su = 0.6
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 
@@ -724,7 +723,7 @@ c_s = 0.99
 c_su = 0.6
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -737,7 +736,7 @@ c_s = 0.89
 c_su = 0.45
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 1.916095 9.092155 6.002832 2.136516 2.799816 1.552025
@@ -749,7 +748,7 @@ c_s = 0.825
 c_su = 0.45
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -762,7 +761,7 @@ c_s = 0.787
 c_su = 0.45
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -775,7 +774,7 @@ c_s = 0.79
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 
 #---------------------------------------------------------------------------------------------------
@@ -788,7 +787,7 @@ c_s = 0.79
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 
 #---------------------------------------------------------------------------------------------------
@@ -801,7 +800,7 @@ c_s = 0.76
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 
 #---------------------------------------------------------------------------------------------------
@@ -814,7 +813,7 @@ c_s = 0.79
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 #---------------------------------------------------------------------------------------------------
 # 2.099595 8.698961 5.991131 2.391177 2.790082 1.552025
@@ -827,7 +826,7 @@ c_s = 0.76
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 
 
 #---------------------------------------------------------------------------------------------------
@@ -841,7 +840,7 @@ c_s = 0.713
 c_su = 0.41
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 
 #---------------------------------------------------------------------------------------------------
@@ -855,7 +854,7 @@ c_s = 0.713
 c_su = 0.33
 
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 
 #---------------------------------------------------------------------------------------------------
@@ -869,7 +868,7 @@ c_s = 0.713
 c_su = 0.41
 th = 1.96
 a <- macro( c_pib, c_a, c_p,  c_s, c_su, c_i, th )
-a$hip_macro_resumen$tasas
+a$Hipotesis$tasas
 a$coeficientes
 g <- a$predicciones %>%
   dplyr::select(pib,ta,tp,sal,inf, sbu)
@@ -911,7 +910,7 @@ tasas_macro_pred <- a$predicciones %>%
                 inflación_prom:=inf)
 
 
-hip_macro_resumen <- a$hip_macro_resumen
+Hipotesis <- a$Hipotesis
 
 coeficientes <- a$coeficientes
 
@@ -928,11 +927,12 @@ test_nulidad_nulidad <- a$test_nulidad_nulidad
 box_ljung <- a$box_ljung
 
 ma_multi_p_valores <- a$ma_multi_p_valores
+
 #Guardar en un RData--------------------------------------------------------------------------------
 message( '\tGuardando tasas macro' )
 
 save( tasas_macro_pred,
-      hip_macro_resumen,
+      Hipotesis,
       coeficientes,
       shapiro_test,
       homocedasticidad,
@@ -941,11 +941,11 @@ save( tasas_macro_pred,
       test_nulidad_nulidad,
       box_ljung,
       ma_multi_p_valores,
-      file = paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
+      file = paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
 # 
 # #Exportar a excel-----------------------------------------------------------------------------------
 write.xlsx(tasas_macro_pred,
-           file = paste0( parametros$resultado_seguro , 'tasas_macro_predicciones.xlsx' ),
+           file = paste0( parametros$resultado_seguro , 'IESS_macro_estudio.xlsx' ),
            sheetName = "hipotesis_predicciones",
            col.names = TRUE,
            row.names = FALSE,

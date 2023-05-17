@@ -37,10 +37,9 @@ esc$V0 <- 1202240160.65
 esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            
                            i_a = 0.0625,
-                           i_r = Hipotesis[ 4, 2 ],
-                           i_sbu = Hipotesis[ 5, 2 ],
-                           i_f = Hipotesis[ 7, 2 ],
-                           i_p = Hipotesis[ 7, 2 ],
+                           i_r = Hipotesis[ 4, 2 ]/100,
+                           i_sbu = Hipotesis[ 5, 2 ]/100,
+                           i_p = Hipotesis[ 6, 2 ]/100,
                            
                            # Tasas de aportación y gasto
                            por_gas = 0.0003, # 0,03% de la masa salarial
@@ -86,10 +85,9 @@ esc$V0 <- 1202240160.65
 esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            
                            i_a = 0.0625,
-                           i_r = Hipotesis[ 4, 2 ],
-                           i_sbu = Hipotesis[ 5, 2 ],
-                           i_f = Hipotesis[ 7, 2 ],
-                           i_p = Hipotesis[ 7, 2 ],
+                           i_r = Hipotesis[ 4, 2 ]/100,
+                           i_sbu = Hipotesis[ 5, 2 ]/100,
+                           i_p = Hipotesis[ 6, 2 ]/100,
                            
                            # Tasas de aportación y gasto
                            por_gas = 0.0003, # 0,03% de la masa salarial

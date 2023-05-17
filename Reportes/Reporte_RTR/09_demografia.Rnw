@@ -1235,7 +1235,7 @@ Elaborado: DAIE}
 {\fontsize{10}{18}\selectfont
 \begin{longtable}[H]{crrrrrrrrr}
   \caption{Evolución histórica de los beneficios entregados a los pensionistas de incapacidad permanente absoluta del \Sexpr{REP_seg}}
-\label{tab:tab_evo_monto_pt_rtr} \\
+\label{tab:tab_evo_monto_pa_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{4}{c}{Pensiones u otros ingresos} &
@@ -1469,7 +1469,7 @@ La edad promedio de los beneficiarios es 14,16 años en los hombres y 36 años e
 {\fontsize{10}{18}\selectfont
 \begin{longtable}[H]{crrrrrrrrr}
   \caption{Evolución histórica de los beneficios entregados a los pensionistas de orfandad del \Sexpr{REP_seg}}
-\label{tab:tab_evo_monto_pt_rtr} \\
+\label{tab:tab_evo_monto_of_rtr} \\
 \toprule
  \multicolumn{1}{l}{\multirow{2}{*}{Año:}} & 
 \multicolumn{4}{c}{Pensiones u otros ingresos} &

@@ -15,7 +15,7 @@ source( 'R/rtr/405_graf_responsabilidad_patronal_rtr.R', encoding = 'UTF-8', ech
 source( 'R/rtr/406_graf_balance_actuarial_rtr.R', encoding = 'UTF-8', echo = FALSE )
 
 # Tablas genéricas ---------------------------------------------------------------------------------
-source( 'R/501_tab_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )
+#source( 'R/501_tab_tasas_macro.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/504_tab_demografia.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/505_tab_contexto_economico.R', encoding = 'UTF-8', echo = FALSE )
 

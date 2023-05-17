@@ -133,7 +133,7 @@ for ( i in 1:length( escenarios_lista ) ) {
                       B11_vap = 'Beneficios por incapacidad temporal',
                       B16_vap = 'Valores generados por responsabilidad patronal',
                       B_sal_vap = 'Prestaciones m\\\'{e}dico asistenciales',
-                      B_vap = 'Beneficios totales', 
+                      B_vap = 'Egresos totales', 
                       G_vap = 'Gastos administrativos',
                       Pas_vap = 'Total pasivo actuarial',
                       V = 'Balance actuarial' )

@@ -8,7 +8,7 @@ message( '\tCargando datos' )
 load( paste0( parametros$RData, 'ONU_proyeccion_poblacion.RData' ) )
 load( paste0( parametros$RData, 'IESS_onu_pea_ecu_int.RData' ) )
 load( paste0( parametros$RData, 'IESS_contexto_economico.RData' ) )
-load( paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
+load( paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
 
 #1. Evolución histórica-----------------------------------------------------------------------------
 ##Evolución histórica del índice de precios (IPC)----------------------------------------------------

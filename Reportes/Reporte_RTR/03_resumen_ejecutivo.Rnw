@@ -94,7 +94,7 @@ A manera de resumen, se describen las principales hipótesis de este estudio:
 % {\fontsize{11}{12}\selectfont
 % %\begin{longtable}[H]{r*{5}{R{2.5cm}}}
 % \begin{longtable}[H]{lc}
-% \caption{Tasas utilizadas en el estudio (período 2019-2058)}
+% \caption{Tasas utilizadas en el estudio (período 2022-2061)}
 % \label{tab:iess_hip_macro_re} \\
 % \toprule
 % Ítem: & \multicolumn{1}{c}{Tasa}\\
@@ -154,7 +154,7 @@ para cubrir los gastos de enfermedades profesiones y atenciones por accidentes e
 Del estudio actuarial se concluyen los siguientes resultados:
 % \begin{table}[H]
 % \centering
-% \caption{Resultado de los escenarios de la valuación actuarial (2019 a 2058)}
+% \caption{Resultado de los escenarios de la valuación actuarial (2022 a 2061)}
 % \label{tab:iess_resultados_resumen_ejec}
 % {\fontsize{9}{11}\selectfont
 % \begin{tabular}{lrrrr}

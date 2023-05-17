@@ -2,7 +2,7 @@ message( paste( rep('-', 100 ), collapse = '' ) )
 
 # Cargando información -----------------------------------------------------------------------------
 message( '\tCargando datos' )
-load( paste0( parametros$RData, 'IESS_tasas_macro_predicciones.RData' ) )
+load( paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
 
 #Función de tildes a latex--------------------------------------------------------------------------
 source( 'R/500_tildes_a_latex.R', encoding = 'UTF-8', echo = FALSE )
@@ -44,7 +44,7 @@ print( aux_xtab,
        sanitize.text.function = identity)
 
 #hipótesis macroeconómicas -------------------------------------------------------------------------
-aux <- copy(hip_macro_resumen)
+aux <- copy(Hipotesis)
 aux_xtable <- xtable( aux, digits = c( 0,0,3) )
 aux_xtable <- tildes_a_latex(aux_xtable)
 
