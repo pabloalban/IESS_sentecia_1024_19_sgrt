@@ -34,7 +34,7 @@ aux <- a %>%
   dplyr::select( rango_edad,
                  rango_m,
                  rango_f ) %>%
-  filter( !is.na(.) ) %>%
+  na.omit(.) %>%
   mutate( total = rango_m + rango_f,
           fdp_m = 100 * rango_m / sum( total ),
           fdp_f = 100 * rango_f / sum( total ),

@@ -221,6 +221,21 @@ evo_rp_montos_anio <- reporte_resp_patronal %>%
   arrange( anio ) %>%
   filter( anio < 2022)
 
+#Evolución histórica de la emisión de rp y montos sin cancelar--------------------------------------
+
+evo_rp_montos_anio_pendientes <- reporte_resp_patronal %>% 
+  filter( !(estado_glosa %in% c( 'CANCELADA', 'CANCELADA CON CONVENIO' ) ) ) %>%
+  filter( estado_acuerdo == 'TRANSFERIDO A GLOSA' ) %>%
+  mutate( anio = year( fecha_acuerdo ) ) %>%
+  group_by( anio ) %>%
+  mutate( rp = n() ) %>%
+  mutate( monto = sum( valor_pendiente, na.rm = TRUE ) ) %>%
+  ungroup( ) %>%
+  distinct( ., anio, .keep_all = TRUE ) %>%
+  dplyr::select( anio, rp, monto) %>%
+  arrange( anio ) %>%
+  filter( anio < 2022)
+
 #Tabla RP por provincia y monto---------------------------------------------------------------------
 
 a <- reporte_resp_patronal %>% 
@@ -307,6 +322,7 @@ save( tab_acuerdo_sector,
       evo_rp_montos_anio,
       tabla_rp_provincia,
       tabla_rangos_montos_rp,
+      evo_rp_montos_anio_pendientes,
       file = paste0( parametros$RData_seg, 'IESS_RTR_tablas_mora_patronal.RData' ) )
 #Limpiar Ram----------------------------------------------------------------------------------------
 message( paste( rep('-', 100 ), collapse = '' ) )

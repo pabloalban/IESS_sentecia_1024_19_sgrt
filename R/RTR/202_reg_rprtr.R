@@ -15,12 +15,13 @@ aux <- afi_mensual %>%
   distinct( anio, .keep_all = TRUE ) %>%
   dplyr::select( anio,
                  masa_salarial ) %>%
-  left_join( ., evo_rp_montos_anio, by ='anio' ) %>%
+  left_join( ., evo_rp_montos_anio_pendientes, by ='anio' ) %>%
   filter( anio >= 2010, anio <= 2021 ) %>%
   mutate( prima_sgrt = c( rep( 0.0055, 5 ), 0.004916667, rep(0.002, 5), 0.0038 ) ) %>%
-  mutate( aporte_sgrt = prima_sgrt * masa_salarial )
+  mutate( aporte_sgrt = prima_sgrt * masa_salarial ) %>%
+  filter( anio >= 2014 )
 
-comparacion_primas
+
 
 # Regresión para encontrar la función de rp---------------------------------------------------------
 message("\tEstimando alpha del modelo de rp")
