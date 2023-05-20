@@ -83,8 +83,8 @@
 % <<cap13, child='14_sensibilidad.Rnw'>>=
 % @
 % 
-% <<cap14, child='15_conclusion.Rnw'>>=
-% @
+<<cap14, child='15_conclusion.Rnw'>>=
+@
 % 
 % <<cap15, child='16_opinion_actuarial.Rnw'>>=
 % @

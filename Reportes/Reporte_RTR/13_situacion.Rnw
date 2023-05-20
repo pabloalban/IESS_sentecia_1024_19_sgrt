@@ -13,7 +13,7 @@ Para estimar el impacto de los valores por cobrar pendientes por responsabilidad
 Se consideró la misma estructura actuarial del \Sexpr{REP_seg}, definida por un sistema de financiamiento de reparto con prima media nivelada, un esquema de prestaciones de beneficio definido y un régimen demográfico en grupo abierto, acorde a lo expuesto en la sección \ref{chp_modelo:actu}.
 
 Solo se considera el 28\% (no el 40\%) del aporte del Estado a las pensiones, puesto que ese fue el porcentaje que el Estado aporta en el año 2019. Además, se aplica los porcentajes de aportación dispuestos por la \legalcite{ResIESS_CD515}.
-\clearpage
+%\clearpage
 
 % Escenario 1 --------------------------------------------------------------------------------------
 \section{Valuación actuarial bajo el escenario base}
@@ -32,12 +32,13 @@ escenario base. El escenario 1 presenta un superávit igual a USD \Sexpr{REP$bal
 términos actuariales, en el año 2058, el cual se obtiene de la diferencia entre su activo actuarial
 (USD \Sexpr{REP$bal_sum_act_1}) y su pasivo actuarial (USD \Sexpr{REP$bal_sum_pas_1}), en valor
 presente. Por último, su prima suficiente alcanza el \Sexpr{REP$pri_med_niv_esc_1}\%.
+
 \begin{table}[H]
 \centering
 \caption{Balance actuarial en el escenario base}
 \label{tab:iess_bal_act_vap_escenario_1}
 \caption*{Fecha de valuación: al \Sexpr{REP_fec_fin}}
-{\fontsize{10}{12}\selectfont
+{\fontsize{11}{14}\selectfont
 \begin{tabular}{lr}
 \toprule
 Componente:	& Valor (USD) \\
