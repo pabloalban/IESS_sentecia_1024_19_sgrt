@@ -2,108 +2,26 @@
 \chapter{Valuación actuarial del \Sexpr{REP_seg}}
 \label{chp_valuacionactu}
 
-Tomando en cuenta el modelo actuarial presentado en el capítulo \ref{chp_modelo} y las hipótesis
-actuariales definidas en el capítulo \ref{chp_hipotesis}, en esta sección se presentan los
-resultados que reflejan la situación actuarial y financiera del \Sexpr{REP_seg}, generados bajo
-diferentes escenarios de proyección. A partir de esos balances, en cada escenario se puede apreciar
-la situación actuarial y financiera del \Sexpr{REP_seg} de forma dinámica, para cada año desde la
-fecha de corte y hasta el horizonte de estudio ($T = \Sexpr{REP_hor}$ años).   
+Tomando en cuenta el modelo actuarial presentado en el capítulo \ref{chp_modelo} y las hipótesis actuariales definidas en el capítulo \ref{chp_hipotesis}, en esta sección se presentan los resultados que reflejan la situación actuarial y el impacto del de la Sentencia de la Corte Constitucional del CASO No. 1024-19-JP/21 y 66-20-JP en el \Sexpr{REP_seg}. A partir del balance actuarial, se puede apreciar la situación actuarial y financiera del \Sexpr{REP_seg} de forma dinámica, para cada año desde la fecha de corte y hasta el horizonte de estudio ($T = \Sexpr{REP_hor}$ años).
 
-Para el análisis se han definido cuatro escenarios: 
-\begin{enumerate}[itemsep=1mm, topsep=5pt]
-\item \textbf{Escenario Base:} Constituye el escenario más verosímil, aplicando parámetros
-financieros conservadores y realistas, en base a valores proyectados promedio. En este escenario 
-se supone: tasa actuarial \Sexpr{REP$tasa_act_esc_1}\%, tasa de crecimiento salarial de 2,1540\%
-y tasa de crecimiento de pensiones igual a 1,8261\%. Además, supone que el aporte estatal
-promedio para los próximos años es igual a 28\% (porcentaje recibido en los primeros meses del 
-2019) y toma en cuenta el cese del aporte del 2,76\% de los pensionistas.
-
-
-% Por último, se analiza el escenario base con la prima original (0,50\%) citada en la Ley de
-% Seguridad Social de 2001 reformado en la Resolución No. C.D. 261 y 501, el 0,25\% es destinado a
-% pago de prestaciones, 0,25\% a prestaciones mésdicas y 0,05\% para contingencias. El 70\% de los
-% ingresos por aportaciones de esta nueva prima se destinarán para financiar el pago de
-% prestaciones médico asistenciales del \Sexpr{REP_seg}.
+Para el análisis se han definido un único escenario:  
+\begin{enumerate}[itemsep=1mm, topsep=5pt] 
+\item \textbf{Escenario Base:} Constituye el escenario más verosímil, aplicando parámetros financieros conservadores y realistas, en base a valores proyectados promedio. En este escenario se supone: tasa actuarial \Sexpr{REP$i_a}\%, tasa de crecimiento salarial de \Sexpr{REP$i_s}\% y tasa de crecimiento de pensiones igual a \Sexpr{REP$i_p}\%. Además, supone que el aporte estatal promedio para los próximos años es igual a 28\% y toma en cuenta el cese del aporte del 2,76\% de los pensionistas.
+Para estimar el impacto de los valores por cobrar pendientes por responsabilidad patronal del \Sexpr{REP_seg}, se estableció un porcentaje relacionado con el aporte patronal al Seguro por \Sexpr{REP$i_rp}\% en la sección \ref{chp_modelo:rp}. Y no se considera los egresos por atenciones-médicas por accidentes y enfermedades laborales que están a cargo del Seguro General de Salud Individual y Familiar.
 \end{enumerate}
 
-% Los parámetros que definen cada escenario\footnote{Nota: La tasa de aportación de afiliados 
-% ($\pi^{2}$) se define a continuación en el detalle de parámetros de cada escenario.} se presentan 
-% en la tabla \ref{tab:par_escenarios}.
-% 
-% \noindent
-% {\fontsize{8}{10}\selectfont
-% \begin{longtable}[H]{L{5cm}C{2.0cm}}
-% \caption{Escenarios de análisis}\\
-% \label{tab:par_escenarios} \\
-% \toprule
-% \multirow{3}{*}{Parámetros:} 
-% & \multicolumn{1}{c}{Escenario 1} 
-% \\
-% & \multicolumn{1}{c}{Base} 
-% \\
-% & \multicolumn{1}{c}{(\%)}  
-%  \\
-% \midrule
-% \endfirsthead
-% 
-% \toprule
-% \multirow{3}{*}{Parámetros:} 
-% & \multicolumn{1}{c}{Escenario 1} 
-% \\
-% & \multicolumn{1}{c}{Base} 
-% \\
-% & \multicolumn{1}{c}{(\%)}   
-% } \\
-% \midrule
-% \endhead
-% 
-% \bottomrule
-% \multicolumn{2}{r}{continúa...} \\
-% \endfoot
-% 
-% \bottomrule \\
-% \caption*{Elaborado: \scriptsize DAIE.}
-% \endlastfoot
-% 
-% \input{tablas/iess_tab_conf_escenarios.tex}
-% 
-% \end{longtable}
-% }
+Se consideró la misma estructura actuarial del \Sexpr{REP_seg}, definida por un sistema de financiamiento de reparto con prima media nivelada, un esquema de prestaciones de beneficio definido y un régimen demográfico en grupo abierto, acorde a lo expuesto en la sección \ref{chp_modelo:actu}.
 
-%En todos los escenarios, 
-
-Se consideró la misma estructura actuarial del \Sexpr{REP_seg}, definida
-por un sistema de financiamiento de reparto con prima media nivelada, un esquema de prestaciones de
-beneficio definido y un régimen demográfico en grupo abierto, acorde a lo expuesto en la sección
-\ref{chp_modelo:actu}. 
-
-% También se consideró el fallo de la corte constitucional sobre el cese de los aportes del 2,76\%
-% por parte de los pensionistas para financiar auxilio de funerales y décimas.
-
-Solo se considera el 28\% (no el 40\%) del aporte del Estado a las pensiones, puesto que ese fue el
-porcentaje que el Estado aporta en el año 2019. Además, en los tres primeros escenarios, aplicamos
-los porcentajes de aportación dispuestos por la resolución No. C.D. 515, mientras que el cuarto y
-último escenario es una propuesta de la Dirección Actuarial, de Investigación y Estadística para
-financiar el pago de prestaciones médico asistenciales del \Sexpr{REP_seg}, las cuales en este
-momento financia el Seguro General de Salud Individual y Familiar.
+Solo se considera el 28\% (no el 40\%) del aporte del Estado a las pensiones, puesto que ese fue el porcentaje que el Estado aporta en el año 2019. Además, se aplica los porcentajes de aportación dispuestos por la \legalcite{ResIESS_CD515}.
 \clearpage
 
 % Escenario 1 --------------------------------------------------------------------------------------
 \section{Valuación actuarial bajo el escenario base}
 \label{chp_valuacion:esc_base}
 
-El escenario base es el más probable o verosímil. En este escenario se utilizan las siguientes
-hipótesis: tasa actuarial, 6,25\%; tasa de crecimiento de los salarios, 2,15\%; y tasa de
-crecimiento del salario básico unificado 2,53\%. Además, se establece que los gastos
-administrativos son igual al \Sexpr{REP$tasa_porcentaje_gasto_esc_1}\% de la masa salarial.
+El escenario base es el más probable o verosímil. En este escenario se utilizan las siguientes hipótesis: tasa actuarial, \Sexpr{REP$i_a}\%; tasa de crecimiento de los salarios, \Sexpr{REP$i_s}\%; y tasa de crecimiento del salario básico unificado \Sexpr{REP$i_sbu}\%. Además, se establece que los gastos administrativos son igual al \Sexpr{REP$tasa_por_gas_esc_1}\% de la masa salarial.
 
-Este escenario considera las siguientes fuentes de financiamiento: la tasa de aportación de los
-afiliados activos igual a \Sexpr{REP$tasa_aporte_esc_1_2020}\% hasta el 2020 y 
-0,38\% a partir del 2021, establecido en la Resolución No. C.D.
-515; la tasa de aportación del estado \Sexpr{REP$apo_est_esc_1}\% (basado en la aportación promedio
-realizada en 2019); y el aporte de los pensionistas de incapacidad permanente total, absoluta y
-parcial, y los beneficiarios de montepío, $\pi^{9,13,14,15}$, igual a
-\Sexpr{REP$tasa_apo_jub_esc_1}\%.
+Este escenario considera las siguientes fuentes de financiamiento: la tasa de aportación de los afiliados activos igual a 0,38\%, establecido en la \legalcite{ResIESS_CD515}; la tasa de aportación del estado \Sexpr{REP$apo_est_esc_1}\%; y el aporte de los pensionistas de incapacidad permanente total, absoluta y parcial, y los beneficiarios de montepío, $\pi^{9,13,14,15}$, igual a \Sexpr{REP$tasa_apo_jub_esc_1}\%.
 
 %---------------------------------------------------------------------------------------------------
 \subsection{Balance actuarial para el escenario base}

@@ -1123,15 +1123,17 @@ El total de gasto prestacional viene dado por la suma de cada uno de los benefic
 \subsection{Flujo de valores generados por responsabilidad patronal}
 \label{chp_modelo:rp}
 
+A partir de la información histórica de los valores pendientes de cobrar por responsabilidad patronal, se establece una relación lineal con los aportes patronales por 0,38\% de la masa salarial establecidos en la \legalcite{ResIESS_CD515}. En la tabla \ref{tab:coeficiente}, se presenta los resultados de la regresión lineal entre los valores pendientes o proceso de cobro de las responsabilidades patronales, como variable dependiente y los valores por aportes al \Sexpr{REP_seg} , como variable independiente.
 
+{\fontsize{11}{13}\selectfont
 \begin{table}[H] \centering
-{\fontsize{8}{9}\selectfont
 \input{tablas/iess_mod_rp.tex}
 \end{tabular}
 \caption*{\scriptsize Fuente: DAIE. \\
 \scriptsize Elaborado: DAIE. \\
 Nota: $^{*}$p$<$0,1; $^{**}$p$<$0,05; $^{***}$p$<$0,01}
 }
+\label{tab:coeficiente}
 \end{table}
 
 

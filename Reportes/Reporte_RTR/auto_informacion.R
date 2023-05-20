@@ -2,13 +2,30 @@ message( paste( rep( '-', 100 ), collapse = '' ) )
 message( '\tEstableciendo información para la configuración del reporte' )
 load( paste0( parametros$RData, 'IESS_macro_estudio.RData' ) )
 load( paste0( parametros$RData_seg, 'IESS_RTR_modelo_rp.RData' ) )
+load( paste0(parametros$RData_seg, "IESS_RTR_modelo_rp.RData") )
+
 REP <- new.env()
 
 # Tasas y parámetros generales----------------------------------------------------------------------
-REP$i_s <- Hipotesis[4,2]
-REP$i_sbu <- Hipotesis[5,2]
-REP$i_p <- Hipotesis[6,2]
-REP$i_a <- 6.25
+REP$i_s <- format( Hipotesis[4,2],
+                   digits = 2, nsmall = 2, big.mark = '.',
+                   decimal.mark = ',', format = 'f' )
+
+REP$i_sbu <- format( Hipotesis[5,2],
+                     digits = 2, nsmall = 2, big.mark = '.',
+                     decimal.mark = ',', format = 'f' )
+
+REP$i_p <- format( Hipotesis[6,2],
+                   digits = 2, nsmall = 2, big.mark = '.',
+                   decimal.mark = ',', format = 'f' )
+
+REP$i_a <- format( 6.25,
+                   digits = 2, nsmall = 2, big.mark = '.',
+                   decimal.mark = ',', format = 'f' )
+
+REP$i_rp <- format( coeficiente * 100,
+                    digits = 2, nsmall = 2, big.mark = '.',
+                    decimal.mark = ',', format = 'f' )
 # Escenario 1 --------------------------------------------------------------------------------------
 escenario <- 'escenario_1'
 load( paste0( parametros$RData_seg, 'IESS_RTR_configuracion_', escenario, '.RData' ) )
