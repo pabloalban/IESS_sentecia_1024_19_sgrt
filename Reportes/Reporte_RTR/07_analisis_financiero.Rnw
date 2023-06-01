@@ -390,7 +390,7 @@ Los componentes del pasivo, dentro de los cuales se encuentran las siguientes su
 
 Para el año 2022, el pasivo se compone en pasivos corrientes por USD 11.752.482,30 (53,55\%) y pasivos no corrientes por USD 10.193.131,09 (46,47\%). Los pasivos corrientes se componen de las obligaciones prestacionales, Cuentas por pagar Intrainstitucional, Proveedores y Retenciones en Calidad de Agente de Retención. Por otra parte, los pasivos no corrientes se conforman de Pasivos por Provisiones Laborales y Depósitos no identificados.
 
-Los balances del IESS en el período comprendido 2012 al 2020 han sufrido cambios en los códigos de cuentas, creación de nuevas cuentas, por tanto a continuación se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas como las siguientes:
+Los balances del IESS en el período comprendido 2012 al 2020 han sufrido cambios en su plan de cuentas; por lo tanto, se presenta la variación y optimización; un ejemplo de ello se evidencia en los componentes del activo, donde algunas cuentas fueron afectadas, como las siguientes:
 
 \begin{itemize}[itemsep=0mm, topsep=0pt]
 \item	En la cuenta “Inversiones” a partir del 2010 al 2012 en los balances se las denomina como: “Inversiones deuda renta fija sector privado” (7110) e “Inversiones deuda renta fija Sector Público” (7120); a partir del 2013 al 2014 es optimizada en una sola cuenta registrada en el plan de cuentas como “Inversiones” (12). Finalmente, a partir del 2015 al 2022 cambia su denominación a “Recursos/Administra por El BIESS” (714). 
@@ -447,7 +447,7 @@ Elaborado: DAIE}
 
 \subsection{Análisis horizontal y vertical del pasivo}
 
-Para el año 2022, los pasivos corrientes crecieron 1.413,26\%, en cambio los pasivos no corrientes decrecieron en 20,77\%. En promedio, durante el período 2016 a 2022, los pasivos del Fondo del \Sexpr{REP_seg} creciencieron en promedio 26,06\% cada año. Por otro lado, los pasivos corrientes crecieron 214,67\% anualmente, y los pasivos no corrientes crecieron en 19,42\%, para el mismo período. En las tablas \ref{tab:iess_analisis_horizontal_pasivos_rtr} y \ref{tab:iess_analisis_vertical_pasivos_rtr}, se presentan los análisis horizontal y vertical de los componentes del pasivo del Fondo del \Sexpr{REP_seg}.
+Para el año 2022, los pasivos corrientes crecieron 1.413,26\%, en cambio los pasivos no corrientes decrecieron en 20,77\%. En promedio, durante el período 2016 a 2022, los pasivos del Fondo del \Sexpr{REP_seg} aumentaron en promedio 26,06\% cada año. Por otro lado, los pasivos corrientes crecieron 214,67\% anualmente, y los pasivos no corrientes crecieron en 19,42\%, para el mismo período. En las tablas \ref{tab:iess_analisis_horizontal_pasivos_rtr} y \ref{tab:iess_analisis_vertical_pasivos_rtr}, se presentan los análisis horizontal y vertical de los componentes del pasivo del Fondo del \Sexpr{REP_seg}.
 
 {\setlength{\tabcolsep}{3pt}
 {\fontsize{9}{12}\selectfont
@@ -633,7 +633,7 @@ Cabe mencionar que el patrimonio de este fondo aumentó en 4,14 veces (812,14 mi
 
 \subsection{Componentes del patrimonio}
 
-El patrimonio es la parte residual en los activos de los fondos administrados, una vez deducidos todos sus pasivos. El patrimonio puede sub-clasificarse para los efectos de su presentación en el balance general y depende de la capitalización, los aportes patrimoniales, las reservas y los resultados. En la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}.
+El patrimonio es la parte residual en los activos de los fondos administrados, una vez deducidos todos sus pasivos. El patrimonio puede subclasificarse para los efectos de su presentación en el balance general y depende de la capitalización, los aportes patrimoniales, las reservas y los resultados. En la tabla \ref{tab:iess_componentes_patrimonio_fondo_rtr}, se presenta los componentes del patrimonio del Fondo del \Sexpr{REP_seg}.
 
 Para el año 2022, el patrimonio del \Sexpr{REP_seg} haciende a USD 1.378.270.202,68. La cuenta patrimonio se compone de las cuentas hijas “Superávit Acumulado” por USD 1.379.319.364,15, el que registra los resultados acumulados del superávit de los fondos de beneficio definido o reparto, obtenidos en ejercicios anteriores. Además, registra los resultados transferidos de la administradora. Además, la cuenta patrimonio se compone de la subcuenta “Déficit Acumulado” por valores negativos de USD 1.049.161,47, el cual registra los resultados acumulados del déficit de los fondos de beneficio definido o reparto, obtenidos en ejercicios anteriores. Además, registra los resultados transferidos de la administradora.
 
@@ -834,7 +834,7 @@ La cuenta “Superávit acumulado” durante período 2013 a 2022, representó e
 
 \section{Ingresos}
 
-Durante el año 2022, el Fondo del \Sexpr{REP_seg} recibió por ingresos USD 270.542.823,99, lo cual represento un incremento de USD 37.415.179,07, respecto al año anterior; en términos porcentuales, representa un incremento igual a 16,05\%. Respeto al año 2013, los ingresos crecieron en 54,04\%. Debido a la expedición de la \legalcite{ResIESS_CD501}, los ingresos del Seguro cayeron en 44,57\ en el 2016, respecto al 2015; en términos monetarios significó que los ingresos del Seguro pasaron de USD 193.520.492,43 en 2015 a solo USD 107.276.670,49 en 2016. A continuación, en la figura \ref{fig:iess_ingresos_fondo_rtr} y tabla \ref{tab:iess_ingresos_fondo_rtr}, se presenta la evolución histórica de los ingresos del Fondo del \Sexpr{REP_seg}.
+Durante el año 2022, el Fondo del \Sexpr{REP_seg} recibió por ingresos USD 270.542.823,99, lo cual representó un incremento de USD 37.415.179,07, respecto al año anterior; en términos porcentuales, representa un incremento igual a 16,05\%. Respeto al año 2013, los ingresos crecieron en 54,04\%. Debido a la expedición de la \legalcite{ResIESS_CD501}, los ingresos del Seguro cayeron en 44,57\ en el 2016, respecto al 2015; en términos monetarios significó que los ingresos del Seguro pasaron de USD 193.520.492,43 en 2015 a solo USD 107.276.670,49 en 2016. A continuación, en la figura \ref{fig:iess_ingresos_fondo_rtr} y tabla \ref{tab:iess_ingresos_fondo_rtr}, se presenta la evolución histórica de los ingresos del Fondo del \Sexpr{REP_seg}.
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -951,7 +951,7 @@ Elaborado: DAIE}
 
 \subsection{Componentes de los ingresos}
 
-A continuación, se desarrolla el análisis histórico de los componentes del ingreso, dentro de los cuales se encuentran las siguientes subcuentas “Aportes de afiliados y patronales”, “Contribuciones del Estado”, “Ing. complementarios oper.”, “Ingresos financieros”, “Ingresos por arriendo y realiz.”, “Ingresos extraordinarios (RP)”, “Intereses, tasas y contribución” y “Otros resultados integrales” (ver tabla \ref{tab:iess_componentes_ingresos_rtr}).
+A continuación, se desarrolla el análisis histórico de los componentes del ingreso, dentro de los cuales se encuentran las siguientes subcuentas: “Aportes de afiliados y patronales”, “Contribuciones del Estado”, “Ingresos complementarios a las operaciones”, “Ingresos financieros”, “Ingresos por arriendo y realizaciones”, “Ingresos extraordinarios (RP)”, “Intereses, tasas y contribución” y “Otros resultados integrales” (ver tabla \ref{tab:iess_componentes_ingresos_rtr}).
 
 En el año 2022, se registraron USD 270.542.823,99 por incrementos en los beneficios económicos producidos a lo largo del período contable, en forma de entradas o incrementos de valor de los activos, o bien, como disminuciones de las obligaciones que dan como resultado aumentos del patrimonio. Los ingresos del año 2022 provienen de mayor a menor valor, en primer lugar, de los ingresos financieros generados por las inversiones del Fondo (el BIESS administra USD 1.393.211.682,31, al corte) por USD 133.467.536,12. En segundo lugar, los aportes patronales por USD 104.092.173,56; en tercer lugar, la contribución del Estado por el 40\% de las pensiones del SGRT por USD 24.942.661,35. En cuarto lugar, los ingresos complementarios de operación por intereses y multas por USD 7.472.585,53 y; además, USD 566.674,03 por responsabilidad patronal; y, por último, USD 1.193,40 por arriendos de bienes inmuebles.
 

@@ -63,7 +63,7 @@ r = \frac{\left(1+i\right)}{\left(1+\pi\right)}-1,
 \end{equation}
 donde: $r$ es la tasa de interés real, $i$ es igual a la tasa de interés nominal y $\pi$ es igual a la tasa de inflación.
 
-A partir de la información entregada por el Mgs. Carlos Julio Arosemena Duran, Gerente General del BIESS, mediante oficio Nro. BIESS-GGEN-2023-0508-OF, de fecha 20 de abril de 2023, se presenta la siguiente depcripción del portafolio de inversiones del Fondo del \Sexpr{REP_seg}. A continuación, se presenta la evolución histórica del valor nominal y su respectivo rendimiento del
+A partir de la información entregada por el Mgs. Carlos Julio Arosemena Duran, Gerente General del BIESS, mediante oficio Nro. BIESS-GGEN-2023-0508-OF, de fecha 20 de abril de 2023, se presenta la siguiente descripción del portafolio de inversiones del Fondo del \Sexpr{REP_seg}. A continuación, se presenta la evolución histórica del valor nominal y su respectivo rendimiento del
 portafolio de inversiones del \Sexpr{REP_seg}, en la tabla
 \ref{tab:iess_total_inv} y la figura \ref{fig:iess_inversiones_rnd_neto}.
 
@@ -329,7 +329,7 @@ Elaborado: DAIE}
   \caption{Evolución de los gastos financieros generados por las inversiones del Fondo del \Sexpr{REP_seg}}
 \label{tab:iess_gastos_inv} \\
 \toprule
- \multicolumn{1}{l}{\multirow{2}{*}{Ingresos:}} & 
+ \multicolumn{1}{l}{\multirow{2}{*}{Gastos:}} & 
 \multicolumn{1}{c}{2013} & 
 \multicolumn{1}{c}{2014} &
 \multicolumn{1}{c}{2015} & 
@@ -467,7 +467,7 @@ En cambio, su tasa de rendimiento ponderada registró su máximo en 2019 (13,05\
 % --------------------------------------------------------------------------------------------------
 \subsubsection{Inversiones en bonos del Estado}
 
-A 31 de diciembre de 2022, el portafolio de inversiones dispone en inversiones en bonos del Estado por un saldo en valor nominal por USD 470.692.259,46 (sin contar cupones de intereses), con una tasa de rendimiento promedio ponderado igual a 7,15\% y a un plazo promedio ponderado igual a 846,45 días. Históricamente, las inversiones en bonos del Estado crecieron de USD 124.643.636,70 a diciembre de 2014 a USD 324.381.199,22 a diciembre de 2015; es decir, un crecimiento igual a 160,25\% en un año; a pesar de que el Fondo del \Sexpr{REP_seg} recibió USD 46.587.710,42 a una tasa de rendimiento igual a 7,50\% a doce (12) años, entre noviembre de 2012 a abril de 2015, por pago del Estado por su aporte del 40\% de las pensiones, el BIESS invirtió en más bonos del Estado. En la tabla \ref{tab:iess_bonos_hist_inv} y figura \ref{fig:iess_inversiones_bonos_rtr}, se presenta la evolución histórica de las inversiones del fondo en bonos del Estado a 31 de diciembre de cada año. En cambio, en la tabla \ref{tab:iess_bonos_detalle_inv} se detalla el saldo, valor de compra, fecha de compra y vencimiento, con su tasa y plazo de los bonos que pertecenen al Fondo a la fecha de corte.
+A 31 de diciembre de 2022, el portafolio de inversiones dispone en inversiones en bonos del Estado por un saldo en valor nominal por USD 470.692.259,46 (sin contar cupones de intereses), con una tasa de rendimiento promedio ponderado igual a 7,15\% y a un plazo promedio ponderado igual a 846,45 días. Históricamente, las inversiones en bonos del Estado crecieron de USD 124.643.636,70 a diciembre de 2014 a USD 324.381.199,22 a diciembre de 2015; es decir, un crecimiento igual a 160,25\% en un año; a pesar de que el Fondo del \Sexpr{REP_seg} recibió USD 46.587.710,42 a una tasa de rendimiento igual a 7,50\% a doce (12) años, entre noviembre de 2012 a abril de 2015, por pago del Estado por su aporte del 40\% de las pensiones, el BIESS invirtió en más bonos del Estado. En la tabla \ref{tab:iess_bonos_hist_inv} y figura \ref{fig:iess_inversiones_bonos_rtr}, se presenta la evolución histórica de las inversiones del fondo en bonos del Estado a 31 de diciembre de cada año. En cambio, en la tabla \ref{tab:iess_bonos_detalle_inv} se detalla el saldo, valor de compra, fecha de compra y vencimiento, con su tasa y plazo de los bonos que pertenecen al Fondo a la fecha de corte.
 
 \begin{figure}[H]
 \captionsetup{justification=centering}
@@ -714,7 +714,7 @@ Elaborado: DAIE}
 \begin{figure}[H]
 \captionsetup{justification=centering}
 \centering
-\caption{Evolución histórica de las inversiones del\Sexpr{REP_seg} en Certificados de Tesorería y su rendimiento promedio ponderado}
+\caption{Evolución histórica de las inversiones del \Sexpr{REP_seg} en Certificados de Tesorería y su rendimiento promedio ponderado}
 \label{fig:iess_inversiones_bonos_rtr}
 \includegraphics[scale=1]{graficos/iess_inversiones_cetes_rtr.png}
 \caption*{\scriptsize Fuente: Subgerencia de Banca de Inversión del BIESS
@@ -1186,7 +1186,7 @@ Elaborado: DAIE}
 
 \subsubsection{Inversiones en papel comercial}
 
-Las inversiones en papel comercial del Fondo del \Sexpr{REP_seg} ascienden a USD 15.515.000,00 a la fecha de corte, lo que sígnica un crecimiento igual a 2805,43\%, con respecto a 2020 (USD 534.000,00). También se registraron inversiones en papel comercial en el año 2015 por USD 10.575.000,00, y USD 5.209.000,00 en el año 2014. La tasa de rendimiento promedio ponderado de las inversiones en papel comercial es 11,09\% a 2022 y 11,04\% a 2020; en cambio, que a 2015 y 2014, se registro tasa de rendimiento iguales a 1,01\% y 1,03\%, respectivamente. En la tabla \ref{tab:iess_pc_hist_inv} y figura \ref{fig:iess_inversiones_papel_comercial_rtr}, se presenta la evolución de las inversiones del Fondo del \Sexpr{REP_seg} en papel comercial, a 31 de diciembre de cada año.
+Las inversiones en papel comercial del Fondo del \Sexpr{REP_seg} ascienden a USD 15.515.000,00 a la fecha de corte, lo que sígnica un crecimiento igual a 2805,43\%, con respecto a 2020 (USD 534.000,00). También se registraron inversiones en papel comercial en el año 2015 por USD 10.575.000,00, y USD 5.209.000,00 en el año 2014. La tasa de rendimiento promedio ponderado de las inversiones en papel comercial es 11,09\% a 2022 y 11,04\% a 2020; en cambio, que a 2015 y 2014, se registró tasa de rendimiento iguales a 1,01\% y 1,03\%, respectivamente. En la tabla \ref{tab:iess_pc_hist_inv} y figura \ref{fig:iess_inversiones_papel_comercial_rtr}, se presenta la evolución de las inversiones del Fondo del \Sexpr{REP_seg} en papel comercial, a 31 de diciembre de cada año.
 
 {\setlength{\tabcolsep}{4pt}
 {\fontsize{11}{12}\selectfont
@@ -1310,7 +1310,7 @@ En esta Sección se presentan las principales causas de desfinanciamiento que su
 \itemsep0em
 \item La ausencia de la contribución del Estado al IESS por el financiamiento del 40\% de las pensiones y otras obligaciones que tiene el Estado con IESS desde abril de 2015 es USD 109.765.237,51 (USD 91.340.621,83 capital y USD 18.424.615,68 lucro cesante).
 
-\item El cambio de las tasas de aportación de la Resolución No. C.D. 261 por la Resolución No. C.D. 501 produjó la ausencia de ingresos por USD 343.852.476,12 (USD 294.352.148,00 capital y 49.500.328,12 lucro cesante).
+\item El cambio de las tasas de aportación de la Resolución No. C.D. 261 a la Resolución No. C.D. 501 provocó la ausencia de ingresos por USD 343.852.476,12 (USD 294.352.148,00 capital y 49.500.328,12 lucro cesante).
 
 \item Desinversiones realizadas desde junio de 2017 hasta la fecha corte del estudio (USD 25.000.000,00) a la fecha de corte no permitieron que el fondo reciba USD 1.035.057,65 (lucro cesante).
 \end{enumerate}
@@ -1451,7 +1451,7 @@ Se calcula que el Fondo del \Sexpr{REP_seg} dejó de percibir USD 18.424.615,68 
 \end{longtable}
 }
 
-Los valores de las pensiones son calculadas sumando las cuentas Pensiones por Riesgos del Trabajo y Pensiones de Montepío registradas en el Balance del Fondo del \Sexpr{REP_seg} (ver tabla \ref{tab:iess_componentes_gastos_rtr}) y sin tomar en cuenta los pagos por subsidios (la normativa no exige el pago del 40\% de los subsidios por parte del Estado).
+Los valores de las pensiones son calculados sumando las cuentas: "Pensiones por Riesgos del Trabajo" y "Pensiones de Montepío", registradas en el Balance del Fondo del \Sexpr{REP_seg} (ver tabla \ref{tab:iess_componentes_gastos_rtr}) y sin tomar en cuenta los pagos por subsidios (la normativa no exige el pago del 40\% de los subsidios por parte del Estado).
 % \vfill
 % %\vspace*{\fill}
 % \end{landscape}

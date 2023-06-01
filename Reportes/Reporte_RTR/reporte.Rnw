@@ -47,9 +47,9 @@
 % Cuerpo del estudio
 %\mainmatter
 
-% # <<cap03, child='03_resumen_ejecutivo.Rnw'>>=
-% # @
-% #  
+<<cap03, child='03_resumen_ejecutivo.Rnw'>>=
+@
+  
 <<cap04, child='04_introduccion.Rnw'>>=
 @
 

@@ -79,7 +79,7 @@ b) Desarrollar y revisar estudios e informes técnicos sobre la situación finan
 
 y su misión:
 
-\textit{``(...) Preparar los balances actuariales de cada uno de los regímenes de protección del Seguro Obligatorio, la elaboración de los estudios técnicos y los informes periódicos sobre la situación de dichos regímenes y sus proyecciones  para mantener el equilibrio financiero de los seguros administrados por el IESS; realizarninvestigaciones y estudios en el campo de la seguridad social; y, preparar de manera sistemática, periódica y oportuna la memoria estadística del IESS en los términos establecidos en la Ley (...)''}
+\textit{``(...) Preparar los balances actuariales de cada uno de los regímenes de protección del Seguro Obligatorio, la elaboración de los estudios técnicos y los informes periódicos sobre la situación de dichos regímenes y sus proyecciones  para mantener el equilibrio financiero de los seguros administrados por el IESS; realizar investigaciones y estudios en el campo de la seguridad social; y, preparar de manera sistemática, periódica y oportuna la memoria estadística del IESS en los términos establecidos en la Ley (...)''}
 
 \section{Reglamento General de Responsabilidad Patronal}
 Con fecha 30 de marzo de 2016, se expidió el Reglamento General de Responsabilidad Patronal, mediante la emisión de la \textcite{ResIESS_CD517}, el cual señala en su Capítulo Sexto, establece:
@@ -131,7 +131,7 @@ SBU: Salario Básico Unificado a la fecha de liquidación.}\\
 	\[RP_{total} = \max \left\{ 25\,SBU; \sum_{k=1}^{t} x_{t} \left[ \prod_{j=1}^{m_{k}} \left(\left(1+ta\right)\left( 1+\pi_{j}\right)\right)^{1/12} - \left(1 + m_{k}\ast\frac{mc_{k}+4\%}{12}\right)\right] I_{0}^{1}\right\}
 \]
 \textit{Donde:}\\
-$RP_{total}$: \textit{Resposabilidad Patronal Total.}\\
+$RP_{total}$: \textit{Responsabilidad Patronal Total.}\\
 $SBU$: \textit{Salario Básico Unificado a la fecha de liquidación.}\\
 $t$: \textit{Número de aportes pagados por mora.}\\
 $x_{k}$: \textit{Es el aporte $k$ no pagado, $k=\bar{1,t}$.}\\

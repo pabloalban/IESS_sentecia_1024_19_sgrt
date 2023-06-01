@@ -15,7 +15,7 @@ A continuación, se presenta un análisis tabular y gráfico de las principales 
 \label{chp_demog:afi}
 
 %---------------------------------------------------------------------------------------------------
-A diciembre de 2022, se registraron 3.087.759 cotizantes al Seguro General Obligatorio, de los cuales 1.758.915 (56,96\%) son hombres y 1.328.844 (43,04\%) son mujeres. En comparación a diciembre de 2021, existe un aumento de 118.153 cotizantes activos, lo que representa un crecimiento igual a 3,98\%. El mayor numero de afiliados activos se registró en noviembre de 2018, con 3.137.439; debido a la pandemia de la COVID – 19, solo cotizaron 2.818.491 afiliados en septiembre de 2020, desde ese punto, el número de cotizantes creció en promedio 9,973 cada mes hasta diciembre de 2022; pero lamentablemente no se ha logrado alcanzar el número de afiliados activos a diciembre de 2019 (3.116.555). En la tabla \ref{tab:iess_afliados}, se presente el número de cotizantes al SGO a diciembre de cada año ; en cambio en la figura \ref{fig:iess_pob_afi_ini}, se presenta la evolución mensual de afiliados activos.
+A diciembre de 2022, se registraron 3.087.759 cotizantes al Seguro General Obligatorio, de los cuales 1.758.915 (56,96\%) son hombres y 1.328.844 (43,04\%) son mujeres. En comparación a diciembre de 2021, existe un aumento de 118.153 cotizantes activos, lo que representa un crecimiento igual a 3,98\%. El mayor número de afiliados activos se registró en noviembre de 2018, con 3.137.439; debido a la pandemia de la COVID – 19, solo cotizaron 2.818.491 afiliados en septiembre de 2020, desde ese punto, el número de cotizantes creció en promedio 9,973 cada mes hasta diciembre de 2022; pero lamentablemente no se ha logrado alcanzar el número de afiliados activos a diciembre de 2019 (3.116.555). En la tabla \ref{tab:iess_afliados}, se presente el número de cotizantes al SGO a diciembre de cada año ; en cambio en la figura \ref{fig:iess_pob_afi_ini}, se presenta la evolución mensual de afiliados activos.
 
 {\setlength{\tabcolsep}{5pt}
 {\fontsize{10}{13}\selectfont
@@ -2117,7 +2117,7 @@ Por provincias; el Guayas registra USD 2.632.400,40 por valores pendientes de ca
 
 {\fontsize{9}{11}\selectfont
 \begin{longtable}[H]{crrrrrr}
-\caption{Resposabilidad Patronal por rangos y por sexo}
+\caption{Responsabilidad Patronal por rangos y por sexo}
 \label{tab:tabla_rangos_montos_rp}\\
 \toprule
 \multirow{2}[2]{*}{Rango:} &
