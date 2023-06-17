@@ -5,6 +5,9 @@ source( 'R/400_preparar_reporte.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/402_graf_contexto_economico.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/403_graf_demografia_sgo.R', encoding = 'UTF-8', echo = FALSE )
 
+#Cálculo de los balances actuariales----------------------------------------------------------------
+source( 'R/rtr/305_calculo_escenarios_balance_rtr.R', encoding = 'UTF-8', echo = FALSE )
+
 # Gráficos específicas de RTR ----------------------------------------------------------------------
 source( 'R/rtr/400_graf_analisis_demografico_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/401_graf_inversiones_rtr.R', encoding = 'UTF-8', echo = FALSE )
