@@ -135,14 +135,14 @@ variación, período 2022 a 2061, el detalle de los cálculos se encuentra en el
 
  \begin{table}[H]
  \centering
- \caption{Promedio de los valores estimados de tasas de variación}
+ \caption{Resumen de hipótesis macroeconómicas}
  \label{tab:iess_hip_macro}
  \begin{tabular}{lr}
  \toprule
  Ítem & Tasa (\%)\\
  \midrule
  \input{tablas/iess_hip_macro.tex}
- \bottomrule
+ %\bottomrule
  \end{tabular}
  \caption*{\scriptsize {\bf Elaborado:} DAIE}
  \end{table}

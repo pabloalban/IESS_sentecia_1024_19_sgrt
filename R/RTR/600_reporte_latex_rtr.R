@@ -29,6 +29,7 @@ source( 'R/rtr/502_tab_responsabilidad_patronal_rtr.R', encoding = 'UTF-8', echo
 source( 'R/rtr/503_tab_causas_desfinanciamientos_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/504_tab_inversiones_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/505_tab_balance_rtr.R', encoding = 'UTF-8', echo = FALSE )
+source( 'R/rtr/506_tab_escenarios_rtr.R', encoding = 'UTF-8', echo = FALSE )
 source( 'R/rtr/508_tab_reg_rtr_.R', encoding = 'UTF-8', echo = FALSE )
 
 # Reporte LaTeX ------------------------------------------------------------------------------------
