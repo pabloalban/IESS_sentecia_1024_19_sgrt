@@ -32,7 +32,7 @@ esc$nombre <- 'escenario_1'
 message( '\t\t\t', esc$nombre )
 
 # 1.1. Hipótesis -----------------------------------------------------------------------------------
-esc$V0 <- 1202240160.65
+esc$V0 <- 1372917814.09
 
 esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            
@@ -80,7 +80,7 @@ esc$nombre <- 'escenario_2'
 message( '\t\t\t', esc$nombre )
 
 # 2.1. Hipótesis -----------------------------------------------------------------------------------
-esc$V0 <- 1202240160.65
+esc$V0 <- 1372917814.09
 
 esc$hip_esc <- data.table( t = 0:parametros$horizonte,
                            

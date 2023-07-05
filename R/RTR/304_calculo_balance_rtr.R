@@ -40,6 +40,10 @@ aux <- SALg %>%
                          'M',
                          'F') ) %>%
   dplyr::select( t, x, sexo, M:=SALg ) %>%
+  rbind( data.frame( t = 0,
+                     x = 18,
+                     sexo = 'M',
+                     M = 0 ),.) %>%
   as.data.table( )
 
 balance <- merge( balance, 
@@ -237,8 +241,8 @@ balance_anual[ t == 0, `:=`( M = 0,
                              V_cor = 0 , 
                              Act = 0, Pas = 0 ) ]
 balance_anual[ , V_cap := V_cor ]
-balance_anual[ t == 0, V_cap := esc$V0 ]
-balance_anual[ t == 0, Act := esc$V0 ]
+balance_anual[ t == 0, V_cap :=   V_cor + esc$V0 ]
+balance_anual[ t == 0, Act :=  V_cor + esc$V0 ]
 balance_anual[ , Act := r * cumsum( v * Act ) ]
 balance_anual[ , Pas := r * cumsum( v * Pas ) ]
 balance_anual[ , V_cap := r * cumsum( v * V_cap ) ]

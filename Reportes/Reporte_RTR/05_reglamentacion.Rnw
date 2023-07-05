@@ -68,7 +68,7 @@ Con fecha 01 de septiembre de 2021, el Juez ponente, Ramiro Ávila Santamaría, 
 \label{chp_reglamento_org_funcional}
 
 
-En el punto 2.3 del artículo 10 de la \textcite{ResIESS_CD535} emitida por el Consejo Directivo del IESS de fecha 8 de septiembre de 2016, se establecen: la misión, atribuciones y responsabilidades de la Dirección Actuarial, de Investigación y Estadística. Entre las cuales se establece la siguiente atribución y responsabilidad:
+En el punto 2.3 del artículo 10 de la \legalcite{ResIESS_CD535} emitida por el Consejo Directivo del IESS de fecha 8 de septiembre de 2016, se establecen: la misión, atribuciones y responsabilidades de la Dirección Actuarial, de Investigación y Estadística. Entre las cuales se establece la siguiente atribución y responsabilidad:
 
 \textit{"2.3 GESTIÓN ACTUARIAL, DE INVESTIGACIÓN Y ESTADÍSTICA\\
 DIRECCIÓN ACTUARIAL, DE INVESTIGACIÓN Y ESTADÍSTICA\\
